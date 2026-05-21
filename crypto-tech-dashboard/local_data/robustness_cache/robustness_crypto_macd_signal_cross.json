@@ -1,0 +1,1468 @@
+{
+  "best": {
+    "cagr": 2.852269947970077,
+    "cg_id": "wefi",
+    "sharpe": 2.4824563712548273,
+    "symbol": "WEFI"
+  },
+  "label": "MACD Signal Cross (long MACD>signal)",
+  "mean_sharpe": 0.2995150594296634,
+  "median_cagr": 0.0032400821866336305,
+  "median_sharpe": 0.39180962440734024,
+  "n_tokens": 144,
+  "params": {
+    "fast": 12,
+    "signal": 9,
+    "slow": 26
+  },
+  "pct_positive": 74.30555555555556,
+  "per_token": [
+    {
+      "avg_trade_return": 0.14628138251896738,
+      "cagr": 2.852269947970077,
+      "cg_id": "wefi",
+      "max_dd": -0.1981197187898841,
+      "n_trades": 37,
+      "sharpe": 2.4824563712548273,
+      "symbol": "WEFI",
+      "win_rate": 0.42105263157894735
+    },
+    {
+      "avg_trade_return": 0.28767855393006725,
+      "cagr": 10.306834150395256,
+      "cg_id": "siren-2",
+      "max_dd": -0.8088020296700595,
+      "n_trades": 33,
+      "sharpe": 2.0370398760282784,
+      "symbol": "SIREN-2",
+      "win_rate": 0.47058823529411764
+    },
+    {
+      "avg_trade_return": 0.1781759424133844,
+      "cagr": 2.9084090147206263,
+      "cg_id": "venice-token",
+      "max_dd": -0.7331467060583394,
+      "n_trades": 31,
+      "sharpe": 1.7366511936674063,
+      "symbol": "VENICE-TOKEN",
+      "win_rate": 0.375
+    },
+    {
+      "avg_trade_return": 0.30896774753122064,
+      "cagr": 2.9983010787301536,
+      "cg_id": "bittorrent",
+      "max_dd": -0.6656213772933504,
+      "n_trades": 45,
+      "sharpe": 1.6005208622703662,
+      "symbol": "BITTORRENT",
+      "win_rate": 0.5652173913043478
+    },
+    {
+      "avg_trade_return": 0.1675225232547597,
+      "cagr": 1.4058345736069682,
+      "cg_id": "helium",
+      "max_dd": -0.6690763084540001,
+      "n_trades": 54,
+      "sharpe": 1.3320725344636817,
+      "symbol": "HELIUM",
+      "win_rate": 0.37037037037037035
+    },
+    {
+      "avg_trade_return": 0.3203408360476041,
+      "cagr": 1.0828283217906924,
+      "cg_id": "skyai",
+      "max_dd": -0.8723997990800328,
+      "n_trades": 34,
+      "sharpe": 1.2279841659682447,
+      "symbol": "SKYAI",
+      "win_rate": 0.5294117647058824
+    },
+    {
+      "avg_trade_return": 0.0875317902801259,
+      "cagr": 0.7692749471540734,
+      "cg_id": "binancecoin",
+      "max_dd": -0.4552806393839278,
+      "n_trades": 153,
+      "sharpe": 1.2088181415932855,
+      "symbol": "BINANCECOIN",
+      "win_rate": 0.4935064935064935
+    },
+    {
+      "avg_trade_return": 0.22140321905916674,
+      "cagr": 1.0106755069444242,
+      "cg_id": "pepe",
+      "max_dd": -0.8095670247017628,
+      "n_trades": 76,
+      "sharpe": 1.1425933632714813,
+      "symbol": "PEPE",
+      "win_rate": 0.3157894736842105
+    },
+    {
+      "avg_trade_return": 0.08973462315743284,
+      "cagr": 0.5176058384715858,
+      "cg_id": "banana-for-scale-2",
+      "max_dd": -0.9358571956577939,
+      "n_trades": 27,
+      "sharpe": 1.126974092586742,
+      "symbol": "BANANA-FOR-SCALE-2",
+      "win_rate": 0.5
+    },
+    {
+      "avg_trade_return": 0.36480335803299013,
+      "cagr": 0.9801660923510314,
+      "cg_id": "undeads-games",
+      "max_dd": -0.8849384909476058,
+      "n_trades": 50,
+      "sharpe": 1.1154954041715277,
+      "symbol": "UNDEADS-GAMES",
+      "win_rate": 0.4
+    },
+    {
+      "avg_trade_return": 0.13588993616031217,
+      "cagr": 0.8218952138015447,
+      "cg_id": "avalanche-2",
+      "max_dd": -0.7356114413519881,
+      "n_trades": 117,
+      "sharpe": 1.0840077894295896,
+      "symbol": "AVALANCHE-2",
+      "win_rate": 0.4067796610169492
+    },
+    {
+      "avg_trade_return": 0.12531120567757262,
+      "cagr": 0.7612888332431305,
+      "cg_id": "fetch-ai",
+      "max_dd": -0.7535363666384637,
+      "n_trades": 153,
+      "sharpe": 1.0436780702304451,
+      "symbol": "FETCH-AI",
+      "win_rate": 0.4155844155844156
+    },
+    {
+      "avg_trade_return": 0.10135489738405895,
+      "cagr": 0.8442414318164784,
+      "cg_id": "dogecoin",
+      "max_dd": -0.8006557383862128,
+      "n_trades": 151,
+      "sharpe": 1.036602359479491,
+      "symbol": "DOGECOIN",
+      "win_rate": 0.4342105263157895
+    },
+    {
+      "avg_trade_return": 0.03618866832406289,
+      "cagr": 0.3980993451282291,
+      "cg_id": "bitcoin",
+      "max_dd": -0.5164477279524287,
+      "n_trades": 166,
+      "sharpe": 1.0269623113926698,
+      "symbol": "BITCOIN",
+      "win_rate": 0.4578313253012048
+    },
+    {
+      "avg_trade_return": 0.11698379068753757,
+      "cagr": 0.6531561076241656,
+      "cg_id": "solana",
+      "max_dd": -0.8148879073587101,
+      "n_trades": 153,
+      "sharpe": 1.0089164995207969,
+      "symbol": "SOLANA",
+      "win_rate": 0.42857142857142855
+    },
+    {
+      "avg_trade_return": 0.10067970434413355,
+      "cagr": 0.634108119983888,
+      "cg_id": "ripple",
+      "max_dd": -0.7392037513916201,
+      "n_trades": 149,
+      "sharpe": 1.004130461457136,
+      "symbol": "RIPPLE",
+      "win_rate": 0.36
+    },
+    {
+      "avg_trade_return": 0.1767591453376695,
+      "cagr": 0.7496290866915474,
+      "cg_id": "floki",
+      "max_dd": -0.7288083567689372,
+      "n_trades": 71,
+      "sharpe": 1.0021752980003347,
+      "symbol": "FLOKI",
+      "win_rate": 0.3888888888888889
+    },
+    {
+      "avg_trade_return": 0.13778303947373724,
+      "cagr": 0.6963992712409657,
+      "cg_id": "virtual-protocol",
+      "max_dd": -0.7033056845201269,
+      "n_trades": 30,
+      "sharpe": 0.9962989507039244,
+      "symbol": "VIRTUAL-PROTOCOL",
+      "win_rate": 0.4
+    },
+    {
+      "avg_trade_return": 0.08724889797136964,
+      "cagr": 0.6426295862547766,
+      "cg_id": "swissborg",
+      "max_dd": -0.8242454867126601,
+      "n_trades": 185,
+      "sharpe": 0.9939795763012551,
+      "symbol": "SWISSBORG",
+      "win_rate": 0.3870967741935484
+    },
+    {
+      "avg_trade_return": 0.1065650166116412,
+      "cagr": 0.6127452733101644,
+      "cg_id": "theta-token",
+      "max_dd": -0.9114868823833873,
+      "n_trades": 157,
+      "sharpe": 0.979493989429823,
+      "symbol": "THETA-TOKEN",
+      "win_rate": 0.35443037974683544
+    },
+    {
+      "avg_trade_return": 0.0911814848124962,
+      "cagr": 0.7441084274814291,
+      "cg_id": "okb",
+      "max_dd": -0.5872997743955808,
+      "n_trades": 169,
+      "sharpe": 0.9641499545008155,
+      "symbol": "OKB",
+      "win_rate": 0.4235294117647059
+    },
+    {
+      "avg_trade_return": 0.0959009687318836,
+      "cagr": 0.5460677449857541,
+      "cg_id": "cardano",
+      "max_dd": -0.862031601913108,
+      "n_trades": 159,
+      "sharpe": 0.9581461534487159,
+      "symbol": "CARDANO",
+      "win_rate": 0.375
+    },
+    {
+      "avg_trade_return": 0.3155992598980796,
+      "cagr": 0.6714476790161676,
+      "cg_id": "chiliz",
+      "max_dd": -0.7936826836856445,
+      "n_trades": 160,
+      "sharpe": 0.955685601341695,
+      "symbol": "CHILIZ",
+      "win_rate": 0.425
+    },
+    {
+      "avg_trade_return": 0.09778259236007501,
+      "cagr": 0.6511203221666444,
+      "cg_id": "axie-infinity",
+      "max_dd": -0.9407729805832238,
+      "n_trades": 144,
+      "sharpe": 0.9508008129996953,
+      "symbol": "AXIE-INFINITY",
+      "win_rate": 0.3888888888888889
+    },
+    {
+      "avg_trade_return": 0.2599724916094773,
+      "cagr": 0.7653823363289534,
+      "cg_id": "chain-2",
+      "max_dd": -0.9091712785401468,
+      "n_trades": 90,
+      "sharpe": 0.9470799936779747,
+      "symbol": "CHAIN-2",
+      "win_rate": 0.37777777777777777
+    },
+    {
+      "avg_trade_return": 0.07713007963060521,
+      "cagr": 0.558053765974748,
+      "cg_id": "sun-token",
+      "max_dd": -0.7276433573635355,
+      "n_trades": 137,
+      "sharpe": 0.9023778148046234,
+      "symbol": "SUN-TOKEN",
+      "win_rate": 0.391304347826087
+    },
+    {
+      "avg_trade_return": 0.07559814807167858,
+      "cagr": 0.5104228976131733,
+      "cg_id": "crypto-com-chain",
+      "max_dd": -0.7358741653171179,
+      "n_trades": 153,
+      "sharpe": 0.8878396715899503,
+      "symbol": "CRYPTO-COM-CHAIN",
+      "win_rate": 0.4025974025974026
+    },
+    {
+      "avg_trade_return": 0.07413766614710306,
+      "cagr": 0.5021039960988603,
+      "cg_id": "zcash",
+      "max_dd": -0.8089353409232898,
+      "n_trades": 173,
+      "sharpe": 0.8819202278774748,
+      "symbol": "ZCASH",
+      "win_rate": 0.41379310344827586
+    },
+    {
+      "avg_trade_return": 0.08541221003280723,
+      "cagr": 0.5038400691704288,
+      "cg_id": "stellar",
+      "max_dd": -0.7766412366601774,
+      "n_trades": 157,
+      "sharpe": 0.8699630213970225,
+      "symbol": "STELLAR",
+      "win_rate": 0.379746835443038
+    },
+    {
+      "avg_trade_return": 0.05465797242496166,
+      "cagr": 0.4913366924103093,
+      "cg_id": "gatechain-token",
+      "max_dd": -0.5817443220644127,
+      "n_trades": 162,
+      "sharpe": 0.8685112007652834,
+      "symbol": "GATECHAIN-TOKEN",
+      "win_rate": 0.41975308641975306
+    },
+    {
+      "avg_trade_return": 0.021845189701043807,
+      "cagr": 0.3089271680454071,
+      "cg_id": "kucoin-shares",
+      "max_dd": -0.3770646979408365,
+      "n_trades": 70,
+      "sharpe": 0.8648931725304305,
+      "symbol": "KUCOIN-SHARES",
+      "win_rate": 0.4
+    },
+    {
+      "avg_trade_return": 0.0845187562901671,
+      "cagr": 0.46646235325095686,
+      "cg_id": "near",
+      "max_dd": -0.7600702946567336,
+      "n_trades": 139,
+      "sharpe": 0.863349465339929,
+      "symbol": "NEAR",
+      "win_rate": 0.4
+    },
+    {
+      "avg_trade_return": 0.052845930341737145,
+      "cagr": 0.44337809053842614,
+      "cg_id": "trust-wallet-token",
+      "max_dd": -0.6144580805339598,
+      "n_trades": 137,
+      "sharpe": 0.8445924280874343,
+      "symbol": "TRUST-WALLET-TOKEN",
+      "win_rate": 0.391304347826087
+    },
+    {
+      "avg_trade_return": 0.06885908991937645,
+      "cagr": 0.4289930395793682,
+      "cg_id": "vechain",
+      "max_dd": -0.8989363344185397,
+      "n_trades": 157,
+      "sharpe": 0.8371187454922381,
+      "symbol": "VECHAIN",
+      "win_rate": 0.3924050632911392
+    },
+    {
+      "avg_trade_return": 0.040901513910720624,
+      "cagr": 0.3450231985010195,
+      "cg_id": "ethereum",
+      "max_dd": -0.5810541889829635,
+      "n_trades": 180,
+      "sharpe": 0.8087405778644572,
+      "symbol": "ETHEREUM",
+      "win_rate": 0.3888888888888889
+    },
+    {
+      "avg_trade_return": 0.060387672637488926,
+      "cagr": 0.384645913132281,
+      "cg_id": "kaspa",
+      "max_dd": -0.5979244506941409,
+      "n_trades": 75,
+      "sharpe": 0.8027395430414558,
+      "symbol": "KASPA",
+      "win_rate": 0.3157894736842105
+    },
+    {
+      "avg_trade_return": 0.04756076360849055,
+      "cagr": 0.3747332261719989,
+      "cg_id": "golem",
+      "max_dd": -0.5523273689050582,
+      "n_trades": 73,
+      "sharpe": 0.7654538800035137,
+      "symbol": "GOLEM",
+      "win_rate": 0.43243243243243246
+    },
+    {
+      "avg_trade_return": 0.07518319718526255,
+      "cagr": 0.3193215138857557,
+      "cg_id": "bonk",
+      "max_dd": -0.7527619703760827,
+      "n_trades": 57,
+      "sharpe": 0.7649207724020493,
+      "symbol": "BONK",
+      "win_rate": 0.4482758620689655
+    },
+    {
+      "avg_trade_return": 0.08943533079405902,
+      "cagr": 0.3108805953520164,
+      "cg_id": "thorchain",
+      "max_dd": -0.8883906553103046,
+      "n_trades": 137,
+      "sharpe": 0.7572271723363928,
+      "symbol": "THORCHAIN",
+      "win_rate": 0.391304347826087
+    },
+    {
+      "avg_trade_return": 0.0633604877459619,
+      "cagr": 0.3289085035964663,
+      "cg_id": "akash-network",
+      "max_dd": -0.8767365325623121,
+      "n_trades": 135,
+      "sharpe": 0.7471616644039317,
+      "symbol": "AKASH-NETWORK",
+      "win_rate": 0.3235294117647059
+    },
+    {
+      "avg_trade_return": 0.05657342329000013,
+      "cagr": 0.313984732918803,
+      "cg_id": "ethereum-classic",
+      "max_dd": -0.8824726820408182,
+      "n_trades": 169,
+      "sharpe": 0.7201098311343439,
+      "symbol": "ETHEREUM-CLASSIC",
+      "win_rate": 0.3764705882352941
+    },
+    {
+      "avg_trade_return": 0.09692106234102305,
+      "cagr": 0.32575694008396905,
+      "cg_id": "hedera-hashgraph",
+      "max_dd": -0.9440439446291329,
+      "n_trades": 179,
+      "sharpe": 0.7114498180545911,
+      "symbol": "HEDERA-HASHGRAPH",
+      "win_rate": 0.37777777777777777
+    },
+    {
+      "avg_trade_return": 0.16458256125517232,
+      "cagr": 0.19969442569802842,
+      "cg_id": "pudgy-penguins",
+      "max_dd": -0.7589733294810822,
+      "n_trades": 28,
+      "sharpe": 0.7104736510350407,
+      "symbol": "PUDGY-PENGUINS",
+      "win_rate": 0.2857142857142857
+    },
+    {
+      "avg_trade_return": 0.04318440402890775,
+      "cagr": 0.24244357233424818,
+      "cg_id": "chainlink",
+      "max_dd": -0.8134313900058083,
+      "n_trades": 181,
+      "sharpe": 0.6568300754970355,
+      "symbol": "CHAINLINK",
+      "win_rate": 0.4065934065934066
+    },
+    {
+      "avg_trade_return": 0.029781880311414606,
+      "cagr": 0.27655879241610726,
+      "cg_id": "beldex",
+      "max_dd": -0.6069306032344168,
+      "n_trades": 111,
+      "sharpe": 0.6527665748036701,
+      "symbol": "BELDEX",
+      "win_rate": 0.3392857142857143
+    },
+    {
+      "avg_trade_return": 0.046732541600908076,
+      "cagr": 0.24420595367059517,
+      "cg_id": "dash",
+      "max_dd": -0.7307891100196948,
+      "n_trades": 160,
+      "sharpe": 0.6507686198851673,
+      "symbol": "DASH",
+      "win_rate": 0.3625
+    },
+    {
+      "avg_trade_return": 0.08356751034501635,
+      "cagr": 0.22142443924638022,
+      "cg_id": "the-sandbox",
+      "max_dd": -0.8858216157153517,
+      "n_trades": 147,
+      "sharpe": 0.6502524540913374,
+      "symbol": "THE-SANDBOX",
+      "win_rate": 0.3108108108108108
+    },
+    {
+      "avg_trade_return": 0.06662082667384608,
+      "cagr": 0.25535595061357386,
+      "cg_id": "shiba-inu",
+      "max_dd": -0.8239936504289496,
+      "n_trades": 127,
+      "sharpe": 0.6484843712012164,
+      "symbol": "SHIBA-INU",
+      "win_rate": 0.421875
+    },
+    {
+      "avg_trade_return": 0.04642748087764528,
+      "cagr": 0.04758507585464655,
+      "cg_id": "grass",
+      "max_dd": -0.8564744140052425,
+      "n_trades": 52,
+      "sharpe": 0.6278213334288896,
+      "symbol": "GRASS",
+      "win_rate": 0.38461538461538464
+    },
+    {
+      "avg_trade_return": 0.07554564786595998,
+      "cagr": 0.13472508076532286,
+      "cg_id": "telcoin",
+      "max_dd": -0.7762830672967712,
+      "n_trades": 117,
+      "sharpe": 0.5993454112678019,
+      "symbol": "TELCOIN",
+      "win_rate": 0.3220338983050847
+    },
+    {
+      "avg_trade_return": 0.02781070637815655,
+      "cagr": 0.18545341613126798,
+      "cg_id": "monero",
+      "max_dd": -0.6855085531625135,
+      "n_trades": 112,
+      "sharpe": 0.5889696640699663,
+      "symbol": "MONERO",
+      "win_rate": 0.35714285714285715
+    },
+    {
+      "avg_trade_return": 0.05706161862658968,
+      "cagr": 0.16849231275616194,
+      "cg_id": "aave",
+      "max_dd": -0.7819528941593896,
+      "n_trades": 151,
+      "sharpe": 0.5840376564645962,
+      "symbol": "AAVE",
+      "win_rate": 0.3026315789473684
+    },
+    {
+      "avg_trade_return": 0.04964201801596721,
+      "cagr": 0.11879533235250372,
+      "cg_id": "injective-protocol",
+      "max_dd": -0.928586973484247,
+      "n_trades": 163,
+      "sharpe": 0.5802858256194506,
+      "symbol": "INJECTIVE-PROTOCOL",
+      "win_rate": 0.35365853658536583
+    },
+    {
+      "avg_trade_return": 0.1090897111597539,
+      "cagr": 0.11051011938917288,
+      "cg_id": "arweave",
+      "max_dd": -0.8195110854706652,
+      "n_trades": 121,
+      "sharpe": 0.5800038024027685,
+      "symbol": "ARWEAVE",
+      "win_rate": 0.36065573770491804
+    },
+    {
+      "avg_trade_return": 0.028946322062718615,
+      "cagr": -0.0316045709987528,
+      "cg_id": "ape-and-pepe",
+      "max_dd": -0.654098017470031,
+      "n_trades": 47,
+      "sharpe": 0.5606584826005986,
+      "symbol": "APE-AND-PEPE",
+      "win_rate": 0.2916666666666667
+    },
+    {
+      "avg_trade_return": 0.05986113271478637,
+      "cagr": 0.13842119105574446,
+      "cg_id": "pendle",
+      "max_dd": -0.8109819862097737,
+      "n_trades": 83,
+      "sharpe": 0.5534524733250736,
+      "symbol": "PENDLE",
+      "win_rate": 0.35714285714285715
+    },
+    {
+      "avg_trade_return": 0.08037577358922039,
+      "cagr": 0.3127128118503302,
+      "cg_id": "zano",
+      "max_dd": -0.9380717361416719,
+      "n_trades": 193,
+      "sharpe": 0.5371539929784162,
+      "symbol": "ZANO",
+      "win_rate": 0.41237113402061853
+    },
+    {
+      "avg_trade_return": 0.1210204610212024,
+      "cagr": -0.1079174744856245,
+      "cg_id": "story-2",
+      "max_dd": -0.8969135325781973,
+      "n_trades": 21,
+      "sharpe": 0.5342344925017631,
+      "symbol": "STORY-2",
+      "win_rate": 0.45454545454545453
+    },
+    {
+      "avg_trade_return": 0.025405800187796423,
+      "cagr": 0.14777051877214498,
+      "cg_id": "bitcoin-cash",
+      "max_dd": -0.746589017223274,
+      "n_trades": 196,
+      "sharpe": 0.5305094233282514,
+      "symbol": "BITCOIN-CASH",
+      "win_rate": 0.3877551020408163
+    },
+    {
+      "avg_trade_return": 0.05229588818012695,
+      "cagr": 0.06352309202908879,
+      "cg_id": "raydium",
+      "max_dd": -0.9335783320645982,
+      "n_trades": 122,
+      "sharpe": 0.5242027483856291,
+      "symbol": "RAYDIUM",
+      "win_rate": 0.3442622950819672
+    },
+    {
+      "avg_trade_return": 0.021557546332453607,
+      "cagr": 0.14696154559946484,
+      "cg_id": "quant-network",
+      "max_dd": -0.6637529278348075,
+      "n_trades": 131,
+      "sharpe": 0.5225036301242425,
+      "symbol": "QUANT-NETWORK",
+      "win_rate": 0.3181818181818182
+    },
+    {
+      "avg_trade_return": 0.06619362724680988,
+      "cagr": 0.04914583229563929,
+      "cg_id": "the-graph",
+      "max_dd": -0.8517074199691946,
+      "n_trades": 137,
+      "sharpe": 0.5177253769996419,
+      "symbol": "THE-GRAPH",
+      "win_rate": 0.36231884057971014
+    },
+    {
+      "avg_trade_return": 0.030586448575591656,
+      "cagr": 0.17483643379845293,
+      "cg_id": "htx-dao",
+      "max_dd": -0.6305361398306848,
+      "n_trades": 55,
+      "sharpe": 0.5125629417876292,
+      "symbol": "HTX-DAO",
+      "win_rate": 0.42857142857142855
+    },
+    {
+      "avg_trade_return": 0.0295609202942073,
+      "cagr": 0.15794144065736693,
+      "cg_id": "tron",
+      "max_dd": -0.7778509983902907,
+      "n_trades": 191,
+      "sharpe": 0.5116743273522684,
+      "symbol": "TRON",
+      "win_rate": 0.46875
+    },
+    {
+      "avg_trade_return": 0.012582472979499859,
+      "cagr": 0.07602987004281392,
+      "cg_id": "jupiter-exchange-solana",
+      "max_dd": -0.7899073438091511,
+      "n_trades": 67,
+      "sharpe": 0.4909066716228399,
+      "symbol": "JUPITER-EXCHANGE-SOLANA",
+      "win_rate": 0.4117647058823529
+    },
+    {
+      "avg_trade_return": 0.04642113874246656,
+      "cagr": 0.03373928187923392,
+      "cg_id": "decentraland",
+      "max_dd": -0.8912008136630529,
+      "n_trades": 163,
+      "sharpe": 0.46570215753570104,
+      "symbol": "DECENTRALAND",
+      "win_rate": 0.3170731707317073
+    },
+    {
+      "avg_trade_return": 0.07297780994545681,
+      "cagr": -0.03615873618268606,
+      "cg_id": "gala",
+      "max_dd": -0.9526038927791253,
+      "n_trades": 117,
+      "sharpe": 0.45460080327085606,
+      "symbol": "GALA",
+      "win_rate": 0.288135593220339
+    },
+    {
+      "avg_trade_return": 0.05173856445145909,
+      "cagr": 0.03827920723498979,
+      "cg_id": "filecoin",
+      "max_dd": -0.864364326930078,
+      "n_trades": 125,
+      "sharpe": 0.44863001398796865,
+      "symbol": "FILECOIN",
+      "win_rate": 0.2857142857142857
+    },
+    {
+      "avg_trade_return": 0.03754547698705532,
+      "cagr": 0.06725180103165007,
+      "cg_id": "pancakeswap-token",
+      "max_dd": -0.7756158781983861,
+      "n_trades": 129,
+      "sharpe": 0.4485590716896323,
+      "symbol": "PANCAKESWAP-TOKEN",
+      "win_rate": 0.38461538461538464
+    },
+    {
+      "avg_trade_return": 0.03514223027433105,
+      "cagr": 0.015281545411012898,
+      "cg_id": "blockstack",
+      "max_dd": -0.8743805514714673,
+      "n_trades": 175,
+      "sharpe": 0.44455908951575485,
+      "symbol": "BLOCKSTACK",
+      "win_rate": 0.375
+    },
+    {
+      "avg_trade_return": 0.028235701198408666,
+      "cagr": 0.07351938682352221,
+      "cg_id": "xdce-crowd-sale",
+      "max_dd": -0.767292032221708,
+      "n_trades": 127,
+      "sharpe": 0.41327200334420794,
+      "symbol": "XDCE-CROWD-SALE",
+      "win_rate": 0.359375
+    },
+    {
+      "avg_trade_return": 0.0215791391384947,
+      "cagr": 0.00038874360892560134,
+      "cg_id": "terra-luna",
+      "max_dd": -0.8300610396247903,
+      "n_trades": 94,
+      "sharpe": 0.4011581450845617,
+      "symbol": "TERRA-LUNA",
+      "win_rate": 0.23404255319148937
+    },
+    {
+      "avg_trade_return": 0.028853088544896575,
+      "cagr": 0.00609142076434166,
+      "cg_id": "neo",
+      "max_dd": -0.9363506041259496,
+      "n_trades": 169,
+      "sharpe": 0.3824611037301188,
+      "symbol": "NEO",
+      "win_rate": 0.4117647058823529
+    },
+    {
+      "avg_trade_return": 0.022282317119876837,
+      "cagr": 0.00802205497068087,
+      "cg_id": "tezos",
+      "max_dd": -0.9092698581717105,
+      "n_trades": 175,
+      "sharpe": 0.37187500560989506,
+      "symbol": "TEZOS",
+      "win_rate": 0.3409090909090909
+    },
+    {
+      "avg_trade_return": 0.01076040697985474,
+      "cagr": 0.0405269303152076,
+      "cg_id": "mantle",
+      "max_dd": -0.5794322083210811,
+      "n_trades": 89,
+      "sharpe": 0.3692437347817081,
+      "symbol": "MANTLE",
+      "win_rate": 0.35555555555555557
+    },
+    {
+      "avg_trade_return": 0.027591578254359157,
+      "cagr": -0.014631297846335989,
+      "cg_id": "decred",
+      "max_dd": -0.8794345662158062,
+      "n_trades": 161,
+      "sharpe": 0.3569660248840748,
+      "symbol": "DECRED",
+      "win_rate": 0.3333333333333333
+    },
+    {
+      "avg_trade_return": 0.01728209717768217,
+      "cagr": -0.0458655584881289,
+      "cg_id": "sei-network",
+      "max_dd": -0.8441839871857048,
+      "n_trades": 75,
+      "sharpe": 0.34596573165681893,
+      "symbol": "SEI-NETWORK",
+      "win_rate": 0.2894736842105263
+    },
+    {
+      "avg_trade_return": 0.05045209331284825,
+      "cagr": -0.03293147647020811,
+      "cg_id": "1inch",
+      "max_dd": -0.8556061494509267,
+      "n_trades": 131,
+      "sharpe": 0.3435864897641991,
+      "symbol": "1INCH",
+      "win_rate": 0.3333333333333333
+    },
+    {
+      "avg_trade_return": 0.04986164004056903,
+      "cagr": -0.05184333748139203,
+      "cg_id": "aptos",
+      "max_dd": -0.905936067983681,
+      "n_trades": 89,
+      "sharpe": 0.3052086726578715,
+      "symbol": "APTOS",
+      "win_rate": 0.35555555555555557
+    },
+    {
+      "avg_trade_return": 0.03163796311861434,
+      "cagr": -0.07344371398134941,
+      "cg_id": "algorand",
+      "max_dd": -0.9245846537255917,
+      "n_trades": 186,
+      "sharpe": 0.30226216184465476,
+      "symbol": "ALGORAND",
+      "win_rate": 0.3010752688172043
+    },
+    {
+      "avg_trade_return": 0.027515871610202147,
+      "cagr": -0.08543260731312419,
+      "cg_id": "compound-governance-token",
+      "max_dd": -0.8210768298567088,
+      "n_trades": 162,
+      "sharpe": 0.2876581732653385,
+      "symbol": "COMPOUND-GOVERNANCE-TOKEN",
+      "win_rate": 0.32098765432098764
+    },
+    {
+      "avg_trade_return": 0.0530038860493249,
+      "cagr": -0.21343230975409122,
+      "cg_id": "curve-dao-token",
+      "max_dd": -0.9360376805044364,
+      "n_trades": 147,
+      "sharpe": 0.28458200337947287,
+      "symbol": "CURVE-DAO-TOKEN",
+      "win_rate": 0.2972972972972973
+    },
+    {
+      "avg_trade_return": 0.04663099438177289,
+      "cagr": -0.08517364159047913,
+      "cg_id": "uniswap",
+      "max_dd": -0.8703056986194169,
+      "n_trades": 163,
+      "sharpe": 0.27530355282074365,
+      "symbol": "UNISWAP",
+      "win_rate": 0.2926829268292683
+    },
+    {
+      "avg_trade_return": 0.023389151376958878,
+      "cagr": -0.18058260753848543,
+      "cg_id": "worldcoin-wld",
+      "max_dd": -0.9076269492599492,
+      "n_trades": 75,
+      "sharpe": 0.26945468217348995,
+      "symbol": "WORLDCOIN-WLD",
+      "win_rate": 0.34210526315789475
+    },
+    {
+      "avg_trade_return": 0.029941471958714695,
+      "cagr": -0.12155505533324107,
+      "cg_id": "ultima",
+      "max_dd": -0.8454183335690759,
+      "n_trades": 69,
+      "sharpe": 0.26558932746539027,
+      "symbol": "ULTIMA",
+      "win_rate": 0.2571428571428571
+    },
+    {
+      "avg_trade_return": 0.01224168956682612,
+      "cagr": 0.02633879124675942,
+      "cg_id": "leo-token",
+      "max_dd": -0.6382683187117473,
+      "n_trades": 192,
+      "sharpe": 0.26518916994582403,
+      "symbol": "LEO-TOKEN",
+      "win_rate": 0.4270833333333333
+    },
+    {
+      "avg_trade_return": 0.0020922375444773042,
+      "cagr": -0.19169646959282394,
+      "cg_id": "lighter",
+      "max_dd": -0.8370102023723599,
+      "n_trades": 103,
+      "sharpe": 0.249552321466127,
+      "symbol": "LIGHTER",
+      "win_rate": 0.3076923076923077
+    },
+    {
+      "avg_trade_return": 0.02005852906002521,
+      "cagr": -0.28833826129374174,
+      "cg_id": "spx6900",
+      "max_dd": -0.826026330305367,
+      "n_trades": 45,
+      "sharpe": 0.2478680901441448,
+      "symbol": "SPX6900",
+      "win_rate": 0.43478260869565216
+    },
+    {
+      "avg_trade_return": 0.03267773205144305,
+      "cagr": -0.0802984497317829,
+      "cg_id": "iota",
+      "max_dd": -0.9455905086928907,
+      "n_trades": 171,
+      "sharpe": 0.24065114985967842,
+      "symbol": "IOTA",
+      "win_rate": 0.29069767441860467
+    },
+    {
+      "avg_trade_return": 0.013752787441684067,
+      "cagr": -0.04880369972281351,
+      "cg_id": "litecoin",
+      "max_dd": -0.8320044113339081,
+      "n_trades": 167,
+      "sharpe": 0.23445355804760248,
+      "symbol": "LITECOIN",
+      "win_rate": 0.40476190476190477
+    },
+    {
+      "avg_trade_return": 0.005113110677047024,
+      "cagr": -0.2722884873513447,
+      "cg_id": "dogwifcoin",
+      "max_dd": -0.8359170823971599,
+      "n_trades": 59,
+      "sharpe": 0.23353677263171052,
+      "symbol": "DOGWIFCOIN",
+      "win_rate": 0.36666666666666664
+    },
+    {
+      "avg_trade_return": 0.015390611376012373,
+      "cagr": -0.1428319235192652,
+      "cg_id": "immutable-x",
+      "max_dd": -0.7779374270372876,
+      "n_trades": 109,
+      "sharpe": 0.20981231825621446,
+      "symbol": "IMMUTABLE-X",
+      "win_rate": 0.38181818181818183
+    },
+    {
+      "avg_trade_return": 0.02397817144265779,
+      "cagr": -0.13208527180237517,
+      "cg_id": "cosmos",
+      "max_dd": -0.9738071972273651,
+      "n_trades": 191,
+      "sharpe": 0.20818768736363064,
+      "symbol": "COSMOS",
+      "win_rate": 0.3958333333333333
+    },
+    {
+      "avg_trade_return": 0.03218346121750592,
+      "cagr": -0.10140949535866317,
+      "cg_id": "bittensor",
+      "max_dd": -0.7737127361623782,
+      "n_trades": 61,
+      "sharpe": 0.20593810009052466,
+      "symbol": "BITTENSOR",
+      "win_rate": 0.3870967741935484
+    },
+    {
+      "avg_trade_return": 0.007925054160327018,
+      "cagr": -0.17362061629630499,
+      "cg_id": "layerzero",
+      "max_dd": -0.7141681056939986,
+      "n_trades": 45,
+      "sharpe": 0.16923206042423863,
+      "symbol": "LAYERZERO",
+      "win_rate": 0.43478260869565216
+    },
+    {
+      "avg_trade_return": 0.025111643372635273,
+      "cagr": -0.05370661127956233,
+      "cg_id": "gnosis",
+      "max_dd": -0.742301877398521,
+      "n_trades": 132,
+      "sharpe": 0.16866542061864168,
+      "symbol": "GNOSIS",
+      "win_rate": 0.36363636363636365
+    },
+    {
+      "avg_trade_return": 0.008368579618906758,
+      "cagr": -0.01480724739617345,
+      "cg_id": "mx-token",
+      "max_dd": -0.5442659971097656,
+      "n_trades": 114,
+      "sharpe": 0.16062533028390766,
+      "symbol": "MX-TOKEN",
+      "win_rate": 0.2807017543859649
+    },
+    {
+      "avg_trade_return": 0.03567234976896261,
+      "cagr": -0.2286249726249876,
+      "cg_id": "dexe",
+      "max_dd": -0.9394509350000991,
+      "n_trades": 146,
+      "sharpe": 0.15566095224839277,
+      "symbol": "DEXE",
+      "win_rate": 0.2602739726027397
+    },
+    {
+      "avg_trade_return": 0.005890453114838192,
+      "cagr": -0.14295158939162977,
+      "cg_id": "just",
+      "max_dd": -0.77900074925702,
+      "n_trades": 168,
+      "sharpe": 0.1405490049330167,
+      "symbol": "JUST",
+      "win_rate": 0.35714285714285715
+    },
+    {
+      "avg_trade_return": 0.011134122294915328,
+      "cagr": -0.14565153483231286,
+      "cg_id": "olympus",
+      "max_dd": -0.967974185448059,
+      "n_trades": 150,
+      "sharpe": 0.09097836390736004,
+      "symbol": "OLYMPUS",
+      "win_rate": 0.37333333333333335
+    },
+    {
+      "avg_trade_return": -0.027063382404785778,
+      "cagr": -0.2974706620965136,
+      "cg_id": "ethena",
+      "max_dd": -0.7432395584537097,
+      "n_trades": 53,
+      "sharpe": 0.08649096264159205,
+      "symbol": "ETHENA",
+      "win_rate": 0.3333333333333333
+    },
+    {
+      "avg_trade_return": 0.022453871260795507,
+      "cagr": -0.2483583008514082,
+      "cg_id": "convex-finance",
+      "max_dd": -0.8692578787267579,
+      "n_trades": 121,
+      "sharpe": 0.06969621589726328,
+      "symbol": "CONVEX-FINANCE",
+      "win_rate": 0.2459016393442623
+    },
+    {
+      "avg_trade_return": 0.029447360283680793,
+      "cagr": -0.24707908565037306,
+      "cg_id": "origintrail",
+      "max_dd": -0.7134381403676224,
+      "n_trades": 52,
+      "sharpe": 0.054407718135778445,
+      "symbol": "ORIGINTRAIL",
+      "win_rate": 0.34615384615384615
+    },
+    {
+      "avg_trade_return": 0.012710535155142044,
+      "cagr": -0.2003987155342407,
+      "cg_id": "render-token",
+      "max_dd": -0.8161709481708749,
+      "n_trades": 49,
+      "sharpe": 0.04130672191035901,
+      "symbol": "RENDER-TOKEN",
+      "win_rate": 0.36
+    },
+    {
+      "avg_trade_return": -0.017885483553516136,
+      "cagr": -0.3243044008214837,
+      "cg_id": "zksync",
+      "max_dd": -0.6416721911888325,
+      "n_trades": 53,
+      "sharpe": 0.0312441387596838,
+      "symbol": "ZKSYNC",
+      "win_rate": 0.4074074074074074
+    },
+    {
+      "avg_trade_return": 0.014625180015011723,
+      "cagr": -0.2259807821582257,
+      "cg_id": "polkadot",
+      "max_dd": -0.9080939860739735,
+      "n_trades": 143,
+      "sharpe": 0.023610436977738545,
+      "symbol": "POLKADOT",
+      "win_rate": 0.3333333333333333
+    },
+    {
+      "avg_trade_return": 0.027742010057666747,
+      "cagr": -0.3927106777954462,
+      "cg_id": "jasmycoin",
+      "max_dd": -0.9303101301341987,
+      "n_trades": 127,
+      "sharpe": 0.009750410752034264,
+      "symbol": "JASMYCOIN",
+      "win_rate": 0.25
+    },
+    {
+      "avg_trade_return": 0.003443726184505854,
+      "cagr": -0.40849895113067836,
+      "cg_id": "hastra-prime",
+      "max_dd": -0.9394465727215058,
+      "n_trades": 95,
+      "sharpe": -0.0014817956732627226,
+      "symbol": "HASTRA-PRIME",
+      "win_rate": 0.3333333333333333
+    },
+    {
+      "avg_trade_return": 0.0023636105275682195,
+      "cagr": -0.3353185516740992,
+      "cg_id": "optimism",
+      "max_dd": -0.95729718067976,
+      "n_trades": 111,
+      "sharpe": -0.0034059478236715414,
+      "symbol": "OPTIMISM",
+      "win_rate": 0.3392857142857143
+    },
+    {
+      "avg_trade_return": -0.006596010919846585,
+      "cagr": -0.2890051034161537,
+      "cg_id": "internet-computer",
+      "max_dd": -0.9312608709907384,
+      "n_trades": 133,
+      "sharpe": -0.0049031181086602845,
+      "symbol": "INTERNET-COMPUTER",
+      "win_rate": 0.34328358208955223
+    },
+    {
+      "avg_trade_return": 0.006470309517079714,
+      "cagr": -0.09444982039250405,
+      "cg_id": "nexo",
+      "max_dd": -0.5512514333204873,
+      "n_trades": 115,
+      "sharpe": -0.04141451484665898,
+      "symbol": "NEXO",
+      "win_rate": 0.3275862068965517
+    },
+    {
+      "avg_trade_return": -0.010275586667026347,
+      "cagr": -0.39507035199556617,
+      "cg_id": "celestia",
+      "max_dd": -0.950217038651969,
+      "n_trades": 71,
+      "sharpe": -0.044204476372416916,
+      "symbol": "CELESTIA",
+      "win_rate": 0.3055555555555556
+    },
+    {
+      "avg_trade_return": 0.0002467822275882625,
+      "cagr": -0.005090207132532165,
+      "cg_id": "eutbl",
+      "max_dd": -0.061051118949701166,
+      "n_trades": 49,
+      "sharpe": -0.05739361108853509,
+      "symbol": "EUTBL",
+      "win_rate": 0.4
+    },
+    {
+      "avg_trade_return": -0.005536378484608588,
+      "cagr": -0.3280688241489441,
+      "cg_id": "ethereum-name-service",
+      "max_dd": -0.8804664372606389,
+      "n_trades": 121,
+      "sharpe": -0.06664017892837111,
+      "symbol": "ETHEREUM-NAME-SERVICE",
+      "win_rate": 0.2459016393442623
+    },
+    {
+      "avg_trade_return": -0.027171460010168447,
+      "cagr": -0.6772888502046759,
+      "cg_id": "fartcoin",
+      "max_dd": -0.9050276967625666,
+      "n_trades": 37,
+      "sharpe": -0.07009184649194843,
+      "symbol": "FARTCOIN",
+      "win_rate": 0.3684210526315789
+    },
+    {
+      "avg_trade_return": -0.02157486669749749,
+      "cagr": -0.2507656752758737,
+      "cg_id": "ecash",
+      "max_dd": -0.8254075920258948,
+      "n_trades": 123,
+      "sharpe": -0.07817803811649421,
+      "symbol": "ECASH",
+      "win_rate": 0.27419354838709675
+    },
+    {
+      "avg_trade_return": -0.0213971224417797,
+      "cagr": -0.39649011950088775,
+      "cg_id": "ether-fi",
+      "max_dd": -0.8414408246571922,
+      "n_trades": 59,
+      "sharpe": -0.08241742928618742,
+      "symbol": "ETHER-FI",
+      "win_rate": 0.36666666666666664
+    },
+    {
+      "avg_trade_return": -0.0012340944319411279,
+      "cagr": -0.2890361836790869,
+      "cg_id": "basic-attention-token",
+      "max_dd": -0.9758985470384305,
+      "n_trades": 207,
+      "sharpe": -0.10745836131614049,
+      "symbol": "BASIC-ATTENTION-TOKEN",
+      "win_rate": 0.34615384615384615
+    },
+    {
+      "avg_trade_return": -0.0736720849891675,
+      "cagr": -0.9818387694742317,
+      "cg_id": "reallink",
+      "max_dd": -0.9999999761807417,
+      "n_trades": 138,
+      "sharpe": -0.11567056896463172,
+      "symbol": "REALLINK",
+      "win_rate": 0.3333333333333333
+    },
+    {
+      "avg_trade_return": -0.022890288101793537,
+      "cagr": -0.4144346059413849,
+      "cg_id": "safepal",
+      "max_dd": -0.9755615568535688,
+      "n_trades": 162,
+      "sharpe": -0.1377976949185874,
+      "symbol": "SAFEPAL",
+      "win_rate": 0.2962962962962963
+    },
+    {
+      "avg_trade_return": -0.020998995186457578,
+      "cagr": -0.412021303845982,
+      "cg_id": "apecoin",
+      "max_dd": -0.9664691336835923,
+      "n_trades": 104,
+      "sharpe": -0.14183723171991663,
+      "symbol": "APECOIN",
+      "win_rate": 0.3269230769230769
+    },
+    {
+      "avg_trade_return": -0.031014680319335,
+      "cagr": -0.2659283988502351,
+      "cg_id": "ondo-finance",
+      "max_dd": -0.6030919038451317,
+      "n_trades": 31,
+      "sharpe": -0.19491150324632422,
+      "symbol": "ONDO-FINANCE",
+      "win_rate": 0.3125
+    },
+    {
+      "avg_trade_return": -0.0013563975945123886,
+      "cagr": -0.3047328056323685,
+      "cg_id": "flare-networks",
+      "max_dd": -0.7652331228287124,
+      "n_trades": 103,
+      "sharpe": -0.2411651818687072,
+      "symbol": "FLARE-NETWORKS",
+      "win_rate": 0.25
+    },
+    {
+      "avg_trade_return": -0.022193479889262464,
+      "cagr": -0.3441384545740839,
+      "cg_id": "bitcoin-cash-sv",
+      "max_dd": -0.9636756382539748,
+      "n_trades": 155,
+      "sharpe": -0.25396297147124497,
+      "symbol": "BITCOIN-CASH-SV",
+      "win_rate": 0.3076923076923077
+    },
+    {
+      "avg_trade_return": -0.004910782593413234,
+      "cagr": -0.3606592684722222,
+      "cg_id": "sui",
+      "max_dd": -0.8135414701103136,
+      "n_trades": 99,
+      "sharpe": -0.2649868011415296,
+      "symbol": "SUI",
+      "win_rate": 0.3
+    },
+    {
+      "avg_trade_return": 0.003573525325918707,
+      "cagr": -0.573285753769038,
+      "cg_id": "conflux-token",
+      "max_dd": -0.9917395761884604,
+      "n_trades": 157,
+      "sharpe": -0.2739015147796908,
+      "symbol": "CONFLUX-TOKEN",
+      "win_rate": 0.3037974683544304
+    },
+    {
+      "avg_trade_return": -0.0166840332038034,
+      "cagr": -0.37254392116612867,
+      "cg_id": "syrup",
+      "max_dd": -0.772671675374134,
+      "n_trades": 30,
+      "sharpe": -0.278339502469711,
+      "symbol": "SYRUP",
+      "win_rate": 0.3333333333333333
+    },
+    {
+      "avg_trade_return": -0.005516385190608945,
+      "cagr": -0.4154820207693579,
+      "cg_id": "aethir",
+      "max_dd": -0.845758087438917,
+      "n_trades": 45,
+      "sharpe": -0.33061697748975777,
+      "symbol": "AETHIR",
+      "win_rate": 0.391304347826087
+    },
+    {
+      "avg_trade_return": -0.031784838359566546,
+      "cagr": -0.4269885435606753,
+      "cg_id": "arbitrum",
+      "max_dd": -0.8956049027501805,
+      "n_trades": 77,
+      "sharpe": -0.39304385407535447,
+      "symbol": "ARBITRUM",
+      "win_rate": 0.2564102564102564
+    },
+    {
+      "avg_trade_return": 0.007129280875256899,
+      "cagr": -0.5338151503621822,
+      "cg_id": "lido-dao",
+      "max_dd": -0.9775767695271799,
+      "n_trades": 132,
+      "sharpe": -0.4127676148758723,
+      "symbol": "LIDO-DAO",
+      "win_rate": 0.2727272727272727
+    },
+    {
+      "avg_trade_return": -0.01265751270506111,
+      "cagr": -0.27805674354991716,
+      "cg_id": "apenft",
+      "max_dd": -0.7925578888772239,
+      "n_trades": 134,
+      "sharpe": -0.45872903823846795,
+      "symbol": "APENFT",
+      "win_rate": 0.208955223880597
+    },
+    {
+      "avg_trade_return": -0.018429174416136195,
+      "cagr": -0.5297894349599889,
+      "cg_id": "kaia",
+      "max_dd": -0.891135992453068,
+      "n_trades": 51,
+      "sharpe": -0.47060690258889254,
+      "symbol": "KAIA",
+      "win_rate": 0.2692307692307692
+    },
+    {
+      "avg_trade_return": -0.004921155984765666,
+      "cagr": -0.4606022789506218,
+      "cg_id": "btse-token",
+      "max_dd": -0.9842926643298823,
+      "n_trades": 203,
+      "sharpe": -0.5116975970585381,
+      "symbol": "BTSE-TOKEN",
+      "win_rate": 0.27450980392156865
+    },
+    {
+      "avg_trade_return": -0.02281799985484632,
+      "cagr": -0.4416962564796587,
+      "cg_id": "the-open-network",
+      "max_dd": -0.7519443224085208,
+      "n_trades": 51,
+      "sharpe": -0.6657872505854262,
+      "symbol": "THE-OPEN-NETWORK",
+      "win_rate": 0.3076923076923077
+    },
+    {
+      "avg_trade_return": -0.021134210879630026,
+      "cagr": -0.48267427951571995,
+      "cg_id": "polygon-ecosystem-token",
+      "max_dd": -0.829451060257422,
+      "n_trades": 47,
+      "sharpe": -0.7083390413344524,
+      "symbol": "POLYGON-ECOSYSTEM-TOKEN",
+      "win_rate": 0.25
+    },
+    {
+      "avg_trade_return": -0.03491122813128543,
+      "cagr": -0.6905796262279451,
+      "cg_id": "aerodrome-finance",
+      "max_dd": -0.8408177097936765,
+      "n_trades": 42,
+      "sharpe": -0.7709180855500599,
+      "symbol": "AERODROME-FINANCE",
+      "win_rate": 0.2857142857142857
+    },
+    {
+      "avg_trade_return": -0.06544700363778351,
+      "cagr": -0.6748020091351857,
+      "cg_id": "jito-governance-token",
+      "max_dd": -0.9636434718100554,
+      "n_trades": 77,
+      "sharpe": -0.8145274154699348,
+      "symbol": "JITO-GOVERNANCE-TOKEN",
+      "win_rate": 0.20512820512820512
+    },
+    {
+      "avg_trade_return": -0.06467386134172855,
+      "cagr": -0.6885667972105837,
+      "cg_id": "official-trump",
+      "max_dd": -0.847417995668287,
+      "n_trades": 31,
+      "sharpe": -0.824916546901845,
+      "symbol": "OFFICIAL-TRUMP",
+      "win_rate": 0.25
+    },
+    {
+      "avg_trade_return": -0.07969960066504878,
+      "cagr": -0.6807188289160968,
+      "cg_id": "starknet",
+      "max_dd": -0.9446674911637574,
+      "n_trades": 55,
+      "sharpe": -0.8799400678985173,
+      "symbol": "STARKNET",
+      "win_rate": 0.21428571428571427
+    },
+    {
+      "avg_trade_return": -0.09389732517988236,
+      "cagr": -0.7926452883555082,
+      "cg_id": "eigenlayer",
+      "max_dd": -0.9532815730207693,
+      "n_trades": 49,
+      "sharpe": -1.153231941392786,
+      "symbol": "EIGENLAYER",
+      "win_rate": 0.28
+    },
+    {
+      "avg_trade_return": -0.07365220265490408,
+      "cagr": -0.7383002675797874,
+      "cg_id": "sonic-3",
+      "max_dd": -0.9236003302674262,
+      "n_trades": 33,
+      "sharpe": -1.2475476939858121,
+      "symbol": "SONIC-3",
+      "win_rate": 0.23529411764705882
+    },
+    {
+      "avg_trade_return": -0.06789382120142597,
+      "cagr": -0.753575499953873,
+      "cg_id": "pyth-network",
+      "max_dd": -0.976534670492446,
+      "n_trades": 75,
+      "sharpe": -1.4430587048069716,
+      "symbol": "PYTH-NETWORK",
+      "win_rate": 0.2631578947368421
+    },
+    {
+      "avg_trade_return": -0.0024718808752537467,
+      "cagr": -0.1502579809563772,
+      "cg_id": "hashnote-usyc",
+      "max_dd": -0.1817625046733039,
+      "n_trades": 70,
+      "sharpe": -3.2885507748043588,
+      "symbol": "HASHNOTE-USYC",
+      "win_rate": 0.37142857142857144
+    },
+    {
+      "avg_trade_return": 0.00037632932905112593,
+      "cagr": -0.03305595048320131,
+      "cg_id": "superstate-short-duration-us-government-securities-fund-ustb",
+      "max_dd": -0.05580930533226347,
+      "n_trades": 142,
+      "sharpe": -7.756141335285274,
+      "symbol": "SUPERSTATE-SHORT-DURATION-US-GOVERNMENT-SECURITIES-FUND-USTB",
+      "win_rate": 0.9577464788732394
+    }
+  ],
+  "reliability": "caveats",
+  "worst": {
+    "cagr": -0.03305595048320131,
+    "cg_id": "superstate-short-duration-us-government-securities-fund-ustb",
+    "sharpe": -7.756141335285274,
+    "symbol": "SUPERSTATE-SHORT-DURATION-US-GOVERNMENT-SECURITIES-FUND-USTB"
+  }
+}

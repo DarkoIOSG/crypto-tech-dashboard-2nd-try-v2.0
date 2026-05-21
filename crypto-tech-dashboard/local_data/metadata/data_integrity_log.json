@@ -1,0 +1,100 @@
+{
+  "issues": [
+    {
+      "cg_id": "BITF",
+      "issues": [
+        "open outside [low, high]: 1 rows"
+      ]
+    },
+    {
+      "cg_id": "asteroid-shiba",
+      "issues": [
+        "gap > 7 days: 2 gaps (max=10 days)"
+      ]
+    },
+    {
+      "cg_id": "bittorrent",
+      "issues": [
+        "gap > 7 days: 1 gaps (max=1575 days)"
+      ]
+    },
+    {
+      "cg_id": "btse-token",
+      "issues": [
+        "gap > 7 days: 1 gaps (max=9 days)"
+      ]
+    },
+    {
+      "cg_id": "hashnote-usyc",
+      "issues": [
+        "gap > 7 days: 5 gaps (max=14 days)",
+        "stale: last_date=2026-05-01"
+      ]
+    },
+    {
+      "cg_id": "helium",
+      "issues": [
+        "gap > 7 days: 1 gaps (max=1305 days)"
+      ]
+    },
+    {
+      "cg_id": "janus-henderson-anemoy-aaa-clo-fund",
+      "issues": [
+        "gap > 7 days: 1 gaps (max=16 days)"
+      ]
+    },
+    {
+      "cg_id": "janus-henderson-anemoy-treasury-fund",
+      "issues": [
+        "gap > 7 days: 1 gaps (max=16 days)"
+      ]
+    },
+    {
+      "cg_id": "lighter",
+      "issues": [
+        "gap > 7 days: 1 gaps (max=455 days)"
+      ]
+    },
+    {
+      "cg_id": "monero",
+      "issues": [
+        "gap > 7 days: 1 gaps (max=811 days)"
+      ]
+    },
+    {
+      "cg_id": "reallink",
+      "issues": [
+        "gap > 7 days: 10 gaps (max=22 days)"
+      ]
+    },
+    {
+      "cg_id": "sahara-ai",
+      "issues": [
+        "gap > 7 days: 1 gaps (max=91 days)"
+      ]
+    },
+    {
+      "cg_id": "spiko-amundi-overnight-swap-fund-eur",
+      "issues": [
+        "gap > 7 days: 1 gaps (max=18 days)"
+      ]
+    },
+    {
+      "cg_id": "tagger",
+      "issues": [
+        "gap > 7 days: 1 gaps (max=90 days)"
+      ]
+    },
+    {
+      "cg_id": "ylds",
+      "issues": [
+        "gap > 7 days: 3 gaps (max=77 days)"
+      ]
+    }
+  ],
+  "last_run": "2026-05-18T08:46:32+00:00",
+  "ohlcv_ok": 233,
+  "ohlcv_with_issues": 15,
+  "tokens_checked": 248,
+  "top200_issues": []
+}

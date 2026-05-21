@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+  P2-4: macOS launchd template — copy to
+        ~/Library/LaunchAgents/com.iosg.crypto-dashboard.plist
+  after substituting PROJECT_DIR with the absolute path of
+  this project's `crypto-tech-dashboard/` directory.
+
+  Usage:
+      bash scripts/install_launchd.sh
+
+  Manual install:
+      sed -i '' "s|PROJECT_DIR_PLACEHOLDER|$PWD|g" \
+          scripts/com.iosg.crypto-dashboard.plist.template > \
+          ~/Library/LaunchAgents/com.iosg.crypto-dashboard.plist
+      launchctl load -w ~/Library/LaunchAgents/com.iosg.crypto-dashboard.plist
+-->
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.iosg.crypto-dashboard</string>
+
+    <key>WorkingDirectory</key>
+    <string>PROJECT_DIR_PLACEHOLDER</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>PROJECT_DIR_PLACEHOLDER/venv/bin/python</string>
+        <string>-m</string>
+        <string>uvicorn</string>
+        <string>backend.main:app</string>
+        <string>--host</string>
+        <string>127.0.0.1</string>
+        <string>--port</string>
+        <string>8080</string>
+    </array>
+
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>PYTHONUNBUFFERED</key>
+        <string>1</string>
+    </dict>
+
+    <key>RunAtLoad</key>
+    <true/>
+
+    <key>KeepAlive</key>
+    <true/>
+
+    <key>StandardOutPath</key>
+    <string>PROJECT_DIR_PLACEHOLDER/logs/uvicorn.out.log</string>
+
+    <key>StandardErrorPath</key>
+    <string>PROJECT_DIR_PLACEHOLDER/logs/uvicorn.err.log</string>
+
+    <key>ThrottleInterval</key>
+    <integer>15</integer>
+</dict>
+</plist>

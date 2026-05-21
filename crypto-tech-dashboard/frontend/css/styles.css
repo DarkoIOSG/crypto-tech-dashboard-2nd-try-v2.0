@@ -1,0 +1,1916 @@
+/* IOSG Crypto Tech Dashboard — TradingView-style dark theme */
+
+/* P0-F: HTML5 [hidden] attribute MUST win over component display rules.
+ * Without this, .score-badge { display: inline-flex } overrides the
+ * implicit `display:none` that the [hidden] attribute is supposed to apply,
+ * making the "Close-only data" badge show on every token (incl. bitcoin).
+ */
+[hidden] { display: none !important; }
+
+:root {
+    /* Dark theme — default (PLAN sec 7.2). */
+    --bg-primary: #131722;
+    --bg-secondary: #1e222d;
+    --bg-tertiary: #2a2e39;
+    --bg-elevated: #363a45;
+
+    --text-primary: #d1d4dc;
+    --text-secondary: #787b86;
+    /* Audit P0 (Milan designer): prior #4c525e measured 1.73:1 on --bg-tertiary
+     * (.rank-badge text) and 2.02:1 on --bg-secondary — both AA fail. Lifted
+     * to #9098A4 → 4.66 on tertiary / 5.46 on card / 6.15 on primary, all AA pass. */
+    --text-muted: #9098A4;
+    /* Audit P0: shadow tokens so light theme doesn't drop the pitch-black
+     * rgba(0,0,0,0.45) overlay onto white cards. Dark theme keeps the
+     * familiar deep shadow; light theme uses a soft slate tint.
+     *
+     * Milan-final tune: layered shadows for Stripe / Linear "depth" feel.
+     * Single-layer was --shadow-modal: 0 6px 18px rgba(0,0,0,0.45). Now
+     * 3-stop stack so dark cards feel like they're floating, not pasted.
+     * --shadow-card / --shadow-card-hover are NEW tokens for elevation +
+     * hover-lift micro-interaction. */
+    --shadow-card:        0 1px 2px rgba(0, 0, 0, 0.28), 0 1px 3px rgba(0, 0, 0, 0.20);
+    --shadow-card-hover:  0 6px 14px rgba(0, 0, 0, 0.32), 0 2px 5px rgba(0, 0, 0, 0.24);
+    --shadow-modal:       0 12px 32px rgba(0, 0, 0, 0.55), 0 4px 12px rgba(0, 0, 0, 0.32);
+    --shadow-drawer:      0 -8px 28px rgba(0, 0, 0, 0.52), 0 -2px 8px rgba(0, 0, 0, 0.28);
+    --shadow-backdrop:    rgba(0, 0, 0, 0.55);
+
+    /* Phase 3 Module 7.1 (Milan): saturation balance. Prior values jumped
+     * S=46%→100% across 5 accents — produced the "5 different products
+     * mashed up" feeling. Target band: S ∈ [60%, 72%] so accents feel like
+     * one family. Hue is preserved on every color. --chart-volume-spike
+     * keeps the bright #f7c948 since charts NEED saturation. */
+    --accent-green:  #26a69a;   /* S=62% — already in band, kept */
+    --accent-red:    #e25f5c;   /* was #ef5350 (S=83%) → S=69% */
+    --accent-blue:   #4670e1;   /* was #2962ff (S=100%) → S=72% */
+    --accent-yellow: #e2bf5c;   /* was #f7c948 (S=91%) → S=69% */
+    --accent-purple: #ab47bc;   /* S=46% — kept low, role-narrowed */
+
+    --border-primary: #363a45;
+    --border-subtle: #2a2e39;
+
+    --chart-candle-up: #26a69a;
+    --chart-candle-down: #ef5350;
+    --chart-volume: #5d6673;
+    --chart-volume-spike: #f7c948;
+    --chart-ma-fast: #2196f3;
+    --chart-ma-slow: #ff9800;
+    --chart-bb-fill: rgba(33, 150, 243, 0.05);
+
+    /* Audit P1 (Milan designer): radius scale. Prior CSS had 9 distinct radius values
+     * (1/2/3/4/5/6/8/12/14 px) on 5 chip-like components with no shared
+     * token. Consolidate to a 4-step scale that covers the design.
+     *
+     * --radius-xs: chip / pill (rank-chip, badge-composite, tier-b-banner)
+     * --radius-sm: input / dropdown / button (token-search, token-dropdown)
+     * --radius-md: card / panel (score-card, indicator-panel, market-tile)
+     * --radius-lg: drawer / modal (mobile drawer, explainer-body)
+     *
+     * Milan-final tune: original 3/4/6/12 read as rectangular / engineer-y.
+     * Industry refs (Stripe 6/8/12/16, Linear 6/8/12/24, TradingView 4/8/12/16)
+     * all bias 50-100% rounder at the card+modal level. Upgraded to 4/6/10/16
+     * so cards/panels feel "future-y" without forcing pill geometry. */
+    --radius-xs: 4px;    /* was 3px — chip / pill */
+    --radius-sm: 6px;    /* was 4px — input / button */
+    --radius-md: 10px;   /* was 6px — card / panel (biggest visual lift) */
+    --radius-lg: 16px;   /* was 12px — drawer / modal / hero */
+
+    /* Spacing scale (new): 4px ladder used across hero / market / score / indicator
+     * sections. Not a forced rewrite — only the high-traffic surfaces consume
+     * these tokens. The rest stays on raw px to avoid a 1500-line churn. */
+    --space-1: 4px;
+    --space-2: 8px;
+    --space-3: 12px;
+    --space-4: 16px;
+    --space-5: 24px;
+    --space-6: 32px;
+
+    /* Phase 3 Module 7.5 (Milan): canonical 5-step font scale.
+     * Tier 1 (micro)    : tag, footer, badge text          10px
+     * Tier 2 (small)    : caption, label, secondary line    12px
+     * Tier 3 (body)     : default UI text                   14px
+     * Tier 4 (display)  : section H2, gauge mid-numbers     38px
+     * Tier 5 (hero)     : Overall composite number          56px
+     * Numbers that don't fit (15-22) belong to brand / pill
+     * roles already named explicitly and are left as raw px. */
+    --font-micro:   10px;
+    --font-small:   12px;
+    --font-body:    14px;
+    --font-display: 38px;
+    --font-hero:    56px;
+
+    /* Transition tokens (new): unify the four prior ad-hoc speeds
+     * (120ms / 150ms / 200ms / 250ms / 0.12s / 0.25s) into a 3-step scale.
+     * Slow uses the Material "standard" curve so card lifts feel weighty. */
+    --transition-fast: 120ms ease;
+    --transition-base: 200ms ease;
+    --transition-slow: 320ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* R8-3A: light theme (Phase-2 item 3). Two-tier off-white per user Q3
+ * (user Q3: "TradingView-style high-end white") — canvas #F0F3FA, cards #FFFFFF. Accents
+ * darkened for WCAG AA contrast (white-on-white-not-readable problem
+ * with the dark theme's --accent-yellow #f7c948 → light's #B8860B). */
+html[data-theme="light"] {
+    --bg-primary:   #F0F3FA;
+    --bg-secondary: #FFFFFF;
+    --bg-tertiary:  #F7F8FA;
+    --bg-elevated:  #E0E3EB;
+
+    /* Phase 3.2 (Milan P0): on the off-white canvas the default 22%-opacity
+     * blue refresh-progress fill reads as "smudge" not "working". Bump to
+     * 34% so the fill is clearly visible without overpowering the label. */
+    --refresh-fill-opacity: 0.34;
+
+    --text-primary:   #131722;
+    --text-secondary: #50565E;
+    /* R8-3B / designer audit: prior #9098A4 measured 2.91:1 on #FFFFFF (AA
+     * fail for body text). Darkened to #5E6573 for ~4.62:1 — passes AA. */
+    --text-muted:     #5E6573;
+
+    /* R8-3B / designer-V2 audit: prior values measured 3.25-3.90:1 on white
+     * (AA fail for text/icon usage). Darkened to AA-passing shades while
+     * preserving hue family. Chart-candle accents stay BRIGHTER so K-line
+     * fills retain TradingView-style saturation on the canvas. */
+    --accent-green:  #067A66;   /* 5.27:1 on #FFFFFF — AA pass */
+    --accent-red:    #D32B3B;   /* 5.03:1 — AA pass */
+    --accent-blue:   #1E55E0;   /* 6.12:1 on white, 5.51:1 on canvas — AA pass on both */
+    --accent-yellow: #8B6508;   /* 5.30:1 — AA pass */
+    --accent-purple: #9C27B0;
+
+    --border-primary: #D6DCE5;
+    --border-subtle:  #E8ECF2;
+
+    /* Chart candle / volume keep the bright shades so the K-line stays
+     * visually saturated — fills are graphical, not body text, and
+     * WCAG-AA does not apply at full-cell opacity. */
+    --chart-candle-up:    #089981;
+    --chart-candle-down:  #F23645;
+    --chart-volume:       #B0B6C0;
+    --chart-volume-spike: #B8860B;
+
+    /* Audit P0 (Milan designer): in light theme rgba(0,0,0,0.45) on white cards
+     * is the loudest tell of a half-themed product. Use slate-grey ink
+     * at lower opacity so cards lift but don't print black.
+     *
+     * Milan-final tune: 2-stop stacks (Stripe / Linear pattern). The thin
+     * 1px hairline gives the card a "card edge" anchor; the wider blur
+     * supplies depth. Slate (15,23,42) instead of pitch black keeps the
+     * shadow color-coherent with the off-white canvas. */
+    --shadow-card:        0 1px 2px rgba(15, 23, 42, 0.05), 0 1px 3px rgba(15, 23, 42, 0.07);
+    --shadow-card-hover:  0 8px 16px rgba(15, 23, 42, 0.08), 0 3px 6px rgba(15, 23, 42, 0.06);
+    --shadow-modal:       0 14px 36px rgba(15, 23, 42, 0.16), 0 4px 12px rgba(15, 23, 42, 0.08);
+    --shadow-drawer:      0 -8px 28px rgba(15, 23, 42, 0.12), 0 -2px 8px rgba(15, 23, 42, 0.06);
+    --shadow-backdrop:    rgba(15, 23, 42, 0.32);
+    --chart-ma-fast:      #1565C0;
+    --chart-ma-slow:      #EF6C00;
+    --chart-bb-fill:      rgba(33, 150, 243, 0.07);
+}
+
+/* R8-3A: smooth fade so the theme switch doesn't strobe. */
+html, body, .topbar, .score-card, .indicator-panel, .chart,
+.market-tile, .robustness-table, .rank-list li {
+    transition: background-color var(--transition-base), color var(--transition-base),
+                border-color var(--transition-base);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.45;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.muted {
+    color: var(--text-secondary);
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: var(--bg-secondary);
+    border-bottom: 1px solid var(--border-primary);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+}
+
+.topbar-left {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    /* R7-5: don't let chips wrap below the brand on narrow viewports —
+     * we'd rather see them clipped behind a horizontal scroll than crash
+     * into a 3-row topbar. */
+    flex-wrap: nowrap;
+    min-width: 0;
+    overflow: hidden;
+}
+
+.topbar .brand {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 8px;
+    color: var(--text-primary);
+    white-space: nowrap;             /* R7-5: brand never wraps */
+    flex: 0 0 auto;
+}
+
+.topbar .brand-primary {
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 0.4px;
+    font-variant-numeric: tabular-nums;
+    color: var(--text-primary);
+}
+
+.topbar .brand-sub {
+    font-weight: 500;
+    font-size: 11px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+}
+
+.topbar #last-update {
+    font-size: 12px;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;             /* R7-5 */
+}
+
+/* R7-5: phone-class viewport — shrink the brand so it still fits with
+ * any chips next to it. The chips themselves are already nowrap (above). */
+@media (max-width: 480px) {
+    .topbar .brand {
+        gap: 6px;
+    }
+    .topbar .brand-primary {
+        font-size: 15px;
+        letter-spacing: 0.2px;
+    }
+    .topbar .brand-sub {
+        font-size: 10px;
+        letter-spacing: 0.8px;
+    }
+    .topbar #last-update {
+        font-size: 11px;
+    }
+    .topbar-left {
+        gap: 8px;
+    }
+}
+
+.btn {
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+    border: 1px solid var(--border-primary);
+    padding: 6px 14px;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
+    /* Milan-final tune: transform on transition list so :hover lift animates. */
+    transition: background var(--transition-fast), border-color var(--transition-fast),
+                transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+.btn:hover {
+    background: var(--bg-elevated);
+    border-color: var(--accent-blue);
+    /* Milan-final tune: 1px lift + halo so buttons feel pressable, not painted. */
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-card);
+}
+.btn:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+.btn:focus-visible {
+    outline: none;
+    border-color: var(--accent-blue);
+    box-shadow: 0 0 0 2px rgba(41, 98, 255, 0.35);
+}
+.btn:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+/* R8-3A: theme toggle icon button — sun in dark mode (=> click to go light),
+ * moon in light mode (=> click to go dark). The icon shown represents the
+ * destination state, which is the more intuitive UX. */
+.btn-icon {
+    padding: 5px 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.theme-icon {
+    color: var(--text-primary);
+}
+html[data-theme="dark"] .theme-icon-moon { display: none; }
+html[data-theme="light"] .theme-icon-sun  { display: none; }
+.topbar-right {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 280px;
+    /* Milan-final tune: align with spacing scale. */
+    gap: var(--space-4);
+    padding: var(--space-4) var(--space-5);
+    max-width: 1800px;
+    margin: 0 auto;
+}
+
+.main-pane {
+    min-width: 0;
+}
+
+.sidebar {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-primary);
+    border-radius: var(--radius-md);
+    /* Milan-final tune: spacing-token padding + card shadow so the rail
+     * reads as a sheet alongside the main content, not a flat panel. */
+    padding: var(--space-3);
+    height: fit-content;
+    position: sticky;
+    top: 60px;
+    max-height: calc(100vh - 80px);
+    overflow-y: auto;
+    box-shadow: var(--shadow-card);
+}
+
+.sidebar-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border-subtle);
+}
+.sidebar-head strong {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    color: var(--text-secondary);
+    font-weight: 600;
+}
+
+.rank-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.rank-list li {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: 6px 8px;
+    border-bottom: 1px solid var(--border-subtle);
+    cursor: pointer;
+    font-size: 13px;
+    position: relative;
+    /* Milan-final tune: indent + bg transition for a "leans in" hover. */
+    border-radius: var(--radius-xs);
+    transition: background var(--transition-fast), padding-left var(--transition-fast);
+}
+.rank-list li:last-child {
+    border-bottom: none;
+}
+.rank-list li:hover {
+    background: var(--bg-tertiary);
+    padding-left: 12px;
+}
+/* R7-7: the currently-loaded token gets a left blue accent + tinted bg so
+ * the user can see where their selection lives in the leaderboard. Wins
+ * over :hover via specificity + position-static accent. */
+.rank-list li.selected {
+    background: rgba(41, 98, 255, 0.10);
+    box-shadow: inset 3px 0 0 0 var(--accent-blue);
+}
+.rank-list li.selected .rank-symbol {
+    color: var(--accent-blue);
+}
+.rank-list .rank-badge {
+    flex: 0 0 auto;
+    min-width: 28px;
+    font-size: 10px;
+    font-weight: 600;
+    color: var(--text-muted);
+    font-variant-numeric: tabular-nums;
+    background: var(--bg-tertiary);
+    border-radius: var(--radius-xs);
+    text-align: center;
+    padding: 2px 4px;
+    letter-spacing: 0.3px;
+}
+.rank-list li.top-rank .rank-badge {
+    color: var(--bg-primary);
+    background: var(--accent-yellow);
+}
+.rank-list .rank-text {
+    flex: 1 1 auto;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.15;
+    overflow: hidden;
+}
+.rank-list .rank-symbol {
+    color: var(--text-primary);
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.rank-list .rank-name {
+    color: var(--text-secondary);
+    font-size: 11px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.rank-list .rank-score {
+    color: var(--accent-green);
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+    flex: 0 0 auto;
+    text-align: right;
+    min-width: 38px;
+}
+.rank-list .rank-score.score-low {
+    color: var(--accent-red);
+}
+.rank-list .rank-score.score-mid {
+    color: var(--accent-yellow);
+}
+.rank-list .rank-spark {
+    flex: 0 0 auto;
+    width: 60px;
+    height: 18px;
+    display: inline-block;
+    line-height: 0;
+}
+.rank-list .rank-spark svg {
+    display: block;
+}
+/* R6-4: caution chip when a ranked token only has CoinGecko close-only
+   data — its KDJ / volume_spike signals are NaN-suppressed and its
+   reversal score is informational only. Yellow attention, not red. */
+.rank-list .rank-cap {
+    flex: 0 0 auto;
+    color: var(--accent-yellow);
+    font-size: 11px;
+    line-height: 1;
+    margin-left: -4px;
+    cursor: help;
+}
+
+/* R6-4: topbar fallback-count chip — only shown when fallback > 0. */
+.fallback-stat {
+    font-size: 12px;
+    color: var(--accent-yellow);
+    border: 1px solid var(--accent-yellow);
+    border-radius: var(--radius-xs);
+    padding: 1px 7px;
+    font-variant-numeric: tabular-nums;
+    margin-left: 6px;
+    cursor: help;
+    /* R7-5: keep on a single line at all viewports. Was wrapping "32 / close-
+     * / only" to 3 lines at 375 px and 2 lines at 768 px (Artist R7 P1-4). */
+    white-space: nowrap;
+}
+
+/* R6-9: topbar exchange-health chip — red border, shown when any
+   exchange returned 0 markets at lifespan boot. */
+.exchange-health {
+    font-size: 12px;
+    color: var(--accent-red);
+    border: 1px solid var(--accent-red);
+    border-radius: var(--radius-xs);
+    padding: 1px 7px;
+    margin-left: 6px;
+    cursor: help;
+    white-space: nowrap;          /* R7-5 — same fix as .fallback-stat */
+}
+
+.token-selector-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 4px 0 14px;
+    flex-wrap: wrap;
+}
+
+#rank-mode {
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+    border: 1px solid var(--border-primary);
+    padding: 6px 10px;
+    border-radius: var(--radius-sm);
+    font-size: 13px;
+    transition: border-color var(--transition-fast);
+}
+#rank-mode:hover {
+    border-color: var(--bg-elevated);
+}
+#rank-mode:focus {
+    outline: none;
+    border-color: var(--accent-blue);
+}
+
+/* Searchable token combobox */
+.token-combobox {
+    position: relative;
+    min-width: 260px;
+}
+.token-search {
+    width: 100%;
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+    border: 1px solid var(--border-primary);
+    padding: 6px 10px;
+    border-radius: var(--radius-sm);
+    font-size: 13px;
+    transition: border-color var(--transition-fast);
+}
+.token-search:hover {
+    border-color: var(--bg-elevated);
+}
+.token-search:focus {
+    outline: none;
+    border-color: var(--accent-blue);
+}
+.token-search::placeholder {
+    color: var(--text-muted);
+}
+.token-dropdown {
+    position: absolute;
+    top: calc(100% + 4px);
+    left: 0;
+    right: 0;
+    z-index: 60;
+    margin: 0;
+    padding: 4px 0;
+    list-style: none;
+    max-height: 320px;
+    overflow-y: auto;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-primary);
+    /* Milan-final tune: dropdown was --radius-sm (4 -> 6px). Match the
+     * card scale so the panel reads as a floating sheet, not an input. */
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-modal);
+}
+.token-dropdown li {
+    padding: 6px 12px;
+    font-size: 13px;
+    color: var(--text-primary);
+    cursor: pointer;
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    transition: background var(--transition-fast), padding-left var(--transition-fast);
+}
+.token-dropdown li:hover,
+.token-dropdown li.active {
+    background: var(--bg-tertiary);
+    /* Milan-final tune: 4px indent on hover so the row "leans in" instead of
+     * just changing color. Subtle but signals interactivity. */
+    padding-left: 16px;
+}
+/* R6-17: dim historical-only (dropped-from-Top-N) tokens. */
+.token-dropdown li.inactive {
+    opacity: 0.55;
+}
+.token-dropdown li.inactive .opt-sym::after {
+    content: " (inactive)";
+    color: var(--text-muted);
+    font-weight: 400;
+    text-transform: none;
+    margin-left: 6px;
+    font-size: 11px;
+}
+.token-dropdown .opt-sym {
+    font-weight: 600;
+    color: var(--text-primary);
+    min-width: 56px;
+    text-transform: uppercase;
+    font-variant-numeric: tabular-nums;
+}
+.token-dropdown .opt-name {
+    color: var(--text-secondary);
+    font-size: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    flex: 1 1 auto;
+    min-width: 0;
+}
+.token-dropdown .opt-id {
+    color: var(--text-muted);
+    font-size: 11px;
+}
+.token-dropdown .empty {
+    padding: 8px 12px;
+    color: var(--text-secondary);
+    font-style: italic;
+    cursor: default;
+}
+
+.token-meta {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    min-width: 0;
+}
+
+.token-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-primary);
+    letter-spacing: 0.1px;
+}
+
+.token-price {
+    color: var(--text-primary);
+    font-size: 16px;
+    font-weight: 500;
+    font-variant-numeric: tabular-nums;
+}
+
+.scores-mini {
+    margin-left: auto;
+    display: flex;
+    gap: 8px;
+}
+
+.score-badge {
+    padding: 5px 12px;
+    /* Milan-final tune: was tokenised as --radius-lg (12 -> 16px in this round).
+     * Pill geometry must stay independent of the card-radius token, so lock
+     * to 999px (the canonical pill radius). On a 22px-tall chip both look
+     * identical (radius caps at min(width,height)/2) but the intent is clear. */
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-primary);
+    color: var(--text-secondary);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+.score-badge span {
+    color: var(--text-primary);
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: none;
+    letter-spacing: 0;
+    font-variant-numeric: tabular-nums;
+}
+.score-badge.trend span { color: var(--accent-green); }
+/* Phase 3 Module 7.4 (Milan): Reversal de-purpled. Purple read as
+ * "experimental / off-palette" against the green/red/blue financial
+ * convention. Map to neutral amber so it stays semantically distinct
+ * from Trend (green) without introducing a non-trading hue. */
+.score-badge.reversal span { color: var(--accent-yellow); }
+/* R6-10: close-only badge previously used hard-coded #d4a017 (a darker
+ * amber not declared in :root). Map it to --accent-yellow so the palette
+ * is closed (PLAN sec 7.2 — every accent traces back to a CSS variable). */
+.score-badge.close-only {
+    border-color: var(--accent-yellow);
+    color: var(--accent-yellow);
+    background: rgba(247, 201, 72, 0.08);
+}
+
+.chart {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-primary);
+    border-radius: var(--radius-md);
+    height: 180px;
+    /* R6-14: shimmering skeleton overlay while the chart container is
+     * empty (before the first LightweightCharts.createChart() call runs).
+     * Once a child node is inserted (canvas / svg), the :empty selector
+     * fails and the background reverts to the plain dark panel. */
+}
+.chart:empty {
+    background:
+        linear-gradient(110deg,
+            var(--bg-secondary) 8%,
+            var(--bg-tertiary) 18%,
+            var(--bg-secondary) 33%) 0 0 / 200% 100%;
+    animation: chart-skeleton 1.4s ease-in-out infinite;
+}
+@keyframes chart-skeleton {
+    0%   { background-position: 100% 0; }
+    100% { background-position: 0 0;   }
+}
+.chart-main {
+    height: 440px;
+    margin-bottom: var(--space-4);
+    /* Milan-final tune: lift the hero candle off the canvas. */
+    box-shadow: var(--shadow-card);
+}
+
+/* R6-5: section-header is the L2 heading of the page (Score Breakdown,
+ * Core Indicators) — it must outweigh the panel-header / card h3 chrome
+ * (which is also 11px/600/uppercase/--text-secondary). Promote to 13px,
+ * primary text color, accent-blue underline so the visual ladder reads
+ * section > panel > card-h3 > body.
+ */
+.section-header {
+    margin: 26px 0 12px;
+    font-size: 13px;
+    color: var(--text-primary);
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--accent-blue);
+    border-bottom-width: 2px;
+    display: inline-block;
+    min-width: 160px;
+}
+
+.indicator-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* Milan-final tune: was 12px raw — promote to spacing token. */
+    gap: var(--space-3);
+}
+
+.indicator-panel {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-primary);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    /* Milan-final tune: card baseline shadow so the panel floats on the canvas. */
+    box-shadow: var(--shadow-card);
+    transition: border-color var(--transition-base), box-shadow var(--transition-slow),
+                transform var(--transition-slow);
+}
+/* R6-12: prior hover transitioned --border-primary -> --bg-elevated, but
+ * the two resolve to the same #363a45 (see :root :26-27), making the
+ * hover a no-op. Use --accent-blue + a faint glow so the affordance is
+ * unmistakable on a dark canvas.
+ * Milan-final tune: combine glow + layered lift shadow so hover reads as
+ * "card rises", not "border tints". translateY kept tiny (-1px) to avoid
+ * jitter when the user scans the grid. */
+.indicator-panel:hover {
+    border-color: var(--accent-blue);
+    box-shadow: var(--shadow-card-hover), 0 0 0 1px rgba(41, 98, 255, 0.18);
+    transform: translateY(-1px);
+}
+.indicator-panel header {
+    padding: 8px 12px;
+    background: var(--bg-tertiary);
+    font-size: 11px;
+    color: var(--text-secondary);
+    border-bottom: 1px solid var(--border-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+    /* R6-15: lock a min-height so panels with param-controls (which
+     * inevitably wrap on narrower widths) line up vertically with
+     * panels that have no controls (Momentum, Mean Reversion,
+     * Z-Score MA, Price Appreciation). Was causing visible row-height
+     * drift in the indicator grid. */
+    min-height: 44px;
+}
+.indicator-panel header > span:first-child {
+    flex: 1 1 auto;
+}
+.param-controls {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-transform: none;
+    letter-spacing: 0;
+    font-weight: 500;
+}
+/* R6-11: harmonise control casing inside the panel header.
+ * The header band itself is uppercase (.indicator-panel header) but the
+ * param-controls inline labels and the reset button are lowercase. Lift
+ * both to uppercase + 0.5px letter-spacing so the strip reads as one
+ * cohesive sub-row instead of mixed-case junk. */
+.param-controls label {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 10px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.param-controls input[type="number"] {
+    width: 48px;
+    padding: 2px 4px;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    border: 1px solid var(--border-primary);
+    border-radius: var(--radius-xs);
+    font-size: 11px;
+    font-variant-numeric: tabular-nums;
+    font-family: inherit;
+}
+.param-controls input[type="number"]:focus {
+    outline: none;
+    border-color: var(--accent-blue);
+}
+.param-controls input[type="number"]::-webkit-inner-spin-button,
+.param-controls input[type="number"]::-webkit-outer-spin-button {
+    height: 18px;
+}
+.param-reset {
+    background: transparent;
+    color: var(--text-muted);
+    border: 1px solid var(--border-primary);
+    border-radius: var(--radius-xs);
+    padding: 2px 7px;
+    font-size: 10px;
+    font-family: inherit;
+    cursor: pointer;
+    text-transform: uppercase;     /* R6-11: was lowercase; align to header casing */
+    letter-spacing: 0.5px;
+}
+.param-reset:hover {
+    color: var(--text-primary);
+    border-color: var(--text-muted);
+}
+.indicator-panel .chart {
+    border: none;
+    border-radius: 0;
+    height: 160px;
+}
+.indicator-panel .legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 5px 12px;
+    background: var(--bg-secondary);
+    border-bottom: 1px solid var(--border-subtle);
+    font-size: 12px;
+    line-height: 1.4;
+    color: var(--text-secondary);
+}
+.indicator-panel .legend .legend-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-variant-numeric: tabular-nums;
+}
+.indicator-panel .legend .swatch {
+    display: inline-block;
+    width: 12px;
+    height: 2px;
+    border-radius: 1px;
+    flex: 0 0 auto;
+}
+
+/* (?) info marker for tooltips */
+.info-mark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: var(--bg-elevated);
+    color: var(--text-secondary);
+    font-size: 9px;
+    font-weight: 700;
+    margin-left: 4px;
+    cursor: help;
+    user-select: none;
+}
+.info-mark:hover {
+    background: var(--accent-blue);
+    color: #fff;
+}
+
+.more-indicators {
+    margin-top: var(--space-4);
+}
+.more-indicators > summary {
+    cursor: pointer;
+    padding: 10px 14px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-primary);
+    border-radius: var(--radius-md);
+    color: var(--text-secondary);
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: background var(--transition-fast), color var(--transition-fast);
+    list-style: none;
+}
+.more-indicators > summary::-webkit-details-marker { display: none; }
+.more-indicators > summary::before {
+    content: "+";
+    display: inline-block;
+    width: 16px;
+    color: var(--accent-blue);
+    font-weight: 700;
+    margin-right: 4px;
+}
+.more-indicators[open] > summary::before {
+    content: "-";
+}
+.more-indicators > summary:hover {
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+}
+.more-indicators[open] > summary {
+    margin-bottom: 12px;
+}
+
+.score-detail {
+    margin-top: 24px;
+}
+.score-detail-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* Milan-final tune: harmonise with --space-3 (was raw 12px). */
+    gap: var(--space-3);
+}
+.score-card {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-primary);
+    /* Milan-final tune: token-fy padding (was 16/18 ad-hoc -> 16/20 on the
+     * spacing ladder) and add card shadow so the surface lifts off the canvas. */
+    padding: var(--space-4) var(--space-5);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-card);
+    transition: box-shadow var(--transition-slow), transform var(--transition-slow),
+                border-color var(--transition-base);
+}
+.score-card:hover {
+    box-shadow: var(--shadow-card-hover);
+    transform: translateY(-1px);
+}
+.score-card h3 {
+    margin: 0 0 6px;
+    color: var(--text-secondary);
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+}
+.score-large {
+    font-size: 38px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 6px;
+    line-height: 1.05;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -0.5px;
+}
+.score-large.score-strong { color: var(--accent-green); }
+.score-large.score-weak   { color: var(--accent-red); }
+.score-large.score-neutral { color: var(--accent-yellow); }
+
+.score-gauge {
+    /* R7-3: was 140px when score_gauge.js used viewBox W=180. After widening
+     * the viewBox to 220 (so 0/100 tick labels aren't clipped) keep the same
+     * proportional rendered width: 220 * (140/180) = 171 -> 170 px. */
+    width: 170px;
+    flex: 0 0 auto;
+    margin: 0;
+}
+.score-gauge svg { display: block; }
+
+/* R6-1: pair the dial and the big number side by side in the hero band. */
+.score-card-row {
+    display: flex;
+    align-items: center;
+    /* Milan-final tune: align with spacing scale (was 14 -> 16). */
+    gap: var(--space-4);
+    margin-bottom: var(--space-1);
+}
+/* R6-1 — the hoisted hero block needs a little breathing room before the candle. */
+.score-detail {
+    margin-bottom: 18px;
+}
+
+/* R8-2A: Overall composite hero card — full-width above the 2-col grid.
+ * Visual cues distinguishing it from Trend/Reversal:
+ *   - left accent-blue stripe (2px)
+ *   - COMPOSITE micro-badge in the h3
+ *   - 240px gauge (~40% larger than the 170px Trend/Reversal gauges)
+ *   - 56px hero number (vs 38px in the 2-col cards)
+ * Strategy A from user Q4. */
+.score-card.score-card-overall {
+    /* Milan-final tune: thicker left accent (3px) reads cleaner at 16px corner;
+     * promote to --radius-lg (16px) for a hero-card feel — Stripe / Linear
+     * both jump one notch up at the hero level. Padding aligned to spacing
+     * scale (16/24 from --space-4 / --space-5). */
+    border-left: 3px solid var(--accent-blue);
+    margin-bottom: var(--space-3);
+    background: var(--bg-secondary);
+    border-radius: var(--radius-lg);
+    padding: var(--space-4) var(--space-5);
+    box-shadow: var(--shadow-card);
+}
+.score-card.score-card-overall:hover {
+    /* override generic .score-card:hover lift — hero is anchor, shouldn't bob. */
+    transform: none;
+    box-shadow: var(--shadow-card-hover);
+}
+.score-card-overall .overall-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: var(--space-2);
+    margin-bottom: var(--space-3);
+}
+.score-card-overall .overall-head h3 {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--text-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+}
+.badge-composite {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    padding: 2px 6px;
+    border-radius: var(--radius-xs);
+    background: rgba(41, 98, 255, 0.15);
+    color: var(--accent-blue);
+}
+.score-card-overall .overall-body {
+    display: grid;
+    grid-template-columns: 240px 1fr 300px;
+    gap: 18px;
+    align-items: center;
+}
+.score-gauge.score-gauge-xl {
+    width: 240px;
+}
+.score-large.score-xl {
+    font-size: 56px;
+    line-height: 1;
+    margin-bottom: 4px;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -1px;
+}
+.score-blurb {
+    font-size: 13px;
+    font-style: italic;
+    margin-bottom: 4px;
+}
+.components-overall {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 11px;
+    font-variant-numeric: tabular-nums;
+}
+.components-overall li {
+    display: grid;
+    grid-template-columns: 1fr 50px 50px 60px;
+    gap: 6px;
+    padding: 3px 0;
+    border-bottom: 1px dotted var(--border-subtle);
+    color: var(--text-secondary);
+}
+.components-overall li:last-child {
+    border-bottom: none;
+}
+.components-overall .sleeve-label {
+    color: var(--text-primary);
+}
+.components-overall .sleeve-value {
+    text-align: right;
+}
+.components-overall .sleeve-weight {
+    text-align: right;
+    color: var(--text-muted);
+}
+.components-overall .sleeve-contrib {
+    text-align: right;
+    color: var(--accent-blue);
+    font-weight: 600;
+}
+
+/* R8-2C: rank chip — small "Rank N / M" tag in card headers */
+.rank-chip {
+    display: inline-block;
+    padding: 1px 7px;
+    border-radius: var(--radius-xs);
+    background: var(--bg-tertiary);
+    color: var(--text-secondary);
+    font-size: 10px;
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: 0.3px;
+    text-transform: none;
+    margin-left: 4px;
+}
+
+@media (max-width: 900px) {
+    .score-card-overall .overall-body {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    .score-gauge.score-gauge-xl {
+        width: 100%;
+        max-width: 280px;
+        margin: 0 auto;
+    }
+    .score-large.score-xl {
+        font-size: 44px;
+        text-align: center;
+    }
+    .score-blurb {
+        text-align: center;
+    }
+}
+
+/* R8-2C: explainer modal — opened by clicking .info-mark[data-explainer]. */
+.explainer-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 200;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.explainer-modal[hidden] {
+    display: none !important;
+}
+.explainer-backdrop {
+    position: absolute;
+    inset: 0;
+    background: var(--shadow-backdrop);
+}
+.explainer-body {
+    position: relative;
+    z-index: 1;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-primary);
+    /* Milan-final tune: modal jumps to --radius-lg (16px) — at 720px wide
+     * a 10px corner reads as a card; 16px reads as a sheet. Stripe / Linear
+     * both use 16px on overlay surfaces. */
+    border-radius: var(--radius-lg);
+    max-width: 720px;
+    width: 90%;
+    max-height: 85vh;
+    overflow-y: auto;
+    padding: var(--space-5) var(--space-6);
+    box-shadow: var(--shadow-modal);
+}
+.explainer-close {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 28px;
+    line-height: 1;
+    cursor: pointer;
+    padding: 0;
+    width: 32px;
+    height: 32px;
+}
+.explainer-close:hover { color: var(--text-primary); }
+.explainer-title {
+    font-size: 18px;
+    margin: 0 0 6px;
+    color: var(--text-primary);
+}
+.explainer-oneline {
+    color: var(--text-secondary);
+    font-size: 13px;
+    margin: 0 0 16px;
+}
+.explainer-formula {
+    background: var(--bg-primary);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    padding: 10px 12px;
+    font-size: 12px;
+    color: var(--text-primary);
+    white-space: pre-wrap;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+.explainer-content h3 {
+    margin: 18px 0 8px;
+    font-size: 12px;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    font-weight: 600;
+}
+.explainer-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+    font-variant-numeric: tabular-nums;
+}
+.explainer-table th, .explainer-table td {
+    padding: 6px 10px;
+    text-align: left;
+    border-bottom: 1px dotted var(--border-subtle);
+}
+.explainer-table th {
+    color: var(--text-secondary);
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.explainer-table td.num { text-align: right; }
+.explainer-table code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 11px;
+    color: var(--text-secondary);
+}
+.explainer-list {
+    margin: 0;
+    padding-left: 20px;
+}
+.explainer-list li {
+    margin: 4px 0;
+    font-size: 13px;
+    color: var(--text-primary);
+    line-height: 1.45;
+}
+
+/* R8-2B: indicator robustness table — universe-wide backtest results. */
+.indicator-robustness {
+    margin: 24px 0 60px;
+}
+.indicator-robustness .small {
+    font-size: 12px;
+    margin: 4px 0 12px;
+}
+.robustness-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+    font-variant-numeric: tabular-nums;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-primary);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    /* Milan-final tune: subtle card shadow on the wide table so it doesn't
+     * disappear into the canvas. */
+    box-shadow: var(--shadow-card);
+}
+.robustness-table th, .robustness-table td {
+    padding: 8px 12px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-subtle);
+}
+.robustness-table th {
+    background: var(--bg-tertiary);
+    color: var(--text-secondary);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+}
+.robustness-table td.num {
+    text-align: right;
+    color: var(--text-primary);
+}
+.robustness-table td.strat-name {
+    color: var(--text-primary);
+    font-weight: 500;
+    cursor: help;
+}
+.robustness-table tr.rob-row {
+    cursor: pointer;
+    transition: background var(--transition-fast);
+}
+.robustness-table tr.rob-row:hover {
+    background: var(--bg-tertiary);
+}
+.rel-badge {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: var(--radius-xs);
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.rel-badge.rel-ok {
+    background: rgba(38, 166, 154, 0.18);
+    color: var(--accent-green);
+}
+.rel-badge.rel-mid {
+    background: rgba(247, 201, 72, 0.18);
+    color: var(--accent-yellow);
+}
+.rel-badge.rel-bad {
+    background: rgba(239, 83, 80, 0.18);
+    color: var(--accent-red);
+}
+.robustness-detail {
+    margin-top: 12px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-primary);
+    border-radius: var(--radius-md);
+    padding: 12px 14px;
+}
+.rob-detail-head {
+    display: flex;
+    gap: 14px;
+    align-items: baseline;
+    margin-bottom: 10px;
+    font-size: 13px;
+}
+.rob-detail-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 11px;
+    font-variant-numeric: tabular-nums;
+}
+.rob-detail-table th, .rob-detail-table td {
+    padding: 4px 8px;
+    border-bottom: 1px dotted var(--border-subtle);
+}
+.rob-detail-table th {
+    color: var(--text-secondary);
+    text-align: left;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: 0.4px;
+}
+.rob-detail-table td.num {
+    text-align: right;
+}
+.rob-detail-table tr[data-token] {
+    cursor: pointer;
+}
+.rob-detail-table tr[data-token]:hover {
+    background: var(--bg-tertiary);
+}
+.rob-detail-table td.tok {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+/* R8-1D: sidebar asset-class tab strip (Crypto / US Stocks). */
+.sidebar-tabs {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid var(--border-subtle);
+}
+.sidebar-tabs .tab-btn {
+    flex: 1;
+    background: transparent;
+    color: var(--text-secondary);
+    border: none;
+    padding: 8px 4px;
+    font: inherit;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -1px;
+    transition: color var(--transition-base), border-color var(--transition-base);
+}
+.sidebar-tabs .tab-btn:hover {
+    color: var(--text-primary);
+}
+.sidebar-tabs .tab-btn.active {
+    color: var(--accent-blue);
+    border-bottom-color: var(--accent-blue);
+}
+
+/* R8-1C: market info panel — 5 tiles between token-selector and score-detail.
+ * One row, auto-fit so it wraps gracefully on narrow viewports. */
+.market-panel {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    /* Milan-final tune: spacing tokens (was 8px / 4-14 ad-hoc). */
+    gap: var(--space-2);
+    margin: var(--space-1) 0 var(--space-4);
+}
+.market-tile {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-primary);
+    /* Milan-final tune: --radius-sm (4 -> 6px) + spacing token padding +
+     * baseline shadow + hover lift. Brings the tile strip from "flat
+     * informational" to "tactile". */
+    border-radius: var(--radius-sm);
+    padding: var(--space-2) var(--space-3);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+    box-shadow: var(--shadow-card);
+    transition: box-shadow var(--transition-slow), transform var(--transition-slow),
+                border-color var(--transition-base);
+}
+.market-tile:hover {
+    border-color: var(--accent-blue);
+    box-shadow: var(--shadow-card-hover);
+    transform: translateY(-1px);
+}
+.market-tile-label {
+    font-size: 10px;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+}
+.market-tile-value {
+    font-size: 14px;
+    color: var(--text-primary);
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+}
+
+.score-card .components {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+    border-top: 1px solid var(--border-subtle);
+    padding-top: 10px;
+}
+.score-card .components li {
+    display: flex;
+    justify-content: space-between;
+    padding: 4px 0;
+    font-size: 12px;
+    color: var(--text-secondary);
+    border-bottom: 1px dotted transparent;
+}
+.score-card .components li:hover {
+    color: var(--text-primary);
+}
+.score-card .components li span:last-child {
+    color: var(--text-primary);
+    font-variant-numeric: tabular-nums;
+}
+
+.percentiles {
+    font-size: 12px;
+    line-height: 1.55;
+    font-variant-numeric: tabular-nums;
+}
+
+.backtest {
+    /* Milan-final tune: spacing-token margin + card shadow for consistency. */
+    margin: var(--space-5) 0 60px;
+    border: 1px solid var(--border-primary);
+    border-radius: var(--radius-md);
+    padding: var(--space-3) var(--space-4);
+    background: var(--bg-secondary);
+    box-shadow: var(--shadow-card);
+}
+.backtest > summary {
+    cursor: pointer;
+    color: var(--text-secondary);
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.backtest > summary:hover { color: var(--text-primary); }
+.backtest-stats {
+    margin-top: 10px;
+    font-variant-numeric: tabular-nums;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 6px 14px;
+}
+.backtest-stats > div {
+    color: var(--text-primary);
+    font-size: 13px;
+}
+.backtest-equity {
+    margin-top: 14px;
+    height: 220px;
+    width: 100%;
+    border-radius: var(--radius-sm);
+    background: var(--bg-primary);
+}
+#backtest-run {
+    margin-top: 8px;
+}
+
+/* scrollbar polish for sidebar */
+.sidebar::-webkit-scrollbar {
+    width: 8px;
+}
+.sidebar::-webkit-scrollbar-track {
+    background: var(--bg-secondary);
+}
+.sidebar::-webkit-scrollbar-thumb {
+    background: var(--bg-elevated);
+    border-radius: var(--radius-sm);
+}
+.sidebar::-webkit-scrollbar-thumb:hover {
+    background: var(--text-muted);
+}
+
+@media (max-width: 1200px) {
+    .layout {
+        grid-template-columns: minmax(0, 1fr) 240px;
+    }
+}
+
+@media (max-width: 900px) {
+    .layout {
+        grid-template-columns: 1fr;
+        padding: 12px;
+        /* R6-7: leave room at the bottom for the collapsed drawer handle
+           so the page's last element isn't covered by the fixed strip. */
+        padding-bottom: 56px;
+    }
+    .indicator-grid {
+        grid-template-columns: 1fr;
+    }
+    .score-detail-grid {
+        grid-template-columns: 1fr;
+    }
+    .chart-main {
+        height: 360px;
+    }
+    .scores-mini {
+        margin-left: 0;
+    }
+}
+
+/* R8-4A / Audit P1 (analyst): Tier-B status banner on the Overall hero card.
+ * Shows users whether the composite is theory-prior (default fallback) or
+ * data-driven (only if Tier-B Ridge accept gate passed). Keeps the
+ * "Plan-compliant honest failure" visible instead of buried in an API JSON. */
+.tier-b-banner {
+    display: inline-flex;
+    align-items: center;
+    padding: 2px 8px;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    border-radius: var(--radius-xs);
+    font-variant-numeric: tabular-nums;
+    cursor: help;
+}
+.tier-b-banner.tier-b-fallback {
+    background: var(--bg-tertiary);
+    color: var(--text-secondary);
+    border: 1px solid var(--border-subtle);
+}
+.tier-b-banner.tier-b-accept {
+    background: rgba(8, 153, 129, 0.12);
+    color: var(--accent-green);
+    border: 1px solid var(--accent-green);
+}
+
+/* Audit P0 (product director): theme-aware legend swatches. Previously
+ * inline `style="background:#2196f3"` was hardcoded for 14 occurrences,
+ * so legend chips stayed dark-theme blue/orange/green even in light mode. */
+.swatch-blue   { background: var(--chart-ma-fast); }
+.swatch-orange { background: var(--chart-ma-slow); }
+.swatch-green  { background: var(--accent-green); }
+.swatch-red    { background: var(--accent-red); }
+.swatch-purple { background: var(--accent-purple); }
+.swatch-yellow { background: var(--accent-yellow); }
+
+/* R8-1B.2 / Q14: data coverage folding row. Sits between market panel and
+ * score breakdown, telling the analyst when the per-token signal becomes
+ * reliable. Built with native <details> so close = paid-zero behaviour. */
+.data-coverage {
+    margin: 8px 0 12px;
+    border: 1px solid var(--border-subtle);
+    background: var(--bg-secondary);
+    border-radius: var(--radius-md);
+    font-size: 12px;
+}
+.data-coverage-summary {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 12px;
+    cursor: pointer;
+    list-style: none;
+    color: var(--text-secondary);
+}
+.data-coverage-summary::-webkit-details-marker { display: none; }
+.data-coverage-summary::before {
+    content: "▸";
+    color: var(--text-muted);
+    font-size: 10px;
+}
+.data-coverage[open] .data-coverage-summary::before { content: "▾"; }
+.data-coverage-label {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+.data-coverage-headline {
+    font-variant-numeric: tabular-nums;
+    color: var(--text-secondary);
+}
+.data-coverage-body { padding: 4px 12px 12px; }
+.data-coverage-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.data-coverage-table th,
+.data-coverage-table td {
+    padding: 4px 8px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-subtle);
+    font-variant-numeric: tabular-nums;
+}
+.data-coverage-table th {
+    color: var(--text-muted);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: 0.5px;
+}
+.data-coverage-table td.num { text-align: right; }
+
+/* R6-7: mobile bottom drawer (PLAN sec 7.3 line 873 — "pull-up bottom drawer").
+ * On viewports <= 768px the sidebar is taken out of the document flow
+ * and parked at the bottom with only the handle visible. Tapping the
+ * handle slides the panel up to ~70vh. */
+.drawer-handle { display: none; }
+
+@media (max-width: 768px) {
+    .sidebar {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: auto;
+        max-height: 72vh;
+        margin: 0;
+        border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+        border: 1px solid var(--border-primary);
+        border-bottom: none;
+        box-shadow: var(--shadow-drawer);
+        background: var(--bg-secondary);
+        transform: translateY(calc(100% - 48px));
+        transition: transform var(--transition-slow);
+        z-index: 90;
+        padding-top: 48px;        /* room for the handle button at top */
+        overflow: hidden;          /* clip rank-list until expanded */
+        display: flex;
+        flex-direction: column;
+    }
+    .sidebar.expanded {
+        transform: translateY(0);
+        overflow-y: auto;
+    }
+    .drawer-handle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 48px;
+        background: transparent;
+        color: var(--text-primary);
+        border: none;
+        border-bottom: 1px solid var(--border-subtle);
+        font: inherit;
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+        cursor: pointer;
+        z-index: 1;
+    }
+    .drawer-handle .drawer-grip {
+        width: 36px;
+        height: 4px;
+        background: var(--text-muted);
+        border-radius: 2px;
+    }
+    .sidebar.expanded .drawer-handle .drawer-label::after {
+        content: "  (tap to close)";
+        font-weight: 400;
+        color: var(--text-secondary);
+    }
+    .sidebar.expanded .drawer-handle {
+        /* invert the arrow when expanded — replace ▴ with ▾ via JS would
+           require markup tweak; keep label simple and rely on the
+           (tap to close) suffix above. */
+    }
+    .sidebar-head {
+        display: none;
+    }
+    .rank-list {
+        padding-bottom: 12px;
+    }
+}
+
+/* ============================================================
+ * Phase 3 Module 2: legal footer — sticky-to-bottom disclaimer
+ * + meta row (version, last data refresh). Honors light/dark
+ * theme via existing tokens.
+ * ============================================================ */
+.site-footer {
+    margin-top: 32px;
+    padding: 18px 24px 24px;
+    border-top: 1px solid var(--border-subtle);
+    background: var(--bg-secondary);
+    color: var(--text-muted);
+    font-size: 11px;
+    line-height: 1.55;
+}
+.site-footer-row {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+.site-footer-meta {
+    display: flex;
+    gap: 8px;
+    align-items: baseline;
+    color: var(--text-secondary);
+    font-variant-numeric: tabular-nums;
+    margin-bottom: 10px;
+}
+.site-footer-meta #footer-version,
+.site-footer-meta #footer-last-refresh {
+    color: var(--text-primary);
+    font-weight: 500;
+}
+.site-footer-sep {
+    color: var(--text-muted);
+    opacity: 0.6;
+}
+.site-footer-disclaimer {
+    max-width: 920px;
+    margin: 0 auto;
+    color: var(--text-muted);
+}
+@media (max-width: 600px) {
+    .site-footer { padding: 14px 16px 18px; font-size: 10.5px; }
+    .site-footer-meta { flex-wrap: wrap; }
+}
+
+/* Phase 3 Module 8 (PM): toast notifications. Stacks bottom-right,
+ * fades in 200ms, auto-dismisses, theme-aware. */
+.toast-container {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    z-index: 9999;
+    pointer-events: none;
+}
+.toast {
+    pointer-events: auto;
+    min-width: 240px;
+    max-width: 360px;
+    padding: 10px 14px;
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    border: 1px solid var(--border-primary);
+    border-left: 3px solid var(--accent-blue);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-card);
+    font-size: 13px;
+    line-height: 1.4;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity 200ms ease, transform 200ms ease;
+}
+.toast.toast-entered {
+    opacity: 1;
+    transform: translateY(0);
+}
+.toast.toast-leaving {
+    opacity: 0;
+    transform: translateY(8px);
+}
+.toast-warn { border-left-color: var(--accent-yellow); }
+.toast-error { border-left-color: var(--accent-red); }
+.toast-success { border-left-color: var(--accent-green); }
+.toast-msg {
+    flex: 1 1 auto;
+}
+.toast-close {
+    flex: 0 0 auto;
+    background: transparent;
+    border: 0;
+    color: var(--text-muted);
+    font-size: 18px;
+    line-height: 1;
+    padding: 0 0 0 4px;
+    cursor: pointer;
+}
+.toast-close:hover { color: var(--text-primary); }
+@media (max-width: 480px) {
+    .toast-container { right: 12px; left: 12px; bottom: 12px; }
+    .toast { min-width: 0; max-width: 100%; }
+}
+
+/* Phase 3.1: refresh button progress bar. The button keeps its normal
+ * border + label; a coloured bar fills from left to right inside it
+ * proportional to (current/total) from /api/system/refresh-progress.
+ * When phase=="idle" the bar collapses to width:0 and the label reads
+ * "Refresh". */
+.refresh-btn {
+    position: relative;
+    overflow: hidden;
+    min-width: 200px;        /* room for "Crypto · 210/210 · my-token-name" */
+    text-align: center;
+}
+.refresh-progress-bar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 0%;
+    background: var(--accent-blue);
+    /* Phase 3.2 (Milan P0): per-theme opacity. 22% was anemic in light mode
+     * — the override below bumps it to 34% so the fill is visible against
+     * the off-white canvas. */
+    opacity: var(--refresh-fill-opacity, 0.22);
+    /* Phase 3.2 (Milan P0): slower glide so the per-token tick (~1 Hz)
+     * doesn't feel like a twitch. Standard Material "decelerate" curve. */
+    transition: width 700ms cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: none;
+    z-index: 0;
+    /* Phase 3.2 (Milan P0): subtle shimmer so the user can tell the bar
+     * is "alive" even when the fill plateaus on a slow token (CG retry
+     * can pause 5-10 s). 1.6 s sweep matches Stripe / Linear pattern. */
+    background-image: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(255, 255, 255, 0.14) 50%,
+        transparent 100%
+    );
+    background-size: 200% 100%;
+    animation: refresh-shimmer 1.6s linear infinite;
+}
+@keyframes refresh-shimmer {
+    from { background-position: 200% 0; }
+    to   { background-position: -200% 0; }
+}
+.refresh-label {
+    position: relative;
+    z-index: 1;
+    font-variant-numeric: tabular-nums;  /* numbers don't jitter */
+    white-space: nowrap;
+}
+.refresh-btn[disabled] {
+    cursor: progress;
+    opacity: 1;       /* override the default disabled fade — progress is informative */
+}
+/* Phase 3.2 (Milan P2): freeze the hover translateY/box-shadow while a
+ * refresh is in flight — otherwise hovering the button while the bar fills
+ * pops it up 1px and visually jitters the progress overlay. */
+.refresh-btn[disabled]:hover {
+    transform: none;
+    box-shadow: none;
+    border-color: var(--border-primary);
+}
+/* Phase 3.2 (Milan P2): timeout state must be visually distinct. Currently
+ * a 10-min hard cap drops you back to "Refresh" with identical styling —
+ * a user who walked away wouldn't notice. Tint label + border red. */
+.refresh-btn-timeout { border-color: var(--accent-red); }
+.refresh-btn-timeout .refresh-label { color: var(--accent-red); }

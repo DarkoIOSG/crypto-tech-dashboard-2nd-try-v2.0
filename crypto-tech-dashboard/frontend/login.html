@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IOSG Crypto Tech Dashboard — Access</title>
+    <!-- Resolve theme BEFORE stylesheet so the gate matches the dashboard
+         the user is about to enter. Default dark. -->
+    <script>
+    (function() {
+        try {
+            var t = localStorage.getItem('iosg-theme') || 'dark';
+            document.documentElement.dataset.theme = t;
+        } catch (e) {
+            document.documentElement.dataset.theme = 'dark';
+        }
+        // If already authed, skip the gate.
+        try {
+            if (localStorage.getItem('iosg-auth') === 'ok') {
+                location.replace('/');
+            }
+        } catch (e) {}
+    })();
+    </script>
+    <link rel="stylesheet" href="/css/login.css">
+</head>
+<body>
+    <main class="login-shell">
+        <div class="login-card">
+            <header class="login-head">
+                <div class="login-brand">IOSG</div>
+                <div class="login-sub">Crypto Tech Dashboard</div>
+            </header>
+
+            <form id="login-form" class="login-form" autocomplete="off">
+                <label for="login-input" class="login-label">Enter access code</label>
+                <input id="login-input"
+                       type="password"
+                       name="code"
+                       autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="characters"
+                       spellcheck="false"
+                       inputmode="text"
+                       maxlength="32"
+                       required>
+                <button id="login-submit" type="submit" class="login-btn">Enter</button>
+                <div id="login-error" class="login-error" hidden>Incorrect code.</div>
+            </form>
+
+            <footer class="login-foot">
+                Internal preview · Not investment advice
+            </footer>
+        </div>
+    </main>
+    <script src="/js/auth.js"></script>
+</body>
+</html>

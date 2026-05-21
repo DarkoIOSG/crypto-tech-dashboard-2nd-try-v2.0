@@ -1,0 +1,39 @@
+ticker,asset_class,name,exchange,region,active
+ANY,us-stock,Sphere 3D Corp,NASDAQ,US,true
+APLD,us-stock,Applied Digital Corporation,NASDAQ,US,true
+ARBK,us-stock,Argo Blockchain plc,NASDAQ,US,true
+BIGG,us-stock,BIGG Digital Assets Inc,OTC,US,true
+BITF,us-stock,Bitfarms Ltd,NASDAQ,US,true
+BKKT,us-stock,Bakkt Holdings Inc,NYSE,US,true
+BLSH,us-stock,Bullish,NYSE,US,true
+BTBT,us-stock,Bit Digital Inc,NASDAQ,US,true
+BTCS,us-stock,BTCS Inc,NASDAQ,US,true
+BTDR,us-stock,Bitdeer Technologies Group,NASDAQ,US,true
+BTGO,us-stock,B2Gold Corp,NYSE,US,true
+BTM,us-stock,Bitumio Inc,NASDAQ,US,true
+CAN,us-stock,Canaan Inc,NASDAQ,US,true
+CIFR,us-stock,Cipher Mining Inc,NASDAQ,US,true
+CLSK,us-stock,CleanSpark Inc,NASDAQ,US,true
+COIN,us-stock,Coinbase Global Inc,NASDAQ,US,true
+CORZ,us-stock,Core Scientific Inc,NASDAQ,US,true
+CRCL,us-stock,Circle Internet Group Inc,NYSE,US,true
+DEFT,us-stock,DeFi Technologies Inc,NASDAQ,US,true
+DMGGF,us-stock,DMG Blockchain Solutions Inc,OTC,US,true
+EBON,us-stock,Ebang International Holdings,NASDAQ,US,true
+ETOR,us-stock,eToro Group Ltd,NASDAQ,US,true
+EXOD,us-stock,Exodus Movement Inc,NYSE,US,true
+FIGR,us-stock,Figure Technology Solutions,NASDAQ,US,true
+FLD,us-stock,Fold Holdings Inc,NASDAQ,US,true
+GEMI,us-stock,Gemini Space Station Inc,NASDAQ,US,true
+GLXY,us-stock,Galaxy Digital Inc,NASDAQ,US,true
+GREE,us-stock,Greenidge Generation Holdings,NASDAQ,US,true
+HIVE,us-stock,HIVE Digital Technologies,NASDAQ,US,true
+HOOD,us-stock,Robinhood Markets Inc,NASDAQ,US,true
+HUT,us-stock,Hut 8 Corp,NASDAQ,US,true
+IREN,us-stock,IREN Limited,NASDAQ,US,true
+MARA,us-stock,MARA Holdings Inc,NASDAQ,US,true
+MSTR,us-stock,MicroStrategy Incorporated,NASDAQ,US,true
+NPPTF,us-stock,Nilam Resources Inc,OTC,US,true
+RIOT,us-stock,Riot Platforms Inc,NASDAQ,US,true
+VOYG,us-stock,Voyager Digital Holdings,OTC,US,true
+WULF,us-stock,TeraWulf Inc,NASDAQ,US,true

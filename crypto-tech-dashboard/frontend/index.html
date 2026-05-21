@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IOSG Crypto Tech Dashboard</title>
+    <!-- Phase 3 Module 1: access gate. If user has not entered code IOSG,
+         redirect to /login.html BEFORE anything else loads. Must be the
+         very first <script> in <head> so no DOM / assets are fetched. -->
+    <script>
+    (function() {
+        try {
+            if (localStorage.getItem('iosg-auth') !== 'ok') {
+                location.replace('/login.html');
+                // Stop the parser from running anything else.
+                throw new Error('redirect');
+            }
+        } catch (e) {
+            if (e.message === 'redirect') throw e;
+            // localStorage unavailable → still gate, send to login
+            location.replace('/login.html');
+            throw new Error('redirect');
+        }
+    })();
+    </script>
+    <!-- R8-3A (revised 2026-05-15): default theme = dark, regardless of
+         OS prefers-color-scheme. Only honors localStorage if the user has
+         explicitly toggled via the sun/moon button. Avoids flash because
+         this script runs before stylesheet loads. -->
+    <script>
+    (function() {
+        try {
+            var t = localStorage.getItem('iosg-theme') || 'dark';
+            document.documentElement.dataset.theme = t;
+        } catch (e) {
+            document.documentElement.dataset.theme = 'dark';
+        }
+    })();
+    </script>
+    <link rel="stylesheet" href="/css/styles.css">
+    <!-- Phase 3 Module 8 (PM): inline data-URI favicon. Avoids a 404 on
+         /favicon.ico without needing a binary asset in the repo. SVG circle
+         with "I" mark uses the accent-blue brand colour. -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2032'%3E%3Crect%20width='32'%20height='32'%20rx='6'%20fill='%234670e1'/%3E%3Ctext%20x='16'%20y='22'%20text-anchor='middle'%20font-family='ui-sans-serif,system-ui,sans-serif'%20font-size='18'%20font-weight='700'%20fill='%23ffffff'%3EI%3C/text%3E%3C/svg%3E">
+    <!-- Phase 3 Module 8 (PM): social meta. Pasted-link previews render a
+         brand-aware unfurl instead of a blank card. og:image points to the
+         same SVG favicon (Twitter/Slack will rasterise). -->
+    <meta name="description" content="IOSG Crypto Tech Dashboard — cross-sectional technical-indicator rankings across 200 crypto tokens and US-listed crypto-adjacent stocks.">
+    <meta property="og:title" content="IOSG Crypto Tech Dashboard">
+    <meta property="og:description" content="Cross-sectional technical-indicator rankings across crypto and US stocks. Research preview.">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary">
+    <meta name="theme-color" content="#0f1216">
+    <script src="/lib/lightweight-charts.standalone.production.js"></script>
+</head>
+<body>
+    <header class="topbar">
+        <div class="topbar-left">
+            <!-- Phase 3 Module 7.3 (Milan): two-tier brand. Primary IOSG
+                 with tabular spacing; secondary "Tech Dashboard" as caps
+                 sub-label below. Visual weight of a financial product
+                 rather than ALL CAPS sentence. -->
+            <span class="brand">
+                <span class="brand-primary">IOSG</span>
+                <span class="brand-sub">Tech Dashboard</span>
+            </span>
+            <span id="last-update" class="muted">last update: --</span>
+            <span id="fallback-stat" class="muted fallback-stat" hidden></span>
+            <span id="exchange-health" class="muted exchange-health" hidden></span>
+        </div>
+        <div class="topbar-right">
+            <!-- R8-3A: theme toggle icon button — sun in dark mode, moon in light mode. -->
+            <button id="theme-toggle" class="btn btn-icon" type="button" title="Toggle light / dark theme" aria-label="Toggle theme">
+                <svg class="theme-icon theme-icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                <svg class="theme-icon theme-icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            </button>
+            <!-- Phase 3.1: refresh button wraps a progress bar that fills
+                 left-to-right while a background refresh is running. Bar
+                 is hidden by default; activated by app.js when refresh
+                 fires. Text inside the button is dynamic (e.g. "47 / 210
+                 · bitcoin"). -->
+            <button id="refresh-btn" class="btn refresh-btn">
+                <span class="refresh-progress-bar" id="refresh-progress-bar"></span>
+                <span class="refresh-label" id="refresh-label">Refresh</span>
+            </button>
+        </div>
+    </header>
+
+    <main class="layout">
+        <section class="main-pane">
+            <div class="token-selector-row">
+                <div class="token-combobox" id="token-combobox">
+                    <input type="text"
+                           id="token-search"
+                           class="token-search"
+                           placeholder="Search token (symbol / name / id)..."
+                           autocomplete="off"
+                           spellcheck="false">
+                    <ul id="token-dropdown" class="token-dropdown" hidden></ul>
+                </div>
+                <div class="token-meta">
+                    <span id="token-name" class="token-name">--</span>
+                    <span id="token-price" class="token-price">--</span>
+                </div>
+                <div class="scores-mini">
+                    <span class="score-badge trend"
+                          title="Trend score: blended SMA/EMA/MACD/momentum signals, scaled 0-100. Higher = stronger trend.">
+                        Trend <span id="badge-trend">--</span>
+                        <span class="info-mark"
+                              title="DEFINITION: mini Trend badge for the selected token. FORMULA: compute 9 directional signals from OHLCV, rank each signal cross-sectionally inside today's active asset class, then equal-weight average them into a 0-100 Trend score. INPUT SIGNALS: 10d log return, 20d log return, MACD histogram, 5d MACD-histogram slope, SMA(5/20) cross strength, EMA(5/20) cross strength, MA50 slope over 20d, price distance from MA50, and Bollinger %B. INTERPRETATION: 70+ = stronger trend than most peers; 40-60 = mixed or range-bound; <30 = weak/downtrend. This small badge mirrors the larger Trend card below.">?</span>
+                    </span>
+                    <span class="score-badge reversal"
+                          title="Reversal score: blended RSI/KDJ/Bollinger/mean-reversion signals, scaled 0-100. Higher = stronger reversal setup.">
+                        Reversal <span id="badge-reversal">--</span>
+                        <span class="info-mark"
+                              title="DEFINITION: mini Reversal badge for the selected token. FORMULA: compute 7 mean-reversion / oversold signals from OHLCV, convert every signal so 'more oversold / more rebound setup' points upward, rank them cross-sectionally, then equal-weight average into a 0-100 Reversal score. INPUT SIGNALS: RSI distance below 30, RSI re-cross above 30, KDJ K distance below 20, inverted Bollinger Z-score, 40d mean-reversion Z-score with 16d skip, inverted MA50-deviation Z-score, and inverted 5d return. INTERPRETATION: 70+ = strong oversold-bounce candidate; 40-60 = mild setup; <30 = little reversal edge. High Reversal plus low Trend is the cleanest rebound pattern; high Reversal plus high Trend is conflicted.">?</span>
+                    </span>
+                    <span id="badge-close-only"
+                          class="score-badge close-only"
+                          title="This token has no spot-exchange listing in our universe (Binance/OKX/Bybit/Gate.io). CoinGecko provides close-price-only history, so volume and H/L/V indicators (KDJ, volume spike) are suppressed for it."
+                          hidden>
+                        Close-only data
+                    </span>
+                </div>
+            </div>
+
+            <!-- R8-1C: Market info panel (Phase-2 item 5).
+                 5 tiles between token selector and score detail:
+                 mcap rank, mcap, 24h vol, 30d avg vol, liquidity venue. -->
+            <section id="market-cap-panel" class="market-panel" hidden>
+                <div class="market-tile" title="CoinGecko's global market-cap rank for this token (or US-stock cap rank for stocks). #1 is the largest by circulating supply × price. Blank for tokens outside CG's tracked Top-N or for stocks where Yahoo doesn't expose a rank field.">
+                    <div class="market-tile-label">Mcap Rank
+                        <span class="info-mark" title="DEFINITION: token's global market-cap rank. FORMULA: tokens sorted descending by (circulating_supply × current_price); #1 is the largest. SOURCE: refreshed daily from CoinGecko /coins/markets endpoint (crypto) or yfinance .info['marketCap'] (stocks, no explicit rank — sorted within our 38-stock universe). Blank when the source doesn't expose a rank field (some niche tokenized stocks, very late-listed tokens). Rank is universe-relative not asset-class-relative — BTC #1 globally, but in our 38-stock universe MSTR is also rank #1.">?</span>
+                    </div>
+                    <div class="market-tile-value" id="mcap-rank">—</div>
+                </div>
+                <div class="market-tile" title="Circulating supply × current price in USD. The dominant size signal for cross-token comparison — large-cap (≥$10B) behaves very differently from small-cap in crypto.">
+                    <div class="market-tile-label">Market Cap
+                        <span class="info-mark" title="DEFINITION: total USD value of all circulating units. FORMULA: market_cap = circulating_supply × current_price. For crypto: CoinGecko returns both fields directly via /coins/markets. For stocks: yfinance .info['marketCap'] = shares_outstanding × close_price. NOT to be confused with FDV (fully-diluted valuation) which uses total_supply instead. Refreshed daily at 08:30 Asia/Shanghai (crypto) and 08:35 (stocks). Practical interpretation: large-cap (≥$10B) tokens historically have lower realized volatility and tighter bid/ask than small-cap; this drives a lot of cross-token behavior differences.">?</span>
+                    </div>
+                    <div class="market-tile-value" id="mcap-value">—</div>
+                </div>
+                <div class="market-tile" title="Trailing 24-hour total trading volume in USD across all venues CoinGecko aggregates (or regular-market volume for stocks via Yahoo). Captures today's liquidity / activity intensity.">
+                    <div class="market-tile-label">24h Volume
+                        <span class="info-mark" title="DEFINITION: total USD volume traded in the last 24 hours. FORMULA: crypto = Σ(units_traded × price_at_trade) across all venues CoinGecko aggregates (Binance + OKX + Bybit + others — far more than just our 8 OHLCV exchanges); stocks = yfinance regularMarketVolume × current price (NYSE/NASDAQ session). HIGH 24h volume = easier entry/exit + tighter spreads. A sudden jump vs 30d average (>2×) is the Volume Spike signal (one of the 12 indicator panels). Reset at UTC 00:00 for crypto, US market open for stocks.">?</span>
+                    </div>
+                    <div class="market-tile-value" id="vol-24h">—</div>
+                </div>
+                <div class="market-tile" title="Mean of the last 30 daily volume bars from our local OHLCV history. Smoothed liquidity proxy that filters out single-day spikes. Shows '—' for CoinGecko close-only tokens (no real exchange volume available).">
+                    <div class="market-tile-label">30d Avg Volume
+                        <span class="info-mark" title="DEFINITION: smoothed liquidity proxy — simple mean of the last 30 daily volume bars from our local OHLCV cache (NOT live from CG/Yahoo). FORMULA: avg_vol_30d = (1/30) · Σ volume_i for i in [t-29, t]. Useful as a baseline: today's 24h volume / this number = the volume spike ratio (one of the 12 indicator signals, threshold ≥ 3× is the chart marker). Returns '—' when the token is on CoinGecko close-only fallback (Tier-4) — close-only data has volume = 0, so the mean would be misleading. Recomputed on every daily-update cron.">?</span>
+                    </div>
+                    <div class="market-tile-value" id="vol-30d">—</div>
+                </div>
+                <div class="market-tile" title="The data source that supplies this token's OHLCV: a Tier-1 spot exchange (Binance / OKX / Bybit / Gate.io / Coinbase / Kraken / KuCoin / Bitstamp) or the CoinGecko close-only fallback. Tier-1 means full open/high/low/close/volume; CoinGecko means daily close only (KDJ / volume-spike signals are suppressed).">
+                    <div class="market-tile-label">Liquidity
+                        <span class="info-mark" title="DEFINITION: which data source supplies this token's OHLCV bars — proxy for execution venue quality. 4-tier waterfall: Tier 1 = Binance → OKX → Bybit → Gate.io → Coinbase → Kraken → KuCoin → Bitstamp (full O/H/L/C/V via CCXT); Tier 4 = CoinGecko fallback (daily close only, O=H=L=close, volume=0). Tier 2 (on-chain) + Tier 3 (scrape) are skipped per design. The selected venue is the FIRST exchange in the priority list that returns the symbol pair as XXX/USDT (or fallback to /USD, /BUSD, /USDC). Tier-4 tokens have KDJ + Volume Spike signals auto-suppressed (NaN) because the required H/L/V are unavailable. Stocks always use yfinance (their own tier path).">?</span>
+                    </div>
+                    <div class="market-tile-value" id="liquidity-source">—</div>
+                </div>
+            </section>
+
+            <!-- R8-1B.2 / Q14: data coverage folding row. Plan acceptance:
+                 "add a Data Coverage row beneath the token-meta in the
+                 scoring section". Shows earliest/latest/tier-breakdown so
+                 users see when the per-token signal becomes reliable. -->
+            <details id="data-coverage" class="data-coverage" hidden>
+                <summary class="data-coverage-summary">
+                    <span class="data-coverage-label">Data Coverage
+                        <span class="info-mark" title="DEFINITION: per-token data quality boundary — tells you when each signal first becomes trustworthy for this specific token. SHOWN FIELDS: earliest_date (first OHLCV row we have), latest_date (most recent), real_ohlc_from (first date with full O/H/L/V, not just close), close_only_windows (date ranges where only close is available). CLICK TO EXPAND: tier_breakdown table — each contiguous segment lists {from, to, source exchange (binance/okx/etc), tier (1 or 4), rows}. Why it matters: KDJ requires real high/low, Volume Spike needs real volume. Both are auto-NaN during Tier-4 close-only segments. For example, BTC has one segment: Tier-1 binance 2020-01-02 → today, so every signal is computed normally. A token like 'tradable-latam-fintech' may be Tier-4 from 2024-06 → today, so its KDJ + Volume Spike are NaN and its Reversal score reliability is reduced.">?</span>
+                    </span>
+                    <span class="data-coverage-headline" id="data-coverage-headline">—</span>
+                </summary>
+                <div class="data-coverage-body" id="data-coverage-body"></div>
+            </details>
+
+            <!-- R6-1: score-detail hoisted to hero position so the marquee scores
+                 are visible above the fold on a 900-px viewport.
+                 R8-2A: Overall composite card added above the 2-col Trend+Reversal
+                 grid. Strategy A from user Q4 ("full-width hero on top, 2-col grid below"). -->
+            <section class="score-detail">
+                <h2 class="section-header">Score Breakdown
+                    <span class="info-mark" title="DEFINITION: the dashboard's main scoring section. Three numbers are shown — Overall (composite, top with 240px gauge), Trend, Reversal — each on a 0-100 scale where the number is this token's cross-sectional percentile rank within today's asset-class universe (crypto and US-stocks are partitioned and ranked independently). HOW IT IS BUILT: (1) compute 16 atomic technical signals from OHLCV (9 trend + 7 reversal); (2) cross-sectionally percentile-rank each signal across the universe today; (3) equal-weight-average the 9 trend signals → Trend score, the 7 reversal signals (with sign flips on bb_z / ma50_dev_z / mom_ret_5d) → Reversal score; (4) compute 4 supplementary sleeves — Breadth (% trend signals positive), Risk (-vol_20d percentile), TS Trend 2y, TS Reversal 2y; (5) weighted blend the 6 sleeves: Overall = 0.40·Trend + 0.25·Reversal + 0.15·Breadth + 0.10·Risk + 0.05·TS_Trend_2y + 0.05·TS_Reversal_2y. A score of 70 means top 30% of universe today; 50 = median. Weights are finance-theory priors (Liu/Tsyvinski 2021 + Russell/Engle 2010).">?</span>
+                </h2>
+
+                <!-- R8-2A: Overall composite hero card (full-width) -->
+                <div class="score-card score-card-overall">
+                    <header class="overall-head">
+                        <h3>Overall
+                            <span class="badge-composite">COMPOSITE</span>
+                            <span class="info-mark" data-explainer="overall"
+                                  title="DEFINITION: single 0-100 headline blending 6 sleeves to summarize this token's technical setup. FORMULA: Overall = 0.40·Trend_CS% + 0.25·Reversal_CS% + 0.15·Breadth_CS% + 0.10·Risk_CS% + 0.05·TS_Trend_2y% + 0.05·TS_Reversal_2y%. Every input is a 0-100 cross-sectional percentile within today's asset-class universe. WEIGHT RATIONALE: Liu/Tsyvinski 2021 'Risks and Returns of Crypto' shows momentum is the most robust factor → 0.40; reversal real but noisier → 0.25; signal breadth (% trend signals positive) as confirmation discount → 0.15; risk (-vol_20d percentile, low vol = high score) → 0.10; 2y per-token TS percentile catches rare-strength outliers → 0.05×2. After blending, the result is percentile-ranked again to produce the Rank N/M chip. Click for full explainer + strengths/weaknesses.">?</span>
+                        </h3>
+                        <span class="rank-chip" id="overall-rank">Rank — / —</span>
+                        <!-- Audit P1 (analyst): banner reflecting Tier-B trained-but-not-accepted state.
+                             Populated by fetchTierBStatus(). Hidden when accepted or untrained. -->
+                        <span id="tier-b-banner" class="tier-b-banner" hidden></span>
+                    </header>
+                    <div class="overall-body">
+                        <div id="overall-gauge" class="score-gauge score-gauge-xl"></div>
+                        <div class="overall-meta">
+                            <div id="overall-value" class="score-large score-xl">--</div>
+                            <div id="overall-blurb" class="score-blurb muted">--</div>
+                            <div id="overall-percentiles" class="percentiles muted"></div>
+                        </div>
+                        <ul id="overall-components" class="components components-overall"></ul>
+                    </div>
+                </div>
+
+                <div class="score-detail-grid">
+                    <div class="score-card">
+                        <h3>Trend
+                            <span class="rank-chip" id="trend-rank">Rank — / —</span>
+                            <span class="info-mark" data-explainer="trend"
+                                  title="DEFINITION: 0-100 score measuring directional uptrend strength. COMPUTATION: 9 atomic trend signals are each cross-sectionally percentile-ranked across the universe, then equal-weight averaged. The 9 signals: mom_ret_10d (10-day log return), mom_ret_20d (20-day log return), macd_hist_12_26_9 (MACD histogram = EMA12 - EMA26 - signal_EMA9), macd_hist_slope5 (5-bar slope of histogram), sma_cross_strength_signed_5_20 (SMA5−SMA20)/SMA20 signed, ema_cross_strength_signed_5_20 (same with EMAs), ma50_slope_20d (slope of MA50 over 20 bars), ma50_dev ((close-MA50)/MA50), bb_pctb_20 (Bollinger %B). Result is itself percentile-ranked → Trend_CS%, the input used in the Overall formula. High = broad agreement across momentum + MA position; low = downtrend or chop. Click for the full breakdown.">?</span>
+                        </h3>
+                        <div class="score-card-row">
+                            <div id="trend-gauge" class="score-gauge"></div>
+                            <div id="trend-value" class="score-large">--</div>
+                        </div>
+                        <div id="trend-percentiles" class="percentiles muted"
+                             title="Cross-sectional %: rank within today's universe."></div>
+                        <ul id="trend-components" class="components"></ul>
+                    </div>
+                    <div class="score-card">
+                        <h3>Reversal
+                            <span class="rank-chip" id="reversal-rank">Rank — / —</span>
+                            <span class="info-mark" data-explainer="reversal"
+                                  title="DEFINITION: 0-100 score measuring mean-reversion / oversold-bounce setup strength. COMPUTATION: 7 atomic reversal signals are each cross-sectionally percentile-ranked, then equal-weight averaged. The 7 signals with sign convention: rsi_dist_os_14 = max(0, 30-RSI) (+1), rsi_turn_event_14 (RSI re-crosses 30 from below, +1), kdj_os_distance = max(0, 20-K) (+1), bb_z_20 (Bollinger Z-score, sign FLIPPED so near-lower-band = high), mr_z_40_skip16 (price vs 40-day mean Z-score with 16-day skip, +1), ma50_dev_z_40 (sign FLIPPED so stretched-above-MA50 = low score), mom_ret_5d (sign FLIPPED so 5d sell-off = high reversal). The sign flips convert 'stretched/sold off' into 'high reversal candidate'. Use case: pair LOW Trend + HIGH Reversal for high-conviction reversal candidates; HIGH Trend + HIGH Reversal = conflicting (caution).">?</span>
+                        </h3>
+                        <div class="score-card-row">
+                            <div id="reversal-gauge" class="score-gauge"></div>
+                            <div id="reversal-value" class="score-large">--</div>
+                        </div>
+                        <div id="reversal-percentiles" class="percentiles muted"
+                             title="Cross-sectional %: rank within today's universe."></div>
+                        <ul id="reversal-components" class="components"></ul>
+                    </div>
+                </div>
+            </section>
+
+            <div id="chart-candle" class="chart chart-main"></div>
+
+            <h2 class="section-header">Core Indicators
+                <span class="info-mark" title="DEFINITION: the 12 technical-indicator families that produce the 16 atomic signals feeding the scoring system above. Each family operates on the same OHLCV time series. THE 12 FAMILIES: (1) SMA Cross — SMA(n) = (1/n)·Σclose; (2) EMA Cross — EMA(n) with α=2/(n+1); (3) MACD = EMA12 - EMA26, Signal = EMA(MACD,9), Histogram = MACD-Signal; (4) RSI = 100 - 100/(1+RS) using Wilder smoothing; (5) KDJ — stochastic K/D/J on N-bar range; (6) Bollinger — mean ± 2σ envelope, %B = position; (7) Volume Spike — vol_t / SMA(vol,14); (8) Momentum — log returns over 5/10/20/30 bars; (9) RSI Mean Reversion — max(0, 30-RSI); (10) Mean Reversion — Z-score over 40-day mean, skip 16; (11) Z-Score vs MA50 — (close-MA50)/MA50 + slope + Z-norm; (12) Price Appreciation — raw 10d/20d returns. PARAMETERS: every panel's header inputs (period/fast/slow/N/M1/M2/std/window) are live — change a value, chart re-fits in 300 ms via debounced reloadPanel(). Hover each panel-title to see what that specific indicator measures and its formula.">?</span>
+            </h2>
+            <div class="indicator-grid">
+                <div class="indicator-panel" data-family="sma_cross" data-title-template="SMA Cross ({fast}/{slow})">
+                    <header>
+                        <span class="panel-title" title="DEFINITION: simple moving average crossover. FORMULA: SMA(n)_t = (1/n) · Σ_{i=t-n+1}^{t} close_i. Default fast = 5 bars (recent week), slow = 20 bars (recent month). SIGNAL: fast SMA crossing UP through slow SMA = golden cross = bullish; DOWN cross = death cross = bearish. EMITTED SCORE: sma_cross_strength_signed_5_20 = (SMA(fast) - SMA(slow)) / SMA(slow). Positive value = golden-cross regime, magnitude scales rank contribution. Feeds the Trend sleeve (one of 9 trend signals).">SMA Cross (5/20)</span>
+                        <span class="param-controls">
+                            <label>fast<input type="number" min="2" max="100" step="1" data-param="fast" value="5"></label>
+                            <label>slow<input type="number" min="3" max="200" step="1" data-param="slow" value="20"></label>
+                            <button type="button" class="param-reset" title="Reset to defaults">reset</button>
+                        </span>
+                    </header>
+                    <div class="legend">
+                        <span class="legend-item"><i class="swatch swatch-blue"></i>SMA Fast (5)</span>
+                        <span class="legend-item"><i class="swatch swatch-orange"></i>SMA Slow (20)</span>
+                    </div>
+                    <div id="chart-sma_cross" class="chart"></div>
+                </div>
+                <div class="indicator-panel" data-family="macd" data-title-template="MACD ({fast},{slow},{signal})">
+                    <header>
+                        <span class="panel-title" title="DEFINITION: Moving Average Convergence/Divergence — measures spread between two EMAs of different speeds. FORMULAS: EMA(close, n) = α·close_t + (1-α)·EMA_{t-1} with α = 2/(n+1); MACD line = EMA(close, 12) - EMA(close, 26); Signal line = EMA(MACD line, 9); Histogram = MACD - Signal. SIGNAL READING: Histogram > 0 and rising = bullish acceleration; Histogram > 0 but falling = momentum cooling; Histogram < 0 and falling = bearish acceleration. EMITTED SCORES: macd_hist_12_26_9 (raw histogram value) and macd_hist_slope5_12_26_9 (5-bar linear regression slope of histogram — turns sign BEFORE histogram itself, useful for early entry).">MACD (12,26,9)</span>
+                        <span class="param-controls">
+                            <label>fast<input type="number" min="2" max="100" step="1" data-param="fast" value="12"></label>
+                            <label>slow<input type="number" min="3" max="200" step="1" data-param="slow" value="26"></label>
+                            <label>signal<input type="number" min="2" max="50" step="1" data-param="signal" value="9"></label>
+                            <button type="button" class="param-reset" title="Reset to defaults">reset</button>
+                        </span>
+                    </header>
+                    <div class="legend">
+                        <span class="legend-item"><i class="swatch swatch-blue"></i>MACD Line</span>
+                        <span class="legend-item"><i class="swatch swatch-orange"></i>Signal</span>
+                        <span class="legend-item"><i class="swatch swatch-green"></i>Histogram (+/-)</span>
+                    </div>
+                    <div id="chart-macd" class="chart"></div>
+                </div>
+                <div class="indicator-panel" data-family="rsi" data-title-template="RSI ({period})">
+                    <header>
+                        <span class="panel-title" title="DEFINITION: Relative Strength Index — bounded momentum oscillator on 0-100 scale. FORMULA: RSI = 100 - 100/(1+RS), where RS = avg_gain_n / avg_loss_n. Wilder's smoothing for averages: new_avg = (prev_avg·(n-1) + this_value) / n. avg_gain_n = mean of POSITIVE close-to-close diffs over last n bars; avg_loss_n = mean of ABSOLUTE values of NEGATIVE diffs. CONVENTION: RSI<30 oversold (mean-reversion candidate), 30-50 weak, 50-70 normal-bull, >70 overbought, >80 stretched. EMITTED SCORES: rsi_dist_os_14 = max(0, 30-RSI) (reversal sleeve); rsi_turn_event_14 = 1 if RSI just crossed 30 from below else 0 (discrete reversal trigger).">RSI (14)</span>
+                        <span class="param-controls">
+                            <label>period<input type="number" min="2" max="100" step="1" data-param="period" value="14"></label>
+                            <button type="button" class="param-reset" title="Reset to defaults">reset</button>
+                        </span>
+                    </header>
+                    <div id="chart-rsi" class="chart"></div>
+                </div>
+                <div class="indicator-panel" data-family="bollinger" data-title-template="Bollinger ({period}, {num_std}σ)">
+                    <header>
+                        <span class="panel-title" title="DEFINITION: price envelope based on rolling mean ± k standard deviations. FORMULAS: mid = SMA(close, period); σ = stdev(close, period); upper = mid + num_std·σ; lower = mid - num_std·σ; %B = (close - lower) / (upper - lower). Defaults: period = 20, num_std = 2 (about 95% of bars should fall inside under normality). %B INTERPRETATION: 1.0 = at upper band, 0.5 = at mid, 0.0 = at lower, <0 = below lower (rare, very stretched). EMITTED SCORES: bb_pctb_20 (raw %B for Trend sleeve — high = stretched up, low = stretched down); bb_z_20 = standardized %B used in Reversal sleeve with sign FLIPPED so 'near lower band' → high reversal score.">Bollinger (20, 2σ)</span>
+                        <span class="param-controls">
+                            <label>period<input type="number" min="3" max="200" step="1" data-param="period" value="20"></label>
+                            <label>std<input type="number" min="0.5" max="5" step="0.1" data-param="num_std" value="2"></label>
+                            <button type="button" class="param-reset" title="Reset to defaults">reset</button>
+                        </span>
+                    </header>
+                    <div id="chart-bollinger" class="chart"></div>
+                </div>
+            </div>
+
+            <details class="more-indicators">
+                <!-- Phase 3 Module 7.2 (Milan): default-collapse 8 panels
+                     (Volume Spike + Momentum + 6 original "more"). First-screen
+                     shows only the 4 core indicators above. -->
+                <summary>Show 8 more indicators</summary>
+                <div class="indicator-grid">
+                    <div class="indicator-panel" data-family="volume_spike" data-title-template="Volume Spike ({ma_window})">
+                        <header>
+                            <span class="panel-title" title="DEFINITION: ratio of today's volume to its N-bar moving average. FORMULA: vol_ratio_t = volume_t / SMA(volume, ma_window)_t. Default ma_window = 14 bars (~2 trading weeks). READING: vol_ratio < 1 = below average activity (dry-up); ≥ 1 = normal; ≥ 2 = volume spike (often accompanies breakouts or capitulation); ≥ 3 = the threshold line drawn on the chart. INTERPRETATION: volume-confirmed price moves historically have higher follow-through probability than no-volume moves. EMITTED SCORE: feeds the per-token volume context (not directly in trend/reversal sleeves, but used as a quality filter for some strategies). AUTO-SUPPRESSED: returns NaN for CoinGecko close-only tokens where volume = 0.">Volume Spike (14)</span>
+                            <span class="param-controls">
+                                <label>window<input type="number" min="3" max="100" step="1" data-param="ma_window" value="14"></label>
+                                <button type="button" class="param-reset" title="Reset to defaults">reset</button>
+                            </span>
+                        </header>
+                        <div id="chart-volume_spike" class="chart"></div>
+                    </div>
+                    <div class="indicator-panel" data-family="momentum">
+                        <header><span class="panel-title" title="DEFINITION: log returns over four lookback horizons capturing momentum at multiple speeds. FORMULA: mom_ret_nd_t = log(close_t / close_{t-n}). Plotted for n in {5, 10, 20, 30}. Log returns (not pct returns) are used because they are additive in time and symmetric around 0. SLEEVE USE: trend sleeve consumes mom_ret_10d + mom_ret_20d (POSITIVE correlation expected — uptrend means positive returns); reversal sleeve consumes -mom_ret_5d (sign FLIPPED — recent 5d sell-off becomes high reversal score). READING THE 4 LINES: aligned positive across all 4 = persistent strong uptrend; aligned negative = persistent downtrend; mixed signs = chop or regime transition.">Momentum (5/10/20/30d)</span></header>
+                        <div class="legend">
+                            <span class="legend-item"><i class="swatch swatch-blue"></i>5d</span>
+                            <span class="legend-item"><i class="swatch swatch-green"></i>10d</span>
+                            <span class="legend-item"><i class="swatch swatch-orange"></i>20d</span>
+                            <span class="legend-item"><i class="swatch swatch-purple"></i>30d</span>
+                        </div>
+                        <div id="chart-momentum" class="chart"></div>
+                    </div>
+                    <div class="indicator-panel" data-family="ema_cross" data-title-template="EMA Cross ({fast}/{slow})">
+                        <header>
+                            <span class="panel-title" title="DEFINITION: exponential moving average crossover. FORMULA: EMA(close, n)_t = α·close_t + (1-α)·EMA_{t-1} with α = 2/(n+1). For n=5: α ≈ 0.333, most recent bar gets 33% weight, prior history 67%. For n=20: α ≈ 0.095. EMA differs from SMA by giving more weight to recent prices — golden / death cross FIRES EARLIER than SMA, but with more false signals in choppy regimes. EMITTED SCORE: ema_cross_strength_signed_5_20 = (EMA(fast) - EMA(slow)) / EMA(slow), sign-preserved. Feeds the Trend sleeve.">EMA Cross (5/20)</span>
+                            <span class="param-controls">
+                                <label>fast<input type="number" min="2" max="100" step="1" data-param="fast" value="5"></label>
+                                <label>slow<input type="number" min="3" max="200" step="1" data-param="slow" value="20"></label>
+                                <button type="button" class="param-reset" title="Reset to defaults">reset</button>
+                            </span>
+                        </header>
+                        <div class="legend">
+                            <span class="legend-item"><i class="swatch swatch-blue"></i>EMA Fast (5)</span>
+                            <span class="legend-item"><i class="swatch swatch-orange"></i>EMA Slow (20)</span>
+                        </div>
+                        <div id="chart-ema_cross" class="chart"></div>
+                    </div>
+                    <div class="indicator-panel" data-family="rsi_mr" data-title-template="RSI Mean Reversion ({period})">
+                        <header>
+                            <span class="panel-title" title="DEFINITION: a derived signal that quantifies how far RSI is below the 30 oversold threshold. FORMULA: rsi_mr_os_soft = max(0, 30 - RSI(period)). RSI period default = 14. EXAMPLES: RSI=35 → score 0 (not oversold); RSI=30 → score 0 (at threshold); RSI=20 → score 10; RSI=10 → score 20 (deeply oversold). SIGNAL PROPERTIES: smooth (linear in RSI), bounded above by 30, lower bound 0. USAGE: standalone bullish reversal candidate. Highest conviction when combined with: (a) an RSI turn event (RSI re-crosses 30 from below); (b) Bollinger %B re-entering above 0 from below.">RSI Mean Reversion (14)</span>
+                            <span class="param-controls">
+                                <label>period<input type="number" min="2" max="100" step="1" data-param="period" value="14"></label>
+                                <button type="button" class="param-reset" title="Reset to defaults">reset</button>
+                            </span>
+                        </header>
+                        <div id="chart-rsi_mr" class="chart"></div>
+                    </div>
+                    <div class="indicator-panel" data-family="kdj" data-title-template="KDJ ({N},{M1},{M2})">
+                        <header>
+                            <span class="panel-title" title="DEFINITION: Stochastic KDJ — momentum oscillator based on current close vs the high/low range of the last N bars. FORMULAS: RSV_t = (close_t - lowest_low_N) / (highest_high_N - lowest_low_N) × 100 (raw stochastic, 0-100); K_t = SMA(RSV, M1) (M1=3); D_t = SMA(K, M2) (M2=3); J_t = 3·K_t - 2·D_t (J amplifies K, can go negative or >100 — surfaces extremes earlier than K alone). DEFAULTS: N=9, M1=3, M2=3 (Wilder's choice). READING: K<20 and turning up = oversold reversal candidate; K>80 and turning down = overbought sell. AUTO-SUPPRESSED (NaN): for CoinGecko close-only tokens since highest_high / lowest_low can't be computed without real H/L bars. EMITTED SCORE: kdj_os_distance = max(0, 20-K).">KDJ (9,3,3)</span>
+                            <span class="param-controls">
+                                <label>N<input type="number" min="2" max="60" step="1" data-param="N" value="9"></label>
+                                <label>M1<input type="number" min="1" max="20" step="1" data-param="M1" value="3"></label>
+                                <label>M2<input type="number" min="1" max="20" step="1" data-param="M2" value="3"></label>
+                                <button type="button" class="param-reset" title="Reset to defaults">reset</button>
+                            </span>
+                        </header>
+                        <div class="legend">
+                            <span class="legend-item"><i class="swatch swatch-blue"></i>K</span>
+                            <span class="legend-item"><i class="swatch swatch-orange"></i>D</span>
+                            <span class="legend-item"><i class="swatch swatch-purple"></i>J</span>
+                        </div>
+                        <div id="chart-kdj" class="chart"></div>
+                    </div>
+                    <div class="indicator-panel" data-family="mean_reversion">
+                        <header><span class="panel-title" title="DEFINITION: Z-score of current price vs its trailing N-day mean, with a 'skip K' offset to avoid contaminating the score with the same window we're scoring on. FORMULA: mr_z_N_skipK = (close_t - mean(close[t-N-K : t-K])) / std(close[t-N-K : t-K]). Default: N = 40, K = 16. EXPLANATION OF THE SKIP: if we just used the last 40 days, the 'mean' would include yesterday's price — biased toward it. By skipping the most-recent 16 days, we measure how stretched the CURRENT price is vs the 'background' price level from 16-56 days ago. READING: z < -2 = price 2σ below historical mean (mean-reversion candidate); z > 2 = stretched above. EMITTED SCORE: mr_z_40_skip16 feeds the Reversal sleeve with +1 sign weighting.">Mean Reversion (40,16)</span></header>
+                        <div id="chart-mean_reversion" class="chart"></div>
+                    </div>
+                    <div class="indicator-panel" data-family="zscore_ma">
+                        <header><span class="panel-title" title="DEFINITION: standardized distance of close from its 50-day SMA, plus its slope and Z-score-of-deviation. FORMULAS: ma50 = SMA(close, 50); ma50_dev = (close - ma50) / ma50 (raw deviation in %, dimensionless); ma50_slope_20d = OLS slope of ma50 over the last 20 bars (positive = medium-term uptrend curving up, negative = curving down); ma50_dev_z_40 = z-score of the ma50_dev series over its last 40 bars. SLEEVE USE: Trend sleeve consumes ma50_slope_20d + ma50_dev (positive correlation expected — price above MA + MA sloping up = uptrend). Reversal sleeve consumes -ma50_dev_z_40 (sign FLIPPED — being stretched ABOVE MA50 reduces reversal score, being stretched BELOW raises it).">Z-Score vs MA50</span></header>
+                        <div id="chart-zscore_ma" class="chart"></div>
+                    </div>
+                    <div class="indicator-panel" data-family="price_appreciation">
+                        <header><span class="panel-title" title="DEFINITION: raw price change percentages over two lookback horizons. FORMULAS: price_ret_10d_t = (close_t - close_{t-10}) / close_{t-10}; price_ret_20d_t = analogous over 20 bars. NOT log returns — these are simple % returns for human-readable scale. WHY BOTH: provides ABSOLUTE-return context alongside the cross-sectionally ranked momentum signal. Example: a token with mom_ret_20d percentile 90 might be a +5% move (large-cap) or a +500% move (micro-cap meme) — price_ret tells you which. Used in the Price Appreciation strategy: long when 20d>10% AND volume z-score>2; exit when 5d return<0.">Price Appreciation (10d / 20d)</span></header>
+                        <div id="chart-price_appreciation" class="chart"></div>
+                    </div>
+                </div>
+            </details>
+
+            <details class="backtest">
+                <summary>Golden-cross backtest (SMA 5/20)
+                    <span class="info-mark" title="DEFINITION: per-token backtest of a Simple Moving Average crossover strategy. RULE: position = 1 (long) when SMA(fast) > SMA(slow); position = 0 (flat) otherwise. FORMULA: SMA(n)_t = (1/n)·Σ_{i=t-n+1}^{t} close_i. EXECUTION: next-day fill — signal computed at close of day t triggers position change at open of day t+1 (this is the shift(1) that avoids look-ahead bias). FRICTION: 5 basis-point commission charged on each position change (one-way; round-trip = 10 bps). REPORTS: CAGR = (final_equity)^(365/days) - 1 (annualized, √365 for crypto); Sharpe = √365 · mean(daily_returns) / std(daily_returns); max_drawdown = worst peak-to-trough %; n_trades = round-trip count; win_rate = % of trades with positive return. EQUITY CURVE plots cumulative product of (1 + daily_return). Tweak fast/slow in inputs below to compare parameters.">?</span>
+                </summary>
+                <div id="backtest-stats" class="backtest-stats muted">no run yet</div>
+                <button id="backtest-run" class="btn">Run</button>
+                <!-- P1-G: equity curve from /api/backtest/{id}.result.equity_curve -->
+                <div id="backtest-equity-curve" class="chart backtest-equity"></div>
+            </details>
+
+            <!-- R8-2B: indicator robustness — universe-wide backtest table -->
+            <section class="indicator-robustness">
+                <h2 class="section-header">Indicator Robustness
+                    <span class="info-mark" title="DEFINITION: universe-wide backtest of 9 canonical rule-based strategies. Each strategy is run on EVERY token with ≥365 days of history; results are then aggregated. THE 9 STRATEGIES (entry / exit): (1) rsi_oversold_30_50 — long when RSI<30, exit when RSI>50; (2) macd_signal_cross — long on MACD line ↑ Signal, exit on MACD line ↓ Signal; (3) kdj_oversold_cross — long when K↑D and both<20, exit K↓D and both>80; (4) bollinger_lower_band — long when close touches lower band, exit at mid; (5) sma_golden_cross 5/20; (6) ema_golden_cross 5/20; (7) momentum_breakout — long when 20d return >0, exit ≤0; (8) zscore_reversion — long when z<-2, exit when z>0; (9) price_appreciation — long when 20d>10% AND vol_z>2, exit when 5d return<0. AGGREGATION: median Sharpe, % positive Sharpe, worst & best tokens. RELIABILITY BADGE: 'Reliable' = median Sharpe ≥ 0.5 AND ≥60% positive AND worst ≥ -1.0; 'Useable with caveats' = median Sharpe ∈ [0.2, 0.5) OR pct positive ∈ [50%, 60%); 'Unreliable' otherwise. EXECUTION: next-day fill + 5bps commission, √365 annualization.">?</span>
+                </h2>
+                <p class="muted small">
+                    "If I had traded purely on this indicator, would I have made or lost money?"
+                    Each strategy is back-tested across every token in the current asset class.
+                </p>
+                <table id="robustness-table" class="robustness-table">
+                    <thead>
+                        <tr>
+                            <th title="Strategy rule family. Hover each row name for the exact entry/exit rule. Click a row to open per-token backtest details.">Strategy</th>
+                            <th title="Median annualized Sharpe ratio across all eligible tokens for this strategy. FORMULA per token: Sharpe = sqrt(365) × mean(daily_strategy_return) / std(daily_strategy_return) for crypto, using next-day execution and 5 bps commission. Then take the median across tokens.">Median Sharpe</th>
+                            <th title="Percentage of eligible tokens where the strategy's annualized Sharpe ratio is greater than 0. FORMULA: 100 × count(token_sharpe > 0) / n_tokens. Higher means the rule works broadly rather than only on one outlier token.">% Positive</th>
+                            <th title="Best-performing token for this strategy, shown as SYMBOL: Sharpe. This is the maximum per-token Sharpe inside the current asset-class universe and is useful for spotting where the rule historically worked best.">Best</th>
+                            <th title="Worst-performing token for this strategy, shown as SYMBOL: Sharpe. This is the minimum per-token Sharpe; very negative worst results mean the indicator can fail badly on some names.">Worst</th>
+                            <th title="Number of eligible tokens included in this universe-wide backtest. Eligibility generally requires at least 365 days of usable OHLCV history; close-only tokens can suppress KDJ / volume-dependent rules.">n</th>
+                            <th title="Reliability classification. Reliable = median Sharpe ≥ 0.5 AND ≥60% positive AND worst Sharpe ≥ -1.0. Caveats = median Sharpe between 0.2 and 0.5 OR % positive between 50% and 60%. Unreliable = weaker than those thresholds.">Reliability</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+                <div id="robustness-detail" class="robustness-detail" hidden></div>
+            </section>
+        </section>
+
+        <aside class="sidebar" id="sidebar">
+            <!-- R6-7: mobile-only drawer handle. On viewports <= 768px the
+                 sidebar becomes a fixed-bottom slide-up drawer; tapping
+                 the handle toggles .expanded on the parent <aside>. -->
+            <button id="drawer-handle" class="drawer-handle" type="button"
+                    aria-controls="sidebar" aria-expanded="false" hidden>
+                <span class="drawer-grip" aria-hidden="true"></span>
+                <span class="drawer-label">Top 20 ▴</span>
+            </button>
+            <!-- R8-1D: asset-class tab strip. Switching tabs swaps the
+                 active asset universe (crypto Top-200 vs US stocks 40).
+                 URL hash persists (#tab=us-stock). -->
+            <div class="sidebar-tabs">
+                <button class="tab-btn active" data-tab="crypto" type="button">Crypto</button>
+                <button class="tab-btn" data-tab="us-stock" type="button">US Stocks</button>
+            </div>
+            <header class="sidebar-head">
+                <strong id="sidebar-title">Top 20</strong>
+                <span class="info-mark" title="DEFINITION: top 20 tokens of the active asset-class universe (crypto = 200 tokens; us-stock = 38 active tickers), ranked by the chosen score. SORT MODES: 'By Overall' (composite, default), 'By Trend' (9-signal blend), 'By Reversal' (7-signal blend). DATA: pulls /api/rankings?sort_by=<mode>&limit=20&asset_class=<active>. Each row: rank number + ticker/name + sparkline + score value. SPARKLINE: tiny inline SVG showing the last 30 days of the chosen percentile (green polyline if ending value ≥ starting, red otherwise). CLICK any row to jump to that token; .selected class persists for visual hand-off. Universe partition: crypto and US-stock rank INDEPENDENTLY — crypto #1 may share name space with stock #1 but they're in different percentile spaces.">?</span>
+                <select id="rank-mode">
+                    <!-- UX-audit final: backend has supported sort_by=overall
+                         since R8-2A but the dropdown stopped at Trend / Reversal.
+                         PM weekly review wanted top-N by composite. Now first
+                         option since Overall is the published headline score. -->
+                    <option value="overall">By Overall</option>
+                    <option value="trend">By Trend</option>
+                    <option value="reversal">By Reversal</option>
+                </select>
+            </header>
+            <ul id="rank-list" class="rank-list"></ul>
+        </aside>
+    </main>
+
+    <!-- Phase 3 Module 2: legal footer. Disclaimer is non-negotiable text.
+         Version + last-refresh are filled by app.js at runtime. -->
+    <footer class="site-footer">
+        <div class="site-footer-row site-footer-meta">
+            <span>© 2026 IOSG</span>
+            <span class="site-footer-sep">·</span>
+            <span id="footer-version">v—</span>
+            <span class="site-footer-sep">·</span>
+            <span id="footer-last-refresh">Last data refresh: —</span>
+        </div>
+        <div class="site-footer-row site-footer-disclaimer">
+            This dashboard is a research preview for internal IOSG and
+            portfolio-company use only. The displayed scores, rankings and
+            backtests are illustrative and DO NOT constitute investment
+            advice, solicitation, or a recommendation to buy or sell any
+            asset. Past performance does not guarantee future results.
+            Crypto and US-equity prices may be delayed.
+        </div>
+    </footer>
+
+    <script src="/js/api.js"></script>
+    <script src="/js/components/score_gauge.js?v=20260515-help-click3"></script>
+    <script src="/js/components/sparkline.js?v=20260515-help-click3"></script>
+    <script src="/js/components/market_panel.js?v=20260515-help-click3"></script>  <!-- R8-1C -->
+    <script src="/js/components/robustness_panel.js?v=20260515-help-click3"></script>  <!-- R8-2B -->
+    <script src="/js/components/explainer_modal.js?v=20260515-help-click3"></script>  <!-- R8-2C -->
+    <script src="/js/components/toast.js?v=20260518-p3"></script>  <!-- Phase 3 Module 8 -->
+    <script src="/js/charts/candle.js?v=20260515-help-click3"></script>
+    <script src="/js/charts/indicator_panels.js?v=20260515-help-click3"></script>
+    <script src="/js/app.js?v=20260515-help-click3"></script>
+</body>
+</html>

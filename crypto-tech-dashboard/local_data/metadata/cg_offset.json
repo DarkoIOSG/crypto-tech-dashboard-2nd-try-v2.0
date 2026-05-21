@@ -1,0 +1,22 @@
+{
+  "btc_max_diff_pct": 0.24433706061476912,
+  "btc_overlap_days": 32,
+  "detected_at": "2026-05-18T08:39:26+00:00",
+  "exchange": "binance",
+  "method": "btc-close-30d-vs-exchange",
+  "offset_days": 0,
+  "per_offset": {
+    "-1": {
+      "mean_abs_pct": 1.2747097342382323,
+      "overlap_days": 31
+    },
+    "0": {
+      "mean_abs_pct": 0.24433706061476912,
+      "overlap_days": 32
+    },
+    "1": {
+      "mean_abs_pct": 1.3312610581451692,
+      "overlap_days": 32
+    }
+  }
+}

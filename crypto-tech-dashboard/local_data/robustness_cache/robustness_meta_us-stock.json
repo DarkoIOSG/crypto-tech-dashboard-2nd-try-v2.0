@@ -1,0 +1,9 @@
+{
+  "asset_class": "us-stock",
+  "commission_bps": 5.0,
+  "computed_at": "2026-05-15T08:13:45",
+  "elapsed_seconds": 10.6,
+  "min_history_days": 365,
+  "n_candidates": 30,
+  "ohlcv_hash": "89f024200a6c687c856d6a9c3ac76d2211f6abfa6fb137dee0604a770c2a5acc"
+}

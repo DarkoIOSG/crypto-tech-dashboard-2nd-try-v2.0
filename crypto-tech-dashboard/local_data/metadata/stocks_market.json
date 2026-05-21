@@ -1,0 +1,383 @@
+{
+  "ANY": {
+    "ticker": "ANY",
+    "name": "Sphere 3D Corp.",
+    "exchange": "NCM",
+    "current_price": 2.29,
+    "market_cap": 8768982,
+    "shares_outstanding": 3829250,
+    "total_volume_24h": 146070,
+    "price_change_percentage_24h": -5.761321
+  },
+  "APLD": {
+    "ticker": "APLD",
+    "name": "Applied Digital Corporation",
+    "exchange": "NMS",
+    "current_price": 42.56,
+    "market_cap": 12162352128,
+    "shares_outstanding": 285769539,
+    "total_volume_24h": 17723110,
+    "price_change_percentage_24h": -8.88461
+  },
+  "ARBK": {
+    "ticker": "ARBK",
+    "name": "Argo Blockchain plc",
+    "exchange": "NCM",
+    "current_price": 4.19,
+    "market_cap": 61320220,
+    "shares_outstanding": 14634897,
+    "total_volume_24h": 35582,
+    "price_change_percentage_24h": 2.1951256
+  },
+  "BIGG": {
+    "ticker": "BIGG",
+    "name": "Big Tree Group, Inc.",
+    "exchange": "PNK",
+    "current_price": 0.0001,
+    "market_cap": 2221,
+    "shares_outstanding": 22212217,
+    "total_volume_24h": 300,
+    "price_change_percentage_24h": 0.0
+  },
+  "BITF": {
+    "ticker": "BITF",
+    "name": "Bitfarms Ltd",
+    "exchange": "NGM",
+    "current_price": 1.98,
+    "market_cap": 1199686528,
+    "shares_outstanding": 602851137,
+    "total_volume_24h": 37311063,
+    "price_change_percentage_24h": null
+  },
+  "BKKT": {
+    "ticker": "BKKT",
+    "name": "Bakkt, Inc.",
+    "exchange": "NYQ",
+    "current_price": 8.28,
+    "market_cap": 369390048,
+    "shares_outstanding": 44612329,
+    "total_volume_24h": 2133319,
+    "price_change_percentage_24h": -4.6083
+  },
+  "BLSH": {
+    "ticker": "BLSH",
+    "name": "Bullish",
+    "exchange": "NYQ",
+    "current_price": 35.66,
+    "market_cap": 5407780352,
+    "shares_outstanding": 151648346,
+    "total_volume_24h": 2191583,
+    "price_change_percentage_24h": -9.63
+  },
+  "BTBT": {
+    "ticker": "BTBT",
+    "name": "Bit Digital, Inc.",
+    "exchange": "NCM",
+    "current_price": 1.805,
+    "market_cap": 589471872,
+    "shares_outstanding": 326577219,
+    "total_volume_24h": 31622933,
+    "price_change_percentage_24h": -15.258214
+  },
+  "BTCS": {
+    "ticker": "BTCS",
+    "name": "BTCS Inc.",
+    "exchange": "NCM",
+    "current_price": 1.83,
+    "market_cap": 91088936,
+    "shares_outstanding": 49775371,
+    "total_volume_24h": 1314184,
+    "price_change_percentage_24h": -13.679248
+  },
+  "BTDR": {
+    "ticker": "BTDR",
+    "name": "Bitdeer Technologies Group",
+    "exchange": "NCM",
+    "current_price": 13.35,
+    "market_cap": 3248237312,
+    "shares_outstanding": 198913731,
+    "total_volume_24h": 8047360,
+    "price_change_percentage_24h": -9.491523
+  },
+  "BTGO": {
+    "ticker": "BTGO",
+    "name": "BitGo Holdings, Inc.",
+    "exchange": "NYQ",
+    "current_price": 8.89,
+    "market_cap": 1026501376,
+    "shares_outstanding": 106611583,
+    "total_volume_24h": 3198482,
+    "price_change_percentage_24h": -9.83772
+  },
+  "BTM": {
+    "ticker": "BTM",
+    "name": "Bitcoin Depot Inc.",
+    "exchange": "NCM",
+    "current_price": 2.93,
+    "market_cap": 33251278,
+    "shares_outstanding": 5941972,
+    "total_volume_24h": 765562,
+    "price_change_percentage_24h": 5.395687
+  },
+  "CAN": {
+    "ticker": "CAN",
+    "name": "Canaan Inc.",
+    "exchange": "NGM",
+    "current_price": 0.5004,
+    "market_cap": 373050400,
+    "shares_outstanding": 724729417,
+    "total_volume_24h": 6260805,
+    "price_change_percentage_24h": -5.119456
+  },
+  "CIFR": {
+    "ticker": "CIFR",
+    "name": "Cipher Digital Inc.",
+    "exchange": "NMS",
+    "current_price": 20.33,
+    "market_cap": 8315970048,
+    "shares_outstanding": 409049197,
+    "total_volume_24h": 24256987,
+    "price_change_percentage_24h": -8.793185
+  },
+  "CLSK": {
+    "ticker": "CLSK",
+    "name": "CleanSpark, Inc.",
+    "exchange": "NCM",
+    "current_price": 13.11,
+    "market_cap": 3364138752,
+    "shares_outstanding": 256608606,
+    "total_volume_24h": 17558015,
+    "price_change_percentage_24h": -6.2231755
+  },
+  "COIN": {
+    "ticker": "COIN",
+    "name": "Coinbase Global, Inc.",
+    "exchange": "NMS",
+    "current_price": 195.43,
+    "market_cap": 51488137216,
+    "shares_outstanding": 222426875,
+    "total_volume_24h": 14428628,
+    "price_change_percentage_24h": -7.8203874
+  },
+  "CORZ": {
+    "ticker": "CORZ",
+    "name": "Core Scientific, Inc.",
+    "exchange": "NMS",
+    "current_price": 24.21,
+    "market_cap": 7696002560,
+    "shares_outstanding": 317885292,
+    "total_volume_24h": 10146688,
+    "price_change_percentage_24h": -2.8491137
+  },
+  "CRCL": {
+    "ticker": "CRCL",
+    "name": "Circle Internet Group",
+    "exchange": "NYQ",
+    "current_price": 114.0,
+    "market_cap": 30471139328,
+    "shares_outstanding": 229857799,
+    "total_volume_24h": 17752078,
+    "price_change_percentage_24h": -7.97546
+  },
+  "DEFT": {
+    "ticker": "DEFT",
+    "name": "DeFi Technologies Inc.",
+    "exchange": "NCM",
+    "current_price": 0.7101,
+    "market_cap": 275360608,
+    "shares_outstanding": 387777239,
+    "total_volume_24h": 6714039,
+    "price_change_percentage_24h": -12.116334
+  },
+  "DMGGF": {
+    "ticker": "DMGGF",
+    "name": "DMG Blockchain Solutions Inc.",
+    "exchange": "OQB",
+    "current_price": 0.2258,
+    "market_cap": 46594784,
+    "shares_outstanding": 206354223,
+    "total_volume_24h": 27050,
+    "price_change_percentage_24h": -4.725743
+  },
+  "EBON": {
+    "ticker": "EBON",
+    "name": "Ebang International Holdings Inc.",
+    "exchange": "NMS",
+    "current_price": 2.22,
+    "market_cap": 13942968,
+    "shares_outstanding": 4726424,
+    "total_volume_24h": 2198,
+    "price_change_percentage_24h": 5.6086836
+  },
+  "ETOR": {
+    "ticker": "ETOR",
+    "name": "eToro Group Ltd.",
+    "exchange": "NMS",
+    "current_price": 40.59,
+    "market_cap": 3228004608,
+    "shares_outstanding": 66806610,
+    "total_volume_24h": 1085521,
+    "price_change_percentage_24h": -2.3809564
+  },
+  "EXOD": {
+    "ticker": "EXOD",
+    "name": "Exodus Movement, Inc.",
+    "exchange": "ASE",
+    "current_price": 6.43,
+    "market_cap": 192982224,
+    "shares_outstanding": 10828976,
+    "total_volume_24h": 90649,
+    "price_change_percentage_24h": -9.94398
+  },
+  "FIGR": {
+    "ticker": "FIGR",
+    "name": "Figure Technology Solutions, Inc.",
+    "exchange": "NMS",
+    "current_price": 43.28,
+    "market_cap": 9532158976,
+    "shares_outstanding": 181663016,
+    "total_volume_24h": 5207427,
+    "price_change_percentage_24h": 0.13882782
+  },
+  "FLD": {
+    "ticker": "FLD",
+    "name": "Fold Holdings, Inc.",
+    "exchange": "NCM",
+    "current_price": 1.42,
+    "market_cap": 72112360,
+    "shares_outstanding": 50783350,
+    "total_volume_24h": 81182,
+    "price_change_percentage_24h": -7.1895437
+  },
+  "GEMI": {
+    "ticker": "GEMI",
+    "name": "Gemini Space Station, Inc.",
+    "exchange": "NMS",
+    "current_price": 5.58,
+    "market_cap": 704583744,
+    "shares_outstanding": 51142702,
+    "total_volume_24h": 17026018,
+    "price_change_percentage_24h": 6.083654
+  },
+  "GLXY": {
+    "ticker": "GLXY",
+    "name": "Galaxy Digital",
+    "exchange": "NMS",
+    "current_price": 29.61,
+    "market_cap": 11544942592,
+    "shares_outstanding": 191491823,
+    "total_volume_24h": 4051016,
+    "price_change_percentage_24h": -7.58427
+  },
+  "GREE": {
+    "ticker": "GREE",
+    "name": "Greenidge Generation Holdings Inc.",
+    "exchange": "NMS",
+    "current_price": 1.47,
+    "market_cap": 24706466,
+    "shares_outstanding": 14073725,
+    "total_volume_24h": 391780,
+    "price_change_percentage_24h": 1.3793089
+  },
+  "HIVE": {
+    "ticker": "HIVE",
+    "name": "HIVE Digital Technologies Ltd.",
+    "exchange": "NCM",
+    "current_price": 2.69,
+    "market_cap": 681260736,
+    "shares_outstanding": 253256770,
+    "total_volume_24h": 10834860,
+    "price_change_percentage_24h": -9.4276085
+  },
+  "HOOD": {
+    "ticker": "HOOD",
+    "name": "Robinhood Markets, Inc.",
+    "exchange": "NMS",
+    "current_price": 77.14,
+    "market_cap": 69464965120,
+    "shares_outstanding": 791184698,
+    "total_volume_24h": 19662351,
+    "price_change_percentage_24h": -4.4113975
+  },
+  "HUT": {
+    "ticker": "HUT",
+    "name": "Hut 8 Corp.",
+    "exchange": "NMS",
+    "current_price": 102.47,
+    "market_cap": 11537518592,
+    "shares_outstanding": 112594112,
+    "total_volume_24h": 4781089,
+    "price_change_percentage_24h": -6.3088613
+  },
+  "IREN": {
+    "ticker": "IREN",
+    "name": "IREN Limited",
+    "exchange": "NMS",
+    "current_price": 52.94,
+    "market_cap": 18919626752,
+    "shares_outstanding": 357378674,
+    "total_volume_24h": 48691571,
+    "price_change_percentage_24h": -9.349314
+  },
+  "MARA": {
+    "ticker": "MARA",
+    "name": "MARA Holdings, Inc.",
+    "exchange": "NCM",
+    "current_price": 12.44,
+    "market_cap": 4743004672,
+    "shares_outstanding": 381270503,
+    "total_volume_24h": 40007187,
+    "price_change_percentage_24h": -6.395789
+  },
+  "MSTR": {
+    "ticker": "MSTR",
+    "name": "Strategy Inc",
+    "exchange": "NMS",
+    "current_price": 177.42,
+    "market_cap": 62217502720,
+    "shares_outstanding": 331038946,
+    "total_volume_24h": 19654296,
+    "price_change_percentage_24h": -5.107773
+  },
+  "NPPTF": {
+    "ticker": "NPPTF",
+    "name": "Neptune Digital Assets Corp.",
+    "exchange": "OQB",
+    "current_price": 0.6887,
+    "market_cap": 88347192,
+    "shares_outstanding": 128281096,
+    "total_volume_24h": 57675,
+    "price_change_percentage_24h": 1.8937769
+  },
+  "RIOT": {
+    "ticker": "RIOT",
+    "name": "Riot Platforms, Inc.",
+    "exchange": "NCM",
+    "current_price": 23.49,
+    "market_cap": 8882771968,
+    "shares_outstanding": 378151230,
+    "total_volume_24h": 14080182,
+    "price_change_percentage_24h": -4.5897613
+  },
+  "VOYG": {
+    "ticker": "VOYG",
+    "name": "Voyager Technologies, Inc.",
+    "exchange": "NYQ",
+    "current_price": 34.44,
+    "market_cap": 2040988288,
+    "shares_outstanding": 53503581,
+    "total_volume_24h": 2486434,
+    "price_change_percentage_24h": -4.94066
+  },
+  "WULF": {
+    "ticker": "WULF",
+    "name": "TeraWulf Inc.",
+    "exchange": "NCM",
+    "current_price": 22.32,
+    "market_cap": 11060288512,
+    "shares_outstanding": 495532645,
+    "total_volume_24h": 23972883,
+    "price_change_percentage_24h": -7.6541185
+  },
+  "_refreshed_at": "2026-05-18T13:58:28"
+}

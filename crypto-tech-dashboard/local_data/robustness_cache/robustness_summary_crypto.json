@@ -1,0 +1,244 @@
+{
+  "meta": {
+    "asset_class": "crypto",
+    "commission_bps": 5.0,
+    "computed_at": "2026-05-15T08:13:34",
+    "elapsed_seconds": 49.8,
+    "min_history_days": 365,
+    "n_candidates": 144,
+    "ohlcv_hash": "89f024200a6c687c856d6a9c3ac76d2211f6abfa6fb137dee0604a770c2a5acc"
+  },
+  "strategies": {
+    "bollinger_lower_band": {
+      "best": {
+        "cagr": 26.122487536032253,
+        "cg_id": "siren-2",
+        "sharpe": 1.9907354590426507,
+        "symbol": "SIREN-2"
+      },
+      "label": "Bollinger Lower Band (long close<lower, exit at mid)",
+      "mean_sharpe": 0.04153318965700949,
+      "median_cagr": -0.3057035134436361,
+      "median_sharpe": 0.036979401396396334,
+      "n_tokens": 143,
+      "params": {
+        "num_std": 2.0,
+        "period": 20
+      },
+      "pct_positive": 51.04895104895105,
+      "reliability": "caveats",
+      "worst": {
+        "cagr": -0.8798410191294163,
+        "cg_id": "story-2",
+        "sharpe": -1.4217040398406373,
+        "symbol": "STORY-2"
+      }
+    },
+    "ema_golden_cross": {
+      "best": {
+        "cagr": 0.03960231330327413,
+        "cg_id": "superstate-short-duration-us-government-securities-fund-ustb",
+        "sharpe": 16.687463511800203,
+        "symbol": "SUPERSTATE-SHORT-DURATION-US-GOVERNMENT-SECURITIES-FUND-USTB"
+      },
+      "label": "EMA Golden Cross (5/20)",
+      "mean_sharpe": 0.6602833905025025,
+      "median_cagr": 0.174811183349596,
+      "median_sharpe": 0.5697919404721858,
+      "n_tokens": 144,
+      "params": {
+        "fast": 5,
+        "slow": 20
+      },
+      "pct_positive": 83.33333333333333,
+      "reliability": "caveats",
+      "worst": {
+        "cagr": -0.5936586052128054,
+        "cg_id": "sonic-3",
+        "sharpe": -1.0859916488037658,
+        "symbol": "SONIC-3"
+      }
+    },
+    "kdj_oversold_cross": {
+      "best": {
+        "cagr": 3.98120966963024,
+        "cg_id": "bittorrent",
+        "sharpe": 1.784889134385701,
+        "symbol": "BITTORRENT"
+      },
+      "label": "KDJ Oversold Cross (K crosses D up <20)",
+      "mean_sharpe": 0.19999908692057175,
+      "median_cagr": -0.12258129894522352,
+      "median_sharpe": 0.17569117633018266,
+      "n_tokens": 130,
+      "params": {
+        "M1": 3,
+        "M2": 3,
+        "N": 9
+      },
+      "pct_positive": 66.15384615384616,
+      "reliability": "caveats",
+      "worst": {
+        "cagr": -0.8098720843123357,
+        "cg_id": "sonic-3",
+        "sharpe": -1.1518140985533365,
+        "symbol": "SONIC-3"
+      }
+    },
+    "macd_signal_cross": {
+      "best": {
+        "cagr": 2.852269947970077,
+        "cg_id": "wefi",
+        "sharpe": 2.4824563712548273,
+        "symbol": "WEFI"
+      },
+      "label": "MACD Signal Cross (long MACD>signal)",
+      "mean_sharpe": 0.2995150594296634,
+      "median_cagr": 0.0032400821866336305,
+      "median_sharpe": 0.39180962440734024,
+      "n_tokens": 144,
+      "params": {
+        "fast": 12,
+        "signal": 9,
+        "slow": 26
+      },
+      "pct_positive": 74.30555555555556,
+      "reliability": "caveats",
+      "worst": {
+        "cagr": -0.03305595048320131,
+        "cg_id": "superstate-short-duration-us-government-securities-fund-ustb",
+        "sharpe": -7.756141335285274,
+        "symbol": "SUPERSTATE-SHORT-DURATION-US-GOVERNMENT-SECURITIES-FUND-USTB"
+      }
+    },
+    "momentum_breakout": {
+      "best": {
+        "cagr": 0.037935029367312634,
+        "cg_id": "superstate-short-duration-us-government-securities-fund-ustb",
+        "sharpe": 16.33396977978963,
+        "symbol": "SUPERSTATE-SHORT-DURATION-US-GOVERNMENT-SECURITIES-FUND-USTB"
+      },
+      "label": "Momentum Breakout (20d return > 0)",
+      "mean_sharpe": 0.5489979846294369,
+      "median_cagr": 0.0891856314388132,
+      "median_sharpe": 0.5108342350503852,
+      "n_tokens": 144,
+      "params": {
+        "lookback": 20,
+        "threshold": 0.0
+      },
+      "pct_positive": 79.86111111111111,
+      "reliability": "caveats",
+      "worst": {
+        "cagr": -0.12751960114196503,
+        "cg_id": "hashnote-usyc",
+        "sharpe": -2.2698522092099083,
+        "symbol": "HASHNOTE-USYC"
+      }
+    },
+    "price_appreciation": {
+      "best": {
+        "cagr": 0.9485105073583797,
+        "cg_id": "pudgy-penguins",
+        "sharpe": 1.5452985687055316,
+        "symbol": "PUDGY-PENGUINS"
+      },
+      "label": "Price Appreciation (20d>10% + vol_z>2; exit 5d<0)",
+      "mean_sharpe": 0.30399877640273754,
+      "median_cagr": 0.07188771966839835,
+      "median_sharpe": 0.3758970328704725,
+      "n_tokens": 130,
+      "params": {
+        "exit_window": 5,
+        "lookback": 20,
+        "threshold": 0.1,
+        "vol_z_min": 2.0
+      },
+      "pct_positive": 74.61538461538461,
+      "reliability": "caveats",
+      "worst": {
+        "cagr": -0.27130834541649596,
+        "cg_id": "syrup",
+        "sharpe": -1.763517638850422,
+        "symbol": "SYRUP"
+      }
+    },
+    "rsi_oversold_30_50": {
+      "best": {
+        "cagr": 1.1361170344725435,
+        "cg_id": "virtual-protocol",
+        "sharpe": 2.0073279419916643,
+        "symbol": "VIRTUAL-PROTOCOL"
+      },
+      "label": "RSI Oversold (long RSI<30, exit RSI>50)",
+      "mean_sharpe": 0.23750836664028974,
+      "median_cagr": -0.0013789835702224251,
+      "median_sharpe": 0.2587431706518223,
+      "n_tokens": 144,
+      "params": {
+        "entry": 30,
+        "exit": 50,
+        "period": 14
+      },
+      "pct_positive": 68.05555555555556,
+      "reliability": "caveats",
+      "worst": {
+        "cagr": -0.0005669255703654175,
+        "cg_id": "superstate-short-duration-us-government-securities-fund-ustb",
+        "sharpe": -1.1300085146539895,
+        "symbol": "SUPERSTATE-SHORT-DURATION-US-GOVERNMENT-SECURITIES-FUND-USTB"
+      }
+    },
+    "sma_golden_cross": {
+      "best": {
+        "cagr": 0.03802189249344168,
+        "cg_id": "superstate-short-duration-us-government-securities-fund-ustb",
+        "sharpe": 16.381315537646454,
+        "symbol": "SUPERSTATE-SHORT-DURATION-US-GOVERNMENT-SECURITIES-FUND-USTB"
+      },
+      "label": "SMA Golden Cross (5/20)",
+      "mean_sharpe": 0.6030721764875702,
+      "median_cagr": 0.08165597419298198,
+      "median_sharpe": 0.48608810173418915,
+      "n_tokens": 144,
+      "params": {
+        "fast": 5,
+        "slow": 20
+      },
+      "pct_positive": 82.63888888888889,
+      "reliability": "caveats",
+      "worst": {
+        "cagr": -0.555526489712663,
+        "cg_id": "pyth-network",
+        "sharpe": -0.924577608731038,
+        "symbol": "PYTH-NETWORK"
+      }
+    },
+    "zscore_reversion": {
+      "best": {
+        "cagr": 1.975530597036558,
+        "cg_id": "virtual-protocol",
+        "sharpe": 1.8122169833426856,
+        "symbol": "VIRTUAL-PROTOCOL"
+      },
+      "label": "Z-Score Reversion (entry z<-2, exit z>0)",
+      "mean_sharpe": 0.06931932925921493,
+      "median_cagr": -0.09574571302513868,
+      "median_sharpe": 0.09281614361655624,
+      "n_tokens": 143,
+      "params": {
+        "entry_z": -2.0,
+        "exit_z": 0.0,
+        "window": 40
+      },
+      "pct_positive": 58.74125874125874,
+      "reliability": "caveats",
+      "worst": {
+        "cagr": -0.654630614700888,
+        "cg_id": "starknet",
+        "sharpe": -1.4155885134848936,
+        "symbol": "STARKNET"
+      }
+    }
+  }
+}

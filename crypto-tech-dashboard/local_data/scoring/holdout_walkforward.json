@@ -1,0 +1,472 @@
+{
+  "generated_at": "2026-05-15T06:19:01.840848+00:00",
+  "schema_version": 2,
+  "split": {
+    "train_frac": 0.8,
+    "cutoff_date": "2025-02-10",
+    "n_train_dates": 1838,
+    "n_holdout_dates": 460
+  },
+  "horizons_evaluated": [
+    5,
+    10,
+    20,
+    60
+  ],
+  "results": {
+    "5d_t2": {
+      "horizon": 5,
+      "cutoff_date": "2025-02-10",
+      "train_dates": 1838,
+      "holdout_dates": 460,
+      "calibrated_weights_train_only": {
+        "trend_cs": 0.0,
+        "reversal_cs": 0.0,
+        "breadth_cs": 0.0,
+        "risk_cs": 0.9
+      },
+      "theory_weights": {
+        "trend_cs": 0.4,
+        "reversal_cs": 0.25,
+        "breadth_cs": 0.15,
+        "risk_cs": 0.1
+      },
+      "holdout_calibrated": {
+        "rho": 0.05191269789765371,
+        "t_raw": 4.5324706492331295,
+        "t_nw": 2.5557682965207693,
+        "n_dates": 455
+      },
+      "holdout_theory": {
+        "rho": 0.02105831643854188,
+        "t_raw": 2.0971937873548776,
+        "t_nw": 1.223509013752338,
+        "n_dates": 455
+      },
+      "in_sample_train_calibrated": {
+        "rho": 0.06897631050414296,
+        "t_raw": 12.465076120856661,
+        "t_nw": 7.246220162134562,
+        "n_dates": 1836
+      },
+      "in_sample_train_theory": {
+        "rho": 0.002718683483628015,
+        "t_raw": 0.5935967108916826,
+        "t_nw": 0.3519112905174182,
+        "n_dates": 1836
+      }
+    },
+    "5d_bonferroni": {
+      "horizon": 5,
+      "cutoff_date": "2025-02-10",
+      "train_dates": 1838,
+      "holdout_dates": 460,
+      "calibrated_weights_train_only": {
+        "trend_cs": 0.0,
+        "reversal_cs": 0.0,
+        "breadth_cs": 0.0,
+        "risk_cs": 0.9
+      },
+      "theory_weights": {
+        "trend_cs": 0.4,
+        "reversal_cs": 0.25,
+        "breadth_cs": 0.15,
+        "risk_cs": 0.1
+      },
+      "holdout_calibrated": {
+        "rho": 0.05191269789765371,
+        "t_raw": 4.5324706492331295,
+        "t_nw": 2.5557682965207693,
+        "n_dates": 455
+      },
+      "holdout_theory": {
+        "rho": 0.02105831643854188,
+        "t_raw": 2.0971937873548776,
+        "t_nw": 1.223509013752338,
+        "n_dates": 455
+      },
+      "in_sample_train_calibrated": {
+        "rho": 0.06897631050414296,
+        "t_raw": 12.465076120856661,
+        "t_nw": 7.246220162134562,
+        "n_dates": 1836
+      },
+      "in_sample_train_theory": {
+        "rho": 0.002718683483628015,
+        "t_raw": 0.5935967108916826,
+        "t_nw": 0.3519112905174182,
+        "n_dates": 1836
+      }
+    },
+    "10d_t2": {
+      "horizon": 10,
+      "cutoff_date": "2025-02-10",
+      "train_dates": 1838,
+      "holdout_dates": 460,
+      "calibrated_weights_train_only": {
+        "trend_cs": 0.0,
+        "reversal_cs": 0.0,
+        "breadth_cs": 0.0,
+        "risk_cs": 0.9
+      },
+      "theory_weights": {
+        "trend_cs": 0.4,
+        "reversal_cs": 0.25,
+        "breadth_cs": 0.15,
+        "risk_cs": 0.1
+      },
+      "holdout_calibrated": {
+        "rho": 0.05441608916065308,
+        "t_raw": 4.705112838198434,
+        "t_nw": 1.9132874732019893,
+        "n_dates": 450
+      },
+      "holdout_theory": {
+        "rho": 0.027352721045391885,
+        "t_raw": 2.826985617813134,
+        "t_nw": 1.2030430611930802,
+        "n_dates": 450
+      },
+      "in_sample_train_calibrated": {
+        "rho": 0.07899204921675965,
+        "t_raw": 14.741913445492557,
+        "t_nw": 6.174147078888893,
+        "n_dates": 1836
+      },
+      "in_sample_train_theory": {
+        "rho": 0.015469618795759806,
+        "t_raw": 3.3390964378816608,
+        "t_nw": 1.468594081290825,
+        "n_dates": 1836
+      }
+    },
+    "10d_bonferroni": {
+      "horizon": 10,
+      "cutoff_date": "2025-02-10",
+      "train_dates": 1838,
+      "holdout_dates": 460,
+      "calibrated_weights_train_only": {
+        "trend_cs": 0.0,
+        "reversal_cs": 0.0,
+        "breadth_cs": 0.0,
+        "risk_cs": 0.9
+      },
+      "theory_weights": {
+        "trend_cs": 0.4,
+        "reversal_cs": 0.25,
+        "breadth_cs": 0.15,
+        "risk_cs": 0.1
+      },
+      "holdout_calibrated": {
+        "rho": 0.05441608916065308,
+        "t_raw": 4.705112838198434,
+        "t_nw": 1.9132874732019893,
+        "n_dates": 450
+      },
+      "holdout_theory": {
+        "rho": 0.027352721045391885,
+        "t_raw": 2.826985617813134,
+        "t_nw": 1.2030430611930802,
+        "n_dates": 450
+      },
+      "in_sample_train_calibrated": {
+        "rho": 0.07899204921675965,
+        "t_raw": 14.741913445492557,
+        "t_nw": 6.174147078888893,
+        "n_dates": 1836
+      },
+      "in_sample_train_theory": {
+        "rho": 0.015469618795759806,
+        "t_raw": 3.3390964378816608,
+        "t_nw": 1.468594081290825,
+        "n_dates": 1836
+      }
+    },
+    "20d_t2": {
+      "horizon": 20,
+      "cutoff_date": "2025-02-10",
+      "train_dates": 1838,
+      "holdout_dates": 460,
+      "calibrated_weights_train_only": {
+        "trend_cs": 0.0,
+        "reversal_cs": 0.0,
+        "breadth_cs": 0.0,
+        "risk_cs": 0.9
+      },
+      "theory_weights": {
+        "trend_cs": 0.4,
+        "reversal_cs": 0.25,
+        "breadth_cs": 0.15,
+        "risk_cs": 0.1
+      },
+      "holdout_calibrated": {
+        "rho": 0.0771913871160626,
+        "t_raw": 6.660908985494881,
+        "t_nw": 1.8385323102549769,
+        "n_dates": 440
+      },
+      "holdout_theory": {
+        "rho": 0.03927117855850028,
+        "t_raw": 3.905394869436903,
+        "t_nw": 1.1784792392150543,
+        "n_dates": 440
+      },
+      "in_sample_train_calibrated": {
+        "rho": 0.094423921806221,
+        "t_raw": 17.36565168722195,
+        "t_nw": 5.16935479297912,
+        "n_dates": 1836
+      },
+      "in_sample_train_theory": {
+        "rho": 0.02080599366795851,
+        "t_raw": 4.603611717153574,
+        "t_nw": 1.5282614656066846,
+        "n_dates": 1836
+      }
+    },
+    "20d_bonferroni": {
+      "horizon": 20,
+      "cutoff_date": "2025-02-10",
+      "train_dates": 1838,
+      "holdout_dates": 460,
+      "calibrated_weights_train_only": {
+        "trend_cs": 0.0,
+        "reversal_cs": 0.0,
+        "breadth_cs": 0.0,
+        "risk_cs": 0.9
+      },
+      "theory_weights": {
+        "trend_cs": 0.4,
+        "reversal_cs": 0.25,
+        "breadth_cs": 0.15,
+        "risk_cs": 0.1
+      },
+      "holdout_calibrated": {
+        "rho": 0.0771913871160626,
+        "t_raw": 6.660908985494881,
+        "t_nw": 1.8385323102549769,
+        "n_dates": 440
+      },
+      "holdout_theory": {
+        "rho": 0.03927117855850028,
+        "t_raw": 3.905394869436903,
+        "t_nw": 1.1784792392150543,
+        "n_dates": 440
+      },
+      "in_sample_train_calibrated": {
+        "rho": 0.094423921806221,
+        "t_raw": 17.36565168722195,
+        "t_nw": 5.16935479297912,
+        "n_dates": 1836
+      },
+      "in_sample_train_theory": {
+        "rho": 0.02080599366795851,
+        "t_raw": 4.603611717153574,
+        "t_nw": 1.5282614656066846,
+        "n_dates": 1836
+      }
+    },
+    "60d_t2": {
+      "horizon": 60,
+      "cutoff_date": "2025-02-10",
+      "train_dates": 1838,
+      "holdout_dates": 460,
+      "calibrated_weights_train_only": {
+        "trend_cs": 0.0,
+        "reversal_cs": 0.0,
+        "breadth_cs": 0.0,
+        "risk_cs": 0.9
+      },
+      "theory_weights": {
+        "trend_cs": 0.4,
+        "reversal_cs": 0.25,
+        "breadth_cs": 0.15,
+        "risk_cs": 0.1
+      },
+      "holdout_calibrated": {
+        "rho": 0.09208374047199724,
+        "t_raw": 8.263890311649718,
+        "t_nw": 1.4707264126096002,
+        "n_dates": 400
+      },
+      "holdout_theory": {
+        "rho": 0.06938640405027634,
+        "t_raw": 6.914333518043416,
+        "t_nw": 1.29136708441242,
+        "n_dates": 400
+      },
+      "in_sample_train_calibrated": {
+        "rho": 0.11848255262200207,
+        "t_raw": 22.37065540840567,
+        "t_nw": 3.982816746112343,
+        "n_dates": 1836
+      },
+      "in_sample_train_theory": {
+        "rho": 0.029566635346457315,
+        "t_raw": 6.776888648486845,
+        "t_nw": 1.4657117853242398,
+        "n_dates": 1836
+      }
+    },
+    "60d_bonferroni": {
+      "horizon": 60,
+      "cutoff_date": "2025-02-10",
+      "train_dates": 1838,
+      "holdout_dates": 460,
+      "calibrated_weights_train_only": {
+        "trend_cs": 0.0,
+        "reversal_cs": 0.0,
+        "breadth_cs": 0.0,
+        "risk_cs": 0.9
+      },
+      "theory_weights": {
+        "trend_cs": 0.4,
+        "reversal_cs": 0.25,
+        "breadth_cs": 0.15,
+        "risk_cs": 0.1
+      },
+      "holdout_calibrated": {
+        "rho": 0.09208374047199724,
+        "t_raw": 8.263890311649718,
+        "t_nw": 1.4707264126096002,
+        "n_dates": 400
+      },
+      "holdout_theory": {
+        "rho": 0.06938640405027634,
+        "t_raw": 6.914333518043416,
+        "t_nw": 1.29136708441242,
+        "n_dates": 400
+      },
+      "in_sample_train_calibrated": {
+        "rho": 0.11848255262200207,
+        "t_raw": 22.37065540840567,
+        "t_nw": 3.982816746112343,
+        "n_dates": 1836
+      },
+      "in_sample_train_theory": {
+        "rho": 0.029566635346457315,
+        "t_raw": 6.776888648486845,
+        "t_nw": 1.4657117853242398,
+        "n_dates": 1836
+      }
+    }
+  },
+  "trend_atomic_reweight": {
+    "5d": {
+      "horizon": 5,
+      "cutoff_date": "2025-02-10",
+      "atomic_weights": {
+        "sma_cross_strength_signed_5_20": 0.5122301055700037,
+        "ema_cross_strength_signed_5_20": 0.48776989442999635
+      },
+      "holdout_atomic_reweight": {
+        "rho": 0.009400429390753908,
+        "t_raw": 1.5693804007077048,
+        "t_nw": 1.0090670697115538,
+        "n_dates": 455
+      },
+      "holdout_equal_weight_sleeve": {
+        "rho": 0.004979219868424415,
+        "t_raw": 0.5632874529409829,
+        "t_nw": 0.3473173921728893,
+        "n_dates": 455
+      },
+      "delta_rho_vs_equal": 0.004421209522329494
+    },
+    "10d": {
+      "horizon": 10,
+      "cutoff_date": "2025-02-10",
+      "atomic_weights": {
+        "sma_cross_strength_signed_5_20": 0.49281517267966407,
+        "ema_cross_strength_signed_5_20": 0.5071848273203358
+      },
+      "holdout_atomic_reweight": {
+        "rho": 0.012480672806990223,
+        "t_raw": 2.14764193404467,
+        "t_nw": 1.0784965706571321,
+        "n_dates": 450
+      },
+      "holdout_equal_weight_sleeve": {
+        "rho": 0.008828654453768786,
+        "t_raw": 1.0600352236225383,
+        "t_nw": 0.5113186037585554,
+        "n_dates": 450
+      },
+      "delta_rho_vs_equal": 0.0036520183532214364
+    },
+    "20d": {
+      "horizon": 20,
+      "cutoff_date": "2025-02-10",
+      "atomic_weights": {
+        "ema_cross_strength_signed_5_20": 1.0
+      },
+      "holdout_atomic_reweight": {
+        "rho": 0.01544301649357678,
+        "t_raw": 2.7428739753620888,
+        "t_nw": 1.0518259139909925,
+        "n_dates": 440
+      },
+      "holdout_equal_weight_sleeve": {
+        "rho": 0.013478038572535444,
+        "t_raw": 1.5627396085962901,
+        "t_nw": 0.5362304590438268,
+        "n_dates": 440
+      },
+      "delta_rho_vs_equal": 0.0019649779210413366
+    },
+    "60d": {
+      "horizon": 60,
+      "atomic_weights": {},
+      "holdout": {
+        "rho": NaN
+      },
+      "equal_weight_holdout": {
+        "rho": NaN
+      },
+      "note": "no atomic survived the gate on train slice"
+    }
+  },
+  "sharpe_simulation": {
+    "5d": {
+      "calibrated": {
+        "sharpe_annual": -0.40229536264704835,
+        "mean_ret_per_h": -0.0029885874635781633,
+        "sd_ret_per_h": 0.06347202790011627,
+        "turnover_avg": 0.1781939682174165,
+        "n_days": 455,
+        "horizon": 5
+      },
+      "theory": {
+        "sharpe_annual": 0.583879732413192,
+        "mean_ret_per_h": 0.0041404432336484475,
+        "sd_ret_per_h": 0.06058775554574754,
+        "turnover_avg": 0.46644037653174,
+        "n_days": 455,
+        "horizon": 5
+      }
+    },
+    "60d": {
+      "calibrated": {
+        "sharpe_annual": 0.3673376699052092,
+        "mean_ret_per_h": 0.029492534327410867,
+        "sd_ret_per_h": 0.19802381986511258,
+        "turnover_avg": 0.1754471743797099,
+        "n_days": 400,
+        "horizon": 60
+      },
+      "theory": {
+        "sharpe_annual": 0.7585685213340032,
+        "mean_ret_per_h": 0.05324046015581876,
+        "sd_ret_per_h": 0.17310825989893133,
+        "turnover_avg": 0.4668427708400789,
+        "n_days": 400,
+        "horizon": 60
+      }
+    }
+  },
+  "notes": [
+    "Calibrated weights are fit on the train slice only (date < cutoff). Holdout rho is composite vs fwd_h on the remaining 20% of dates.",
+    "All t-stats use Newey-West HAC SE with lag = h - 1.",
+    "Threshold variants reported: t2 (|t_nw| >= 2.0, naive) and bonferroni (|t_nw| >= 3.16 for 80-test family)."
+  ]
+}

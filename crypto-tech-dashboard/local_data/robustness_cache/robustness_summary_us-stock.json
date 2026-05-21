@@ -1,0 +1,244 @@
+{
+  "meta": {
+    "asset_class": "us-stock",
+    "commission_bps": 5.0,
+    "computed_at": "2026-05-15T08:13:45",
+    "elapsed_seconds": 10.6,
+    "min_history_days": 365,
+    "n_candidates": 30,
+    "ohlcv_hash": "89f024200a6c687c856d6a9c3ac76d2211f6abfa6fb137dee0604a770c2a5acc"
+  },
+  "strategies": {
+    "bollinger_lower_band": {
+      "best": {
+        "cagr": 3.5303171021194544,
+        "cg_id": "EXOD",
+        "sharpe": 1.5783267896248627,
+        "symbol": "EXOD"
+      },
+      "label": "Bollinger Lower Band (long close<lower, exit at mid)",
+      "mean_sharpe": 0.3814930012587391,
+      "median_cagr": -0.17335500407944188,
+      "median_sharpe": 0.33996207027068315,
+      "n_tokens": 30,
+      "params": {
+        "num_std": 2.0,
+        "period": 20
+      },
+      "pct_positive": 73.33333333333333,
+      "reliability": "caveats",
+      "worst": {
+        "cagr": -0.6536403280858205,
+        "cg_id": "BTM",
+        "sharpe": -0.6283231772890193,
+        "symbol": "BTM"
+      }
+    },
+    "ema_golden_cross": {
+      "best": {
+        "cagr": 1.8614343056455365,
+        "cg_id": "HIVE",
+        "sharpe": 1.5261273845192536,
+        "symbol": "HIVE"
+      },
+      "label": "EMA Golden Cross (5/20)",
+      "mean_sharpe": 0.6113231213897018,
+      "median_cagr": 0.29845270372275345,
+      "median_sharpe": 0.7682017554133341,
+      "n_tokens": 30,
+      "params": {
+        "fast": 5,
+        "slow": 20
+      },
+      "pct_positive": 83.33333333333333,
+      "reliability": "reliable",
+      "worst": {
+        "cagr": -0.2605804256075487,
+        "cg_id": "FLD",
+        "sharpe": -0.993652392311538,
+        "symbol": "FLD"
+      }
+    },
+    "kdj_oversold_cross": {
+      "best": {
+        "cagr": 1.5770495780780842,
+        "cg_id": "CLSK",
+        "sharpe": 1.2980245597448394,
+        "symbol": "CLSK"
+      },
+      "label": "KDJ Oversold Cross (K crosses D up <20)",
+      "mean_sharpe": 0.4762883728222329,
+      "median_cagr": -0.0397356484970014,
+      "median_sharpe": 0.4618773029488633,
+      "n_tokens": 30,
+      "params": {
+        "M1": 3,
+        "M2": 3,
+        "N": 9
+      },
+      "pct_positive": 83.33333333333333,
+      "reliability": "caveats",
+      "worst": {
+        "cagr": -0.8016740175215258,
+        "cg_id": "BTM",
+        "sharpe": -0.9874131049873782,
+        "symbol": "BTM"
+      }
+    },
+    "macd_signal_cross": {
+      "best": {
+        "cagr": 1.7102624499475185,
+        "cg_id": "MSTR",
+        "sharpe": 1.6478509178299743,
+        "symbol": "MSTR"
+      },
+      "label": "MACD Signal Cross (long MACD>signal)",
+      "mean_sharpe": 0.5681566919842482,
+      "median_cagr": 0.09968298974123335,
+      "median_sharpe": 0.6158880720097163,
+      "n_tokens": 30,
+      "params": {
+        "fast": 12,
+        "signal": 9,
+        "slow": 26
+      },
+      "pct_positive": 83.33333333333333,
+      "reliability": "reliable",
+      "worst": {
+        "cagr": -0.37155879637054134,
+        "cg_id": "FLD",
+        "sharpe": -0.6715469415776497,
+        "symbol": "FLD"
+      }
+    },
+    "momentum_breakout": {
+      "best": {
+        "cagr": 1.6190263467373875,
+        "cg_id": "CORZ",
+        "sharpe": 1.6049812844157305,
+        "symbol": "CORZ"
+      },
+      "label": "Momentum Breakout (20d return > 0)",
+      "mean_sharpe": 0.5205639512975337,
+      "median_cagr": 0.27413015167329435,
+      "median_sharpe": 0.7539291057146875,
+      "n_tokens": 30,
+      "params": {
+        "lookback": 20,
+        "threshold": 0.0
+      },
+      "pct_positive": 76.66666666666667,
+      "reliability": "caveats",
+      "worst": {
+        "cagr": -0.9794140337415889,
+        "cg_id": "BIGG",
+        "sharpe": -1.192533043093887,
+        "symbol": "BIGG"
+      }
+    },
+    "price_appreciation": {
+      "best": {
+        "cagr": 0.7913458338979087,
+        "cg_id": "HIVE",
+        "sharpe": 1.149987689715675,
+        "symbol": "HIVE"
+      },
+      "label": "Price Appreciation (20d>10% + vol_z>2; exit 5d<0)",
+      "mean_sharpe": 0.3690368803528286,
+      "median_cagr": 0.059770782390204835,
+      "median_sharpe": 0.39018054479725794,
+      "n_tokens": 30,
+      "params": {
+        "exit_window": 5,
+        "lookback": 20,
+        "threshold": 0.1,
+        "vol_z_min": 2.0
+      },
+      "pct_positive": 76.66666666666667,
+      "reliability": "caveats",
+      "worst": {
+        "cagr": -0.494488404604844,
+        "cg_id": "ANY",
+        "sharpe": -1.2962724125145895,
+        "symbol": "ANY"
+      }
+    },
+    "rsi_oversold_30_50": {
+      "best": {
+        "cagr": 0.9023455580015063,
+        "cg_id": "DEFT",
+        "sharpe": 1.2986272980279994,
+        "symbol": "DEFT"
+      },
+      "label": "RSI Oversold (long RSI<30, exit RSI>50)",
+      "mean_sharpe": 0.33621858116958325,
+      "median_cagr": 0.027441315324810867,
+      "median_sharpe": 0.34219959839599356,
+      "n_tokens": 30,
+      "params": {
+        "entry": 30,
+        "exit": 50,
+        "period": 14
+      },
+      "pct_positive": 80.0,
+      "reliability": "caveats",
+      "worst": {
+        "cagr": -0.6866723062875444,
+        "cg_id": "ARBK",
+        "sharpe": -0.5095840680975375,
+        "symbol": "ARBK"
+      }
+    },
+    "sma_golden_cross": {
+      "best": {
+        "cagr": 1.9907135653433556,
+        "cg_id": "HIVE",
+        "sharpe": 1.579568493811029,
+        "symbol": "HIVE"
+      },
+      "label": "SMA Golden Cross (5/20)",
+      "mean_sharpe": 0.6407152846114597,
+      "median_cagr": 0.27190317993457935,
+      "median_sharpe": 0.7065353823105137,
+      "n_tokens": 30,
+      "params": {
+        "fast": 5,
+        "slow": 20
+      },
+      "pct_positive": 86.66666666666667,
+      "reliability": "reliable",
+      "worst": {
+        "cagr": -0.22813090744302045,
+        "cg_id": "FLD",
+        "sharpe": -0.573594376426576,
+        "symbol": "FLD"
+      }
+    },
+    "zscore_reversion": {
+      "best": {
+        "cagr": 1.4910013482803377,
+        "cg_id": "APLD",
+        "sharpe": 1.45780845942766,
+        "symbol": "APLD"
+      },
+      "label": "Z-Score Reversion (entry z<-2, exit z>0)",
+      "mean_sharpe": 0.2939005561502721,
+      "median_cagr": -0.13236794769691185,
+      "median_sharpe": 0.12514720311754196,
+      "n_tokens": 30,
+      "params": {
+        "entry_z": -2.0,
+        "exit_z": 0.0,
+        "window": 40
+      },
+      "pct_positive": 60.0,
+      "reliability": "caveats",
+      "worst": {
+        "cagr": -0.5049515159446192,
+        "cg_id": "BTM",
+        "sharpe": -0.6007804336292563,
+        "symbol": "BTM"
+      }
+    }
+  }
+}

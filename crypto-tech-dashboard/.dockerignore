@@ -1,0 +1,34 @@
+.git
+.gitignore
+.DS_Store
+
+# Never bake secrets or machine-local environments into an image.
+.env
+.env.*
+!.env.example
+venv/
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+.pytest_cache/
+
+# Local-only logs / temp files.
+logs/
+*.log
+tmp/
+.tmp/
+
+# Large, regenerable historical backups. The live local_data/ tree is copied,
+# but rotated snapshots are excluded from Docker build context.
+local_data/ohlcv_backup_*/
+local_data/quarantine/
+local_data/scoring/_horizon_panel_cache.pkl
+
+# Editor / OS clutter.
+.vscode/
+.idea/
+*.swp
+Thumbs.db
+.runtime/

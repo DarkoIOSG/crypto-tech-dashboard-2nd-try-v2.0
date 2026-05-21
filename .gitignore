@@ -1,0 +1,38 @@
+# venv
+crypto-tech-dashboard/venv/
+.praison-venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+.pytest_cache/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# Local data (CSVs are too large for git history) — keep metadata only
+crypto-tech-dashboard/local_data/ohlcv/*.csv
+crypto-tech-dashboard/local_data/ohlcv_backup_*/
+crypto-tech-dashboard/local_data/market_cap/mcap_daily/*.csv
+crypto-tech-dashboard/local_data/market_cap/top200_current.csv
+crypto-tech-dashboard/local_data/market_cap/scores_history.csv
+
+# Screenshots binary
+screenshots/
+
+# Logs + tmp
+*.log
+/tmp/
+
+# Secrets — keep .env.example but ignore real .env
+crypto-tech-dashboard/.env
+# Audit P-ML: 47MB indicator cache for horizon analysis script. Regenerable.
+crypto-tech-dashboard/local_data/scoring/_horizon_panel_cache.pkl

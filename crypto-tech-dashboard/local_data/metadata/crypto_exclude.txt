@@ -1,0 +1,20 @@
+# Crypto cg_ids to exclude from the Top-N universe + rankings + UI.
+# One id per line. Lines starting with # are comments. Blank lines OK.
+#
+# Use cases:
+# - Long-tail tokens with permanent data-source failures (no spot pair on
+#   any of the 8 CCXT exchanges AND CG /coins/<id>/market_chart returns
+#   empty even with 30-day deep retry).
+# - Tokens you've decided are noise (stablecoins, wrapped assets, RWA
+#   placeholders).
+#
+# Effect:
+# - list_tokens() skips them → invisible in UI, sidebar, search.
+# - rankings exclude them → don't pollute cross-section percentiles.
+# - update_market_cap_snapshot drops them from top200_current.csv so the
+#   daily cron stops re-fetching → saves CG API quota.
+# - The on-disk OHLCV CSV is PRESERVED (not deleted). Remove the id from
+#   this list to re-enable the token.
+
+# 20+ days stale despite R7-8 30-day CG deep retry (architect final audit).
+hashnote-usyc

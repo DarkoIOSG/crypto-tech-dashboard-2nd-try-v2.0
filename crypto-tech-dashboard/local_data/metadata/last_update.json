@@ -1,0 +1,67 @@
+{
+  "exchange_health": {
+    "binance": {
+      "available": true,
+      "markets_count": 4361
+    },
+    "bitstamp": {
+      "available": true,
+      "markets_count": 298
+    },
+    "bybit": {
+      "available": true,
+      "markets_count": 3261
+    },
+    "coinbase": {
+      "available": true,
+      "markets_count": 1164
+    },
+    "gateio": {
+      "available": true,
+      "markets_count": 6337
+    },
+    "kraken": {
+      "available": true,
+      "markets_count": 1540
+    },
+    "kucoin": {
+      "available": true,
+      "markets_count": 1657
+    },
+    "okx": {
+      "available": true,
+      "markets_count": 3787
+    }
+  },
+  "last_mcap_update": "2026-05-18T16:46:17",
+  "last_ohlcv_update": "2026-05-18T16:46:17",
+  "last_run_summary": {
+    "failed": 0,
+    "failed_ids": [],
+    "fallback": 26,
+    "finished_at": "2026-05-18T16:46:17",
+    "new_arrivals": [],
+    "recovered_ids": [
+      "hashnote-usyc"
+    ],
+    "rows_appended": 0,
+    "started_at": "2026-05-18T16:44:48",
+    "status": "ok",
+    "tokens": 210,
+    "universe_size": 200
+  },
+  "last_stocks_summary": {
+    "asset_class": "us-stock",
+    "failed": 0,
+    "failed_ids": [],
+    "finished_at": "2026-05-18T13:58:01",
+    "rows_appended": 38,
+    "started_at": "2026-05-18T13:57:51",
+    "status": "ok",
+    "tokens": 38
+  },
+  "last_stocks_update": "2026-05-18T13:58:01",
+  "mode": "daily_update",
+  "status": "ok",
+  "timezone": "Asia/Shanghai"
+}

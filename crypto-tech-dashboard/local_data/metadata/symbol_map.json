@@ -1,0 +1,2482 @@
+{
+  "1inch": {
+    "binance": "1INCH/USDT",
+    "bitstamp": null,
+    "bybit": "1INCH/USDT",
+    "coinbase": "1INCH/USD",
+    "gateio": "1INCH/USDT",
+    "kraken": "1INCH/USD",
+    "kucoin": "1INCH/USDT",
+    "okx": "1INCH/USDT"
+  },
+  "ANY": {
+    "binance": "ANY/USDT",
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": null,
+    "gateio": null,
+    "kraken": null,
+    "kucoin": null,
+    "okx": null
+  },
+  "APLD": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": null,
+    "gateio": null,
+    "kraken": null,
+    "kucoin": null,
+    "okx": null
+  },
+  "ARBK": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": null,
+    "gateio": null,
+    "kraken": null,
+    "kucoin": null,
+    "okx": null
+  },
+  "BIGG": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": null,
+    "gateio": null,
+    "kraken": null,
+    "kucoin": null,
+    "okx": null
+  },
+  "BITF": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": null,
+    "gateio": null,
+    "kraken": null,
+    "kucoin": null,
+    "okx": null
+  },
+  "BKKT": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": null,
+    "gateio": null,
+    "kraken": null,
+    "kucoin": null,
+    "okx": null
+  },
+  "BLSH": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": null,
+    "gateio": null,
+    "kraken": null,
+    "kucoin": null,
+    "okx": null
+  },
+  "BTBT": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": null,
+    "gateio": null,
+    "kraken": null,
+    "kucoin": null,
+    "okx": null
+  },
+  "BTCS": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": null,
+    "gateio": null,
+    "kraken": null,
+    "kucoin": null,
+    "okx": null
+  },
+  "BTDR": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": null,
+    "gateio": null,
+    "kraken": null,
+    "kucoin": null,
+    "okx": null
+  },
+  "BTGO": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": null,
+    "gateio": null,
+    "kraken": null,
+    "kucoin": null,
+    "okx": null
+  },
+  "BTM": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": null,
+    "gateio": null,
+    "kraken": null,
+    "kucoin": null,
+    "okx": null
+  },
+  "CAN": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": null,
+    "gateio": null,
+    "kraken": null,
+    "kucoin": null,
+    "okx": null
+  },
+  "CIFR": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": null,
+    "gateio": null,
+    "kraken": null,
+    "kucoin": null,
+    "okx": null
+  },
+  "CLSK": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": null,
+    "gateio": null,
+    "kraken": null,
+    "kucoin": null,
+    "okx": null
+  },
+  "COIN": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": null,
+    "gateio": null,
+    "kraken": null,
+    "kucoin": null,
+    "okx": null
+  },
+  "CORZ": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": null,
+    "gateio": null,
+    "kraken": null,
+    "kucoin": null,
+    "okx": null
+  },
+  "CRCL": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": null,
+    "gateio": null,
+    "kraken": null,
+    "kucoin": null,
+    "okx": null
+  },
+  "DEFT": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": null,
+    "gateio": null,
+    "kraken": null,
+    "kucoin": null,
+    "okx": null
+  },
+  "DMGGF": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": null,
+    "gateio": null,
+    "kraken": null,
+    "kucoin": null,
+    "okx": null
+  },
+  "EBON": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": null,
+    "gateio": null,
+    "kraken": null,
+    "kucoin": null,
+    "okx": null
+  },
+  "ETOR": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": null,
+    "gateio": null,
+    "kraken": null,
+    "kucoin": null,
+    "okx": null
+  },
+  "EXOD": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": null,
+    "gateio": null,
+    "kraken": null,
+    "kucoin": null,
+    "okx": null
+  },
+  "FIGR": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": null,
+    "gateio": null,
+    "kraken": null,
+    "kucoin": null,
+    "okx": null
+  },
+  "FLD": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": null,
+    "gateio": null,
+    "kraken": null,
+    "kucoin": null,
+    "okx": null
+  },
+  "GEMI": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": null,
+    "gateio": null,
+    "kraken": null,
+    "kucoin": null,
+    "okx": null
+  },
+  "GLXY": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": null,
+    "gateio": null,
+    "kraken": null,
+    "kucoin": null,
+    "okx": null
+  },
+  "GREE": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": null,
+    "gateio": null,
+    "kraken": null,
+    "kucoin": null,
+    "okx": null
+  },
+  "HIVE": {
+    "binance": "HIVE/USDT",
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": null,
+    "gateio": "HIVE/USDT",
+    "kraken": null,
+    "kucoin": null,
+    "okx": null
+  },
+  "HOOD": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": null,
+    "gateio": null,
+    "kraken": null,
+    "kucoin": null,
+    "okx": null
+  },
+  "HUT": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": null,
+    "gateio": null,
+    "kraken": null,
+    "kucoin": null,
+    "okx": null
+  },
+  "IREN": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": null,
+    "gateio": null,
+    "kraken": null,
+    "kucoin": null,
+    "okx": null
+  },
+  "MARA": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": null,
+    "gateio": null,
+    "kraken": null,
+    "kucoin": null,
+    "okx": null
+  },
+  "MSTR": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": null,
+    "gateio": null,
+    "kraken": null,
+    "kucoin": null,
+    "okx": null
+  },
+  "NPPTF": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": null,
+    "gateio": null,
+    "kraken": null,
+    "kucoin": null,
+    "okx": null
+  },
+  "RIOT": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": null,
+    "gateio": null,
+    "kraken": null,
+    "kucoin": null,
+    "okx": null
+  },
+  "VOYG": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": null,
+    "gateio": null,
+    "kraken": null,
+    "kucoin": null,
+    "okx": null
+  },
+  "WULF": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": null,
+    "gateio": null,
+    "kraken": null,
+    "kucoin": null,
+    "okx": null
+  },
+  "a7a5": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": null,
+    "gateio": null,
+    "kraken": null,
+    "kucoin": null,
+    "okx": null
+  },
+  "aave": {
+    "binance": "AAVE/USDT",
+    "bitstamp": "AAVE/USD",
+    "bybit": "AAVE/USDT",
+    "coinbase": "AAVE/USD",
+    "gateio": "AAVE/USDT",
+    "kraken": "AAVE/USD",
+    "kucoin": "AAVE/USDT",
+    "okx": "AAVE/USDT"
+  },
+  "adi-token": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": null,
+    "gateio": null,
+    "kraken": "ADI/USD",
+    "kucoin": "ADI/USDT",
+    "okx": null
+  },
+  "aerodrome-finance": {
+    "binance": null,
+    "bitstamp": "AERO/USD",
+    "bybit": "AERO/USDT",
+    "coinbase": "AERO/USD",
+    "gateio": "AERO/USDT",
+    "kraken": "AERO/USD",
+    "kucoin": "AERO/USDT",
+    "okx": null
+  },
+  "aethir": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": "ATH/USDT",
+    "coinbase": "ATH/USD",
+    "gateio": "ATH/USDT",
+    "kraken": "ATH/USD",
+    "kucoin": "ATH/USDT",
+    "okx": "ATH/USDT"
+  },
+  "akash-network": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": "AKT/USD",
+    "gateio": "AKT/USDT",
+    "kraken": "AKT/USD",
+    "kucoin": "AKT/USDT",
+    "okx": null
+  },
+  "algorand": {
+    "binance": "ALGO/USDT",
+    "bitstamp": "ALGO/USD",
+    "bybit": "ALGO/USDT",
+    "coinbase": "ALGO/USD",
+    "gateio": "ALGO/USDT",
+    "kraken": "ALGO/USDT",
+    "kucoin": "ALGO/USDT",
+    "okx": "ALGO/USDT"
+  },
+  "ape-and-pepe": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": null,
+    "gateio": "APEPE/USDT",
+    "kraken": null,
+    "kucoin": null,
+    "okx": null
+  },
+  "apecoin": {
+    "binance": "APE/USDT",
+    "bitstamp": "APE/USD",
+    "bybit": "APE/USDT",
+    "coinbase": "APE/USDT",
+    "gateio": "APE/USDT",
+    "kraken": "APE/USDT",
+    "kucoin": "APE/USDT",
+    "okx": "APE/USDT"
+  },
+  "apenft": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": "NFT/USDT",
+    "coinbase": null,
+    "gateio": "NFT/USDT",
+    "kraken": null,
+    "kucoin": "NFT/USDT",
+    "okx": "NFT/USDT"
+  },
+  "aptos": {
+    "binance": "APT/USDT",
+    "bitstamp": "APT/USD",
+    "bybit": "APT/USDT",
+    "coinbase": "APT/USDT",
+    "gateio": "APT/USDT",
+    "kraken": "APT/USD",
+    "kucoin": "APT/USDT",
+    "okx": "APT/USDT"
+  },
+  "arbitrum": {
+    "binance": "ARB/USDT",
+    "bitstamp": "ARB/USD",
+    "bybit": "ARB/USDT",
+    "coinbase": "ARB/USD",
+    "gateio": "ARB/USDT",
+    "kraken": "ARB/USD",
+    "kucoin": "ARB/USDT",
+    "okx": "ARB/USDT"
+  },
+  "arweave": {
+    "binance": "AR/USDT",
+    "bitstamp": null,
+    "bybit": "AR/USDT",
+    "coinbase": null,
+    "gateio": "AR/USDT",
+    "kraken": "AR/USD",
+    "kucoin": "AR/USDT",
+    "okx": "AR/USDT"
+  },
+  "aster-2": {
+    "binance": "ASTER/USDT",
+    "bitstamp": "ASTER/USD",
+    "bybit": "ASTER/USDT",
+    "coinbase": "ASTER/USD",
+    "gateio": "ASTER/USDT",
+    "kraken": "ASTER/USD",
+    "kucoin": "ASTER/USDT",
+    "okx": "ASTER/USDT"
+  },
+  "asteroid-shiba": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": null,
+    "gateio": null,
+    "kraken": null,
+    "kucoin": null,
+    "okx": null
+  },
+  "audiera": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": null,
+    "gateio": "BEAT/USDT",
+    "kraken": null,
+    "kucoin": null,
+    "okx": null
+  },
+  "avalanche-2": {
+    "binance": "AVAX/USDT",
+    "bitstamp": "AVAX/USD",
+    "bybit": "AVAX/USDT",
+    "coinbase": "AVAX/USDT",
+    "gateio": "AVAX/USDT",
+    "kraken": "AVAX/USDT",
+    "kucoin": "AVAX/USDT",
+    "okx": "AVAX/USDT"
+  },
+  "axie-infinity": {
+    "binance": "AXS/USDT",
+    "bitstamp": "AXS/USD",
+    "bybit": "AXS/USDT",
+    "coinbase": "AXS/USD",
+    "gateio": "AXS/USDT",
+    "kraken": "AXS/USD",
+    "kucoin": "AXS/USDT",
+    "okx": "AXS/USDT"
+  },
+  "banana-for-scale-2": {
+    "binance": "BANANAS31/USDT",
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": null,
+    "gateio": "BANANAS31/USDT",
+    "kraken": "BANANAS31/USD",
+    "kucoin": null,
+    "okx": null
+  },
+  "basic-attention-token": {
+    "binance": "BAT/USDT",
+    "bitstamp": "BAT/USD",
+    "bybit": "BAT/USDT",
+    "coinbase": "BAT/USD",
+    "gateio": "BAT/USDT",
+    "kraken": "BAT/USD",
+    "kucoin": "BAT/USDT",
+    "okx": "BAT/USDT"
+  },
+  "beldex": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": null,
+    "gateio": "BDX/USDT",
+    "kraken": "BDX/USD",
+    "kucoin": "BDX/USDT",
+    "okx": null
+  },
+  "bianrensheng": {
+    "binance": "币安人生/USDT",
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": null,
+    "gateio": null,
+    "kraken": null,
+    "kucoin": null,
+    "okx": null
+  },
+  "billions-network": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": "BILL/USDT",
+    "coinbase": "BILL/USD",
+    "gateio": null,
+    "kraken": "BILL/USD",
+    "kucoin": "BILL/USDT",
+    "okx": null
+  },
+  "binancecoin": {
+    "binance": "BNB/USDT",
+    "bitstamp": "BNB/USD",
+    "bybit": "BNB/USDT",
+    "coinbase": "BNB/USD",
+    "gateio": "BNB/USDT",
+    "kraken": "BNB/USDT",
+    "kucoin": "BNB/USDT",
+    "okx": "BNB/USDT"
+  },
+  "bitcoin": {
+    "binance": "BTC/USDT",
+    "bitstamp": "BTC/USDT",
+    "bybit": "BTC/USDT",
+    "coinbase": "BTC/USDT",
+    "gateio": "BTC/USDT",
+    "kraken": "BTC/USDT",
+    "kucoin": "BTC/USDT",
+    "okx": "BTC/USDT"
+  },
+  "bitcoin-cash": {
+    "binance": "BCH/USDT",
+    "bitstamp": "BCH/USD",
+    "bybit": "BCH/USDT",
+    "coinbase": "BCH/USD",
+    "gateio": "BCH/USDT",
+    "kraken": "BCH/USDT",
+    "kucoin": "BCH/USDT",
+    "okx": "BCH/USDT"
+  },
+  "bitcoin-cash-sv": {
+    "binance": "BSV/USDT",
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": null,
+    "gateio": "BSV/USDT",
+    "kraken": null,
+    "kucoin": "BSV/USDT",
+    "okx": null
+  },
+  "bitget-token": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": null,
+    "gateio": null,
+    "kraken": "BGB/USD",
+    "kucoin": null,
+    "okx": null
+  },
+  "bittensor": {
+    "binance": "TAO/USDT",
+    "bitstamp": "TAO/USD",
+    "bybit": null,
+    "coinbase": "TAO/USD",
+    "gateio": "TAO/USDT",
+    "kraken": "TAO/USD",
+    "kucoin": "TAO/USDT",
+    "okx": null
+  },
+  "bittorrent": {
+    "binance": "BTT/USDT",
+    "bitstamp": null,
+    "bybit": "BTT/USDT",
+    "coinbase": null,
+    "gateio": "BTT/USDT",
+    "kraken": "BTT/USD",
+    "kucoin": "BTT/USDT",
+    "okx": null
+  },
+  "block-street": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": "BSB/USDT",
+    "coinbase": null,
+    "gateio": null,
+    "kraken": null,
+    "kucoin": null,
+    "okx": null
+  },
+  "blockstack": {
+    "binance": "STX/USDT",
+    "bitstamp": null,
+    "bybit": "STX/USDT",
+    "coinbase": "STX/USDT",
+    "gateio": "STX/USDT",
+    "kraken": "STX/USD",
+    "kucoin": "STX/USDT",
+    "okx": "STX/USDT"
+  },
+  "bonk": {
+    "binance": "BONK/USDT",
+    "bitstamp": "BONK/USD",
+    "bybit": "BONK/USDT",
+    "coinbase": "BONK/USD",
+    "gateio": "BONK/USDT",
+    "kraken": "BONK/USD",
+    "kucoin": "BONK/USDT",
+    "okx": "BONK/USDT"
+  },
+  "btse-token": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": null,
+    "gateio": null,
+    "kraken": null,
+    "kucoin": null,
+    "okx": null
+  },
+  "build-on": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": null,
+    "gateio": "B/USDT",
+    "kraken": null,
+    "kucoin": null,
+    "okx": null
+  },
+  "canton-network": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": "CC/USDT",
+    "coinbase": null,
+    "gateio": "CC/USDT",
+    "kraken": "CC/USDT",
+    "kucoin": "CC/USDT",
+    "okx": "CC/USDT"
+  },
+  "cardano": {
+    "binance": "ADA/USDT",
+    "bitstamp": "ADA/USD",
+    "bybit": "ADA/USDT",
+    "coinbase": "ADA/USDT",
+    "gateio": "ADA/USDT",
+    "kraken": "ADA/USDT",
+    "kucoin": "ADA/USDT",
+    "okx": "ADA/USDT"
+  },
+  "celestia": {
+    "binance": "TIA/USDT",
+    "bitstamp": null,
+    "bybit": "TIA/USDT",
+    "coinbase": "TIA/USD",
+    "gateio": "TIA/USDT",
+    "kraken": "TIA/USD",
+    "kucoin": "TIA/USDT",
+    "okx": "TIA/USDT"
+  },
+  "centrifuge-2": {
+    "binance": "CFG/USDT",
+    "bitstamp": null,
+    "bybit": "CFG/USDT",
+    "coinbase": "CFG/USD",
+    "gateio": "CFG/USDT",
+    "kraken": "CFG/USD",
+    "kucoin": "CFG/USDT",
+    "okx": "CFG/USDT"
+  },
+  "chain-2": {
+    "binance": null,
+    "bitstamp": "XCN/USD",
+    "bybit": null,
+    "coinbase": "XCN/USD",
+    "gateio": "XCN/USDT",
+    "kraken": "XCN/USD",
+    "kucoin": "XCN/USDT",
+    "okx": null
+  },
+  "chainlink": {
+    "binance": "LINK/USDT",
+    "bitstamp": "LINK/USD",
+    "bybit": "LINK/USDT",
+    "coinbase": "LINK/USDT",
+    "gateio": "LINK/USDT",
+    "kraken": "LINK/USDT",
+    "kucoin": "LINK/USDT",
+    "okx": "LINK/USDT"
+  },
+  "chiliz": {
+    "binance": "CHZ/USDT",
+    "bitstamp": "CHZ/USD",
+    "bybit": "CHZ/USDT",
+    "coinbase": "CHZ/USDT",
+    "gateio": "CHZ/USDT",
+    "kraken": "CHZ/USD",
+    "kucoin": "CHZ/USDT",
+    "okx": "CHZ/USDT"
+  },
+  "circle-internet-group-ondo-tokenized-stock": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": null,
+    "gateio": "CRCLON/USDT",
+    "kraken": null,
+    "kucoin": null,
+    "okx": null
+  },
+  "compound-governance-token": {
+    "binance": "COMP/USDT",
+    "bitstamp": "COMP/USD",
+    "bybit": "COMP/USDT",
+    "coinbase": "COMP/USD",
+    "gateio": "COMP/USDT",
+    "kraken": "COMP/USD",
+    "kucoin": "COMP/USDT",
+    "okx": "COMP/USDT"
+  },
+  "conflux-token": {
+    "binance": "CFX/USDT",
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": null,
+    "gateio": "CFX/USDT",
+    "kraken": "CFX/USD",
+    "kucoin": "CFX/USDT",
+    "okx": "CFX/USDT"
+  },
+  "convex-finance": {
+    "binance": "CVX/USDT",
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": "CVX/USD",
+    "gateio": "CVX/USDT",
+    "kraken": "CVX/USD",
+    "kucoin": "CVX/USDT",
+    "okx": "CVX/USDT"
+  },
+  "cosmos": {
+    "binance": "ATOM/USDT",
+    "bitstamp": "ATOM/USD",
+    "bybit": "ATOM/USDT",
+    "coinbase": "ATOM/USDT",
+    "gateio": "ATOM/USDT",
+    "kraken": "ATOM/USDT",
+    "kucoin": "ATOM/USDT",
+    "okx": "ATOM/USDT"
+  },
+  "crypto-com-chain": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": "CRO/USDT",
+    "gateio": "CRO/USDT",
+    "kraken": "CRO/USDT",
+    "kucoin": "CRO/USDT",
+    "okx": "CRO/USDT"
+  },
+  "curve-dao-token": {
+    "binance": "CRV/USDT",
+    "bitstamp": "CRV/USD",
+    "bybit": "CRV/USDT",
+    "coinbase": "CRV/USD",
+    "gateio": "CRV/USDT",
+    "kraken": "CRV/USD",
+    "kucoin": "CRV/USDT",
+    "okx": "CRV/USDT"
+  },
+  "dash": {
+    "binance": "DASH/USDT",
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": "DASH/USD",
+    "gateio": "DASH/USDT",
+    "kraken": "DASH/USD",
+    "kucoin": "DASH/USDT",
+    "okx": "DASH/USDT"
+  },
+  "decentraland": {
+    "binance": "MANA/USDT",
+    "bitstamp": "MANA/USD",
+    "bybit": "MANA/USDT",
+    "coinbase": "MANA/USD",
+    "gateio": "MANA/USDT",
+    "kraken": "MANA/USDT",
+    "kucoin": "MANA/USDT",
+    "okx": "MANA/USDT"
+  },
+  "decred": {
+    "binance": "DCR/USDT",
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": null,
+    "gateio": "DCR/USDT",
+    "kraken": null,
+    "kucoin": "DCR/USDT",
+    "okx": null
+  },
+  "dexe": {
+    "binance": "DEXE/USDT",
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": null,
+    "gateio": "DEXE/USDT",
+    "kraken": null,
+    "kucoin": "DEXE/USDT",
+    "okx": null
+  },
+  "dogecoin": {
+    "binance": "DOGE/USDT",
+    "bitstamp": "DOGE/USD",
+    "bybit": "DOGE/USDT",
+    "coinbase": "DOGE/USDT",
+    "gateio": "DOGE/USDT",
+    "kraken": "DOGE/USDT",
+    "kucoin": "DOGE/USDT",
+    "okx": "DOGE/USDT"
+  },
+  "dogwifcoin": {
+    "binance": "WIF/USDT",
+    "bitstamp": "WIF/USD",
+    "bybit": "WIF/USDT",
+    "coinbase": "WIF/USD",
+    "gateio": "WIF/USDT",
+    "kraken": "WIF/USD",
+    "kucoin": "WIF/USDT",
+    "okx": "WIF/USDT"
+  },
+  "doublezero": {
+    "binance": "2Z/USDT",
+    "bitstamp": null,
+    "bybit": "2Z/USDT",
+    "coinbase": "2Z/USD",
+    "gateio": "2Z/USDT",
+    "kraken": "2Z/USD",
+    "kucoin": "2Z/USDT",
+    "okx": "2Z/USDT"
+  },
+  "ecash": {
+    "binance": "XEC/USDT",
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": null,
+    "gateio": "XEC/USDT",
+    "kraken": null,
+    "kucoin": "XEC/USDT",
+    "okx": null
+  },
+  "edgex": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": "EDGE/USDT",
+    "coinbase": "EDGE/USD",
+    "gateio": "EDGE/USDT",
+    "kraken": "EDGE/USD",
+    "kucoin": "EDGE/USDT",
+    "okx": "EDGE/USDT"
+  },
+  "eigenlayer": {
+    "binance": "EIGEN/USDT",
+    "bitstamp": "EIGEN/USD",
+    "bybit": "EIGEN/USDT",
+    "coinbase": "EIGEN/USD",
+    "gateio": "EIGEN/USDT",
+    "kraken": "EIGEN/USD",
+    "kucoin": "EIGEN/USDT",
+    "okx": "EIGEN/USDT"
+  },
+  "elrond-erd-2": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": null,
+    "gateio": null,
+    "kraken": null,
+    "kucoin": null,
+    "okx": null
+  },
+  "ethena": {
+    "binance": "ENA/USDT",
+    "bitstamp": "ENA/USD",
+    "bybit": "ENA/USDT",
+    "coinbase": "ENA/USD",
+    "gateio": "ENA/USDT",
+    "kraken": "ENA/USD",
+    "kucoin": "ENA/USDT",
+    "okx": "ENA/USDT"
+  },
+  "ether-fi": {
+    "binance": "ETHFI/USDT",
+    "bitstamp": null,
+    "bybit": "ETHFI/USDT",
+    "coinbase": "ETHFI/USD",
+    "gateio": "ETHFI/USDT",
+    "kraken": "ETHFI/USD",
+    "kucoin": "ETHFI/USDT",
+    "okx": "ETHFI/USDT"
+  },
+  "ethereum": {
+    "binance": "ETH/USDT",
+    "bitstamp": "ETH/USDT",
+    "bybit": "ETH/USDT",
+    "coinbase": "ETH/USDT",
+    "gateio": "ETH/USDT",
+    "kraken": "ETH/USDT",
+    "kucoin": "ETH/USDT",
+    "okx": "ETH/USDT"
+  },
+  "ethereum-classic": {
+    "binance": "ETC/USDT",
+    "bitstamp": "ETC/USD",
+    "bybit": "ETC/USDT",
+    "coinbase": "ETC/USD",
+    "gateio": "ETC/USDT",
+    "kraken": "ETC/USD",
+    "kucoin": "ETC/USDT",
+    "okx": "ETC/USDT"
+  },
+  "ethereum-name-service": {
+    "binance": "ENS/USDT",
+    "bitstamp": null,
+    "bybit": "ENS/USDT",
+    "coinbase": "ENS/USDT",
+    "gateio": "ENS/USDT",
+    "kraken": "ENS/USD",
+    "kucoin": "ENS/USDT",
+    "okx": "ENS/USDT"
+  },
+  "ethgas-2": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": "GWEI/USD",
+    "gateio": "GWEI/USDT",
+    "kraken": "GWEI/USD",
+    "kucoin": "GWEI/USDT",
+    "okx": null
+  },
+  "euro-coin": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": null,
+    "gateio": null,
+    "kraken": "EURC/USD",
+    "kucoin": null,
+    "okx": "EURC/USD"
+  },
+  "eutbl": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": null,
+    "gateio": null,
+    "kraken": null,
+    "kucoin": null,
+    "okx": null
+  },
+  "falcon-finance-ff": {
+    "binance": "FF/USDT",
+    "bitstamp": null,
+    "bybit": "FF/USDT",
+    "coinbase": null,
+    "gateio": "FF/USDT",
+    "kraken": "FF/USD",
+    "kucoin": "FF/USDT",
+    "okx": null
+  },
+  "fartcoin": {
+    "binance": null,
+    "bitstamp": "FARTCOIN/USD",
+    "bybit": null,
+    "coinbase": "FARTCOIN/USD",
+    "gateio": "FARTCOIN/USDT",
+    "kraken": "FARTCOIN/USDT",
+    "kucoin": "FARTCOIN/USDT",
+    "okx": null
+  },
+  "fetch-ai": {
+    "binance": "FET/USDT",
+    "bitstamp": "FET/USD",
+    "bybit": "FET/USDT",
+    "coinbase": "FET/USDT",
+    "gateio": "FET/USDT",
+    "kraken": "FET/USD",
+    "kucoin": "FET/USDT",
+    "okx": "FET/USDT"
+  },
+  "fidelity-digital-interest-token": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": null,
+    "gateio": null,
+    "kraken": null,
+    "kucoin": null,
+    "okx": null
+  },
+  "figure-heloc": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": null,
+    "gateio": null,
+    "kraken": null,
+    "kucoin": null,
+    "okx": null
+  },
+  "filecoin": {
+    "binance": "FIL/USDT",
+    "bitstamp": null,
+    "bybit": "FIL/USDT",
+    "coinbase": "FIL/USD",
+    "gateio": "FIL/USDT",
+    "kraken": "FIL/USD",
+    "kucoin": "FIL/USDT",
+    "okx": "FIL/USDT"
+  },
+  "flare-networks": {
+    "binance": null,
+    "bitstamp": "FLR/USD",
+    "bybit": "FLR/USDT",
+    "coinbase": "FLR/USD",
+    "gateio": "FLR/USDT",
+    "kraken": "FLR/USD",
+    "kucoin": "FLR/USDT",
+    "okx": "FLR/USDT"
+  },
+  "floki": {
+    "binance": "FLOKI/USDT",
+    "bitstamp": "FLOKI/USD",
+    "bybit": "FLOKI/USDT",
+    "coinbase": "FLOKI/USD",
+    "gateio": "FLOKI/USDT",
+    "kraken": "FLOKI/USD",
+    "kucoin": "FLOKI/USDT",
+    "okx": "FLOKI/USDT"
+  },
+  "frax": {
+    "binance": "FRAX/USDT",
+    "bitstamp": null,
+    "bybit": "FRAX/USDT",
+    "coinbase": null,
+    "gateio": "FRAX/USDT",
+    "kraken": null,
+    "kucoin": "FRAX/USDT",
+    "okx": null
+  },
+  "gala": {
+    "binance": "GALA/USDT",
+    "bitstamp": "GALA/USD",
+    "bybit": "GALA/USDT",
+    "coinbase": null,
+    "gateio": "GALA/USDT",
+    "kraken": "GALA/USD",
+    "kucoin": null,
+    "okx": "GALA/USDT"
+  },
+  "gatechain-token": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": null,
+    "gateio": "GT/USDT",
+    "kraken": null,
+    "kucoin": null,
+    "okx": null
+  },
+  "genius-3": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": null,
+    "gateio": "GENIUS/USDT",
+    "kraken": null,
+    "kucoin": "GENIUS/USDT",
+    "okx": null
+  },
+  "gnosis": {
+    "binance": "GNO/USDT",
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": "GNO/USD",
+    "gateio": "GNO/USDT",
+    "kraken": "GNO/USD",
+    "kucoin": null,
+    "okx": null
+  },
+  "golem": {
+    "binance": "GLM/USDT",
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": "GLM/USD",
+    "gateio": "GLM/USDT",
+    "kraken": null,
+    "kucoin": "GLM/USDT",
+    "okx": "GLM/USDT"
+  },
+  "grass": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": "GRASS/USDT",
+    "coinbase": null,
+    "gateio": "GRASS/USDT",
+    "kraken": "GRASS/USD",
+    "kucoin": "GRASS/USDT",
+    "okx": "GRASS/USDT"
+  },
+  "hash-2": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": null,
+    "gateio": null,
+    "kraken": null,
+    "kucoin": null,
+    "okx": null
+  },
+  "hashnote-usyc": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": null,
+    "gateio": null,
+    "kraken": null,
+    "kucoin": null,
+    "okx": null
+  },
+  "hastra-prime": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": "PRIME/USDT",
+    "coinbase": "PRIME/USD",
+    "gateio": "PRIME/USDT",
+    "kraken": "PRIME/USD",
+    "kucoin": null,
+    "okx": null
+  },
+  "hedera-hashgraph": {
+    "binance": "HBAR/USDT",
+    "bitstamp": "HBAR/USD",
+    "bybit": "HBAR/USDT",
+    "coinbase": "HBAR/USDT",
+    "gateio": "HBAR/USDT",
+    "kraken": "HBAR/USD",
+    "kucoin": "HBAR/USDT",
+    "okx": "HBAR/USDT"
+  },
+  "helium": {
+    "binance": "HNT/USDT",
+    "bitstamp": null,
+    "bybit": "HNT/USDT",
+    "coinbase": "HNT/USD",
+    "gateio": "HNT/USDT",
+    "kraken": "HNT/USD",
+    "kucoin": "HNT/USDT",
+    "okx": null
+  },
+  "htx-dao": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": "HTX/USDT",
+    "coinbase": null,
+    "gateio": "HTX/USDT",
+    "kraken": null,
+    "kucoin": "HTX/USDT",
+    "okx": null
+  },
+  "humanity": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": "H/USDT",
+    "coinbase": null,
+    "gateio": "H/USDT",
+    "kraken": "H/USD",
+    "kucoin": "H/USDT",
+    "okx": null
+  },
+  "hyperliquid": {
+    "binance": null,
+    "bitstamp": "HYPE/USD",
+    "bybit": "HYPE/USDT",
+    "coinbase": "HYPE/USD",
+    "gateio": "HYPE/USDT",
+    "kraken": "HYPE/USD",
+    "kucoin": "HYPE/USDT",
+    "okx": "HYPE/USDT"
+  },
+  "immutable-x": {
+    "binance": "IMX/USDT",
+    "bitstamp": "IMX/USD",
+    "bybit": "IMX/USDT",
+    "coinbase": "IMX/USDT",
+    "gateio": "IMX/USDT",
+    "kraken": "IMX/USD",
+    "kucoin": "IMX/USDT",
+    "okx": "IMX/USDT"
+  },
+  "injective-protocol": {
+    "binance": "INJ/USDT",
+    "bitstamp": "INJ/USD",
+    "bybit": "INJ/USDT",
+    "coinbase": "INJ/USD",
+    "gateio": "INJ/USDT",
+    "kraken": "INJ/USD",
+    "kucoin": "INJ/USDT",
+    "okx": "INJ/USDT"
+  },
+  "instadapp": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": "FLUID/USDT",
+    "coinbase": "FLUID/USD",
+    "gateio": "FLUID/USDT",
+    "kraken": null,
+    "kucoin": null,
+    "okx": "FLUID/USDT"
+  },
+  "internet-computer": {
+    "binance": "ICP/USDT",
+    "bitstamp": "ICP/USD",
+    "bybit": "ICP/USDT",
+    "coinbase": "ICP/USDT",
+    "gateio": "ICP/USDT",
+    "kraken": "ICP/USD",
+    "kucoin": "ICP/USDT",
+    "okx": "ICP/USDT"
+  },
+  "iota": {
+    "binance": "IOTA/USDT",
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": null,
+    "gateio": "IOTA/USDT",
+    "kraken": null,
+    "kucoin": "IOTA/USDT",
+    "okx": "IOTA/USDT"
+  },
+  "janus-henderson-anemoy-aaa-clo-fund": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": null,
+    "gateio": null,
+    "kraken": null,
+    "kucoin": null,
+    "okx": null
+  },
+  "janus-henderson-anemoy-treasury-fund": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": null,
+    "gateio": null,
+    "kraken": null,
+    "kucoin": null,
+    "okx": null
+  },
+  "jasmycoin": {
+    "binance": "JASMY/USDT",
+    "bitstamp": null,
+    "bybit": "JASMY/USDT",
+    "coinbase": "JASMY/USDT",
+    "gateio": "JASMY/USDT",
+    "kraken": "JASMY/USD",
+    "kucoin": "JASMY/USDT",
+    "okx": null
+  },
+  "jito-governance-token": {
+    "binance": "JTO/USDT",
+    "bitstamp": null,
+    "bybit": "JTO/USDT",
+    "coinbase": "JTO/USD",
+    "gateio": "JTO/USDT",
+    "kraken": "JTO/USD",
+    "kucoin": "JTO/USDT",
+    "okx": "JTO/USDT"
+  },
+  "jupiter-exchange-solana": {
+    "binance": "JUP/USDT",
+    "bitstamp": "JUP/USD",
+    "bybit": "JUP/USDT",
+    "coinbase": null,
+    "gateio": "JUP/USDT",
+    "kraken": "JUP/USD",
+    "kucoin": "JUP/USDT",
+    "okx": "JUP/USDT"
+  },
+  "just": {
+    "binance": "JST/USDT",
+    "bitstamp": null,
+    "bybit": "JST/USDT",
+    "coinbase": null,
+    "gateio": "JST/USDT",
+    "kraken": "JST/USD",
+    "kucoin": "JST/USDT",
+    "okx": null
+  },
+  "kaia": {
+    "binance": "KAIA/USDT",
+    "bitstamp": null,
+    "bybit": "KAIA/USDT",
+    "coinbase": null,
+    "gateio": "KAIA/USDT",
+    "kraken": null,
+    "kucoin": "KAIA/USDT",
+    "okx": "KAIA/USDT"
+  },
+  "kaspa": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": "KAS/USDT",
+    "coinbase": null,
+    "gateio": "KAS/USDT",
+    "kraken": "KAS/USDT",
+    "kucoin": "KAS/USDT",
+    "okx": null
+  },
+  "kite-2": {
+    "binance": "KITE/USDT",
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": "KITE/USD",
+    "gateio": "KITE/USDT",
+    "kraken": null,
+    "kucoin": "KITE/USDT",
+    "okx": "KITE/USDT"
+  },
+  "kucoin-shares": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": "KCS/USDT",
+    "coinbase": null,
+    "gateio": null,
+    "kraken": null,
+    "kucoin": "KCS/USDT",
+    "okx": null
+  },
+  "lab": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": null,
+    "gateio": "LAB/USDT",
+    "kraken": null,
+    "kucoin": "LAB/USDT",
+    "okx": null
+  },
+  "layerzero": {
+    "binance": "ZRO/USDT",
+    "bitstamp": "ZRO/USD",
+    "bybit": "ZRO/USDT",
+    "coinbase": "ZRO/USD",
+    "gateio": "ZRO/USDT",
+    "kraken": "ZRO/USD",
+    "kucoin": "ZRO/USDT",
+    "okx": "ZRO/USDT"
+  },
+  "leo-token": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": null,
+    "gateio": "LEO/USDT",
+    "kraken": null,
+    "kucoin": null,
+    "okx": "LEO/USDT"
+  },
+  "lido-dao": {
+    "binance": "LDO/USDT",
+    "bitstamp": "LDO/USD",
+    "bybit": "LDO/USDT",
+    "coinbase": "LDO/USD",
+    "gateio": "LDO/USDT",
+    "kraken": "LDO/USD",
+    "kucoin": "LDO/USDT",
+    "okx": "LDO/USDT"
+  },
+  "lido-earn-eth": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": null,
+    "gateio": null,
+    "kraken": null,
+    "kucoin": null,
+    "okx": null
+  },
+  "lighter": {
+    "binance": "LIT/USDT",
+    "bitstamp": "LIT/USD",
+    "bybit": "LIT/USDT",
+    "coinbase": null,
+    "gateio": "LIT/USDT",
+    "kraken": "LIT/USD",
+    "kucoin": "LIT/USDT",
+    "okx": "LIT/USDT"
+  },
+  "litecoin": {
+    "binance": "LTC/USDT",
+    "bitstamp": "LTC/USD",
+    "bybit": "LTC/USDT",
+    "coinbase": "LTC/USD",
+    "gateio": "LTC/USDT",
+    "kraken": "LTC/USDT",
+    "kucoin": "LTC/USDT",
+    "okx": "LTC/USDT"
+  },
+  "maga-bitcoin": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": null,
+    "gateio": null,
+    "kraken": null,
+    "kucoin": null,
+    "okx": null
+  },
+  "mantle": {
+    "binance": null,
+    "bitstamp": "MNT/USD",
+    "bybit": "MNT/USDT",
+    "coinbase": null,
+    "gateio": "MNT/USDT",
+    "kraken": "MNT/USD",
+    "kucoin": "MNT/USDT",
+    "okx": null
+  },
+  "memecore": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": null,
+    "gateio": "M/USDT",
+    "kraken": "M/USD",
+    "kucoin": null,
+    "okx": null
+  },
+  "midnight-3": {
+    "binance": "NIGHT/USDT",
+    "bitstamp": null,
+    "bybit": "NIGHT/USDT",
+    "coinbase": null,
+    "gateio": "NIGHT/USDT",
+    "kraken": "NIGHT/USD",
+    "kucoin": "NIGHT/USDT",
+    "okx": "NIGHT/USDT"
+  },
+  "monad": {
+    "binance": null,
+    "bitstamp": "MON/USD",
+    "bybit": "MON/USDT",
+    "coinbase": "MON/USD",
+    "gateio": "MON/USDT",
+    "kraken": "MON/USD",
+    "kucoin": "MON/USDT",
+    "okx": "MON/USDT"
+  },
+  "monero": {
+    "binance": "XMR/USDT",
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": null,
+    "gateio": null,
+    "kraken": "XMR/USDT",
+    "kucoin": "XMR/USDT",
+    "okx": null
+  },
+  "morpho": {
+    "binance": "MORPHO/USDT",
+    "bitstamp": null,
+    "bybit": "MORPHO/USDT",
+    "coinbase": "MORPHO/USD",
+    "gateio": "MORPHO/USDT",
+    "kraken": "MORPHO/USD",
+    "kucoin": "MORPHO/USDT",
+    "okx": "MORPHO/USDT"
+  },
+  "mx-token": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": "MX/USDT",
+    "coinbase": null,
+    "gateio": null,
+    "kraken": null,
+    "kucoin": null,
+    "okx": null
+  },
+  "near": {
+    "binance": "NEAR/USDT",
+    "bitstamp": "NEAR/USD",
+    "bybit": "NEAR/USDT",
+    "coinbase": "NEAR/USDT",
+    "gateio": "NEAR/USDT",
+    "kraken": "NEAR/USD",
+    "kucoin": "NEAR/USDT",
+    "okx": "NEAR/USDT"
+  },
+  "neo": {
+    "binance": "NEO/USDT",
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": null,
+    "gateio": "NEO/USDT",
+    "kraken": "NEO/USD",
+    "kucoin": "NEO/USDT",
+    "okx": "NEO/USDT"
+  },
+  "newton-project": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": null,
+    "gateio": "AB/USDT",
+    "kraken": "AB/USD",
+    "kucoin": null,
+    "okx": null
+  },
+  "nexo": {
+    "binance": "NEXO/USDT",
+    "bitstamp": null,
+    "bybit": "NEXO/USDT",
+    "coinbase": null,
+    "gateio": "NEXO/USDT",
+    "kraken": null,
+    "kucoin": null,
+    "okx": null
+  },
+  "official-trump": {
+    "binance": "TRUMP/USDT",
+    "bitstamp": "TRUMP/USD",
+    "bybit": "TRUMP/USDT",
+    "coinbase": "TRUMP/USD",
+    "gateio": "TRUMP/USDT",
+    "kraken": "TRUMP/USDT",
+    "kucoin": "TRUMP/USDT",
+    "okx": "TRUMP/USDT"
+  },
+  "okb": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": null,
+    "gateio": "OKB/USDT",
+    "kraken": "OKB/USD",
+    "kucoin": null,
+    "okx": "OKB/USDT"
+  },
+  "olympus": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": null,
+    "gateio": null,
+    "kraken": null,
+    "kucoin": null,
+    "okx": null
+  },
+  "ondo-finance": {
+    "binance": "ONDO/USDT",
+    "bitstamp": "ONDO/USD",
+    "bybit": "ONDO/USDT",
+    "coinbase": "ONDO/USD",
+    "gateio": "ONDO/USDT",
+    "kraken": "ONDO/USD",
+    "kucoin": "ONDO/USDT",
+    "okx": "ONDO/USDT"
+  },
+  "optimism": {
+    "binance": "OP/USDT",
+    "bitstamp": "OP/USD",
+    "bybit": "OP/USDT",
+    "coinbase": "OP/USDT",
+    "gateio": "OP/USDT",
+    "kraken": "OP/USD",
+    "kucoin": "OP/USDT",
+    "okx": "OP/USDT"
+  },
+  "origintrail": {
+    "binance": null,
+    "bitstamp": "TRAC/USD",
+    "bybit": null,
+    "coinbase": "TRAC/USD",
+    "gateio": null,
+    "kraken": "TRAC/USD",
+    "kucoin": "TRAC/USDT",
+    "okx": null
+  },
+  "pancakeswap-token": {
+    "binance": "CAKE/USDT",
+    "bitstamp": "CAKE/USD",
+    "bybit": "CAKE/USDT",
+    "coinbase": "CAKE/USD",
+    "gateio": "CAKE/USDT",
+    "kraken": "CAKE/USD",
+    "kucoin": "CAKE/USDT",
+    "okx": null
+  },
+  "pendle": {
+    "binance": "PENDLE/USDT",
+    "bitstamp": "PENDLE/USD",
+    "bybit": "PENDLE/USDT",
+    "coinbase": "PENDLE/USD",
+    "gateio": "PENDLE/USDT",
+    "kraken": "PENDLE/USD",
+    "kucoin": "PENDLE/USDT",
+    "okx": "PENDLE/USDT"
+  },
+  "pepe": {
+    "binance": "PEPE/USDT",
+    "bitstamp": "PEPE/USD",
+    "bybit": "PEPE/USDT",
+    "coinbase": "PEPE/USD",
+    "gateio": "PEPE/USDT",
+    "kraken": "PEPE/USD",
+    "kucoin": "PEPE/USDT",
+    "okx": "PEPE/USDT"
+  },
+  "pi-network": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": null,
+    "gateio": "PI/USDT",
+    "kraken": "PI/USD",
+    "kucoin": null,
+    "okx": "PI/USDT"
+  },
+  "pieverse": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": "PIEVERSE/USDT",
+    "coinbase": null,
+    "gateio": "PIEVERSE/USDT",
+    "kraken": null,
+    "kucoin": null,
+    "okx": null
+  },
+  "plasma": {
+    "binance": "XPL/USDT",
+    "bitstamp": "XPL/USD",
+    "bybit": "XPL/USDT",
+    "coinbase": "XPL/USD",
+    "gateio": "XPL/USDT",
+    "kraken": "XPL/USD",
+    "kucoin": "XPL/USDT",
+    "okx": "XPL/USDT"
+  },
+  "polkadot": {
+    "binance": "DOT/USDT",
+    "bitstamp": "DOT/USD",
+    "bybit": "DOT/USDT",
+    "coinbase": "DOT/USDT",
+    "gateio": "DOT/USDT",
+    "kraken": "DOT/USDT",
+    "kucoin": "DOT/USDT",
+    "okx": "DOT/USDT"
+  },
+  "polygon-ecosystem-token": {
+    "binance": "POL/USDT",
+    "bitstamp": "POL/USD",
+    "bybit": "POL/USDT",
+    "coinbase": "POL/USD",
+    "gateio": "POL/USDT",
+    "kraken": "POL/USD",
+    "kucoin": "POL/USDT",
+    "okx": "POL/USDT"
+  },
+  "pudgy-penguins": {
+    "binance": "PENGU/USDT",
+    "bitstamp": "PENGU/USD",
+    "bybit": "PENGU/USDT",
+    "coinbase": "PENGU/USD",
+    "gateio": "PENGU/USDT",
+    "kraken": "PENGU/USDT",
+    "kucoin": "PENGU/USDT",
+    "okx": "PENGU/USDT"
+  },
+  "pump-fun": {
+    "binance": "PUMP/USDT",
+    "bitstamp": null,
+    "bybit": "PUMP/USDT",
+    "coinbase": "PUMP/USD",
+    "gateio": "PUMP/USDT",
+    "kraken": "PUMP/USD",
+    "kucoin": "PUMP/USDT",
+    "okx": "PUMP/USDT"
+  },
+  "pyth-network": {
+    "binance": "PYTH/USDT",
+    "bitstamp": "PYTH/USD",
+    "bybit": "PYTH/USDT",
+    "coinbase": "PYTH/USD",
+    "gateio": "PYTH/USDT",
+    "kraken": "PYTH/USD",
+    "kucoin": "PYTH/USDT",
+    "okx": "PYTH/USDT"
+  },
+  "quant-network": {
+    "binance": "QNT/USDT",
+    "bitstamp": "QNT/USD",
+    "bybit": "QNT/USDT",
+    "coinbase": "QNT/USDT",
+    "gateio": "QNT/USDT",
+    "kraken": "QNT/USD",
+    "kucoin": "QNT/USDT",
+    "okx": null
+  },
+  "rain": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": null,
+    "gateio": null,
+    "kraken": "RAIN/USD",
+    "kucoin": "RAIN/USDT",
+    "okx": null
+  },
+  "ravedao": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": "RAVE/USD",
+    "gateio": "RAVE/USDT",
+    "kraken": "RAVE/USDT",
+    "kucoin": "RAVE/USDT",
+    "okx": null
+  },
+  "raydium": {
+    "binance": "RAY/USDT",
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": "RAY/USD",
+    "gateio": "RAY/USDT",
+    "kraken": "RAY/USD",
+    "kucoin": "RAY/USDT",
+    "okx": "RAY/USDT"
+  },
+  "reallink": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": null,
+    "gateio": null,
+    "kraken": null,
+    "kucoin": null,
+    "okx": null
+  },
+  "render-token": {
+    "binance": "RENDER/USDT",
+    "bitstamp": null,
+    "bybit": "RENDER/USDT",
+    "coinbase": "RENDER/USD",
+    "gateio": "RENDER/USDT",
+    "kraken": "RENDER/USD",
+    "kucoin": "RENDER/USDT",
+    "okx": "RENDER/USDT"
+  },
+  "ripple": {
+    "binance": "XRP/USDT",
+    "bitstamp": "XRP/USDT",
+    "bybit": "XRP/USDT",
+    "coinbase": "XRP/USDT",
+    "gateio": "XRP/USDT",
+    "kraken": "XRP/USDT",
+    "kucoin": "XRP/USDT",
+    "okx": "XRP/USDT"
+  },
+  "river": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": null,
+    "gateio": null,
+    "kraken": "RIVER/USD",
+    "kucoin": null,
+    "okx": null
+  },
+  "safepal": {
+    "binance": "SFP/USDT",
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": null,
+    "gateio": "SFP/USDT",
+    "kraken": null,
+    "kucoin": "SFP/USDT",
+    "okx": null
+  },
+  "sahara-ai": {
+    "binance": "SAHARA/USDT",
+    "bitstamp": null,
+    "bybit": "SAHARA/USDT",
+    "coinbase": null,
+    "gateio": "SAHARA/USDT",
+    "kraken": "SAHARA/USD",
+    "kucoin": "SAHARA/USDT",
+    "okx": "SAHARA/USDT"
+  },
+  "sei-network": {
+    "binance": "SEI/USDT",
+    "bitstamp": "SEI/USD",
+    "bybit": "SEI/USDT",
+    "coinbase": "SEI/USD",
+    "gateio": "SEI/USDT",
+    "kraken": "SEI/USD",
+    "kucoin": "SEI/USDT",
+    "okx": "SEI/USDT"
+  },
+  "shiba-inu": {
+    "binance": "SHIB/USDT",
+    "bitstamp": "SHIB/USD",
+    "bybit": "SHIB/USDT",
+    "coinbase": "SHIB/USDT",
+    "gateio": "SHIB/USDT",
+    "kraken": "SHIB/USDT",
+    "kucoin": "SHIB/USDT",
+    "okx": "SHIB/USDT"
+  },
+  "siren-2": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": null,
+    "gateio": "SIREN/USDT",
+    "kraken": null,
+    "kucoin": "SIREN/USDT",
+    "okx": null
+  },
+  "sky": {
+    "binance": "SKY/USDT",
+    "bitstamp": null,
+    "bybit": "SKY/USDT",
+    "coinbase": "SKY/USD",
+    "gateio": "SKY/USDT",
+    "kraken": "SKY/USD",
+    "kucoin": "SKY/USDT",
+    "okx": "SKY/USDT"
+  },
+  "skyai": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": null,
+    "gateio": "SKYAI/USDT",
+    "kraken": null,
+    "kucoin": null,
+    "okx": null
+  },
+  "solana": {
+    "binance": "SOL/USDT",
+    "bitstamp": "SOL/USD",
+    "bybit": "SOL/USDT",
+    "coinbase": "SOL/USDT",
+    "gateio": "SOL/USDT",
+    "kraken": "SOL/USDT",
+    "kucoin": "SOL/USDT",
+    "okx": "SOL/USDT"
+  },
+  "sonic-3": {
+    "binance": "S/USDT",
+    "bitstamp": "S/USD",
+    "bybit": "S/USDT",
+    "coinbase": "S/USD",
+    "gateio": "S/USDT",
+    "kraken": "S/USDT",
+    "kucoin": "S/USDT",
+    "okx": "S/USDT"
+  },
+  "spiko-amundi-overnight-swap-fund-eur": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": null,
+    "gateio": null,
+    "kraken": null,
+    "kucoin": null,
+    "okx": null
+  },
+  "spx6900": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": "SPX/USDT",
+    "coinbase": "SPX/USD",
+    "gateio": "SPX/USDT",
+    "kraken": "SPX/USD",
+    "kucoin": "SPX/USDT",
+    "okx": null
+  },
+  "stable-2": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": "STABLE/USDT",
+    "coinbase": null,
+    "gateio": "STABLE/USDT",
+    "kraken": "STABLE/USD",
+    "kucoin": "STABLE/USDT",
+    "okx": null
+  },
+  "starknet": {
+    "binance": "STRK/USDT",
+    "bitstamp": "STRK/USD",
+    "bybit": "STRK/USDT",
+    "coinbase": "STRK/USD",
+    "gateio": "STRK/USDT",
+    "kraken": "STRK/USD",
+    "kucoin": "STRK/USDT",
+    "okx": "STRK/USDT"
+  },
+  "stellar": {
+    "binance": "XLM/USDT",
+    "bitstamp": "XLM/USD",
+    "bybit": "XLM/USDT",
+    "coinbase": "XLM/USDT",
+    "gateio": "XLM/USDT",
+    "kraken": "XLM/USD",
+    "kucoin": "XLM/USDT",
+    "okx": "XLM/USDT"
+  },
+  "story-2": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": "IP/USDT",
+    "coinbase": "IP/USD",
+    "gateio": "IP/USDT",
+    "kraken": "IP/USD",
+    "kucoin": "IP/USDT",
+    "okx": "IP/USDT"
+  },
+  "sui": {
+    "binance": "SUI/USDT",
+    "bitstamp": "SUI/USD",
+    "bybit": "SUI/USDT",
+    "coinbase": "SUI/USD",
+    "gateio": "SUI/USDT",
+    "kraken": "SUI/USD",
+    "kucoin": "SUI/USDT",
+    "okx": "SUI/USDT"
+  },
+  "sun-token": {
+    "binance": "SUN/USDT",
+    "bitstamp": null,
+    "bybit": "SUN/USDT",
+    "coinbase": null,
+    "gateio": "SUN/USDT",
+    "kraken": "SUN/USD",
+    "kucoin": "SUN/USDT",
+    "okx": null
+  },
+  "superstate-short-duration-us-government-securities-fund-ustb": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": null,
+    "gateio": null,
+    "kraken": null,
+    "kucoin": null,
+    "okx": null
+  },
+  "swissborg": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": null,
+    "gateio": null,
+    "kraken": null,
+    "kucoin": null,
+    "okx": null
+  },
+  "syrup": {
+    "binance": "SYRUP/USDT",
+    "bitstamp": "SYRUP/USD",
+    "bybit": null,
+    "coinbase": "SYRUP/USD",
+    "gateio": "SYRUP/USDT",
+    "kraken": "SYRUP/USD",
+    "kucoin": "SYRUP/USDT",
+    "okx": null
+  },
+  "tagger": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": null,
+    "gateio": null,
+    "kraken": null,
+    "kucoin": null,
+    "okx": null
+  },
+  "telcoin": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": "TEL/USDT",
+    "coinbase": null,
+    "gateio": null,
+    "kraken": "TEL/USD",
+    "kucoin": "TEL/USDT",
+    "okx": null
+  },
+  "terra-luna": {
+    "binance": "LUNC/USDT",
+    "bitstamp": null,
+    "bybit": "LUNC/USDT",
+    "coinbase": null,
+    "gateio": "LUNC/USDT",
+    "kraken": "LUNC/USD",
+    "kucoin": "LUNC/USDT",
+    "okx": null
+  },
+  "tezos": {
+    "binance": "XTZ/USDT",
+    "bitstamp": "XTZ/USD",
+    "bybit": "XTZ/USDT",
+    "coinbase": "XTZ/USD",
+    "gateio": "XTZ/USDT",
+    "kraken": "XTZ/USDT",
+    "kucoin": "XTZ/USDT",
+    "okx": "XTZ/USDT"
+  },
+  "the-graph": {
+    "binance": "GRT/USDT",
+    "bitstamp": "GRT/USD",
+    "bybit": "GRT/USDT",
+    "coinbase": "GRT/USD",
+    "gateio": "GRT/USDT",
+    "kraken": "GRT/USD",
+    "kucoin": "GRT/USDT",
+    "okx": "GRT/USDT"
+  },
+  "the-open-network": {
+    "binance": "TON/USDT",
+    "bitstamp": "TON/USD",
+    "bybit": "TON/USDT",
+    "coinbase": "TON/USD",
+    "gateio": "TON/USDT",
+    "kraken": "TON/USDT",
+    "kucoin": "TON/USDT",
+    "okx": "TON/USDT"
+  },
+  "the-sandbox": {
+    "binance": "SAND/USDT",
+    "bitstamp": "SAND/USD",
+    "bybit": "SAND/USDT",
+    "coinbase": "SAND/USDT",
+    "gateio": "SAND/USDT",
+    "kraken": "SAND/USD",
+    "kucoin": "SAND/USDT",
+    "okx": "SAND/USDT"
+  },
+  "the9bit": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": null,
+    "gateio": null,
+    "kraken": null,
+    "kucoin": "9BIT/USDT",
+    "okx": null
+  },
+  "theta-token": {
+    "binance": "THETA/USDT",
+    "bitstamp": null,
+    "bybit": "THETA/USDT",
+    "coinbase": null,
+    "gateio": "THETA/USDT",
+    "kraken": null,
+    "kucoin": "THETA/USDT",
+    "okx": "THETA/USDT"
+  },
+  "thorchain": {
+    "binance": "RUNE/USDT",
+    "bitstamp": null,
+    "bybit": "RUNE/USDT",
+    "coinbase": null,
+    "gateio": "RUNE/USDT",
+    "kraken": "RUNE/USD",
+    "kucoin": "RUNE/USDT",
+    "okx": null
+  },
+  "tradable-apac-diversified-finance-provider-sstn": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": null,
+    "gateio": null,
+    "kraken": null,
+    "kucoin": null,
+    "okx": null
+  },
+  "tradable-latam-fintech-sstn": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": null,
+    "gateio": null,
+    "kraken": null,
+    "kucoin": null,
+    "okx": null
+  },
+  "troll-2": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": "TROLL/USD",
+    "gateio": "TROLL/USDT",
+    "kraken": null,
+    "kucoin": "TROLL/USDT",
+    "okx": null
+  },
+  "tron": {
+    "binance": "TRX/USDT",
+    "bitstamp": "TRX/USD",
+    "bybit": "TRX/USDT",
+    "coinbase": null,
+    "gateio": "TRX/USDT",
+    "kraken": "TRX/USD",
+    "kucoin": "TRX/USDT",
+    "okx": "TRX/USDT"
+  },
+  "trust-wallet-token": {
+    "binance": "TWT/USDT",
+    "bitstamp": null,
+    "bybit": "TWT/USDT",
+    "coinbase": null,
+    "gateio": "TWT/USDT",
+    "kraken": null,
+    "kucoin": "TWT/USDT",
+    "okx": null
+  },
+  "ultima": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": null,
+    "gateio": "ULTIMA/USDT",
+    "kraken": null,
+    "kucoin": "ULTIMA/USDT",
+    "okx": null
+  },
+  "undeads-games": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": null,
+    "gateio": "UDS/USDT",
+    "kraken": null,
+    "kucoin": "UDS/USDT",
+    "okx": null
+  },
+  "unibase": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": null,
+    "gateio": "UB/USDT",
+    "kraken": null,
+    "kucoin": "UB/USDT",
+    "okx": null
+  },
+  "uniswap": {
+    "binance": "UNI/USDT",
+    "bitstamp": "UNI/USD",
+    "bybit": "UNI/USDT",
+    "coinbase": "UNI/USD",
+    "gateio": "UNI/USDT",
+    "kraken": "UNI/USD",
+    "kucoin": "UNI/USDT",
+    "okx": "UNI/USDT"
+  },
+  "united-stables": {
+    "binance": "U/USDT",
+    "bitstamp": null,
+    "bybit": "U/USDT",
+    "coinbase": null,
+    "gateio": "U/USDT",
+    "kraken": "U/USD",
+    "kucoin": "U/USDT",
+    "okx": null
+  },
+  "usa": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": "USAT/USDT",
+    "coinbase": null,
+    "gateio": "USAT/USDT",
+    "kraken": "USAT/USDT",
+    "kucoin": null,
+    "okx": "USAT/USDT"
+  },
+  "usx": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": null,
+    "gateio": null,
+    "kraken": null,
+    "kucoin": null,
+    "okx": null
+  },
+  "vaulta": {
+    "binance": "A/USDT",
+    "bitstamp": null,
+    "bybit": "A/USDT",
+    "coinbase": null,
+    "gateio": "A/USDT",
+    "kraken": "A/USD",
+    "kucoin": "A/USDT",
+    "okx": "A/USDT"
+  },
+  "vechain": {
+    "binance": "VET/USDT",
+    "bitstamp": null,
+    "bybit": "VET/USDT",
+    "coinbase": "VET/USD",
+    "gateio": "VET/USDT",
+    "kraken": "VET/USDT",
+    "kucoin": "VET/USDT",
+    "okx": null
+  },
+  "venice-token": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": "VVV/USDT",
+    "coinbase": "VVV/USD",
+    "gateio": "VVV/USDT",
+    "kraken": "VVV/USD",
+    "kucoin": "VVV/USDT",
+    "okx": null
+  },
+  "virtual-protocol": {
+    "binance": "VIRTUAL/USDT",
+    "bitstamp": "VIRTUAL/USD",
+    "bybit": "VIRTUAL/USDT",
+    "coinbase": "VIRTUAL/USD",
+    "gateio": "VIRTUAL/USDT",
+    "kraken": "VIRTUAL/USDT",
+    "kucoin": "VIRTUAL/USDT",
+    "okx": "VIRTUAL/USDT"
+  },
+  "vision-3": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": null,
+    "gateio": "VSN/USDT",
+    "kraken": "VSN/USD",
+    "kucoin": "VSN/USDT",
+    "okx": null
+  },
+  "walrus-2": {
+    "binance": "WAL/USDT",
+    "bitstamp": null,
+    "bybit": "WAL/USDT",
+    "coinbase": "WAL/USD",
+    "gateio": "WAL/USDT",
+    "kraken": "WAL/USD",
+    "kucoin": "WAL/USDT",
+    "okx": null
+  },
+  "wefi": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": null,
+    "gateio": null,
+    "kraken": null,
+    "kucoin": null,
+    "okx": null
+  },
+  "whitebit": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": null,
+    "gateio": null,
+    "kraken": "WBT/USD",
+    "kucoin": null,
+    "okx": null
+  },
+  "world-liberty-financial": {
+    "binance": "WLFI/USDT",
+    "bitstamp": "WLFI/USD",
+    "bybit": "WLFI/USDT",
+    "coinbase": "WLFI/USD",
+    "gateio": "WLFI/USDT",
+    "kraken": "WLFI/USD",
+    "kucoin": "WLFI/USDT",
+    "okx": "WLFI/USDT"
+  },
+  "worldcoin-wld": {
+    "binance": "WLD/USDT",
+    "bitstamp": null,
+    "bybit": "WLD/USDT",
+    "coinbase": "WLD/USD",
+    "gateio": "WLD/USDT",
+    "kraken": "WLD/USD",
+    "kucoin": "WLD/USDT",
+    "okx": "WLD/USDT"
+  },
+  "xdce-crowd-sale": {
+    "binance": null,
+    "bitstamp": "XDC/USD",
+    "bybit": "XDC/USDT",
+    "coinbase": null,
+    "gateio": "XDC/USDT",
+    "kraken": "XDC/USD",
+    "kucoin": "XDC/USDT",
+    "okx": null
+  },
+  "xphere": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": null,
+    "gateio": null,
+    "kraken": null,
+    "kucoin": null,
+    "okx": null
+  },
+  "ylds": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": null,
+    "gateio": null,
+    "kraken": null,
+    "kucoin": null,
+    "okx": null
+  },
+  "zano": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": null,
+    "gateio": null,
+    "kraken": null,
+    "kucoin": null,
+    "okx": null
+  },
+  "zcash": {
+    "binance": "ZEC/USDT",
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": "ZEC/USD",
+    "gateio": "ZEC/USDT",
+    "kraken": "ZEC/USD",
+    "kucoin": "ZEC/USDT",
+    "okx": "ZEC/USDT"
+  },
+  "zebec-network": {
+    "binance": null,
+    "bitstamp": null,
+    "bybit": null,
+    "coinbase": null,
+    "gateio": "ZBCN/USDT",
+    "kraken": "ZBCN/USD",
+    "kucoin": "ZBCN/USDT",
+    "okx": "ZBCN/USDT"
+  },
+  "zksync": {
+    "binance": "ZK/USDT",
+    "bitstamp": null,
+    "bybit": "ZK/USDT",
+    "coinbase": "ZK/USD",
+    "gateio": "ZK/USDT",
+    "kraken": "ZK/USD",
+    "kucoin": "ZK/USDT",
+    "okx": "ZK/USDT"
+  }
+}

@@ -1,0 +1,4080 @@
+{
+  "1inch": {
+    "close_only_windows": [],
+    "earliest_date": "2020-12-25",
+    "latest_date": "2026-05-14",
+    "n_rows": 1967,
+    "real_ohlc_from": "2020-12-25",
+    "tier_breakdown": [
+      {
+        "from": "2020-12-25",
+        "rows": 1967,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "ANY": {
+    "earliest_date": "2019-12-30",
+    "latest_date": "2026-05-13",
+    "listing_date": "2019-12-30",
+    "real_ohlc_from": "2019-12-30",
+    "close_only_windows": [],
+    "tier_breakdown": [
+      {
+        "from": "2019-12-30",
+        "to": "2026-05-13",
+        "tier": 1,
+        "source": "yfinance",
+        "rows": 1601
+      }
+    ]
+  },
+  "APLD": {
+    "earliest_date": "2022-04-13",
+    "latest_date": "2026-05-13",
+    "listing_date": "2022-04-13",
+    "real_ohlc_from": "2022-04-13",
+    "close_only_windows": [],
+    "tier_breakdown": [
+      {
+        "from": "2022-04-13",
+        "to": "2026-05-13",
+        "tier": 1,
+        "source": "yfinance",
+        "rows": 1024
+      }
+    ]
+  },
+  "ARBK": {
+    "earliest_date": "2021-09-23",
+    "latest_date": "2026-05-13",
+    "listing_date": "2021-09-23",
+    "real_ohlc_from": "2021-09-23",
+    "close_only_windows": [],
+    "tier_breakdown": [
+      {
+        "from": "2021-09-23",
+        "to": "2026-05-13",
+        "tier": 1,
+        "source": "yfinance",
+        "rows": 1164
+      }
+    ]
+  },
+  "BIGG": {
+    "earliest_date": "2019-12-30",
+    "latest_date": "2026-05-12",
+    "listing_date": "2019-12-30",
+    "real_ohlc_from": "2019-12-30",
+    "close_only_windows": [],
+    "tier_breakdown": [
+      {
+        "from": "2019-12-30",
+        "to": "2026-05-12",
+        "tier": 1,
+        "source": "yfinance",
+        "rows": 1600
+      }
+    ]
+  },
+  "BITF": {
+    "earliest_date": "2019-12-30",
+    "latest_date": "2026-05-13",
+    "listing_date": "2019-12-30",
+    "real_ohlc_from": "2019-12-30",
+    "close_only_windows": [],
+    "tier_breakdown": [
+      {
+        "from": "2019-12-30",
+        "to": "2026-05-13",
+        "tier": 1,
+        "source": "yfinance",
+        "rows": 1601
+      }
+    ]
+  },
+  "BKKT": {
+    "earliest_date": "2020-11-19",
+    "latest_date": "2026-05-13",
+    "listing_date": "2020-11-19",
+    "real_ohlc_from": "2020-11-19",
+    "close_only_windows": [],
+    "tier_breakdown": [
+      {
+        "from": "2020-11-19",
+        "to": "2026-05-13",
+        "tier": 1,
+        "source": "yfinance",
+        "rows": 1375
+      }
+    ]
+  },
+  "BLSH": {
+    "earliest_date": "2025-08-13",
+    "latest_date": "2026-05-13",
+    "listing_date": "2025-08-13",
+    "real_ohlc_from": "2025-08-13",
+    "close_only_windows": [],
+    "tier_breakdown": [
+      {
+        "from": "2025-08-13",
+        "to": "2026-05-13",
+        "tier": 1,
+        "source": "yfinance",
+        "rows": 189
+      }
+    ]
+  },
+  "BTBT": {
+    "earliest_date": "2019-12-30",
+    "latest_date": "2026-05-13",
+    "listing_date": "2019-12-30",
+    "real_ohlc_from": "2019-12-30",
+    "close_only_windows": [],
+    "tier_breakdown": [
+      {
+        "from": "2019-12-30",
+        "to": "2026-05-13",
+        "tier": 1,
+        "source": "yfinance",
+        "rows": 1601
+      }
+    ]
+  },
+  "BTCS": {
+    "earliest_date": "2019-12-30",
+    "latest_date": "2026-05-13",
+    "listing_date": "2019-12-30",
+    "real_ohlc_from": "2019-12-30",
+    "close_only_windows": [],
+    "tier_breakdown": [
+      {
+        "from": "2019-12-30",
+        "to": "2026-05-13",
+        "tier": 1,
+        "source": "yfinance",
+        "rows": 1601
+      }
+    ]
+  },
+  "BTDR": {
+    "earliest_date": "2021-07-28",
+    "latest_date": "2026-05-13",
+    "listing_date": "2021-07-28",
+    "real_ohlc_from": "2021-07-28",
+    "close_only_windows": [],
+    "tier_breakdown": [
+      {
+        "from": "2021-07-28",
+        "to": "2026-05-13",
+        "tier": 1,
+        "source": "yfinance",
+        "rows": 1204
+      }
+    ]
+  },
+  "BTGO": {
+    "earliest_date": "2026-01-21",
+    "latest_date": "2026-05-13",
+    "listing_date": "2026-01-21",
+    "real_ohlc_from": "2026-01-21",
+    "close_only_windows": [],
+    "tier_breakdown": [
+      {
+        "from": "2026-01-21",
+        "to": "2026-05-13",
+        "tier": 1,
+        "source": "yfinance",
+        "rows": 79
+      }
+    ]
+  },
+  "BTM": {
+    "earliest_date": "2022-04-19",
+    "latest_date": "2026-05-13",
+    "listing_date": "2022-04-19",
+    "real_ohlc_from": "2022-04-19",
+    "close_only_windows": [],
+    "tier_breakdown": [
+      {
+        "from": "2022-04-19",
+        "to": "2026-05-13",
+        "tier": 1,
+        "source": "yfinance",
+        "rows": 1021
+      }
+    ]
+  },
+  "CAN": {
+    "earliest_date": "2019-12-30",
+    "latest_date": "2026-05-13",
+    "listing_date": "2019-12-30",
+    "real_ohlc_from": "2019-12-30",
+    "close_only_windows": [],
+    "tier_breakdown": [
+      {
+        "from": "2019-12-30",
+        "to": "2026-05-13",
+        "tier": 1,
+        "source": "yfinance",
+        "rows": 1601
+      }
+    ]
+  },
+  "CIFR": {
+    "earliest_date": "2020-10-20",
+    "latest_date": "2026-05-13",
+    "listing_date": "2020-10-20",
+    "real_ohlc_from": "2020-10-20",
+    "close_only_windows": [],
+    "tier_breakdown": [
+      {
+        "from": "2020-10-20",
+        "to": "2026-05-13",
+        "tier": 1,
+        "source": "yfinance",
+        "rows": 1397
+      }
+    ]
+  },
+  "CLSK": {
+    "earliest_date": "2019-12-30",
+    "latest_date": "2026-05-13",
+    "listing_date": "2019-12-30",
+    "real_ohlc_from": "2019-12-30",
+    "close_only_windows": [],
+    "tier_breakdown": [
+      {
+        "from": "2019-12-30",
+        "to": "2026-05-13",
+        "tier": 1,
+        "source": "yfinance",
+        "rows": 1601
+      }
+    ]
+  },
+  "COIN": {
+    "earliest_date": "2021-04-14",
+    "latest_date": "2026-05-13",
+    "listing_date": "2021-04-14",
+    "real_ohlc_from": "2021-04-14",
+    "close_only_windows": [],
+    "tier_breakdown": [
+      {
+        "from": "2021-04-14",
+        "to": "2026-05-13",
+        "tier": 1,
+        "source": "yfinance",
+        "rows": 1277
+      }
+    ]
+  },
+  "CORZ": {
+    "earliest_date": "2024-01-24",
+    "latest_date": "2026-05-13",
+    "listing_date": "2024-01-24",
+    "real_ohlc_from": "2024-01-24",
+    "close_only_windows": [],
+    "tier_breakdown": [
+      {
+        "from": "2024-01-24",
+        "to": "2026-05-13",
+        "tier": 1,
+        "source": "yfinance",
+        "rows": 578
+      }
+    ]
+  },
+  "CRCL": {
+    "earliest_date": "2025-06-05",
+    "latest_date": "2026-05-13",
+    "listing_date": "2025-06-05",
+    "real_ohlc_from": "2025-06-05",
+    "close_only_windows": [],
+    "tier_breakdown": [
+      {
+        "from": "2025-06-05",
+        "to": "2026-05-13",
+        "tier": 1,
+        "source": "yfinance",
+        "rows": 236
+      }
+    ]
+  },
+  "DEFT": {
+    "earliest_date": "2024-08-15",
+    "latest_date": "2026-05-13",
+    "listing_date": "2024-08-15",
+    "real_ohlc_from": "2024-08-15",
+    "close_only_windows": [],
+    "tier_breakdown": [
+      {
+        "from": "2024-08-15",
+        "to": "2026-05-13",
+        "tier": 1,
+        "source": "yfinance",
+        "rows": 437
+      }
+    ]
+  },
+  "DMGGF": {
+    "earliest_date": "2019-12-30",
+    "latest_date": "2026-05-13",
+    "listing_date": "2019-12-30",
+    "real_ohlc_from": "2019-12-30",
+    "close_only_windows": [],
+    "tier_breakdown": [
+      {
+        "from": "2019-12-30",
+        "to": "2026-05-13",
+        "tier": 1,
+        "source": "yfinance",
+        "rows": 1601
+      }
+    ]
+  },
+  "EBON": {
+    "earliest_date": "2020-06-26",
+    "latest_date": "2026-05-13",
+    "listing_date": "2020-06-26",
+    "real_ohlc_from": "2020-06-26",
+    "close_only_windows": [],
+    "tier_breakdown": [
+      {
+        "from": "2020-06-26",
+        "to": "2026-05-13",
+        "tier": 1,
+        "source": "yfinance",
+        "rows": 1477
+      }
+    ]
+  },
+  "ETOR": {
+    "earliest_date": "2025-05-13",
+    "latest_date": "2026-05-13",
+    "listing_date": "2025-05-13",
+    "real_ohlc_from": "2025-05-13",
+    "close_only_windows": [],
+    "tier_breakdown": [
+      {
+        "from": "2025-05-13",
+        "to": "2026-05-13",
+        "tier": 1,
+        "source": "yfinance",
+        "rows": 252
+      }
+    ]
+  },
+  "EXOD": {
+    "earliest_date": "2021-09-16",
+    "latest_date": "2026-05-13",
+    "listing_date": "2021-09-16",
+    "real_ohlc_from": "2021-09-16",
+    "close_only_windows": [],
+    "tier_breakdown": [
+      {
+        "from": "2021-09-16",
+        "to": "2026-05-13",
+        "tier": 1,
+        "source": "yfinance",
+        "rows": 1169
+      }
+    ]
+  },
+  "FIGR": {
+    "earliest_date": "2025-09-11",
+    "latest_date": "2026-05-13",
+    "listing_date": "2025-09-11",
+    "real_ohlc_from": "2025-09-11",
+    "close_only_windows": [],
+    "tier_breakdown": [
+      {
+        "from": "2025-09-11",
+        "to": "2026-05-13",
+        "tier": 1,
+        "source": "yfinance",
+        "rows": 169
+      }
+    ]
+  },
+  "FLD": {
+    "earliest_date": "2022-02-09",
+    "latest_date": "2026-05-13",
+    "listing_date": "2022-02-09",
+    "real_ohlc_from": "2022-02-09",
+    "close_only_windows": [],
+    "tier_breakdown": [
+      {
+        "from": "2022-02-09",
+        "to": "2026-05-13",
+        "tier": 1,
+        "source": "yfinance",
+        "rows": 1068
+      }
+    ]
+  },
+  "GEMI": {
+    "earliest_date": "2025-09-12",
+    "latest_date": "2026-05-13",
+    "listing_date": "2025-09-12",
+    "real_ohlc_from": "2025-09-12",
+    "close_only_windows": [],
+    "tier_breakdown": [
+      {
+        "from": "2025-09-12",
+        "to": "2026-05-13",
+        "tier": 1,
+        "source": "yfinance",
+        "rows": 168
+      }
+    ]
+  },
+  "GLXY": {
+    "earliest_date": "2025-05-16",
+    "latest_date": "2026-05-13",
+    "listing_date": "2025-05-16",
+    "real_ohlc_from": "2025-05-16",
+    "close_only_windows": [],
+    "tier_breakdown": [
+      {
+        "from": "2025-05-16",
+        "to": "2026-05-13",
+        "tier": 1,
+        "source": "yfinance",
+        "rows": 249
+      }
+    ]
+  },
+  "GREE": {
+    "earliest_date": "2019-12-30",
+    "latest_date": "2026-05-13",
+    "listing_date": "2019-12-30",
+    "real_ohlc_from": "2019-12-30",
+    "close_only_windows": [],
+    "tier_breakdown": [
+      {
+        "from": "2019-12-30",
+        "to": "2026-05-13",
+        "tier": 1,
+        "source": "yfinance",
+        "rows": 1601
+      }
+    ]
+  },
+  "HIVE": {
+    "earliest_date": "2019-12-30",
+    "latest_date": "2026-05-13",
+    "listing_date": "2019-12-30",
+    "real_ohlc_from": "2019-12-30",
+    "close_only_windows": [],
+    "tier_breakdown": [
+      {
+        "from": "2019-12-30",
+        "to": "2026-05-13",
+        "tier": 1,
+        "source": "yfinance",
+        "rows": 1601
+      }
+    ]
+  },
+  "HOOD": {
+    "earliest_date": "2021-07-29",
+    "latest_date": "2026-05-13",
+    "listing_date": "2021-07-29",
+    "real_ohlc_from": "2021-07-29",
+    "close_only_windows": [],
+    "tier_breakdown": [
+      {
+        "from": "2021-07-29",
+        "to": "2026-05-13",
+        "tier": 1,
+        "source": "yfinance",
+        "rows": 1203
+      }
+    ]
+  },
+  "HUT": {
+    "earliest_date": "2019-12-30",
+    "latest_date": "2026-05-13",
+    "listing_date": "2019-12-30",
+    "real_ohlc_from": "2019-12-30",
+    "close_only_windows": [],
+    "tier_breakdown": [
+      {
+        "from": "2019-12-30",
+        "to": "2026-05-13",
+        "tier": 1,
+        "source": "yfinance",
+        "rows": 1601
+      }
+    ]
+  },
+  "IREN": {
+    "earliest_date": "2021-11-17",
+    "latest_date": "2026-05-13",
+    "listing_date": "2021-11-17",
+    "real_ohlc_from": "2021-11-17",
+    "close_only_windows": [],
+    "tier_breakdown": [
+      {
+        "from": "2021-11-17",
+        "to": "2026-05-13",
+        "tier": 1,
+        "source": "yfinance",
+        "rows": 1125
+      }
+    ]
+  },
+  "MARA": {
+    "earliest_date": "2019-12-30",
+    "latest_date": "2026-05-13",
+    "listing_date": "2019-12-30",
+    "real_ohlc_from": "2019-12-30",
+    "close_only_windows": [],
+    "tier_breakdown": [
+      {
+        "from": "2019-12-30",
+        "to": "2026-05-13",
+        "tier": 1,
+        "source": "yfinance",
+        "rows": 1601
+      }
+    ]
+  },
+  "MSTR": {
+    "earliest_date": "2019-12-30",
+    "latest_date": "2026-05-13",
+    "listing_date": "2019-12-30",
+    "real_ohlc_from": "2019-12-30",
+    "close_only_windows": [],
+    "tier_breakdown": [
+      {
+        "from": "2019-12-30",
+        "to": "2026-05-13",
+        "tier": 1,
+        "source": "yfinance",
+        "rows": 1601
+      }
+    ]
+  },
+  "NPPTF": {
+    "earliest_date": "2021-01-08",
+    "latest_date": "2026-05-13",
+    "listing_date": "2021-01-08",
+    "real_ohlc_from": "2021-01-08",
+    "close_only_windows": [],
+    "tier_breakdown": [
+      {
+        "from": "2021-01-08",
+        "to": "2026-05-13",
+        "tier": 1,
+        "source": "yfinance",
+        "rows": 1342
+      }
+    ]
+  },
+  "RIOT": {
+    "earliest_date": "2019-12-30",
+    "latest_date": "2026-05-13",
+    "listing_date": "2019-12-30",
+    "real_ohlc_from": "2019-12-30",
+    "close_only_windows": [],
+    "tier_breakdown": [
+      {
+        "from": "2019-12-30",
+        "to": "2026-05-13",
+        "tier": 1,
+        "source": "yfinance",
+        "rows": 1601
+      }
+    ]
+  },
+  "VOYG": {
+    "earliest_date": "2025-06-11",
+    "latest_date": "2026-05-13",
+    "listing_date": "2025-06-11",
+    "real_ohlc_from": "2025-06-11",
+    "close_only_windows": [],
+    "tier_breakdown": [
+      {
+        "from": "2025-06-11",
+        "to": "2026-05-13",
+        "tier": 1,
+        "source": "yfinance",
+        "rows": 232
+      }
+    ]
+  },
+  "WULF": {
+    "earliest_date": "2019-12-30",
+    "latest_date": "2026-05-13",
+    "listing_date": "2019-12-30",
+    "real_ohlc_from": "2019-12-30",
+    "close_only_windows": [],
+    "tier_breakdown": [
+      {
+        "from": "2019-12-30",
+        "to": "2026-05-13",
+        "tier": 1,
+        "source": "yfinance",
+        "rows": 1601
+      }
+    ]
+  },
+  "a7a5": {
+    "close_only_windows": [
+      [
+        "2025-06-17",
+        "2026-05-14"
+      ]
+    ],
+    "earliest_date": "2025-06-17",
+    "latest_date": "2026-05-14",
+    "n_rows": 332,
+    "real_ohlc_from": null,
+    "tier_breakdown": [
+      {
+        "from": "2025-06-17",
+        "rows": 332,
+        "source": "coingecko",
+        "tier": 4,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "aave": {
+    "close_only_windows": [],
+    "earliest_date": "2020-10-15",
+    "latest_date": "2026-05-14",
+    "n_rows": 2038,
+    "real_ohlc_from": "2020-10-15",
+    "tier_breakdown": [
+      {
+        "from": "2020-10-15",
+        "rows": 2038,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "adi-token": {
+    "close_only_windows": [],
+    "earliest_date": "2025-12-09",
+    "latest_date": "2026-05-14",
+    "n_rows": 157,
+    "real_ohlc_from": "2025-12-09",
+    "tier_breakdown": [
+      {
+        "from": "2025-12-09",
+        "rows": 157,
+        "source": "kraken",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "aerodrome-finance": {
+    "close_only_windows": [],
+    "earliest_date": "2024-12-13",
+    "latest_date": "2026-05-14",
+    "n_rows": 518,
+    "real_ohlc_from": "2024-12-13",
+    "tier_breakdown": [
+      {
+        "from": "2024-12-13",
+        "rows": 518,
+        "source": "bybit",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "aethir": {
+    "close_only_windows": [],
+    "earliest_date": "2024-06-12",
+    "latest_date": "2026-05-14",
+    "n_rows": 702,
+    "real_ohlc_from": "2024-06-12",
+    "tier_breakdown": [
+      {
+        "from": "2024-06-12",
+        "rows": 702,
+        "source": "bybit",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "akash-network": {
+    "close_only_windows": [],
+    "earliest_date": "2021-03-12",
+    "latest_date": "2026-05-14",
+    "n_rows": 1890,
+    "real_ohlc_from": "2021-03-12",
+    "tier_breakdown": [
+      {
+        "from": "2021-03-12",
+        "rows": 1890,
+        "source": "gateio",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "algorand": {
+    "close_only_windows": [],
+    "earliest_date": "2020-01-02",
+    "latest_date": "2026-05-14",
+    "n_rows": 2325,
+    "real_ohlc_from": "2020-01-02",
+    "tier_breakdown": [
+      {
+        "from": "2020-01-02",
+        "rows": 2325,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "ape-and-pepe": {
+    "close_only_windows": [
+      [
+        "2024-08-08",
+        "2026-05-14"
+      ]
+    ],
+    "earliest_date": "2024-08-08",
+    "latest_date": "2026-05-14",
+    "n_rows": 645,
+    "real_ohlc_from": null,
+    "tier_breakdown": [
+      {
+        "from": "2024-08-08",
+        "rows": 645,
+        "source": "coingecko",
+        "tier": 4,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "apecoin": {
+    "close_only_windows": [],
+    "earliest_date": "2022-03-17",
+    "latest_date": "2026-05-14",
+    "n_rows": 1520,
+    "real_ohlc_from": "2022-03-17",
+    "tier_breakdown": [
+      {
+        "from": "2022-03-17",
+        "rows": 1520,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "apenft": {
+    "close_only_windows": [],
+    "earliest_date": "2022-02-21",
+    "latest_date": "2026-05-14",
+    "n_rows": 1544,
+    "real_ohlc_from": "2022-02-21",
+    "tier_breakdown": [
+      {
+        "from": "2022-02-21",
+        "rows": 1544,
+        "source": "bybit",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "aptos": {
+    "close_only_windows": [],
+    "earliest_date": "2022-10-19",
+    "latest_date": "2026-05-14",
+    "n_rows": 1304,
+    "real_ohlc_from": "2022-10-19",
+    "tier_breakdown": [
+      {
+        "from": "2022-10-19",
+        "rows": 1304,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "arbitrum": {
+    "close_only_windows": [],
+    "earliest_date": "2023-03-23",
+    "latest_date": "2026-05-14",
+    "n_rows": 1149,
+    "real_ohlc_from": "2023-03-23",
+    "tier_breakdown": [
+      {
+        "from": "2023-03-23",
+        "rows": 1149,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "arweave": {
+    "close_only_windows": [],
+    "earliest_date": "2021-05-14",
+    "latest_date": "2026-05-14",
+    "n_rows": 1827,
+    "real_ohlc_from": "2021-05-14",
+    "tier_breakdown": [
+      {
+        "from": "2021-05-14",
+        "rows": 1827,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "aster-2": {
+    "close_only_windows": [],
+    "earliest_date": "2025-10-06",
+    "latest_date": "2026-05-14",
+    "n_rows": 221,
+    "real_ohlc_from": "2025-10-06",
+    "tier_breakdown": [
+      {
+        "from": "2025-10-06",
+        "rows": 221,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "audiera": {
+    "close_only_windows": [
+      [
+        "2025-11-01",
+        "2026-05-14"
+      ]
+    ],
+    "earliest_date": "2025-11-01",
+    "latest_date": "2026-05-14",
+    "n_rows": 195,
+    "real_ohlc_from": null,
+    "tier_breakdown": [
+      {
+        "from": "2025-11-01",
+        "rows": 195,
+        "source": "coingecko",
+        "tier": 4,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "avalanche-2": {
+    "close_only_windows": [],
+    "earliest_date": "2020-09-22",
+    "latest_date": "2026-05-14",
+    "n_rows": 2061,
+    "real_ohlc_from": "2020-09-22",
+    "tier_breakdown": [
+      {
+        "from": "2020-09-22",
+        "rows": 2061,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "axie-infinity": {
+    "close_only_windows": [],
+    "earliest_date": "2020-11-04",
+    "latest_date": "2026-05-14",
+    "n_rows": 2018,
+    "real_ohlc_from": "2020-11-04",
+    "tier_breakdown": [
+      {
+        "from": "2020-11-04",
+        "rows": 2018,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "banana-for-scale-2": {
+    "close_only_windows": [],
+    "earliest_date": "2025-03-27",
+    "latest_date": "2026-05-14",
+    "n_rows": 414,
+    "real_ohlc_from": "2025-03-27",
+    "tier_breakdown": [
+      {
+        "from": "2025-03-27",
+        "rows": 414,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "basic-attention-token": {
+    "close_only_windows": [],
+    "earliest_date": "2020-01-02",
+    "latest_date": "2026-05-14",
+    "n_rows": 2325,
+    "real_ohlc_from": "2020-01-02",
+    "tier_breakdown": [
+      {
+        "from": "2020-01-02",
+        "rows": 2325,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "beldex": {
+    "close_only_windows": [],
+    "earliest_date": "2022-08-18",
+    "latest_date": "2026-05-14",
+    "n_rows": 1366,
+    "real_ohlc_from": "2022-08-18",
+    "tier_breakdown": [
+      {
+        "from": "2022-08-18",
+        "rows": 1366,
+        "source": "gateio",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "bianrensheng": {
+    "close_only_windows": [],
+    "earliest_date": "2026-01-07",
+    "latest_date": "2026-05-14",
+    "n_rows": 128,
+    "real_ohlc_from": "2026-01-07",
+    "tier_breakdown": [
+      {
+        "from": "2026-01-07",
+        "rows": 128,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "billions-network": {
+    "close_only_windows": [
+      [
+        "2026-05-04",
+        "2026-05-14"
+      ]
+    ],
+    "earliest_date": "2026-05-04",
+    "latest_date": "2026-05-14",
+    "n_rows": 11,
+    "real_ohlc_from": null,
+    "tier_breakdown": [
+      {
+        "from": "2026-05-04",
+        "rows": 11,
+        "source": "coingecko",
+        "tier": 4,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "binancecoin": {
+    "close_only_windows": [],
+    "earliest_date": "2020-01-02",
+    "latest_date": "2026-05-14",
+    "n_rows": 2325,
+    "real_ohlc_from": "2020-01-02",
+    "tier_breakdown": [
+      {
+        "from": "2020-01-02",
+        "rows": 2325,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "bitcoin": {
+    "close_only_windows": [],
+    "earliest_date": "2020-01-02",
+    "latest_date": "2026-05-14",
+    "n_rows": 2325,
+    "real_ohlc_from": "2020-01-02",
+    "tier_breakdown": [
+      {
+        "from": "2020-01-02",
+        "rows": 2325,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "bitcoin-cash": {
+    "close_only_windows": [],
+    "earliest_date": "2020-01-02",
+    "latest_date": "2026-05-14",
+    "n_rows": 2325,
+    "real_ohlc_from": "2020-01-02",
+    "tier_breakdown": [
+      {
+        "from": "2020-01-02",
+        "rows": 2325,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "bitcoin-cash-sv": {
+    "close_only_windows": [],
+    "earliest_date": "2021-01-29",
+    "latest_date": "2026-05-14",
+    "n_rows": 1932,
+    "real_ohlc_from": "2021-01-29",
+    "tier_breakdown": [
+      {
+        "from": "2021-01-29",
+        "rows": 1932,
+        "source": "gateio",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "bitget-token": {
+    "close_only_windows": [],
+    "earliest_date": "2026-01-30",
+    "latest_date": "2026-05-14",
+    "n_rows": 105,
+    "real_ohlc_from": "2026-01-30",
+    "tier_breakdown": [
+      {
+        "from": "2026-01-30",
+        "rows": 105,
+        "source": "kraken",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "bittensor": {
+    "close_only_windows": [],
+    "earliest_date": "2024-04-11",
+    "latest_date": "2026-05-14",
+    "n_rows": 764,
+    "real_ohlc_from": "2024-04-11",
+    "tier_breakdown": [
+      {
+        "from": "2024-04-11",
+        "rows": 764,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "bittorrent": {
+    "close_only_windows": [],
+    "earliest_date": "2020-01-01",
+    "latest_date": "2022-01-17",
+    "n_rows": 748,
+    "real_ohlc_from": "2020-01-01",
+    "tier_breakdown": [
+      {
+        "from": "2020-01-01",
+        "rows": 748,
+        "source": "binance",
+        "tier": 1,
+        "to": "2022-01-17"
+      }
+    ]
+  },
+  "blockstack": {
+    "close_only_windows": [],
+    "earliest_date": "2020-01-02",
+    "latest_date": "2026-05-14",
+    "n_rows": 2325,
+    "real_ohlc_from": "2020-01-02",
+    "tier_breakdown": [
+      {
+        "from": "2020-01-02",
+        "rows": 2325,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "bonk": {
+    "close_only_windows": [],
+    "earliest_date": "2023-12-15",
+    "latest_date": "2026-05-14",
+    "n_rows": 882,
+    "real_ohlc_from": "2023-12-15",
+    "tier_breakdown": [
+      {
+        "from": "2023-12-15",
+        "rows": 882,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "btse-token": {
+    "close_only_windows": [
+      [
+        "2020-03-12",
+        "2026-05-14"
+      ]
+    ],
+    "earliest_date": "2020-03-12",
+    "latest_date": "2026-05-14",
+    "n_rows": 2247,
+    "real_ohlc_from": null,
+    "tier_breakdown": [
+      {
+        "from": "2020-03-12",
+        "rows": 2247,
+        "source": "coingecko",
+        "tier": 4,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "build-on": {
+    "close_only_windows": [
+      [
+        "2025-05-22",
+        "2026-05-14"
+      ]
+    ],
+    "earliest_date": "2025-05-22",
+    "latest_date": "2026-05-14",
+    "n_rows": 358,
+    "real_ohlc_from": null,
+    "tier_breakdown": [
+      {
+        "from": "2025-05-22",
+        "rows": 358,
+        "source": "coingecko",
+        "tier": 4,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "canton-network": {
+    "close_only_windows": [],
+    "earliest_date": "2025-11-10",
+    "latest_date": "2026-05-14",
+    "n_rows": 186,
+    "real_ohlc_from": "2025-11-10",
+    "tier_breakdown": [
+      {
+        "from": "2025-11-10",
+        "rows": 186,
+        "source": "bybit",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "cardano": {
+    "close_only_windows": [],
+    "earliest_date": "2020-01-02",
+    "latest_date": "2026-05-14",
+    "n_rows": 2325,
+    "real_ohlc_from": "2020-01-02",
+    "tier_breakdown": [
+      {
+        "from": "2020-01-02",
+        "rows": 2325,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "celestia": {
+    "close_only_windows": [],
+    "earliest_date": "2023-10-31",
+    "latest_date": "2026-05-14",
+    "n_rows": 927,
+    "real_ohlc_from": "2023-10-31",
+    "tier_breakdown": [
+      {
+        "from": "2023-10-31",
+        "rows": 927,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "centrifuge-2": {
+    "close_only_windows": [],
+    "earliest_date": "2026-03-16",
+    "latest_date": "2026-05-14",
+    "n_rows": 60,
+    "real_ohlc_from": "2026-03-16",
+    "tier_breakdown": [
+      {
+        "from": "2026-03-16",
+        "rows": 60,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "chain-2": {
+    "close_only_windows": [],
+    "earliest_date": "2022-04-02",
+    "latest_date": "2026-05-14",
+    "n_rows": 1504,
+    "real_ohlc_from": "2022-04-02",
+    "tier_breakdown": [
+      {
+        "from": "2022-04-02",
+        "rows": 1504,
+        "source": "gateio",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "chainlink": {
+    "close_only_windows": [],
+    "earliest_date": "2020-01-02",
+    "latest_date": "2026-05-14",
+    "n_rows": 2325,
+    "real_ohlc_from": "2020-01-02",
+    "tier_breakdown": [
+      {
+        "from": "2020-01-02",
+        "rows": 2325,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "chiliz": {
+    "close_only_windows": [],
+    "earliest_date": "2020-01-02",
+    "latest_date": "2026-05-14",
+    "n_rows": 2325,
+    "real_ohlc_from": "2020-01-02",
+    "tier_breakdown": [
+      {
+        "from": "2020-01-02",
+        "rows": 2325,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "circle-internet-group-ondo-tokenized-stock": {
+    "close_only_windows": [
+      [
+        "2025-09-02",
+        "2026-05-14"
+      ]
+    ],
+    "earliest_date": "2025-09-02",
+    "latest_date": "2026-05-14",
+    "n_rows": 255,
+    "real_ohlc_from": null,
+    "tier_breakdown": [
+      {
+        "from": "2025-09-02",
+        "rows": 255,
+        "source": "coingecko",
+        "tier": 4,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "compound-governance-token": {
+    "close_only_windows": [],
+    "earliest_date": "2020-06-25",
+    "latest_date": "2026-05-14",
+    "n_rows": 2150,
+    "real_ohlc_from": "2020-06-25",
+    "tier_breakdown": [
+      {
+        "from": "2020-06-25",
+        "rows": 2150,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "conflux-token": {
+    "close_only_windows": [],
+    "earliest_date": "2021-03-29",
+    "latest_date": "2026-05-14",
+    "n_rows": 1873,
+    "real_ohlc_from": "2021-03-29",
+    "tier_breakdown": [
+      {
+        "from": "2021-03-29",
+        "rows": 1873,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "convex-finance": {
+    "close_only_windows": [],
+    "earliest_date": "2021-12-23",
+    "latest_date": "2026-05-14",
+    "n_rows": 1604,
+    "real_ohlc_from": "2021-12-23",
+    "tier_breakdown": [
+      {
+        "from": "2021-12-23",
+        "rows": 1604,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "cosmos": {
+    "close_only_windows": [],
+    "earliest_date": "2020-01-02",
+    "latest_date": "2026-05-14",
+    "n_rows": 2325,
+    "real_ohlc_from": "2020-01-02",
+    "tier_breakdown": [
+      {
+        "from": "2020-01-02",
+        "rows": 2325,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "crypto-com-chain": {
+    "close_only_windows": [],
+    "earliest_date": "2020-01-02",
+    "latest_date": "2026-05-14",
+    "n_rows": 2325,
+    "real_ohlc_from": "2020-01-02",
+    "tier_breakdown": [
+      {
+        "from": "2020-01-02",
+        "rows": 2325,
+        "source": "okx",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "curve-dao-token": {
+    "close_only_windows": [],
+    "earliest_date": "2020-08-15",
+    "latest_date": "2026-05-14",
+    "n_rows": 2099,
+    "real_ohlc_from": "2020-08-15",
+    "tier_breakdown": [
+      {
+        "from": "2020-08-15",
+        "rows": 2099,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "dash": {
+    "close_only_windows": [],
+    "earliest_date": "2020-01-02",
+    "latest_date": "2026-05-14",
+    "n_rows": 2325,
+    "real_ohlc_from": "2020-01-02",
+    "tier_breakdown": [
+      {
+        "from": "2020-01-02",
+        "rows": 2325,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "decentraland": {
+    "close_only_windows": [],
+    "earliest_date": "2020-08-06",
+    "latest_date": "2026-05-14",
+    "n_rows": 2108,
+    "real_ohlc_from": "2020-08-06",
+    "tier_breakdown": [
+      {
+        "from": "2020-08-06",
+        "rows": 2108,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "decred": {
+    "close_only_windows": [],
+    "earliest_date": "2020-07-30",
+    "latest_date": "2026-05-14",
+    "n_rows": 2115,
+    "real_ohlc_from": "2020-07-30",
+    "tier_breakdown": [
+      {
+        "from": "2020-07-30",
+        "rows": 2115,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "dexe": {
+    "close_only_windows": [],
+    "earliest_date": "2021-07-23",
+    "latest_date": "2026-05-14",
+    "n_rows": 1757,
+    "real_ohlc_from": "2021-07-23",
+    "tier_breakdown": [
+      {
+        "from": "2021-07-23",
+        "rows": 1757,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "dogecoin": {
+    "close_only_windows": [],
+    "earliest_date": "2020-01-02",
+    "latest_date": "2026-05-14",
+    "n_rows": 2325,
+    "real_ohlc_from": "2020-01-02",
+    "tier_breakdown": [
+      {
+        "from": "2020-01-02",
+        "rows": 2325,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "dogwifcoin": {
+    "close_only_windows": [],
+    "earliest_date": "2024-03-05",
+    "latest_date": "2026-05-14",
+    "n_rows": 801,
+    "real_ohlc_from": "2024-03-05",
+    "tier_breakdown": [
+      {
+        "from": "2024-03-05",
+        "rows": 801,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "doublezero": {
+    "close_only_windows": [],
+    "earliest_date": "2025-10-02",
+    "latest_date": "2026-05-14",
+    "n_rows": 225,
+    "real_ohlc_from": "2025-10-02",
+    "tier_breakdown": [
+      {
+        "from": "2025-10-02",
+        "rows": 225,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "ecash": {
+    "close_only_windows": [],
+    "earliest_date": "2021-09-03",
+    "latest_date": "2026-05-14",
+    "n_rows": 1715,
+    "real_ohlc_from": "2021-09-03",
+    "tier_breakdown": [
+      {
+        "from": "2021-09-03",
+        "rows": 1715,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "edgex": {
+    "close_only_windows": [],
+    "earliest_date": "2026-03-31",
+    "latest_date": "2026-05-14",
+    "n_rows": 45,
+    "real_ohlc_from": "2026-03-31",
+    "tier_breakdown": [
+      {
+        "from": "2026-03-31",
+        "rows": 45,
+        "source": "bybit",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "eigenlayer": {
+    "close_only_windows": [],
+    "earliest_date": "2024-10-01",
+    "latest_date": "2026-05-14",
+    "n_rows": 591,
+    "real_ohlc_from": "2024-10-01",
+    "tier_breakdown": [
+      {
+        "from": "2024-10-01",
+        "rows": 591,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "elrond-erd-2": {
+    "close_only_windows": [
+      [
+        "2026-05-06",
+        "2026-05-08"
+      ]
+    ],
+    "earliest_date": "2025-07-17",
+    "latest_date": "2026-05-14",
+    "n_rows": 302,
+    "real_ohlc_from": "2025-07-17",
+    "tier_breakdown": [
+      {
+        "from": "2025-07-17",
+        "rows": 293,
+        "source": "okx",
+        "tier": 1,
+        "to": "2026-05-05"
+      },
+      {
+        "from": "2026-05-06",
+        "rows": 3,
+        "source": "coingecko",
+        "tier": 4,
+        "to": "2026-05-08"
+      },
+      {
+        "from": "2026-05-09",
+        "rows": 6,
+        "source": "okx",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "ethena": {
+    "close_only_windows": [],
+    "earliest_date": "2024-04-02",
+    "latest_date": "2026-05-14",
+    "n_rows": 773,
+    "real_ohlc_from": "2024-04-02",
+    "tier_breakdown": [
+      {
+        "from": "2024-04-02",
+        "rows": 773,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "ether-fi": {
+    "close_only_windows": [],
+    "earliest_date": "2024-03-18",
+    "latest_date": "2026-05-14",
+    "n_rows": 788,
+    "real_ohlc_from": "2024-03-18",
+    "tier_breakdown": [
+      {
+        "from": "2024-03-18",
+        "rows": 788,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "ethereum": {
+    "close_only_windows": [],
+    "earliest_date": "2020-01-02",
+    "latest_date": "2026-05-14",
+    "n_rows": 2325,
+    "real_ohlc_from": "2020-01-02",
+    "tier_breakdown": [
+      {
+        "from": "2020-01-02",
+        "rows": 2325,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "ethereum-classic": {
+    "close_only_windows": [],
+    "earliest_date": "2020-01-02",
+    "latest_date": "2026-05-14",
+    "n_rows": 2325,
+    "real_ohlc_from": "2020-01-02",
+    "tier_breakdown": [
+      {
+        "from": "2020-01-02",
+        "rows": 2325,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "ethereum-name-service": {
+    "close_only_windows": [],
+    "earliest_date": "2021-11-10",
+    "latest_date": "2026-05-14",
+    "n_rows": 1647,
+    "real_ohlc_from": "2021-11-10",
+    "tier_breakdown": [
+      {
+        "from": "2021-11-10",
+        "rows": 1647,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "ethgas-2": {
+    "close_only_windows": [],
+    "earliest_date": "2026-01-21",
+    "latest_date": "2026-05-14",
+    "n_rows": 114,
+    "real_ohlc_from": "2026-01-21",
+    "tier_breakdown": [
+      {
+        "from": "2026-01-21",
+        "rows": 114,
+        "source": "kraken",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "euro-coin": {
+    "close_only_windows": [],
+    "earliest_date": "2025-09-23",
+    "latest_date": "2026-05-14",
+    "n_rows": 234,
+    "real_ohlc_from": "2025-09-23",
+    "tier_breakdown": [
+      {
+        "from": "2025-09-23",
+        "rows": 234,
+        "source": "kraken",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "eutbl": {
+    "close_only_windows": [
+      [
+        "2024-08-15",
+        "2026-05-14"
+      ]
+    ],
+    "earliest_date": "2024-08-15",
+    "latest_date": "2026-05-14",
+    "n_rows": 638,
+    "real_ohlc_from": null,
+    "tier_breakdown": [
+      {
+        "from": "2024-08-15",
+        "rows": 638,
+        "source": "coingecko",
+        "tier": 4,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "falcon-finance-ff": {
+    "close_only_windows": [],
+    "earliest_date": "2025-09-29",
+    "latest_date": "2026-05-14",
+    "n_rows": 228,
+    "real_ohlc_from": "2025-09-29",
+    "tier_breakdown": [
+      {
+        "from": "2025-09-29",
+        "rows": 228,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "fartcoin": {
+    "close_only_windows": [],
+    "earliest_date": "2025-01-23",
+    "latest_date": "2026-05-14",
+    "n_rows": 477,
+    "real_ohlc_from": "2025-01-23",
+    "tier_breakdown": [
+      {
+        "from": "2025-01-23",
+        "rows": 477,
+        "source": "kraken",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "fetch-ai": {
+    "close_only_windows": [],
+    "earliest_date": "2020-01-02",
+    "latest_date": "2026-05-14",
+    "n_rows": 2325,
+    "real_ohlc_from": "2020-01-02",
+    "tier_breakdown": [
+      {
+        "from": "2020-01-02",
+        "rows": 2325,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "fidelity-digital-interest-token": {
+    "close_only_windows": [
+      [
+        "2025-09-17",
+        "2026-05-14"
+      ]
+    ],
+    "earliest_date": "2025-09-17",
+    "latest_date": "2026-05-14",
+    "n_rows": 240,
+    "real_ohlc_from": null,
+    "tier_breakdown": [
+      {
+        "from": "2025-09-17",
+        "rows": 240,
+        "source": "coingecko",
+        "tier": 4,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "figure-heloc": {
+    "close_only_windows": [
+      [
+        "2025-08-26",
+        "2026-05-14"
+      ]
+    ],
+    "earliest_date": "2025-08-26",
+    "latest_date": "2026-05-14",
+    "n_rows": 262,
+    "real_ohlc_from": null,
+    "tier_breakdown": [
+      {
+        "from": "2025-08-26",
+        "rows": 262,
+        "source": "coingecko",
+        "tier": 4,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "filecoin": {
+    "close_only_windows": [],
+    "earliest_date": "2020-10-15",
+    "latest_date": "2026-05-14",
+    "n_rows": 2038,
+    "real_ohlc_from": "2020-10-15",
+    "tier_breakdown": [
+      {
+        "from": "2020-10-15",
+        "rows": 2038,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "flare-networks": {
+    "close_only_windows": [],
+    "earliest_date": "2023-01-10",
+    "latest_date": "2026-05-14",
+    "n_rows": 1221,
+    "real_ohlc_from": "2023-01-10",
+    "tier_breakdown": [
+      {
+        "from": "2023-01-10",
+        "rows": 1221,
+        "source": "bybit",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "floki": {
+    "close_only_windows": [],
+    "earliest_date": "2023-05-05",
+    "latest_date": "2026-05-14",
+    "n_rows": 1106,
+    "real_ohlc_from": "2023-05-05",
+    "tier_breakdown": [
+      {
+        "from": "2023-05-05",
+        "rows": 1106,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "frax": {
+    "close_only_windows": [],
+    "earliest_date": "2026-01-15",
+    "latest_date": "2026-05-14",
+    "n_rows": 120,
+    "real_ohlc_from": "2026-01-15",
+    "tier_breakdown": [
+      {
+        "from": "2026-01-15",
+        "rows": 120,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "gala": {
+    "close_only_windows": [],
+    "earliest_date": "2021-09-13",
+    "latest_date": "2026-05-14",
+    "n_rows": 1705,
+    "real_ohlc_from": "2021-09-13",
+    "tier_breakdown": [
+      {
+        "from": "2021-09-13",
+        "rows": 1705,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "gatechain-token": {
+    "close_only_windows": [],
+    "earliest_date": "2020-01-02",
+    "latest_date": "2026-05-14",
+    "n_rows": 2325,
+    "real_ohlc_from": "2020-01-02",
+    "tier_breakdown": [
+      {
+        "from": "2020-01-02",
+        "rows": 2325,
+        "source": "gateio",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "genius-3": {
+    "close_only_windows": [
+      [
+        "2026-04-13",
+        "2026-05-14"
+      ]
+    ],
+    "earliest_date": "2026-04-13",
+    "latest_date": "2026-05-14",
+    "n_rows": 32,
+    "real_ohlc_from": null,
+    "tier_breakdown": [
+      {
+        "from": "2026-04-13",
+        "rows": 32,
+        "source": "coingecko",
+        "tier": 4,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "gnosis": {
+    "close_only_windows": [],
+    "earliest_date": "2021-08-30",
+    "latest_date": "2026-05-14",
+    "n_rows": 1719,
+    "real_ohlc_from": "2021-08-30",
+    "tier_breakdown": [
+      {
+        "from": "2021-08-30",
+        "rows": 1719,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "golem": {
+    "close_only_windows": [],
+    "earliest_date": "2023-03-17",
+    "latest_date": "2026-05-14",
+    "n_rows": 1155,
+    "real_ohlc_from": "2023-03-17",
+    "tier_breakdown": [
+      {
+        "from": "2023-03-17",
+        "rows": 1155,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "grass": {
+    "close_only_windows": [],
+    "earliest_date": "2024-10-28",
+    "latest_date": "2026-05-14",
+    "n_rows": 564,
+    "real_ohlc_from": "2024-10-28",
+    "tier_breakdown": [
+      {
+        "from": "2024-10-28",
+        "rows": 564,
+        "source": "bybit",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "hash-2": {
+    "close_only_windows": [
+      [
+        "2025-05-29",
+        "2026-05-14"
+      ]
+    ],
+    "earliest_date": "2025-05-29",
+    "latest_date": "2026-05-14",
+    "n_rows": 351,
+    "real_ohlc_from": null,
+    "tier_breakdown": [
+      {
+        "from": "2025-05-29",
+        "rows": 351,
+        "source": "coingecko",
+        "tier": 4,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "hashnote-usyc": {
+    "close_only_windows": [
+      [
+        "2024-10-29",
+        "2026-05-01"
+      ]
+    ],
+    "earliest_date": "2024-10-29",
+    "latest_date": "2026-05-01",
+    "n_rows": 450,
+    "real_ohlc_from": null,
+    "tier_breakdown": [
+      {
+        "from": "2024-10-29",
+        "rows": 450,
+        "source": "coingecko",
+        "tier": 4,
+        "to": "2026-05-01"
+      }
+    ]
+  },
+  "hastra-prime": {
+    "close_only_windows": [],
+    "earliest_date": "2023-03-01",
+    "latest_date": "2026-05-14",
+    "n_rows": 1171,
+    "real_ohlc_from": "2023-03-01",
+    "tier_breakdown": [
+      {
+        "from": "2023-03-01",
+        "rows": 1171,
+        "source": "bybit",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "hedera-hashgraph": {
+    "close_only_windows": [],
+    "earliest_date": "2020-01-02",
+    "latest_date": "2026-05-14",
+    "n_rows": 2325,
+    "real_ohlc_from": "2020-01-02",
+    "tier_breakdown": [
+      {
+        "from": "2020-01-02",
+        "rows": 2325,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "helium": {
+    "close_only_windows": [],
+    "earliest_date": "2020-09-24",
+    "latest_date": "2022-10-14",
+    "n_rows": 751,
+    "real_ohlc_from": "2020-09-24",
+    "tier_breakdown": [
+      {
+        "from": "2020-09-24",
+        "rows": 751,
+        "source": "binance",
+        "tier": 1,
+        "to": "2022-10-14"
+      }
+    ]
+  },
+  "htx-dao": {
+    "close_only_windows": [],
+    "earliest_date": "2024-02-19",
+    "latest_date": "2026-05-14",
+    "n_rows": 816,
+    "real_ohlc_from": "2024-02-19",
+    "tier_breakdown": [
+      {
+        "from": "2024-02-19",
+        "rows": 816,
+        "source": "bybit",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "humanity": {
+    "close_only_windows": [],
+    "earliest_date": "2025-06-25",
+    "latest_date": "2026-05-14",
+    "n_rows": 324,
+    "real_ohlc_from": "2025-06-25",
+    "tier_breakdown": [
+      {
+        "from": "2025-06-25",
+        "rows": 324,
+        "source": "bybit",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "hyperliquid": {
+    "close_only_windows": [],
+    "earliest_date": "2025-07-11",
+    "latest_date": "2026-05-14",
+    "n_rows": 308,
+    "real_ohlc_from": "2025-07-11",
+    "tier_breakdown": [
+      {
+        "from": "2025-07-11",
+        "rows": 308,
+        "source": "bybit",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "immutable-x": {
+    "close_only_windows": [],
+    "earliest_date": "2022-01-10",
+    "latest_date": "2026-05-14",
+    "n_rows": 1586,
+    "real_ohlc_from": "2022-01-10",
+    "tier_breakdown": [
+      {
+        "from": "2022-01-10",
+        "rows": 1586,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "injective-protocol": {
+    "close_only_windows": [],
+    "earliest_date": "2020-10-21",
+    "latest_date": "2026-05-14",
+    "n_rows": 2032,
+    "real_ohlc_from": "2020-10-21",
+    "tier_breakdown": [
+      {
+        "from": "2020-10-21",
+        "rows": 2032,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "internet-computer": {
+    "close_only_windows": [],
+    "earliest_date": "2021-05-11",
+    "latest_date": "2026-05-14",
+    "n_rows": 1830,
+    "real_ohlc_from": "2021-05-11",
+    "tier_breakdown": [
+      {
+        "from": "2021-05-11",
+        "rows": 1830,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "iota": {
+    "close_only_windows": [],
+    "earliest_date": "2020-01-02",
+    "latest_date": "2026-05-14",
+    "n_rows": 2325,
+    "real_ohlc_from": "2020-01-02",
+    "tier_breakdown": [
+      {
+        "from": "2020-01-02",
+        "rows": 2325,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "janus-henderson-anemoy-aaa-clo-fund": {
+    "close_only_windows": [
+      [
+        "2025-11-13",
+        "2026-05-14"
+      ]
+    ],
+    "earliest_date": "2025-11-13",
+    "latest_date": "2026-05-14",
+    "n_rows": 168,
+    "real_ohlc_from": null,
+    "tier_breakdown": [
+      {
+        "from": "2025-11-13",
+        "rows": 168,
+        "source": "coingecko",
+        "tier": 4,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "janus-henderson-anemoy-treasury-fund": {
+    "close_only_windows": [
+      [
+        "2025-11-13",
+        "2026-05-14"
+      ]
+    ],
+    "earliest_date": "2025-11-13",
+    "latest_date": "2026-05-14",
+    "n_rows": 168,
+    "real_ohlc_from": null,
+    "tier_breakdown": [
+      {
+        "from": "2025-11-13",
+        "rows": 168,
+        "source": "coingecko",
+        "tier": 4,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "jasmycoin": {
+    "close_only_windows": [],
+    "earliest_date": "2021-11-22",
+    "latest_date": "2026-05-14",
+    "n_rows": 1635,
+    "real_ohlc_from": "2021-11-22",
+    "tier_breakdown": [
+      {
+        "from": "2021-11-22",
+        "rows": 1635,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "jito-governance-token": {
+    "close_only_windows": [],
+    "earliest_date": "2023-12-07",
+    "latest_date": "2026-05-14",
+    "n_rows": 890,
+    "real_ohlc_from": "2023-12-07",
+    "tier_breakdown": [
+      {
+        "from": "2023-12-07",
+        "rows": 890,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "jupiter-exchange-solana": {
+    "close_only_windows": [],
+    "earliest_date": "2024-01-31",
+    "latest_date": "2026-05-14",
+    "n_rows": 835,
+    "real_ohlc_from": "2024-01-31",
+    "tier_breakdown": [
+      {
+        "from": "2024-01-31",
+        "rows": 835,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "just": {
+    "close_only_windows": [],
+    "earliest_date": "2020-08-11",
+    "latest_date": "2026-05-14",
+    "n_rows": 2103,
+    "real_ohlc_from": "2020-08-11",
+    "tier_breakdown": [
+      {
+        "from": "2020-08-11",
+        "rows": 2103,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "kaia": {
+    "close_only_windows": [],
+    "earliest_date": "2024-10-31",
+    "latest_date": "2026-05-14",
+    "n_rows": 561,
+    "real_ohlc_from": "2024-10-31",
+    "tier_breakdown": [
+      {
+        "from": "2024-10-31",
+        "rows": 561,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "kaspa": {
+    "close_only_windows": [],
+    "earliest_date": "2023-09-07",
+    "latest_date": "2026-05-14",
+    "n_rows": 981,
+    "real_ohlc_from": "2023-09-07",
+    "tier_breakdown": [
+      {
+        "from": "2023-09-07",
+        "rows": 981,
+        "source": "bybit",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "kite-2": {
+    "close_only_windows": [],
+    "earliest_date": "2025-11-03",
+    "latest_date": "2026-05-14",
+    "n_rows": 193,
+    "real_ohlc_from": "2025-11-03",
+    "tier_breakdown": [
+      {
+        "from": "2025-11-03",
+        "rows": 193,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "kucoin-shares": {
+    "close_only_windows": [],
+    "earliest_date": "2023-11-30",
+    "latest_date": "2026-05-14",
+    "n_rows": 897,
+    "real_ohlc_from": "2023-11-30",
+    "tier_breakdown": [
+      {
+        "from": "2023-11-30",
+        "rows": 897,
+        "source": "bybit",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "lab": {
+    "close_only_windows": [
+      [
+        "2025-10-14",
+        "2026-05-14"
+      ]
+    ],
+    "earliest_date": "2025-10-14",
+    "latest_date": "2026-05-14",
+    "n_rows": 213,
+    "real_ohlc_from": null,
+    "tier_breakdown": [
+      {
+        "from": "2025-10-14",
+        "rows": 213,
+        "source": "coingecko",
+        "tier": 4,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "layerzero": {
+    "close_only_windows": [],
+    "earliest_date": "2024-06-20",
+    "latest_date": "2026-05-14",
+    "n_rows": 694,
+    "real_ohlc_from": "2024-06-20",
+    "tier_breakdown": [
+      {
+        "from": "2024-06-20",
+        "rows": 694,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "leo-token": {
+    "close_only_windows": [],
+    "earliest_date": "2020-01-02",
+    "latest_date": "2026-05-14",
+    "n_rows": 2325,
+    "real_ohlc_from": "2020-01-02",
+    "tier_breakdown": [
+      {
+        "from": "2020-01-02",
+        "rows": 2325,
+        "source": "okx",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "lido-dao": {
+    "close_only_windows": [],
+    "earliest_date": "2022-05-09",
+    "latest_date": "2026-05-14",
+    "n_rows": 1467,
+    "real_ohlc_from": "2022-05-09",
+    "tier_breakdown": [
+      {
+        "from": "2022-05-09",
+        "rows": 1467,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "lido-earn-eth": {
+    "close_only_windows": [
+      [
+        "2026-04-14",
+        "2026-05-14"
+      ]
+    ],
+    "earliest_date": "2026-04-14",
+    "latest_date": "2026-05-14",
+    "n_rows": 27,
+    "real_ohlc_from": null,
+    "tier_breakdown": [
+      {
+        "from": "2026-04-14",
+        "rows": 27,
+        "source": "coingecko",
+        "tier": 4,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "lighter": {
+    "close_only_windows": [],
+    "earliest_date": "2021-02-04",
+    "latest_date": "2025-02-10",
+    "n_rows": 1468,
+    "real_ohlc_from": "2021-02-04",
+    "tier_breakdown": [
+      {
+        "from": "2021-02-04",
+        "rows": 1468,
+        "source": "binance",
+        "tier": 1,
+        "to": "2025-02-10"
+      }
+    ]
+  },
+  "litecoin": {
+    "close_only_windows": [],
+    "earliest_date": "2020-01-02",
+    "latest_date": "2026-05-14",
+    "n_rows": 2325,
+    "real_ohlc_from": "2020-01-02",
+    "tier_breakdown": [
+      {
+        "from": "2020-01-02",
+        "rows": 2325,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "mantle": {
+    "close_only_windows": [],
+    "earliest_date": "2023-07-17",
+    "latest_date": "2026-05-14",
+    "n_rows": 1033,
+    "real_ohlc_from": "2023-07-17",
+    "tier_breakdown": [
+      {
+        "from": "2023-07-17",
+        "rows": 1033,
+        "source": "bybit",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "memecore": {
+    "close_only_windows": [],
+    "earliest_date": "2025-07-03",
+    "latest_date": "2026-05-14",
+    "n_rows": 316,
+    "real_ohlc_from": "2025-07-03",
+    "tier_breakdown": [
+      {
+        "from": "2025-07-03",
+        "rows": 316,
+        "source": "kraken",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "midnight-3": {
+    "close_only_windows": [],
+    "earliest_date": "2026-03-11",
+    "latest_date": "2026-05-14",
+    "n_rows": 65,
+    "real_ohlc_from": "2026-03-11",
+    "tier_breakdown": [
+      {
+        "from": "2026-03-11",
+        "rows": 65,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "monad": {
+    "close_only_windows": [],
+    "earliest_date": "2025-11-24",
+    "latest_date": "2026-05-14",
+    "n_rows": 172,
+    "real_ohlc_from": "2025-11-24",
+    "tier_breakdown": [
+      {
+        "from": "2025-11-24",
+        "rows": 172,
+        "source": "bybit",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "monero": {
+    "close_only_windows": [],
+    "earliest_date": "2020-01-01",
+    "latest_date": "2024-02-20",
+    "n_rows": 1512,
+    "real_ohlc_from": "2020-01-01",
+    "tier_breakdown": [
+      {
+        "from": "2020-01-01",
+        "rows": 1512,
+        "source": "binance",
+        "tier": 1,
+        "to": "2024-02-20"
+      }
+    ]
+  },
+  "morpho": {
+    "close_only_windows": [],
+    "earliest_date": "2025-10-03",
+    "latest_date": "2026-05-14",
+    "n_rows": 224,
+    "real_ohlc_from": "2025-10-03",
+    "tier_breakdown": [
+      {
+        "from": "2025-10-03",
+        "rows": 224,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "mx-token": {
+    "close_only_windows": [],
+    "earliest_date": "2021-12-17",
+    "latest_date": "2026-05-14",
+    "n_rows": 1610,
+    "real_ohlc_from": "2021-12-17",
+    "tier_breakdown": [
+      {
+        "from": "2021-12-17",
+        "rows": 1610,
+        "source": "bybit",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "near": {
+    "close_only_windows": [],
+    "earliest_date": "2020-10-14",
+    "latest_date": "2026-05-14",
+    "n_rows": 2039,
+    "real_ohlc_from": "2020-10-14",
+    "tier_breakdown": [
+      {
+        "from": "2020-10-14",
+        "rows": 2039,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "neo": {
+    "close_only_windows": [],
+    "earliest_date": "2020-01-02",
+    "latest_date": "2026-05-14",
+    "n_rows": 2325,
+    "real_ohlc_from": "2020-01-02",
+    "tier_breakdown": [
+      {
+        "from": "2020-01-02",
+        "rows": 2325,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "newton-project": {
+    "close_only_windows": [],
+    "earliest_date": "2025-08-08",
+    "latest_date": "2026-05-14",
+    "n_rows": 280,
+    "real_ohlc_from": "2025-08-08",
+    "tier_breakdown": [
+      {
+        "from": "2025-08-08",
+        "rows": 280,
+        "source": "kraken",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "nexo": {
+    "close_only_windows": [],
+    "earliest_date": "2022-04-29",
+    "latest_date": "2026-05-14",
+    "n_rows": 1477,
+    "real_ohlc_from": "2022-04-29",
+    "tier_breakdown": [
+      {
+        "from": "2022-04-29",
+        "rows": 1477,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "official-trump": {
+    "close_only_windows": [],
+    "earliest_date": "2025-01-19",
+    "latest_date": "2026-05-14",
+    "n_rows": 481,
+    "real_ohlc_from": "2025-01-19",
+    "tier_breakdown": [
+      {
+        "from": "2025-01-19",
+        "rows": 481,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "okb": {
+    "close_only_windows": [],
+    "earliest_date": "2020-01-02",
+    "latest_date": "2026-05-14",
+    "n_rows": 2325,
+    "real_ohlc_from": "2020-01-02",
+    "tier_breakdown": [
+      {
+        "from": "2020-01-02",
+        "rows": 2325,
+        "source": "okx",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "olympus": {
+    "close_only_windows": [
+      [
+        "2021-03-24",
+        "2026-05-14"
+      ]
+    ],
+    "earliest_date": "2021-03-24",
+    "latest_date": "2026-05-14",
+    "n_rows": 1878,
+    "real_ohlc_from": null,
+    "tier_breakdown": [
+      {
+        "from": "2021-03-24",
+        "rows": 1878,
+        "source": "coingecko",
+        "tier": 4,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "ondo-finance": {
+    "close_only_windows": [],
+    "earliest_date": "2025-04-11",
+    "latest_date": "2026-05-14",
+    "n_rows": 399,
+    "real_ohlc_from": "2025-04-11",
+    "tier_breakdown": [
+      {
+        "from": "2025-04-11",
+        "rows": 399,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "optimism": {
+    "close_only_windows": [],
+    "earliest_date": "2022-06-01",
+    "latest_date": "2026-05-14",
+    "n_rows": 1444,
+    "real_ohlc_from": "2022-06-01",
+    "tier_breakdown": [
+      {
+        "from": "2022-06-01",
+        "rows": 1444,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "origintrail": {
+    "close_only_windows": [],
+    "earliest_date": "2024-06-25",
+    "latest_date": "2026-05-14",
+    "n_rows": 689,
+    "real_ohlc_from": "2024-06-25",
+    "tier_breakdown": [
+      {
+        "from": "2024-06-25",
+        "rows": 689,
+        "source": "kraken",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "pancakeswap-token": {
+    "close_only_windows": [],
+    "earliest_date": "2021-02-19",
+    "latest_date": "2026-05-14",
+    "n_rows": 1911,
+    "real_ohlc_from": "2021-02-19",
+    "tier_breakdown": [
+      {
+        "from": "2021-02-19",
+        "rows": 1911,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "pendle": {
+    "close_only_windows": [],
+    "earliest_date": "2023-07-03",
+    "latest_date": "2026-05-14",
+    "n_rows": 1047,
+    "real_ohlc_from": "2023-07-03",
+    "tier_breakdown": [
+      {
+        "from": "2023-07-03",
+        "rows": 1047,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "pepe": {
+    "close_only_windows": [],
+    "earliest_date": "2023-05-05",
+    "latest_date": "2026-05-14",
+    "n_rows": 1106,
+    "real_ohlc_from": "2023-05-05",
+    "tier_breakdown": [
+      {
+        "from": "2023-05-05",
+        "rows": 1106,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "pi-network": {
+    "close_only_windows": [],
+    "earliest_date": "2026-03-13",
+    "latest_date": "2026-05-14",
+    "n_rows": 63,
+    "real_ohlc_from": "2026-03-13",
+    "tier_breakdown": [
+      {
+        "from": "2026-03-13",
+        "rows": 63,
+        "source": "kraken",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "pieverse": {
+    "close_only_windows": [],
+    "earliest_date": "2025-11-14",
+    "latest_date": "2026-05-14",
+    "n_rows": 182,
+    "real_ohlc_from": "2025-11-14",
+    "tier_breakdown": [
+      {
+        "from": "2025-11-14",
+        "rows": 182,
+        "source": "bybit",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "plasma": {
+    "close_only_windows": [],
+    "earliest_date": "2025-09-25",
+    "latest_date": "2026-05-14",
+    "n_rows": 232,
+    "real_ohlc_from": "2025-09-25",
+    "tier_breakdown": [
+      {
+        "from": "2025-09-25",
+        "rows": 232,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "polkadot": {
+    "close_only_windows": [],
+    "earliest_date": "2020-08-18",
+    "latest_date": "2026-05-14",
+    "n_rows": 2096,
+    "real_ohlc_from": "2020-08-18",
+    "tier_breakdown": [
+      {
+        "from": "2020-08-18",
+        "rows": 2096,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "polygon-ecosystem-token": {
+    "close_only_windows": [],
+    "earliest_date": "2024-09-13",
+    "latest_date": "2026-05-14",
+    "n_rows": 609,
+    "real_ohlc_from": "2024-09-13",
+    "tier_breakdown": [
+      {
+        "from": "2024-09-13",
+        "rows": 609,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "pudgy-penguins": {
+    "close_only_windows": [],
+    "earliest_date": "2024-12-17",
+    "latest_date": "2026-05-14",
+    "n_rows": 514,
+    "real_ohlc_from": "2024-12-17",
+    "tier_breakdown": [
+      {
+        "from": "2024-12-17",
+        "rows": 514,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "pump-fun": {
+    "close_only_windows": [],
+    "earliest_date": "2025-09-11",
+    "latest_date": "2026-05-14",
+    "n_rows": 246,
+    "real_ohlc_from": "2025-09-11",
+    "tier_breakdown": [
+      {
+        "from": "2025-09-11",
+        "rows": 246,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "pyth-network": {
+    "close_only_windows": [],
+    "earliest_date": "2024-02-02",
+    "latest_date": "2026-05-14",
+    "n_rows": 833,
+    "real_ohlc_from": "2024-02-02",
+    "tier_breakdown": [
+      {
+        "from": "2024-02-02",
+        "rows": 833,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "quant-network": {
+    "close_only_windows": [],
+    "earliest_date": "2021-07-29",
+    "latest_date": "2026-05-14",
+    "n_rows": 1751,
+    "real_ohlc_from": "2021-07-29",
+    "tier_breakdown": [
+      {
+        "from": "2021-07-29",
+        "rows": 1751,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "rain": {
+    "close_only_windows": [],
+    "earliest_date": "2026-02-09",
+    "latest_date": "2026-05-14",
+    "n_rows": 95,
+    "real_ohlc_from": "2026-02-09",
+    "tier_breakdown": [
+      {
+        "from": "2026-02-09",
+        "rows": 95,
+        "source": "kraken",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "ravedao": {
+    "close_only_windows": [],
+    "earliest_date": "2026-02-27",
+    "latest_date": "2026-05-14",
+    "n_rows": 77,
+    "real_ohlc_from": "2026-02-27",
+    "tier_breakdown": [
+      {
+        "from": "2026-02-27",
+        "rows": 77,
+        "source": "kraken",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "raydium": {
+    "close_only_windows": [],
+    "earliest_date": "2021-08-10",
+    "latest_date": "2026-05-14",
+    "n_rows": 1739,
+    "real_ohlc_from": "2021-08-10",
+    "tier_breakdown": [
+      {
+        "from": "2021-08-10",
+        "rows": 1739,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "reallink": {
+    "close_only_windows": [
+      [
+        "2021-11-22",
+        "2026-05-14"
+      ]
+    ],
+    "earliest_date": "2021-11-22",
+    "latest_date": "2026-05-14",
+    "n_rows": 1413,
+    "real_ohlc_from": null,
+    "tier_breakdown": [
+      {
+        "from": "2021-11-22",
+        "rows": 1413,
+        "source": "coingecko",
+        "tier": 4,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "render-token": {
+    "close_only_windows": [],
+    "earliest_date": "2024-07-26",
+    "latest_date": "2026-05-14",
+    "n_rows": 658,
+    "real_ohlc_from": "2024-07-26",
+    "tier_breakdown": [
+      {
+        "from": "2024-07-26",
+        "rows": 658,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "ripple": {
+    "close_only_windows": [],
+    "earliest_date": "2020-01-02",
+    "latest_date": "2026-05-14",
+    "n_rows": 2325,
+    "real_ohlc_from": "2020-01-02",
+    "tier_breakdown": [
+      {
+        "from": "2020-01-02",
+        "rows": 2325,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "river": {
+    "close_only_windows": [],
+    "earliest_date": "2025-11-04",
+    "latest_date": "2026-05-14",
+    "n_rows": 192,
+    "real_ohlc_from": "2025-11-04",
+    "tier_breakdown": [
+      {
+        "from": "2025-11-04",
+        "rows": 192,
+        "source": "kraken",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "safepal": {
+    "close_only_windows": [],
+    "earliest_date": "2021-02-08",
+    "latest_date": "2026-05-14",
+    "n_rows": 1922,
+    "real_ohlc_from": "2021-02-08",
+    "tier_breakdown": [
+      {
+        "from": "2021-02-08",
+        "rows": 1922,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "sahara-ai": {
+    "close_only_windows": [
+      [
+        "2026-05-06",
+        "2026-05-08"
+      ]
+    ],
+    "earliest_date": "2025-06-26",
+    "latest_date": "2026-05-14",
+    "n_rows": 233,
+    "real_ohlc_from": "2025-06-26",
+    "tier_breakdown": [
+      {
+        "from": "2025-06-26",
+        "rows": 224,
+        "source": "gateio",
+        "tier": 1,
+        "to": "2026-02-04"
+      },
+      {
+        "from": "2026-05-06",
+        "rows": 3,
+        "source": "coingecko",
+        "tier": 4,
+        "to": "2026-05-08"
+      },
+      {
+        "from": "2026-05-09",
+        "rows": 6,
+        "source": "okx",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "sei-network": {
+    "close_only_windows": [],
+    "earliest_date": "2023-08-15",
+    "latest_date": "2026-05-14",
+    "n_rows": 1004,
+    "real_ohlc_from": "2023-08-15",
+    "tier_breakdown": [
+      {
+        "from": "2023-08-15",
+        "rows": 1004,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "shiba-inu": {
+    "close_only_windows": [],
+    "earliest_date": "2021-05-10",
+    "latest_date": "2026-05-14",
+    "n_rows": 1831,
+    "real_ohlc_from": "2021-05-10",
+    "tier_breakdown": [
+      {
+        "from": "2021-05-10",
+        "rows": 1831,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "siren-2": {
+    "close_only_windows": [
+      [
+        "2025-02-19",
+        "2026-05-14"
+      ]
+    ],
+    "earliest_date": "2025-02-19",
+    "latest_date": "2026-05-14",
+    "n_rows": 450,
+    "real_ohlc_from": null,
+    "tier_breakdown": [
+      {
+        "from": "2025-02-19",
+        "rows": 450,
+        "source": "coingecko",
+        "tier": 4,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "sky": {
+    "close_only_windows": [],
+    "earliest_date": "2025-09-17",
+    "latest_date": "2026-05-14",
+    "n_rows": 240,
+    "real_ohlc_from": "2025-09-17",
+    "tier_breakdown": [
+      {
+        "from": "2025-09-17",
+        "rows": 240,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "skyai": {
+    "close_only_windows": [
+      [
+        "2025-04-21",
+        "2026-05-14"
+      ]
+    ],
+    "earliest_date": "2025-04-21",
+    "latest_date": "2026-05-14",
+    "n_rows": 389,
+    "real_ohlc_from": null,
+    "tier_breakdown": [
+      {
+        "from": "2025-04-21",
+        "rows": 389,
+        "source": "coingecko",
+        "tier": 4,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "solana": {
+    "close_only_windows": [],
+    "earliest_date": "2020-08-11",
+    "latest_date": "2026-05-14",
+    "n_rows": 2103,
+    "real_ohlc_from": "2020-08-11",
+    "tier_breakdown": [
+      {
+        "from": "2020-08-11",
+        "rows": 2103,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "sonic-3": {
+    "close_only_windows": [],
+    "earliest_date": "2025-01-16",
+    "latest_date": "2026-05-14",
+    "n_rows": 484,
+    "real_ohlc_from": "2025-01-16",
+    "tier_breakdown": [
+      {
+        "from": "2025-01-16",
+        "rows": 484,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "spiko-amundi-overnight-swap-fund-eur": {
+    "close_only_windows": [
+      [
+        "2026-04-15",
+        "2026-05-14"
+      ]
+    ],
+    "earliest_date": "2026-04-15",
+    "latest_date": "2026-05-14",
+    "n_rows": 13,
+    "real_ohlc_from": null,
+    "tier_breakdown": [
+      {
+        "from": "2026-04-15",
+        "rows": 13,
+        "source": "coingecko",
+        "tier": 4,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "spx6900": {
+    "close_only_windows": [],
+    "earliest_date": "2024-11-21",
+    "latest_date": "2026-05-14",
+    "n_rows": 540,
+    "real_ohlc_from": "2024-11-21",
+    "tier_breakdown": [
+      {
+        "from": "2024-11-21",
+        "rows": 540,
+        "source": "bybit",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "stable-2": {
+    "close_only_windows": [],
+    "earliest_date": "2025-12-08",
+    "latest_date": "2026-05-14",
+    "n_rows": 158,
+    "real_ohlc_from": "2025-12-08",
+    "tier_breakdown": [
+      {
+        "from": "2025-12-08",
+        "rows": 158,
+        "source": "bybit",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "starknet": {
+    "close_only_windows": [],
+    "earliest_date": "2024-02-20",
+    "latest_date": "2026-05-14",
+    "n_rows": 815,
+    "real_ohlc_from": "2024-02-20",
+    "tier_breakdown": [
+      {
+        "from": "2024-02-20",
+        "rows": 815,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "stellar": {
+    "close_only_windows": [],
+    "earliest_date": "2020-01-02",
+    "latest_date": "2026-05-14",
+    "n_rows": 2325,
+    "real_ohlc_from": "2020-01-02",
+    "tier_breakdown": [
+      {
+        "from": "2020-01-02",
+        "rows": 2325,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "story-2": {
+    "close_only_windows": [],
+    "earliest_date": "2025-02-13",
+    "latest_date": "2026-05-14",
+    "n_rows": 456,
+    "real_ohlc_from": "2025-02-13",
+    "tier_breakdown": [
+      {
+        "from": "2025-02-13",
+        "rows": 456,
+        "source": "bybit",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "sui": {
+    "close_only_windows": [],
+    "earliest_date": "2023-05-03",
+    "latest_date": "2026-05-14",
+    "n_rows": 1108,
+    "real_ohlc_from": "2023-05-03",
+    "tier_breakdown": [
+      {
+        "from": "2023-05-03",
+        "rows": 1108,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "sun-token": {
+    "close_only_windows": [],
+    "earliest_date": "2020-09-21",
+    "latest_date": "2026-05-14",
+    "n_rows": 2059,
+    "real_ohlc_from": "2020-09-21",
+    "tier_breakdown": [
+      {
+        "from": "2020-09-21",
+        "rows": 2059,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "superstate-short-duration-us-government-securities-fund-ustb": {
+    "close_only_windows": [
+      [
+        "2024-11-01",
+        "2026-05-14"
+      ]
+    ],
+    "earliest_date": "2024-11-01",
+    "latest_date": "2026-05-14",
+    "n_rows": 560,
+    "real_ohlc_from": null,
+    "tier_breakdown": [
+      {
+        "from": "2024-11-01",
+        "rows": 560,
+        "source": "coingecko",
+        "tier": 4,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "swissborg": {
+    "close_only_windows": [
+      [
+        "2019-12-31",
+        "2026-05-14"
+      ]
+    ],
+    "earliest_date": "2019-12-31",
+    "latest_date": "2026-05-14",
+    "n_rows": 2327,
+    "real_ohlc_from": null,
+    "tier_breakdown": [
+      {
+        "from": "2019-12-31",
+        "rows": 2327,
+        "source": "coingecko",
+        "tier": 4,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "syrup": {
+    "close_only_windows": [],
+    "earliest_date": "2025-05-06",
+    "latest_date": "2026-05-14",
+    "n_rows": 374,
+    "real_ohlc_from": "2025-05-06",
+    "tier_breakdown": [
+      {
+        "from": "2025-05-06",
+        "rows": 374,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "tagger": {
+    "close_only_windows": [
+      [
+        "2026-05-06",
+        "2026-05-08"
+      ]
+    ],
+    "earliest_date": "2025-07-08",
+    "latest_date": "2026-05-14",
+    "n_rows": 222,
+    "real_ohlc_from": "2025-07-08",
+    "tier_breakdown": [
+      {
+        "from": "2025-07-08",
+        "rows": 213,
+        "source": "gateio",
+        "tier": 1,
+        "to": "2026-02-05"
+      },
+      {
+        "from": "2026-05-06",
+        "rows": 3,
+        "source": "coingecko",
+        "tier": 4,
+        "to": "2026-05-08"
+      },
+      {
+        "from": "2026-05-09",
+        "rows": 6,
+        "source": "gateio",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "telcoin": {
+    "close_only_windows": [],
+    "earliest_date": "2021-12-01",
+    "latest_date": "2026-05-14",
+    "n_rows": 1626,
+    "real_ohlc_from": "2021-12-01",
+    "tier_breakdown": [
+      {
+        "from": "2021-12-01",
+        "rows": 1626,
+        "source": "bybit",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "terra-luna": {
+    "close_only_windows": [],
+    "earliest_date": "2022-09-09",
+    "latest_date": "2026-05-14",
+    "n_rows": 1344,
+    "real_ohlc_from": "2022-09-09",
+    "tier_breakdown": [
+      {
+        "from": "2022-09-09",
+        "rows": 1344,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "tezos": {
+    "close_only_windows": [],
+    "earliest_date": "2020-01-02",
+    "latest_date": "2026-05-14",
+    "n_rows": 2325,
+    "real_ohlc_from": "2020-01-02",
+    "tier_breakdown": [
+      {
+        "from": "2020-01-02",
+        "rows": 2325,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "the-graph": {
+    "close_only_windows": [],
+    "earliest_date": "2020-12-17",
+    "latest_date": "2026-05-14",
+    "n_rows": 1975,
+    "real_ohlc_from": "2020-12-17",
+    "tier_breakdown": [
+      {
+        "from": "2020-12-17",
+        "rows": 1975,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "the-open-network": {
+    "close_only_windows": [],
+    "earliest_date": "2024-08-08",
+    "latest_date": "2026-05-14",
+    "n_rows": 645,
+    "real_ohlc_from": "2024-08-08",
+    "tier_breakdown": [
+      {
+        "from": "2024-08-08",
+        "rows": 645,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "the-sandbox": {
+    "close_only_windows": [],
+    "earliest_date": "2020-08-14",
+    "latest_date": "2026-05-14",
+    "n_rows": 2100,
+    "real_ohlc_from": "2020-08-14",
+    "tier_breakdown": [
+      {
+        "from": "2020-08-14",
+        "rows": 2100,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "the9bit": {
+    "close_only_windows": [
+      [
+        "2026-01-08",
+        "2026-05-14"
+      ]
+    ],
+    "earliest_date": "2026-01-08",
+    "latest_date": "2026-05-14",
+    "n_rows": 127,
+    "real_ohlc_from": null,
+    "tier_breakdown": [
+      {
+        "from": "2026-01-08",
+        "rows": 127,
+        "source": "coingecko",
+        "tier": 4,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "theta-token": {
+    "close_only_windows": [],
+    "earliest_date": "2020-01-02",
+    "latest_date": "2026-05-14",
+    "n_rows": 2325,
+    "real_ohlc_from": "2020-01-02",
+    "tier_breakdown": [
+      {
+        "from": "2020-01-02",
+        "rows": 2325,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "thorchain": {
+    "close_only_windows": [],
+    "earliest_date": "2020-09-04",
+    "latest_date": "2026-05-14",
+    "n_rows": 2079,
+    "real_ohlc_from": "2020-09-04",
+    "tier_breakdown": [
+      {
+        "from": "2020-09-04",
+        "rows": 2079,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "tradable-apac-diversified-finance-provider-sstn": {
+    "close_only_windows": [
+      [
+        "2025-07-03",
+        "2026-05-14"
+      ]
+    ],
+    "earliest_date": "2025-07-03",
+    "latest_date": "2026-05-14",
+    "n_rows": 316,
+    "real_ohlc_from": null,
+    "tier_breakdown": [
+      {
+        "from": "2025-07-03",
+        "rows": 316,
+        "source": "coingecko",
+        "tier": 4,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "tron": {
+    "close_only_windows": [],
+    "earliest_date": "2020-01-02",
+    "latest_date": "2026-05-14",
+    "n_rows": 2325,
+    "real_ohlc_from": "2020-01-02",
+    "tier_breakdown": [
+      {
+        "from": "2020-01-02",
+        "rows": 2325,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "trust-wallet-token": {
+    "close_only_windows": [],
+    "earliest_date": "2021-01-27",
+    "latest_date": "2026-05-14",
+    "n_rows": 1934,
+    "real_ohlc_from": "2021-01-27",
+    "tier_breakdown": [
+      {
+        "from": "2021-01-27",
+        "rows": 1934,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "ultima": {
+    "close_only_windows": [
+      [
+        "2023-09-21",
+        "2026-05-14"
+      ]
+    ],
+    "earliest_date": "2023-09-21",
+    "latest_date": "2026-05-14",
+    "n_rows": 967,
+    "real_ohlc_from": null,
+    "tier_breakdown": [
+      {
+        "from": "2023-09-21",
+        "rows": 967,
+        "source": "coingecko",
+        "tier": 4,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "undeads-games": {
+    "close_only_windows": [
+      [
+        "2024-05-02",
+        "2026-05-14"
+      ]
+    ],
+    "earliest_date": "2024-05-02",
+    "latest_date": "2026-05-14",
+    "n_rows": 743,
+    "real_ohlc_from": null,
+    "tier_breakdown": [
+      {
+        "from": "2024-05-02",
+        "rows": 743,
+        "source": "coingecko",
+        "tier": 4,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "unibase": {
+    "close_only_windows": [
+      [
+        "2025-09-12",
+        "2026-05-14"
+      ]
+    ],
+    "earliest_date": "2025-09-12",
+    "latest_date": "2026-05-14",
+    "n_rows": 245,
+    "real_ohlc_from": null,
+    "tier_breakdown": [
+      {
+        "from": "2025-09-12",
+        "rows": 245,
+        "source": "coingecko",
+        "tier": 4,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "uniswap": {
+    "close_only_windows": [],
+    "earliest_date": "2020-09-17",
+    "latest_date": "2026-05-14",
+    "n_rows": 2066,
+    "real_ohlc_from": "2020-09-17",
+    "tier_breakdown": [
+      {
+        "from": "2020-09-17",
+        "rows": 2066,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "united-stables": {
+    "close_only_windows": [],
+    "earliest_date": "2026-01-13",
+    "latest_date": "2026-05-14",
+    "n_rows": 122,
+    "real_ohlc_from": "2026-01-13",
+    "tier_breakdown": [
+      {
+        "from": "2026-01-13",
+        "rows": 122,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "usa": {
+    "close_only_windows": [],
+    "earliest_date": "2026-01-27",
+    "latest_date": "2026-05-14",
+    "n_rows": 108,
+    "real_ohlc_from": "2026-01-27",
+    "tier_breakdown": [
+      {
+        "from": "2026-01-27",
+        "rows": 108,
+        "source": "bybit",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "usx": {
+    "close_only_windows": [
+      [
+        "2025-09-27",
+        "2026-05-14"
+      ]
+    ],
+    "earliest_date": "2025-09-27",
+    "latest_date": "2026-05-14",
+    "n_rows": 230,
+    "real_ohlc_from": null,
+    "tier_breakdown": [
+      {
+        "from": "2025-09-27",
+        "rows": 230,
+        "source": "coingecko",
+        "tier": 4,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "vaulta": {
+    "close_only_windows": [],
+    "earliest_date": "2025-05-28",
+    "latest_date": "2026-05-14",
+    "n_rows": 352,
+    "real_ohlc_from": "2025-05-28",
+    "tier_breakdown": [
+      {
+        "from": "2025-05-28",
+        "rows": 352,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "vechain": {
+    "close_only_windows": [],
+    "earliest_date": "2020-01-02",
+    "latest_date": "2026-05-14",
+    "n_rows": 2325,
+    "real_ohlc_from": "2020-01-02",
+    "tier_breakdown": [
+      {
+        "from": "2020-01-02",
+        "rows": 2325,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "venice-token": {
+    "close_only_windows": [],
+    "earliest_date": "2025-03-21",
+    "latest_date": "2026-05-14",
+    "n_rows": 420,
+    "real_ohlc_from": "2025-03-21",
+    "tier_breakdown": [
+      {
+        "from": "2025-03-21",
+        "rows": 420,
+        "source": "bybit",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "virtual-protocol": {
+    "close_only_windows": [],
+    "earliest_date": "2025-04-11",
+    "latest_date": "2026-05-14",
+    "n_rows": 399,
+    "real_ohlc_from": "2025-04-11",
+    "tier_breakdown": [
+      {
+        "from": "2025-04-11",
+        "rows": 399,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "vision-3": {
+    "close_only_windows": [],
+    "earliest_date": "2025-07-16",
+    "latest_date": "2026-05-14",
+    "n_rows": 303,
+    "real_ohlc_from": "2025-07-16",
+    "tier_breakdown": [
+      {
+        "from": "2025-07-16",
+        "rows": 303,
+        "source": "kraken",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "walrus-2": {
+    "close_only_windows": [],
+    "earliest_date": "2025-10-10",
+    "latest_date": "2026-05-14",
+    "n_rows": 217,
+    "real_ohlc_from": "2025-10-10",
+    "tier_breakdown": [
+      {
+        "from": "2025-10-10",
+        "rows": 217,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "wefi": {
+    "close_only_windows": [
+      [
+        "2024-11-19",
+        "2026-05-14"
+      ]
+    ],
+    "earliest_date": "2024-11-19",
+    "latest_date": "2026-05-14",
+    "n_rows": 542,
+    "real_ohlc_from": null,
+    "tier_breakdown": [
+      {
+        "from": "2024-11-19",
+        "rows": 542,
+        "source": "coingecko",
+        "tier": 4,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "whitebit": {
+    "close_only_windows": [],
+    "earliest_date": "2026-03-05",
+    "latest_date": "2026-05-14",
+    "n_rows": 71,
+    "real_ohlc_from": "2026-03-05",
+    "tier_breakdown": [
+      {
+        "from": "2026-03-05",
+        "rows": 71,
+        "source": "kraken",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "world-liberty-financial": {
+    "close_only_windows": [],
+    "earliest_date": "2025-09-01",
+    "latest_date": "2026-05-14",
+    "n_rows": 256,
+    "real_ohlc_from": "2025-09-01",
+    "tier_breakdown": [
+      {
+        "from": "2025-09-01",
+        "rows": 256,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "worldcoin-wld": {
+    "close_only_windows": [],
+    "earliest_date": "2023-07-24",
+    "latest_date": "2026-05-14",
+    "n_rows": 1026,
+    "real_ohlc_from": "2023-07-24",
+    "tier_breakdown": [
+      {
+        "from": "2023-07-24",
+        "rows": 1026,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "xdce-crowd-sale": {
+    "close_only_windows": [],
+    "earliest_date": "2021-12-30",
+    "latest_date": "2026-05-14",
+    "n_rows": 1597,
+    "real_ohlc_from": "2021-12-30",
+    "tier_breakdown": [
+      {
+        "from": "2021-12-30",
+        "rows": 1597,
+        "source": "bybit",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "ylds": {
+    "close_only_windows": [
+      [
+        "2025-08-26",
+        "2026-05-14"
+      ]
+    ],
+    "earliest_date": "2025-08-26",
+    "latest_date": "2026-05-14",
+    "n_rows": 128,
+    "real_ohlc_from": null,
+    "tier_breakdown": [
+      {
+        "from": "2025-08-26",
+        "rows": 128,
+        "source": "coingecko",
+        "tier": 4,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "zano": {
+    "close_only_windows": [
+      [
+        "2019-12-31",
+        "2026-05-14"
+      ]
+    ],
+    "earliest_date": "2019-12-31",
+    "latest_date": "2026-05-14",
+    "n_rows": 2322,
+    "real_ohlc_from": null,
+    "tier_breakdown": [
+      {
+        "from": "2019-12-31",
+        "rows": 2322,
+        "source": "coingecko",
+        "tier": 4,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "zcash": {
+    "close_only_windows": [],
+    "earliest_date": "2020-01-02",
+    "latest_date": "2026-05-14",
+    "n_rows": 2325,
+    "real_ohlc_from": "2020-01-02",
+    "tier_breakdown": [
+      {
+        "from": "2020-01-02",
+        "rows": 2325,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "zebec-network": {
+    "close_only_windows": [],
+    "earliest_date": "2025-10-15",
+    "latest_date": "2026-05-14",
+    "n_rows": 212,
+    "real_ohlc_from": "2025-10-15",
+    "tier_breakdown": [
+      {
+        "from": "2025-10-15",
+        "rows": 212,
+        "source": "kraken",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  },
+  "zksync": {
+    "close_only_windows": [],
+    "earliest_date": "2024-06-17",
+    "latest_date": "2026-05-14",
+    "n_rows": 697,
+    "real_ohlc_from": "2024-06-17",
+    "tier_breakdown": [
+      {
+        "from": "2024-06-17",
+        "rows": 697,
+        "source": "binance",
+        "tier": 1,
+        "to": "2026-05-14"
+      }
+    ]
+  }
+}

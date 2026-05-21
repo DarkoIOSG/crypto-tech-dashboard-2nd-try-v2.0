@@ -1,0 +1,350 @@
+{
+  "generated_at": "2026-05-15T06:19:01.822554+00:00",
+  "schema_version": 2,
+  "horizon": "5d",
+  "mode": "drop",
+  "t_threshold": 2.0,
+  "use_nw": true,
+  "bonferroni_t": 3.16,
+  "weights": {
+    "trend": 0.0,
+    "reversal": 0.0,
+    "breadth": 0.0,
+    "risk": 0.9,
+    "ts_trend_2y": 0.05,
+    "ts_reversal_2y": 0.05
+  },
+  "contribution_signs": {
+    "trend": 1,
+    "reversal": 1,
+    "breadth": 1,
+    "risk": 1,
+    "ts_trend_2y": 1,
+    "ts_reversal_2y": 1
+  },
+  "audit": {
+    "trend": {
+      "fmb_rho": -0.019046307772100417,
+      "fmb_t": -2.4575313628589925,
+      "t_type": "nw",
+      "rho_source": "train_only",
+      "meaningful": true,
+      "passes_bonferroni": false,
+      "empirical_sign": -1,
+      "action": "dropped (rho=-0.0190<0, conservative)",
+      "raw_size": 0.0,
+      "survivorship_haircut_frac": 0.1,
+      "size_after_haircut": 0.0,
+      "normalized_weight": 0.0
+    },
+    "reversal": {
+      "fmb_rho": 0.011054210166208186,
+      "fmb_t": 1.506619987693197,
+      "t_type": "nw",
+      "rho_source": "train_only",
+      "meaningful": false,
+      "passes_bonferroni": false,
+      "empirical_sign": 1,
+      "action": "dropped (|t|<2.00, t=+1.51)",
+      "raw_size": 0.0,
+      "survivorship_haircut_frac": 0.2,
+      "size_after_haircut": 0.0,
+      "normalized_weight": 0.0
+    },
+    "breadth": {
+      "fmb_rho": -0.000837643781705867,
+      "fmb_t": -0.12364945872527354,
+      "t_type": "nw",
+      "rho_source": "train_only",
+      "meaningful": false,
+      "passes_bonferroni": false,
+      "empirical_sign": -1,
+      "action": "dropped (|t|<2.00, t=-0.12)",
+      "raw_size": 0.0,
+      "survivorship_haircut_frac": 0.15,
+      "size_after_haircut": 0.0,
+      "normalized_weight": 0.0
+    },
+    "risk": {
+      "fmb_rho": 0.06897631050414296,
+      "fmb_t": 7.246220162134562,
+      "t_type": "nw",
+      "rho_source": "train_only",
+      "meaningful": true,
+      "passes_bonferroni": true,
+      "empirical_sign": 1,
+      "action": "kept (rho=+0.0690, |t|=7.25)",
+      "raw_size": 0.06897631050414296,
+      "survivorship_haircut_frac": 0.4,
+      "size_after_haircut": 0.04138578630248577,
+      "normalized_weight": 0.9
+    },
+    "ts_trend_2y": {
+      "normalized_weight": 0.05,
+      "action": "Tier-A default (not in calibration)"
+    },
+    "ts_reversal_2y": {
+      "normalized_weight": 0.05,
+      "action": "Tier-A default (not in calibration)"
+    }
+  },
+  "weights_full_sample": {
+    "trend": 0.0,
+    "reversal": 0.0,
+    "breadth": 0.0,
+    "risk": 0.9,
+    "ts_trend_2y": 0.05,
+    "ts_reversal_2y": 0.05
+  },
+  "weights_train_only": {
+    "trend": 0.0,
+    "reversal": 0.0,
+    "breadth": 0.0,
+    "risk": 0.9,
+    "ts_trend_2y": 0.05,
+    "ts_reversal_2y": 0.05
+  },
+  "weights_train_only_bonferroni": {
+    "trend": 0.0,
+    "reversal": 0.0,
+    "breadth": 0.0,
+    "risk": 0.9,
+    "ts_trend_2y": 0.05,
+    "ts_reversal_2y": 0.05
+  },
+  "weights_train_only_haircut": {
+    "trend": 0.0,
+    "reversal": 0.0,
+    "breadth": 0.0,
+    "risk": 0.9,
+    "ts_trend_2y": 0.05,
+    "ts_reversal_2y": 0.05
+  },
+  "weights_sensitivity_risk_minus_30pct": {
+    "trend": 0.0,
+    "reversal": 0.0,
+    "breadth": 0.0,
+    "risk": 0.9,
+    "ts_trend_2y": 0.05,
+    "ts_reversal_2y": 0.05
+  },
+  "audit_full_sample": {
+    "trend": {
+      "fmb_rho": -0.01427476037950382,
+      "fmb_t": -2.084559163984229,
+      "t_type": "nw",
+      "rho_source": "full_sample",
+      "meaningful": true,
+      "passes_bonferroni": false,
+      "empirical_sign": -1,
+      "action": "dropped (rho=-0.0143<0, conservative)",
+      "raw_size": 0.0,
+      "survivorship_haircut_frac": 0.1,
+      "size_after_haircut": 0.0,
+      "normalized_weight": 0.0
+    },
+    "reversal": {
+      "fmb_rho": 0.008699158515332634,
+      "fmb_t": 1.3754416647580248,
+      "t_type": "nw",
+      "rho_source": "full_sample",
+      "meaningful": false,
+      "passes_bonferroni": false,
+      "empirical_sign": 1,
+      "action": "dropped (|t|<2.00, t=+1.38)",
+      "raw_size": 0.0,
+      "survivorship_haircut_frac": 0.2,
+      "size_after_haircut": 0.0,
+      "normalized_weight": 0.0
+    },
+    "breadth": {
+      "fmb_rho": 0.0003033191438971994,
+      "fmb_t": 0.05168296607087723,
+      "t_type": "nw",
+      "rho_source": "full_sample",
+      "meaningful": false,
+      "passes_bonferroni": false,
+      "empirical_sign": 1,
+      "action": "dropped (|t|<2.00, t=+0.05)",
+      "raw_size": 0.0,
+      "survivorship_haircut_frac": 0.15,
+      "size_after_haircut": 0.0,
+      "normalized_weight": 0.0
+    },
+    "risk": {
+      "fmb_rho": 0.0655874219245041,
+      "fmb_t": 7.594971352791492,
+      "t_type": "nw",
+      "rho_source": "full_sample",
+      "meaningful": true,
+      "passes_bonferroni": true,
+      "empirical_sign": 1,
+      "action": "kept (rho=+0.0656, |t|=7.59)",
+      "raw_size": 0.0655874219245041,
+      "survivorship_haircut_frac": 0.4,
+      "size_after_haircut": 0.03935245315470246,
+      "normalized_weight": 0.9
+    },
+    "ts_trend_2y": {
+      "normalized_weight": 0.05,
+      "action": "Tier-A default (not in calibration)"
+    },
+    "ts_reversal_2y": {
+      "normalized_weight": 0.05,
+      "action": "Tier-A default (not in calibration)"
+    }
+  },
+  "audit_train_only_bonferroni": {
+    "trend": {
+      "fmb_rho": -0.019046307772100417,
+      "fmb_t": -2.4575313628589925,
+      "t_type": "nw",
+      "rho_source": "train_only",
+      "meaningful": false,
+      "passes_bonferroni": false,
+      "empirical_sign": -1,
+      "action": "dropped (|t|<3.16, t=-2.46)",
+      "raw_size": 0.0,
+      "survivorship_haircut_frac": 0.1,
+      "size_after_haircut": 0.0,
+      "normalized_weight": 0.0
+    },
+    "reversal": {
+      "fmb_rho": 0.011054210166208186,
+      "fmb_t": 1.506619987693197,
+      "t_type": "nw",
+      "rho_source": "train_only",
+      "meaningful": false,
+      "passes_bonferroni": false,
+      "empirical_sign": 1,
+      "action": "dropped (|t|<3.16, t=+1.51)",
+      "raw_size": 0.0,
+      "survivorship_haircut_frac": 0.2,
+      "size_after_haircut": 0.0,
+      "normalized_weight": 0.0
+    },
+    "breadth": {
+      "fmb_rho": -0.000837643781705867,
+      "fmb_t": -0.12364945872527354,
+      "t_type": "nw",
+      "rho_source": "train_only",
+      "meaningful": false,
+      "passes_bonferroni": false,
+      "empirical_sign": -1,
+      "action": "dropped (|t|<3.16, t=-0.12)",
+      "raw_size": 0.0,
+      "survivorship_haircut_frac": 0.15,
+      "size_after_haircut": 0.0,
+      "normalized_weight": 0.0
+    },
+    "risk": {
+      "fmb_rho": 0.06897631050414296,
+      "fmb_t": 7.246220162134562,
+      "t_type": "nw",
+      "rho_source": "train_only",
+      "meaningful": true,
+      "passes_bonferroni": true,
+      "empirical_sign": 1,
+      "action": "kept (rho=+0.0690, |t|=7.25)",
+      "raw_size": 0.06897631050414296,
+      "survivorship_haircut_frac": 0.4,
+      "size_after_haircut": 0.04138578630248577,
+      "normalized_weight": 0.9
+    },
+    "ts_trend_2y": {
+      "normalized_weight": 0.05,
+      "action": "Tier-A default (not in calibration)"
+    },
+    "ts_reversal_2y": {
+      "normalized_weight": 0.05,
+      "action": "Tier-A default (not in calibration)"
+    }
+  },
+  "by_horizon": {
+    "5d": {
+      "trend": 0.0,
+      "reversal": 0.0,
+      "breadth": 0.0,
+      "risk": 0.9,
+      "ts_trend_2y": 0.05,
+      "ts_reversal_2y": 0.05
+    },
+    "10d": {
+      "trend": 0.0,
+      "reversal": 0.0,
+      "breadth": 0.0,
+      "risk": 0.9,
+      "ts_trend_2y": 0.05,
+      "ts_reversal_2y": 0.05
+    },
+    "20d": {
+      "trend": 0.0,
+      "reversal": 0.0,
+      "breadth": 0.0,
+      "risk": 0.9,
+      "ts_trend_2y": 0.05,
+      "ts_reversal_2y": 0.05
+    },
+    "60d": {
+      "trend": 0.0,
+      "reversal": 0.0,
+      "breadth": 0.0,
+      "risk": 0.9,
+      "ts_trend_2y": 0.05,
+      "ts_reversal_2y": 0.05
+    }
+  },
+  "all_horizon_blend_weights": {
+    "trend": 0.0,
+    "reversal": 0.0,
+    "breadth": 0.0,
+    "risk": 0.9,
+    "ts_trend_2y": 0.05,
+    "ts_reversal_2y": 0.05
+  },
+  "all_horizon_blend_vote_counts": {
+    "trend": 0,
+    "reversal": 0,
+    "breadth": 0,
+    "risk": 4
+  },
+  "atomic_reweighted_trend": {
+    "sma_cross_strength_signed_5_20": 0.5122301055700037,
+    "ema_cross_strength_signed_5_20": 0.48776989442999635
+  },
+  "atomic_reweighted_trend_horizon": "5d",
+  "survivorship_warning": "195 tokens alive on last date; 0 delisted in the sample. Universe is survivorship-biased: tokens that died before today are absent. Calibrated rho/weights overstate live edge.",
+  "expected_live_haircut": {
+    "trend": 0.1,
+    "reversal": 0.2,
+    "breadth": 0.15,
+    "risk": 0.4
+  },
+  "panel_dimensions": {
+    "n_panel_rows": 243326,
+    "n_dates": 2298,
+    "n_tokens": 232
+  },
+  "split": {
+    "train_frac": 0.8,
+    "cutoff_date": "2025-02-10",
+    "n_train_dates": 1838,
+    "n_holdout_dates": 460
+  },
+  "weight_rationale": {
+    "deployment": "weights = `weights_train_only` (NW-t, t>=2.0, fit on first 80% of dates). The other weight variants are for reviewer transparency only.",
+    "weights_full_sample": "WARNING: in-sample. EXPLANATORY ONLY. Do not deploy.",
+    "weights_train_only_bonferroni": "Family-wise corrected for 80 simultaneous tests (|t|>=3.16). Most conservative; will often concentrate further on risk.",
+    "weights_train_only_haircut": "Train-only weights with each sleeve's |rho| shrunk by an expected survivorship haircut.",
+    "weights_sensitivity_risk_minus_30pct": "Shows how the weights shift if the true risk edge is 30% smaller than the calibration claims."
+  },
+  "release_recommendation": {
+    "verdict": "research-only",
+    "default_mode": "theory",
+    "reason": "Sharpe inversion: calibrated weights have higher CS-IC than theory but produce a NEGATIVE long-short portfolio Sharpe at 5d (theory +0.58 vs calibrated -0.40) and roughly half the Sharpe at 60d (theory +0.76 vs calibrated +0.37). 90% weight on a single low-vol sleeve does not survive the realistic portfolio criterion. Calibrated mode is preserved as opt-in research output; the production default stays 'theory' until a point-in-time universe rebuild (P1b) removes survivorship bias and we re-validate using Sharpe instead of CS-IC as the release gate.",
+    "sharpe_5d_theory": 0.583879732413192,
+    "sharpe_5d_calibrated": -0.40229536264704835,
+    "sharpe_60d_theory": 0.7585685213340032,
+    "sharpe_60d_calibrated": 0.3673376699052092
+  }
+}

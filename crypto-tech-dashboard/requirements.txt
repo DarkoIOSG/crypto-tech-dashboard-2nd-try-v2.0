@@ -1,0 +1,24 @@
+# R6-16: pinned to the exact versions that backed the Round-7 verification
+# screenshots, so a clean-room `pip install -r requirements.txt` reproduces
+# the same behaviour. PLAN sec 10.1 floors are listed in comments so a
+# future upgrade has a known floor to clear.
+#
+# scipy was removed — grep -rn 'scipy' backend/ scripts/ -> 0 hits; the
+# 50 MB wheel was an unused over-spec.
+
+fastapi==0.128.8            # PLAN floor: >= 0.115
+uvicorn[standard]==0.39.0   # PLAN floor: >= 0.30
+pandas==2.3.3               # PLAN floor: >= 2.2
+numpy==2.0.2                # PLAN floor: >= 1.26
+ccxt==4.5.53                # PLAN floor: >= 4.0
+apscheduler==3.11.2         # PLAN floor: >= 3.10
+python-dotenv==1.2.1        # PLAN floor: >= 1.0
+requests==2.32.5            # PLAN floor: >= 2.31
+
+# R8-1D: US stocks integration (Phase-2 item 7). yfinance is the de-facto
+# Python lib for Yahoo Finance OHLCV; no API key required. Used by
+# backend/data/yfinance_client.py for the 40 crypto-related US equities.
+# Pin 1.2.0+ because Yahoo's backend changed; 0.2.x returns "Expecting value"
+# JSON-decode errors as of mid-2025.
+yfinance>=1.2.0
+

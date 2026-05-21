@@ -1,0 +1,327 @@
+{
+  "best": {
+    "cagr": 3.5303171021194544,
+    "cg_id": "EXOD",
+    "sharpe": 1.5783267896248627,
+    "symbol": "EXOD"
+  },
+  "label": "Bollinger Lower Band (long close<lower, exit at mid)",
+  "mean_sharpe": 0.3814930012587391,
+  "median_cagr": -0.17335500407944188,
+  "median_sharpe": 0.33996207027068315,
+  "n_tokens": 30,
+  "params": {
+    "num_std": 2.0,
+    "period": 20
+  },
+  "pct_positive": 73.33333333333333,
+  "per_token": [
+    {
+      "avg_trade_return": 0.28876873457687313,
+      "cagr": 3.5303171021194544,
+      "cg_id": "EXOD",
+      "max_dd": -0.8834499761262271,
+      "n_trades": 51,
+      "sharpe": 1.5783267896248627,
+      "symbol": "EXOD",
+      "win_rate": 0.7307692307692307
+    },
+    {
+      "avg_trade_return": 0.11113718695766313,
+      "cagr": 1.324598654957422,
+      "cg_id": "CORZ",
+      "max_dd": -0.5015600609518418,
+      "n_trades": 24,
+      "sharpe": 1.4471300435826566,
+      "symbol": "CORZ",
+      "win_rate": 0.8333333333333334
+    },
+    {
+      "avg_trade_return": 4.221081684951808,
+      "cagr": 26.46695893869319,
+      "cg_id": "BIGG",
+      "max_dd": -0.9250000000000087,
+      "n_trades": 27,
+      "sharpe": 1.2519263642951288,
+      "symbol": "BIGG",
+      "win_rate": 0.7142857142857143
+    },
+    {
+      "avg_trade_return": 0.11766336840429596,
+      "cagr": 1.1292479344165938,
+      "cg_id": "APLD",
+      "max_dd": -0.7452155810171077,
+      "n_trades": 48,
+      "sharpe": 1.1748988271646235,
+      "symbol": "APLD",
+      "win_rate": 0.625
+    },
+    {
+      "avg_trade_return": 0.162372631311804,
+      "cagr": 0.7203076906493662,
+      "cg_id": "NPPTF",
+      "max_dd": -0.8718917284939645,
+      "n_trades": 55,
+      "sharpe": 1.090925484916027,
+      "symbol": "NPPTF",
+      "win_rate": 0.5
+    },
+    {
+      "avg_trade_return": 0.11595215176176628,
+      "cagr": 0.27466401642040617,
+      "cg_id": "HUT",
+      "max_dd": -0.9269123690067931,
+      "n_trades": 66,
+      "sharpe": 0.7569329595554481,
+      "symbol": "HUT",
+      "win_rate": 0.696969696969697
+    },
+    {
+      "avg_trade_return": 0.11144317301863096,
+      "cagr": 0.0695098384459294,
+      "cg_id": "DMGGF",
+      "max_dd": -0.9512940037751405,
+      "n_trades": 60,
+      "sharpe": 0.6579606304043433,
+      "symbol": "DMGGF",
+      "win_rate": 0.6
+    },
+    {
+      "avg_trade_return": 0.08696782559225678,
+      "cagr": -0.00986799228759938,
+      "cg_id": "BTBT",
+      "max_dd": -0.9537040352972226,
+      "n_trades": 54,
+      "sharpe": 0.5581068956691471,
+      "symbol": "BTBT",
+      "win_rate": 0.6296296296296297
+    },
+    {
+      "avg_trade_return": 0.11107394636717245,
+      "cagr": 0.06573435132905336,
+      "cg_id": "RIOT",
+      "max_dd": -0.9489781447269036,
+      "n_trades": 60,
+      "sharpe": 0.557320779004439,
+      "symbol": "RIOT",
+      "win_rate": 0.5666666666666667
+    },
+    {
+      "avg_trade_return": 0.08812133962669642,
+      "cagr": -0.05634769022283548,
+      "cg_id": "IREN",
+      "max_dd": -0.9475316971983399,
+      "n_trades": 46,
+      "sharpe": 0.5035210520649217,
+      "symbol": "IREN",
+      "win_rate": 0.6521739130434783
+    },
+    {
+      "avg_trade_return": 0.04884551687549738,
+      "cagr": -0.08006511924943005,
+      "cg_id": "CLSK",
+      "max_dd": -0.9086799207546278,
+      "n_trades": 62,
+      "sharpe": 0.469632596818589,
+      "symbol": "CLSK",
+      "win_rate": 0.5483870967741935
+    },
+    {
+      "avg_trade_return": 0.05966348556528137,
+      "cagr": -0.10002702239100225,
+      "cg_id": "CIFR",
+      "max_dd": -0.9464668615129809,
+      "n_trades": 56,
+      "sharpe": 0.4635488449144392,
+      "symbol": "CIFR",
+      "win_rate": 0.6785714285714286
+    },
+    {
+      "avg_trade_return": 0.1076843486479027,
+      "cagr": -0.13178100549210336,
+      "cg_id": "WULF",
+      "max_dd": -0.983063269364695,
+      "n_trades": 60,
+      "sharpe": 0.45150662417335474,
+      "symbol": "WULF",
+      "win_rate": 0.7666666666666667
+    },
+    {
+      "avg_trade_return": 0.03056066721153076,
+      "cagr": -0.4134629131523213,
+      "cg_id": "BKKT",
+      "max_dd": -0.9478512830222594,
+      "n_trades": 45,
+      "sharpe": 0.42413804417861406,
+      "symbol": "BKKT",
+      "win_rate": 0.4782608695652174
+    },
+    {
+      "avg_trade_return": 0.04683427625400238,
+      "cagr": -0.19137042225248746,
+      "cg_id": "MARA",
+      "max_dd": -0.9490766688909638,
+      "n_trades": 56,
+      "sharpe": 0.34131670689977645,
+      "symbol": "MARA",
+      "win_rate": 0.5714285714285714
+    },
+    {
+      "avg_trade_return": 0.09359484746736725,
+      "cagr": -0.19255231615645185,
+      "cg_id": "BITF",
+      "max_dd": -0.964764436235396,
+      "n_trades": 48,
+      "sharpe": 0.3386074336415898,
+      "symbol": "BITF",
+      "win_rate": 0.5416666666666666
+    },
+    {
+      "avg_trade_return": 0.006184216682191856,
+      "cagr": -0.1553395859063963,
+      "cg_id": "BTDR",
+      "max_dd": -0.8665036336492454,
+      "n_trades": 54,
+      "sharpe": 0.3187821971055823,
+      "symbol": "BTDR",
+      "win_rate": 0.6666666666666666
+    },
+    {
+      "avg_trade_return": 0.03221526929267408,
+      "cagr": -0.08338392316238685,
+      "cg_id": "MSTR",
+      "max_dd": -0.7901987355727467,
+      "n_trades": 56,
+      "sharpe": 0.31811925105050826,
+      "symbol": "MSTR",
+      "win_rate": 0.7142857142857143
+    },
+    {
+      "avg_trade_return": 0.0009748107364954281,
+      "cagr": -0.5256792004994714,
+      "cg_id": "GREE",
+      "max_dd": -0.9980423914062881,
+      "n_trades": 57,
+      "sharpe": 0.11785567566584892,
+      "symbol": "GREE",
+      "win_rate": 0.5862068965517241
+    },
+    {
+      "avg_trade_return": 0.012630460484878949,
+      "cagr": -0.3167490460742305,
+      "cg_id": "HIVE",
+      "max_dd": -0.9551755432820896,
+      "n_trades": 56,
+      "sharpe": 0.06693525588427564,
+      "symbol": "HIVE",
+      "win_rate": 0.5357142857142857
+    },
+    {
+      "avg_trade_return": 0.010465860686673685,
+      "cagr": -0.4228435283768376,
+      "cg_id": "BTCS",
+      "max_dd": -0.9652954194186796,
+      "n_trades": 52,
+      "sharpe": 0.06591085208829715,
+      "symbol": "BTCS",
+      "win_rate": 0.5
+    },
+    {
+      "avg_trade_return": 0.020012733047431074,
+      "cagr": -0.2734695116289507,
+      "cg_id": "COIN",
+      "max_dd": -0.8675122910405695,
+      "n_trades": 50,
+      "sharpe": 0.04417646648607363,
+      "symbol": "COIN",
+      "win_rate": 0.52
+    },
+    {
+      "avg_trade_return": 0.02068697153747684,
+      "cagr": -0.21047960636026264,
+      "cg_id": "HOOD",
+      "max_dd": -0.8428621828765492,
+      "n_trades": 35,
+      "sharpe": -0.014848440419835629,
+      "symbol": "HOOD",
+      "win_rate": 0.6666666666666666
+    },
+    {
+      "avg_trade_return": -0.05232321988791856,
+      "cagr": -0.5138405569249851,
+      "cg_id": "CAN",
+      "max_dd": -0.9827146554732696,
+      "n_trades": 49,
+      "sharpe": -0.024153114605285672,
+      "symbol": "CAN",
+      "win_rate": 0.48
+    },
+    {
+      "avg_trade_return": -0.052243012958563026,
+      "cagr": -0.5273102909710929,
+      "cg_id": "ANY",
+      "max_dd": -0.9951550033756034,
+      "n_trades": 50,
+      "sharpe": -0.06461174401211861,
+      "symbol": "ANY",
+      "win_rate": 0.44
+    },
+    {
+      "avg_trade_return": -0.039026658398016334,
+      "cagr": -0.49929045562387053,
+      "cg_id": "DEFT",
+      "max_dd": -0.824817002971305,
+      "n_trades": 13,
+      "sharpe": -0.09028948492954532,
+      "symbol": "DEFT",
+      "win_rate": 0.42857142857142855
+    },
+    {
+      "avg_trade_return": -0.014354726479022873,
+      "cagr": -0.508200995484313,
+      "cg_id": "EBON",
+      "max_dd": -0.9887716675581111,
+      "n_trades": 45,
+      "sharpe": -0.09820701185676015,
+      "symbol": "EBON",
+      "win_rate": 0.4782608695652174
+    },
+    {
+      "avg_trade_return": -0.0407136306085875,
+      "cagr": -0.281173122967174,
+      "cg_id": "FLD",
+      "max_dd": -0.7736061560137363,
+      "n_trades": 39,
+      "sharpe": -0.0997645433623522,
+      "symbol": "FLD",
+      "win_rate": 0.7
+    },
+    {
+      "avg_trade_return": -0.08201348560605154,
+      "cagr": -0.8620870147202195,
+      "cg_id": "ARBK",
+      "max_dd": -0.9991965696677578,
+      "n_trades": 36,
+      "sharpe": -0.5325922209514563,
+      "symbol": "ARBK",
+      "win_rate": 0.5555555555555556
+    },
+    {
+      "avg_trade_return": -0.09540933069918327,
+      "cagr": -0.6536403280858205,
+      "cg_id": "BTM",
+      "max_dd": -0.9527413713240155,
+      "n_trades": 39,
+      "sharpe": -0.6283231772890193,
+      "symbol": "BTM",
+      "win_rate": 0.6
+    }
+  ],
+  "reliability": "caveats",
+  "worst": {
+    "cagr": -0.6536403280858205,
+    "cg_id": "BTM",
+    "sharpe": -0.6283231772890193,
+    "symbol": "BTM"
+  }
+}

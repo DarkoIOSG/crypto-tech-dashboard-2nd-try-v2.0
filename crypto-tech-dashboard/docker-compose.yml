@@ -1,0 +1,25 @@
+services:
+  dashboard:
+    build: .
+    image: iosg-crypto-tech-dashboard:local
+    container_name: iosg-crypto-tech-dashboard
+    env_file:
+      - .env
+    environment:
+      DATA_DIR: /app/local_data
+      HOST: 0.0.0.0
+      PORT: 8000
+      # Phase 3: container system tz aligned with APScheduler cron so
+      # log timestamps and bare datetime.now() calls match the user's
+      # operational timezone (09:00 daily refresh).
+      TZ: Asia/Shanghai
+    ports:
+      - "8000:8000"
+    # Persist OHLCV + metadata across container restarts. Without this,
+    # the daily-update cron's appended rows live only inside the container's
+    # writable layer and disappear on `docker compose down`. With the bind
+    # mount the host folder is the source of truth — the COPY in
+    # Dockerfile just seeds the initial state.
+    volumes:
+      - ./local_data:/app/local_data
+    restart: unless-stopped
