@@ -1,9 +1,8 @@
 """Shared in-memory data service for the API routes.
 
 Loads:
-    - top200_current.csv -> self.top_df
-    - ohlcv/<cg_id>.csv  -> self.ohlcv_cache[cg_id] (lazy per-token)
-    - last_update.json   -> self.status
+    - Postgres (when DATABASE_URL is set, Vercel / GitHub Actions)
+    - OR local CSV files (Docker / local dev, no DATABASE_URL)
 
 Provides:
     .list_tokens()                    -> list[dict] of token metadata
@@ -21,6 +20,7 @@ Hard rule: no try/except in this module — let pandas raise loudly.
 from __future__ import annotations
 
 import json
+import os
 from pathlib import Path
 from typing import Dict, List, Optional
 
@@ -28,12 +28,16 @@ import pandas as pd
 
 from backend.config import (
     DATA_DIR,
+    DATABASE_URL,
     LAST_UPDATE_PATH,
     MCAP_DIR,
     METADATA_DIR,
     OHLCV_DIR,
     TOP200_CURRENT_PATH,
 )
+
+# True when running on Vercel or GitHub Actions with a real Postgres DB.
+_USE_DB: bool = bool(DATABASE_URL)
 from backend.indicators.registry import INDICATORS
 from backend.scoring.ranking import (
     cross_sectional_percentile,
@@ -96,22 +100,20 @@ class DataService:
     # Loading
     # -------------------------------------------------------------- #
     def refresh_from_disk(self) -> int:
-        """Reload top200_current.csv + last_update.json. Invalidates caches."""
+        """Reload token universe + status. Reads from Postgres when DATABASE_URL
+        is set; falls back to local CSV files for Docker / local-dev."""
         self.ohlcv_cache.clear()
         self.indicator_cache.clear()
         self.current_indicators_cache.clear()
         self.scores_cache = None
         self._scores_history_df = None
-        # Phase 3.3 (architect final audit): the stocks market-overview
-        # cache was previously cached-forever after first read, so a fresh
-        # stocks_market.json on disk (written by run_stocks_daily_update)
-        # was invisible to the API until container restart — Market Info
-        # panel for MSTR / COIN / etc. showed yesterday's mcap + 24h vol
-        # forever. Reset it here so the next /api/market_overview/{ticker}
-        # re-reads from disk.
         if hasattr(self, "_stocks_market_cache"):
             self._stocks_market_cache = None
 
+        if _USE_DB:
+            return self._refresh_from_db()
+
+        # --- disk path (Docker / local dev) ---
         if Path(TOP200_CURRENT_PATH).exists() and Path(TOP200_CURRENT_PATH).stat().st_size > 0:
             self.top_df = pd.read_csv(TOP200_CURRENT_PATH)
         else:
@@ -123,6 +125,18 @@ class DataService:
         else:
             self.last_update = {}
 
+        return 0 if self.top_df is None else len(self.top_df)
+
+    def _refresh_from_db(self) -> int:
+        """Load token universe and metadata from Postgres."""
+        from backend.db.postgres_store import PostgresStore
+        store = PostgresStore()
+        self.top_df = store.read_top200_current()
+        self.last_update = store.read_last_update()
+        # Pre-warm the scores snapshot cache for fast API reads.
+        snap = store.read_scores_snapshot()
+        if snap:
+            self.scores_cache = snap
         return 0 if self.top_df is None else len(self.top_df)
 
     # -------------------------------------------------------------- #
@@ -141,13 +155,17 @@ class DataService:
         `asset_class` argument, if supplied, filters the output. None
         returns both.
         """
-        # First gather what we actually have on disk.
-        on_disk = set()
-        if Path(OHLCV_DIR).exists():
-            for p in Path(OHLCV_DIR).glob("*.csv"):
-                if p.name.endswith(".tmp"):
-                    continue
-                on_disk.add(p.stem)
+        # First gather what we actually have on disk (or in Postgres).
+        if _USE_DB:
+            from backend.db.postgres_store import PostgresStore
+            on_disk = PostgresStore().get_ohlcv_ids_set()
+        else:
+            on_disk = set()
+            if Path(OHLCV_DIR).exists():
+                for p in Path(OHLCV_DIR).glob("*.csv"):
+                    if p.name.endswith(".tmp"):
+                        continue
+                    on_disk.add(p.stem)
 
         # Phase 3.5+: read the maintained exclude list. Tokens on this list
         # are dropped from the UI / rankings / cron writes — used to retire
@@ -160,20 +178,33 @@ class DataService:
 
         # R8-1D: read stocks universe for asset_class metadata.
         stocks_meta: dict = {}  # ticker -> meta row dict
-        stocks_path = Path(METADATA_DIR) / "stocks_universe.csv"
-        if stocks_path.exists():
-            try:
-                sdf = pd.read_csv(stocks_path)
+        if _USE_DB:
+            from backend.db.postgres_store import PostgresStore
+            sdf = PostgresStore().read_stocks_universe()
+            if sdf is not None:
                 for _, srow in sdf.iterrows():
                     tk = str(srow.get("ticker", "")).strip()
                     if tk:
                         stocks_meta[tk] = {
                             "name": str(srow.get("name") or tk),
                             "exchange": str(srow.get("exchange") or ""),
-                            "active": bool(str(srow.get("active", "true")).lower() in {"true", "1", "yes"}),
+                            "active": bool(str(srow.get("active", True))),
                         }
-            except Exception:
-                pass
+        else:
+            stocks_path = Path(METADATA_DIR) / "stocks_universe.csv"
+            if stocks_path.exists():
+                try:
+                    sdf = pd.read_csv(stocks_path)
+                    for _, srow in sdf.iterrows():
+                        tk = str(srow.get("ticker", "")).strip()
+                        if tk:
+                            stocks_meta[tk] = {
+                                "name": str(srow.get("name") or tk),
+                                "exchange": str(srow.get("exchange") or ""),
+                                "active": bool(str(srow.get("active", "true")).lower() in {"true", "1", "yes"}),
+                            }
+                except Exception:
+                    pass
         stocks_ids = set(stocks_meta.keys())
 
         out: List[Dict] = []
@@ -274,11 +305,17 @@ class DataService:
     def get_ohlcv(self, cg_id: str) -> Optional[pd.DataFrame]:
         if cg_id in self.ohlcv_cache:
             return self.ohlcv_cache[cg_id]
-        path = Path(OHLCV_DIR) / f"{cg_id}.csv"
-        if not path.exists() or path.stat().st_size == 0:
-            return None
-        df = pd.read_csv(path)
-        if df.empty:
+
+        if _USE_DB:
+            from backend.db.postgres_store import PostgresStore
+            df = PostgresStore().read_ohlcv(cg_id)
+        else:
+            path = Path(OHLCV_DIR) / f"{cg_id}.csv"
+            if not path.exists() or path.stat().st_size == 0:
+                return None
+            df = pd.read_csv(path)
+
+        if df is None or df.empty:
             return None
         df["date"] = pd.to_datetime(df["date"])
         df = df.sort_values("date").reset_index(drop=True)
@@ -599,26 +636,44 @@ class DataService:
         }
 
     def _load_stock_market_overview(self, ticker: str) -> Optional[Dict]:
-        """Read the per-ticker entry from stocks_market.json (refreshed daily
-        by scripts/refresh_stocks_market.py). Cached after first read."""
+        """Read per-ticker market data. Source: Postgres metadata or disk JSON."""
         if not hasattr(self, "_stocks_market_cache"):
             self._stocks_market_cache = None
         if self._stocks_market_cache is None:
-            from pathlib import Path as _P
-            path = _P(METADATA_DIR) / "stocks_market.json"
-            if not path.exists():
-                self._stocks_market_cache = {}
+            if _USE_DB:
+                from backend.db.postgres_store import PostgresStore
+                val = PostgresStore()._read_metadata("stocks_market")
+                self._stocks_market_cache = val if isinstance(val, dict) else {}
             else:
-                try:
-                    self._stocks_market_cache = json.loads(path.read_text())
-                except Exception:  # boundary
+                from pathlib import Path as _P
+                path = _P(METADATA_DIR) / "stocks_market.json"
+                if not path.exists():
                     self._stocks_market_cache = {}
+                else:
+                    try:
+                        self._stocks_market_cache = json.loads(path.read_text())
+                    except Exception:
+                        self._stocks_market_cache = {}
         return self._stocks_market_cache.get(ticker)
 
     def _load_scores_history(self) -> Optional[pd.DataFrame]:
-        """Read scores_history.csv into a tidy frame. Cached after first call."""
+        """Read scores history into a tidy frame. Cached after first call.
+        Source: Postgres when DATABASE_URL is set; scores_history.csv otherwise.
+        """
         if self._scores_history_df is not None:
             return self._scores_history_df
+
+        if _USE_DB:
+            from backend.db.postgres_store import PostgresStore
+            df = PostgresStore().read_scores_history()
+            if df is None or df.empty:
+                self._scores_history_df = pd.DataFrame()
+                return self._scores_history_df
+            df["date"] = pd.to_datetime(df["date"]).dt.normalize()
+            df = df.sort_values(["cg_id", "date"]).reset_index(drop=True)
+            self._scores_history_df = df
+            return df
+
         path = Path(SCORES_HISTORY_PATH)
         if not path.exists() or path.stat().st_size == 0:
             self._scores_history_df = pd.DataFrame()

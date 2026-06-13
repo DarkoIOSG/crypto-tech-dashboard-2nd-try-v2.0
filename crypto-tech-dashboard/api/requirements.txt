@@ -1,0 +1,12 @@
+# Vercel serverless API requirements — intentionally slim.
+# CCXT, yfinance, and apscheduler are NOT included here because the API
+# never fetches market data directly; that job belongs to GitHub Actions
+# (see .github/workflows/daily_refresh.yml) which uses requirements-fetcher.txt.
+
+fastapi==0.128.8
+uvicorn[standard]==0.39.0
+pandas==2.3.3
+numpy==2.0.2
+psycopg2-binary==2.9.10
+python-dotenv==1.2.1
+requests==2.32.5

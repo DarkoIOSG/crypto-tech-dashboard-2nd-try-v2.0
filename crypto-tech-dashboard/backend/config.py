@@ -65,6 +65,11 @@ def _env_int(key: str, default: int) -> int:
 # rotation actually work and stops a leaked key from re-entering source.
 COINGECKO_API_KEY: str = _env_str("COINGECKO_API_KEY", "")
 
+# Postgres / Neon connection string. When set, DataService reads from Postgres
+# and the Fetcher writes to Postgres instead of local CSV files.
+# Format: postgresql://user:password@host:port/dbname?sslmode=require
+DATABASE_URL: str = _env_str("DATABASE_URL", "")
+
 # Daily-update schedule (consumed by main.py / APScheduler — not by this module).
 UPDATE_HOUR: int = _env_int("UPDATE_HOUR", 8)
 UPDATE_MINUTE: int = _env_int("UPDATE_MINUTE", 30)
