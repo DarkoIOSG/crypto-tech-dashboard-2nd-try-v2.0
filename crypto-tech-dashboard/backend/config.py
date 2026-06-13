@@ -134,9 +134,10 @@ DATA_INTEGRITY_LOG_PATH: Path = METADATA_DIR / "data_integrity_log.json"
 TOP200_CURRENT_PATH: Path = MCAP_DIR / "top200_current.csv"
 
 # Create the directory tree at import time so downstream code can assume it exists.
-# (exist_ok=True is idempotent; no try/except needed.)
-for _p in (DATA_DIR, OHLCV_DIR, MCAP_DIR, MCAP_DAILY_DIR, METADATA_DIR):
-    _p.mkdir(parents=True, exist_ok=True)
+# Skip on Vercel (read-only filesystem) — all data comes from Postgres there.
+if not DATABASE_URL:
+    for _p in (DATA_DIR, OHLCV_DIR, MCAP_DIR, MCAP_DAILY_DIR, METADATA_DIR):
+        _p.mkdir(parents=True, exist_ok=True)
 
 # ---------------------------------------------------------------------------
 # Logging
