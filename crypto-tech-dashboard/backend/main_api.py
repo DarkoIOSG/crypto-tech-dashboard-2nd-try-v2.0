@@ -34,6 +34,33 @@ log = logging.getLogger("backend.main_api")
 _FRONTEND_DIR = Path(__file__).resolve().parent.parent / "frontend"
 
 
+class _DbReloadFetcher:
+    """Lightweight stub fetcher for Vercel.
+
+    The real Fetcher (CCXT + CoinGecko) is not imported on Vercel to keep
+    the bundle small. When the user clicks Refresh, this stub reloads the
+    in-memory cache from Neon Postgres (fast, ~1-2 s) instead of re-fetching
+    from exchanges (which would timeout the serverless function).
+    """
+
+    _progress = {
+        "phase": "idle", "current": 0, "total": 0,
+        "last_token": None, "started_at": None, "finished_at": None,
+    }
+
+    def run_daily_update(self):
+        from backend.services.data_service import get_service
+        svc = get_service()
+        svc.refresh_from_disk()
+        log.info("Vercel cache reloaded from Postgres")
+
+    def run_stocks_daily_update(self):
+        pass  # included in run_daily_update cache reload above
+
+    def run_full_initial_load(self):
+        self.run_daily_update()
+
+
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     svc = DataService()
@@ -44,6 +71,8 @@ async def lifespan(app: FastAPI):
         len(svc.top_df) if svc.top_df is not None else 0,
         bool(__import__("os").environ.get("DATABASE_URL")),
     )
+    # Bind the lightweight stub so /api/system/refresh works on Vercel.
+    routes_system.bind_fetcher(_DbReloadFetcher())
     yield
 
 
