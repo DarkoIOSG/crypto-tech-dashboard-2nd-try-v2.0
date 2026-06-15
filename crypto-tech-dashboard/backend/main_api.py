@@ -78,6 +78,21 @@ async def lifespan(app: FastAPI):
 
 app = FastAPI(title="IOSG Crypto Tech Dashboard", lifespan=lifespan)
 
+
+# Vercel override: must be registered BEFORE routes_system.router so FastAPI
+# matches this handler first (first-match wins).
+# Problem: the frontend polls finished_at from /api/system/status waiting for
+# it to change, but on Vercel that field only updates when GitHub Actions runs.
+# Returning {"status":"skipped"} switches the frontend to the fast path: it
+# checks phase=="idle" from /api/system/refresh-progress (always idle here),
+# resolves in ~2 s instead of timing out after 10 min.
+@app.post("/api/system/refresh")
+async def vercel_system_refresh(full: bool = False):
+    from backend.services.data_service import get_service
+    get_service().refresh_from_disk()
+    return {"status": "skipped"}
+
+
 # --- API routes ---
 app.include_router(routes_tokens.router)
 app.include_router(routes_indicators.router)
