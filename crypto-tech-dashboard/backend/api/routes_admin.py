@@ -15,10 +15,36 @@ from pathlib import Path
 from fastapi import APIRouter, HTTPException, Request
 
 from backend.api._validators import validate_cg_id
-from backend.config import DATA_DIR
+from backend.config import DATA_DIR, DATABASE_URL
 
 
 router = APIRouter(tags=["admin"])
+
+
+def _coverage_from_db(cg_id: str | None = None) -> dict:
+    """Query min/max OHLCV dates from Neon. Returns a coverage dict keyed by cg_id."""
+    from backend.db.connection import get_conn
+    conn = get_conn()
+    try:
+        with conn.cursor() as cur:
+            if cg_id:
+                cur.execute(
+                    "SELECT cg_id, MIN(date)::text, MAX(date)::text, COUNT(*)"
+                    " FROM ohlcv WHERE cg_id = %s GROUP BY cg_id",
+                    (cg_id,),
+                )
+            else:
+                cur.execute(
+                    "SELECT cg_id, MIN(date)::text, MAX(date)::text, COUNT(*)"
+                    " FROM ohlcv GROUP BY cg_id"
+                )
+            rows = cur.fetchall()
+    finally:
+        conn.close()
+    return {
+        row[0]: {"earliest_date": row[1], "latest_date": row[2], "rows": row[3]}
+        for row in rows
+    }
 
 
 _LOCAL_HOSTS = {"127.0.0.1", "localhost", "::1"}
@@ -73,13 +99,13 @@ def admin_integrity(request: Request):
 
 @router.get("/api/data-coverage/{cg_id}")
 def data_coverage_one(cg_id: str):
-    """R8-1B.2: per-token data quality boundary.
-
-    Returns the slice of local_data/metadata/data_coverage.json for the
-    requested token. The frontend uses this to render the "Data Coverage"
-    folding row in the score panel (Phase-2 item 11.3 + Q14).
-    """
+    """R8-1B.2: per-token data quality boundary."""
     cg_id = validate_cg_id(cg_id)
+    if DATABASE_URL:
+        coverage = _coverage_from_db(cg_id)
+        if cg_id not in coverage:
+            raise HTTPException(status_code=404, detail=f"no coverage record for {cg_id}")
+        return {"cg_id": cg_id, "coverage": coverage[cg_id]}
     cov_path = Path(DATA_DIR) / "metadata" / "data_coverage.json"
     if not cov_path.exists():
         raise HTTPException(
@@ -88,16 +114,16 @@ def data_coverage_one(cg_id: str):
         )
     coverage = json.loads(cov_path.read_text() or "{}")
     if cg_id not in coverage:
-        raise HTTPException(
-            status_code=404,
-            detail=f"no coverage record for {cg_id}",
-        )
+        raise HTTPException(status_code=404, detail=f"no coverage record for {cg_id}")
     return {"cg_id": cg_id, "coverage": coverage[cg_id]}
 
 
 @router.get("/api/data-coverage")
 def data_coverage_all():
-    """Full coverage map. Reads the whole data_coverage.json file."""
+    """Full coverage map."""
+    if DATABASE_URL:
+        coverage = _coverage_from_db()
+        return {"count": len(coverage), "coverage": coverage}
     cov_path = Path(DATA_DIR) / "metadata" / "data_coverage.json"
     if not cov_path.exists():
         return {"count": 0, "coverage": {}}
