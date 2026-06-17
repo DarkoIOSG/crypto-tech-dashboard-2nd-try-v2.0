@@ -701,6 +701,29 @@ class DataService:
             return pd.Series(dtype=float)
         return sub.set_index("date")[column].astype(float).sort_index()
 
+    def scores_monthly_for(self, cg_id: str) -> list:
+        """Return monthly overall_score snapshots for one token.
+
+        Groups the daily scores_history by calendar month and takes the last
+        recorded score of each month. Returns a list of dicts sorted oldest
+        first: [{"month": "YYYY-MM", "score": float}, ...].
+        Returns an empty list when no history exists for the token.
+        """
+        series = self._persisted_history_for(cg_id, "overall_score")
+        if series.empty:
+            return []
+        monthly = (
+            series
+            .dropna()
+            .resample("ME")
+            .last()
+            .dropna()
+        )
+        return [
+            {"month": idx.strftime("%Y-%m"), "score": round(float(val), 1)}
+            for idx, val in monthly.items()
+        ]
+
     def score_for(self, cg_id: str) -> Optional[Dict[str, float]]:
         scores = self.current_scores()
         if cg_id not in scores:

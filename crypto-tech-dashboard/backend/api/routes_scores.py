@@ -102,6 +102,22 @@ def all_scores(sort_by: str = "trend", limit: int = 0, asset_class: str = ""):
     }
 
 
+@router.get("/api/scores/{cg_id}/monthly")
+def token_score_monthly(cg_id: str):
+    """Return monthly overall_score history for one token.
+
+    Response: {"cg_id": str, "months": [{"month": "YYYY-MM", "score": float}]}
+    Months are sorted oldest-first. Returns an empty list when the token has
+    no scores_history yet.
+    """
+    cg_id = validate_cg_id(cg_id)
+    svc = get_service()
+    if svc.get_token(cg_id) is None:
+        raise HTTPException(status_code=404, detail=f"unknown token {cg_id}")
+    months = svc.scores_monthly_for(cg_id)
+    return {"cg_id": cg_id, "months": months}
+
+
 @router.get("/api/scores/{cg_id}")
 def token_score(cg_id: str):
     cg_id = validate_cg_id(cg_id)
