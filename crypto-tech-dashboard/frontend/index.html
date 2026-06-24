@@ -10,6 +10,10 @@
     <script>
     (function() {
         try {
+            var params = new URLSearchParams(location.search);
+            if (params.get('auth') === 'IOSG') {
+                localStorage.setItem('iosg-auth', 'ok');
+            }
             if (localStorage.getItem('iosg-auth') !== 'ok') {
                 location.replace('/login.html');
                 // Stop the parser from running anything else.

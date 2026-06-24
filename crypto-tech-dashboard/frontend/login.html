@@ -14,8 +14,12 @@
         } catch (e) {
             document.documentElement.dataset.theme = 'dark';
         }
-        // If already authed, skip the gate.
+        // If already authed (or auth param present), skip the gate.
         try {
+            var params = new URLSearchParams(location.search);
+            if (params.get('auth') === 'IOSG') {
+                localStorage.setItem('iosg-auth', 'ok');
+            }
             if (localStorage.getItem('iosg-auth') === 'ok') {
                 location.replace('/');
             }
